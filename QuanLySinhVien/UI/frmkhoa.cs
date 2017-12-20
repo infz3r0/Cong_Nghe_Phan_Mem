@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DXApplication1
+namespace UI_Tier
 {
     public partial class frmkhoa : Form
     {

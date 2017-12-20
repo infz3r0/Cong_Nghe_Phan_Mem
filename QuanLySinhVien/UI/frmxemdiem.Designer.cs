@@ -1,4 +1,4 @@
-﻿namespace DXApplication1
+﻿namespace UI_Tier
 {
     partial class frmxemdiem
     {
@@ -90,7 +90,7 @@
             this.btnthoatxem.Appearance.ForeColor = System.Drawing.Color.Transparent;
             this.btnthoatxem.Appearance.Options.UseFont = true;
             this.btnthoatxem.Appearance.Options.UseForeColor = true;
-            this.btnthoatxem.BackgroundImage = global::DXApplication1.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
+            this.btnthoatxem.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
             this.btnthoatxem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnthoatxem.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnthoatxem.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -134,7 +134,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
-            this.groupBox1.BackgroundImage = global::DXApplication1.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
+            this.groupBox1.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
             this.groupBox1.Controls.Add(this.cbbtenhpxem);
             this.groupBox1.Controls.Add(this.cbbtenbsvxem);
             this.groupBox1.Controls.Add(this.cbbmasvxem);
@@ -377,7 +377,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Tile;
-            this.BackgroundImageStore = global::DXApplication1.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
+            this.BackgroundImageStore = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
             this.CancelButton = this.btnthoatxem;
             this.ClientSize = new System.Drawing.Size(946, 493);
             this.Controls.Add(this.groupBox4);

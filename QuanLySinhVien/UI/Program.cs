@@ -5,7 +5,7 @@ using System.Windows.Forms;
 using DevExpress.UserSkins;
 using DevExpress.Skins;
 
-namespace DXApplication1
+namespace UI_Tier
 {
     static class Program
     {

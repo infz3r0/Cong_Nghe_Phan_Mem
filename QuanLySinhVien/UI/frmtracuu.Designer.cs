@@ -1,4 +1,4 @@
-﻿namespace DXApplication1
+﻿namespace UI_Tier
 {
     partial class frmtracuu
     {
@@ -104,7 +104,7 @@
             this.btnthoatracuu.Appearance.ForeColor = System.Drawing.Color.Transparent;
             this.btnthoatracuu.Appearance.Options.UseFont = true;
             this.btnthoatracuu.Appearance.Options.UseForeColor = true;
-            this.btnthoatracuu.BackgroundImage = global::DXApplication1.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
+            this.btnthoatracuu.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
             this.btnthoatracuu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnthoatracuu.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnthoatracuu.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -136,7 +136,7 @@
             this.btntracuu.Appearance.ForeColor = System.Drawing.Color.White;
             this.btntracuu.Appearance.Options.UseFont = true;
             this.btntracuu.Appearance.Options.UseForeColor = true;
-            this.btntracuu.BackgroundImage = global::DXApplication1.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
+            this.btntracuu.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
             this.btntracuu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btntracuu.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btntracuu.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -154,7 +154,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Tile;
-            this.BackgroundImageStore = global::DXApplication1.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
+            this.BackgroundImageStore = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
             this.CancelButton = this.btnthoatracuu;
             this.ClientSize = new System.Drawing.Size(912, 433);
             this.Controls.Add(this.groupBox3);

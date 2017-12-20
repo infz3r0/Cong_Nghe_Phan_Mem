@@ -1,4 +1,4 @@
-﻿namespace DXApplication1
+﻿namespace UI_Tier
 {
     partial class frmdoipass
     {
@@ -128,7 +128,7 @@
             this.btnthoatdoipass.Appearance.ForeColor = System.Drawing.Color.Transparent;
             this.btnthoatdoipass.Appearance.Options.UseFont = true;
             this.btnthoatdoipass.Appearance.Options.UseForeColor = true;
-            this.btnthoatdoipass.BackgroundImage = global::DXApplication1.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
+            this.btnthoatdoipass.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
             this.btnthoatdoipass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnthoatdoipass.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnthoatdoipass.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -163,7 +163,7 @@
             this.btnokdoipass.Appearance.ForeColor = System.Drawing.Color.White;
             this.btnokdoipass.Appearance.Options.UseFont = true;
             this.btnokdoipass.Appearance.Options.UseForeColor = true;
-            this.btnokdoipass.BackgroundImage = global::DXApplication1.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
+            this.btnokdoipass.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
             this.btnokdoipass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnokdoipass.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnokdoipass.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -209,7 +209,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Tile;
-            this.BackgroundImageStore = global::DXApplication1.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
+            this.BackgroundImageStore = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
             this.CancelButton = this.btnthoatdoipass;
             this.ClientSize = new System.Drawing.Size(448, 308);
             this.Controls.Add(this.groupBox1);

@@ -1,4 +1,4 @@
-﻿namespace DXApplication1
+﻿namespace UI_Tier
 {
     partial class frmlophp
     {
@@ -104,7 +104,7 @@
             this.btnthoatlophp.Appearance.ForeColor = System.Drawing.Color.Transparent;
             this.btnthoatlophp.Appearance.Options.UseFont = true;
             this.btnthoatlophp.Appearance.Options.UseForeColor = true;
-            this.btnthoatlophp.BackgroundImage = global::DXApplication1.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
+            this.btnthoatlophp.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
             this.btnthoatlophp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnthoatlophp.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnthoatlophp.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -124,7 +124,7 @@
             this.btnxoalophp.Appearance.ForeColor = System.Drawing.Color.White;
             this.btnxoalophp.Appearance.Options.UseFont = true;
             this.btnxoalophp.Appearance.Options.UseForeColor = true;
-            this.btnxoalophp.BackgroundImage = global::DXApplication1.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
+            this.btnxoalophp.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
             this.btnxoalophp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnxoalophp.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnxoalophp.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -142,7 +142,7 @@
             this.btnsualophp.Appearance.ForeColor = System.Drawing.Color.White;
             this.btnsualophp.Appearance.Options.UseFont = true;
             this.btnsualophp.Appearance.Options.UseForeColor = true;
-            this.btnsualophp.BackgroundImage = global::DXApplication1.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
+            this.btnsualophp.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
             this.btnsualophp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnsualophp.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnsualophp.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -160,7 +160,7 @@
             this.btnthemlophp.Appearance.ForeColor = System.Drawing.Color.White;
             this.btnthemlophp.Appearance.Options.UseFont = true;
             this.btnthemlophp.Appearance.Options.UseForeColor = true;
-            this.btnthemlophp.BackgroundImage = global::DXApplication1.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
+            this.btnthemlophp.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
             this.btnthemlophp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnthemlophp.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnthemlophp.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -175,7 +175,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
-            this.groupBox1.BackgroundImage = global::DXApplication1.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
+            this.groupBox1.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
             this.groupBox1.Controls.Add(this.labelControl1);
             this.groupBox1.Controls.Add(this.txttenlophp);
             this.groupBox1.Controls.Add(this.txtslsv);
@@ -303,7 +303,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Tile;
-            this.BackgroundImageStore = global::DXApplication1.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
+            this.BackgroundImageStore = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
             this.CancelButton = this.btnthoatlophp;
             this.ClientSize = new System.Drawing.Size(786, 507);
             this.Controls.Add(this.groupBox3);

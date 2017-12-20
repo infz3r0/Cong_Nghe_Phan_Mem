@@ -1,4 +1,4 @@
-﻿namespace DXApplication1
+﻿namespace UI_Tier
 {
     partial class frmmonhoc
     {
@@ -89,7 +89,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
-            this.groupBox1.BackgroundImage = global::DXApplication1.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
+            this.groupBox1.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
             this.groupBox1.Controls.Add(this.cbbloaihp);
             this.groupBox1.Controls.Add(this.txtmahp);
             this.groupBox1.Controls.Add(this.txtstchp);
@@ -209,7 +209,7 @@
             this.btnthoathp.Appearance.ForeColor = System.Drawing.Color.Transparent;
             this.btnthoathp.Appearance.Options.UseFont = true;
             this.btnthoathp.Appearance.Options.UseForeColor = true;
-            this.btnthoathp.BackgroundImage = global::DXApplication1.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
+            this.btnthoathp.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
             this.btnthoathp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnthoathp.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnthoathp.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -229,7 +229,7 @@
             this.btnxoahp.Appearance.ForeColor = System.Drawing.Color.White;
             this.btnxoahp.Appearance.Options.UseFont = true;
             this.btnxoahp.Appearance.Options.UseForeColor = true;
-            this.btnxoahp.BackgroundImage = global::DXApplication1.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
+            this.btnxoahp.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
             this.btnxoahp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnxoahp.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnxoahp.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -247,7 +247,7 @@
             this.btnsuahp.Appearance.ForeColor = System.Drawing.Color.White;
             this.btnsuahp.Appearance.Options.UseFont = true;
             this.btnsuahp.Appearance.Options.UseForeColor = true;
-            this.btnsuahp.BackgroundImage = global::DXApplication1.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
+            this.btnsuahp.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
             this.btnsuahp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnsuahp.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnsuahp.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -265,7 +265,7 @@
             this.btnthemhp.Appearance.ForeColor = System.Drawing.Color.White;
             this.btnthemhp.Appearance.Options.UseFont = true;
             this.btnthemhp.Appearance.Options.UseForeColor = true;
-            this.btnthemhp.BackgroundImage = global::DXApplication1.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
+            this.btnthemhp.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
             this.btnthemhp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnthemhp.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnthemhp.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -299,7 +299,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Tile;
-            this.BackgroundImageStore = global::DXApplication1.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
+            this.BackgroundImageStore = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
             this.CancelButton = this.btnthoathp;
             this.ClientSize = new System.Drawing.Size(700, 486);
             this.Controls.Add(this.groupBox3);

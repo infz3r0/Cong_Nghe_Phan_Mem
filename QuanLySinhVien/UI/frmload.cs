@@ -7,7 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraSplashScreen;
 
-namespace DXApplication1
+namespace UI_Tier
 {
     public partial class frmload : SplashScreen
     {

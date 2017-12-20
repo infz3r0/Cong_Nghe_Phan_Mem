@@ -1,4 +1,4 @@
-﻿namespace DXApplication1
+﻿namespace UI_Tier
 {
     partial class frmdangki
     {
@@ -126,7 +126,7 @@
             this.btnthoatdk.Appearance.ForeColor = System.Drawing.Color.Transparent;
             this.btnthoatdk.Appearance.Options.UseFont = true;
             this.btnthoatdk.Appearance.Options.UseForeColor = true;
-            this.btnthoatdk.BackgroundImage = global::DXApplication1.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
+            this.btnthoatdk.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
             this.btnthoatdk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnthoatdk.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnthoatdk.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -161,7 +161,7 @@
             this.btndangki.Appearance.ForeColor = System.Drawing.Color.White;
             this.btndangki.Appearance.Options.UseFont = true;
             this.btndangki.Appearance.Options.UseForeColor = true;
-            this.btndangki.BackgroundImage = global::DXApplication1.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
+            this.btndangki.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
             this.btndangki.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btndangki.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btndangki.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -203,7 +203,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Tile;
-            this.BackgroundImageStore = global::DXApplication1.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
+            this.BackgroundImageStore = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
             this.CancelButton = this.btnthoatdk;
             this.ClientSize = new System.Drawing.Size(525, 286);
             this.Controls.Add(this.groupBox1);

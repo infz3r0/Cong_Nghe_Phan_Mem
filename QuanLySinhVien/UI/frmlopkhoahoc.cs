@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 
-namespace DXApplication1
+namespace UI_Tier
 {
     public partial class frmlopkhoahoc : DevExpress.XtraEditors.XtraForm
     {

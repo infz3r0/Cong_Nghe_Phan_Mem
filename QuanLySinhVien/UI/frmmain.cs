@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraBars;
 using System.Threading;
 
-namespace DXApplication1
+namespace UI_Tier
 {
     public partial class frmmain : DevExpress.XtraBars.Ribbon.RibbonForm
     {
