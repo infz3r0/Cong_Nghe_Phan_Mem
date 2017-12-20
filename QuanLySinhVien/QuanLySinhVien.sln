@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2006
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DXApplication1", "DXApplication1\DXApplication1.csproj", "{B1009E2B-6F8A-4B90-86EF-30712BAF0088}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XaiThuDevExpress", "DXApplication1\XaiThuDevExpress.csproj", "{B1009E2B-6F8A-4B90-86EF-30712BAF0088}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
