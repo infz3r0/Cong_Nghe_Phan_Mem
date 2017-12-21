@@ -33,7 +33,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnthoatxem = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.gridviewkhoa = new System.Windows.Forms.DataGridView();
+            this.gridviewxemdiem = new System.Windows.Forms.DataGridView();
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
@@ -57,7 +57,7 @@
             this.txtxeploaixem = new DevExpress.XtraEditors.TextEdit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridviewkhoa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridviewxemdiem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbbtenhpxem.Properties)).BeginInit();
@@ -107,7 +107,7 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox3.Controls.Add(this.gridviewkhoa);
+            this.groupBox3.Controls.Add(this.gridviewxemdiem);
             this.groupBox3.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox3.ForeColor = System.Drawing.Color.White;
             this.groupBox3.Location = new System.Drawing.Point(12, 226);
@@ -117,15 +117,15 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông tin chi tiết";
             // 
-            // gridviewkhoa
+            // gridviewxemdiem
             // 
-            this.gridviewkhoa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gridviewkhoa.BackgroundColor = System.Drawing.Color.White;
-            this.gridviewkhoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridviewkhoa.Location = new System.Drawing.Point(6, 25);
-            this.gridviewkhoa.Name = "gridviewkhoa";
-            this.gridviewkhoa.Size = new System.Drawing.Size(765, 220);
-            this.gridviewkhoa.TabIndex = 9;
+            this.gridviewxemdiem.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridviewxemdiem.BackgroundColor = System.Drawing.Color.White;
+            this.gridviewxemdiem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridviewxemdiem.Location = new System.Drawing.Point(6, 25);
+            this.gridviewxemdiem.Name = "gridviewxemdiem";
+            this.gridviewxemdiem.Size = new System.Drawing.Size(765, 220);
+            this.gridviewxemdiem.TabIndex = 9;
             // 
             // defaultLookAndFeel1
             // 
@@ -389,7 +389,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmxemdiem_FormClosing);
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridviewkhoa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridviewxemdiem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -415,7 +415,7 @@
         private DevExpress.XtraEditors.SimpleButton btnthoatxem;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.DataGridView gridviewkhoa;
+        private System.Windows.Forms.DataGridView gridviewxemdiem;
         private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;

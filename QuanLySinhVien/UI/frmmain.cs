@@ -240,6 +240,19 @@ namespace UI_Tier
             }
         }
 
-        
+        private void navBarItem13_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            Form frm = kiemtraform(typeof(frmbancansu));
+            if (frm == null)
+            {
+                frmbancansu forms = new frmbancansu();
+                forms.MdiParent = this;
+                forms.Show();
+            }
+            else
+            {
+                frm.Activate();
+            }
+        }
     }
 }
