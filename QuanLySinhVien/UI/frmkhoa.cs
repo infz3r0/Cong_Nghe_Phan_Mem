@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using BUS_Tier;
+using MODEL_Tier;
+
 namespace UI_Tier
 {
     public partial class frmkhoa : Form

@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 
+using BUS_Tier;
+using MODEL_Tier;
+
 namespace UI_Tier
 {
     public partial class frmsv : DevExpress.XtraEditors.XtraForm

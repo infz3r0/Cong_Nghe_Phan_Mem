@@ -7,6 +7,9 @@ using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraSplashScreen;
 
+using BUS_Tier;
+using MODEL_Tier;
+
 namespace UI_Tier
 {
     public partial class frmload : SplashScreen

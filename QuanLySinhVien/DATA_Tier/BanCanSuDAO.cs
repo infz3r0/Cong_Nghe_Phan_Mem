@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace DATA_Tier
 {
-    public class Class1
+    class BanCanSuDAO
     {
     }
 }

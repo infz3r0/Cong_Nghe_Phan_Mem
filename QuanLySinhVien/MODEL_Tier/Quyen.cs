@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MODEL_Tier
 {
-    public class Class1
+    class Quyen
     {
     }
 }

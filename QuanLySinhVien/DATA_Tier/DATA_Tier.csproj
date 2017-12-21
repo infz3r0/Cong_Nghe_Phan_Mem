@@ -40,14 +40,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="BanCanSuDAO.cs" />
+    <Compile Include="DanhSachLopHPDAO.cs" />
+    <Compile Include="DBConnect.cs" />
+    <Compile Include="DiemDAO.cs" />
+    <Compile Include="DieuKienDAO.cs" />
+    <Compile Include="KhoaDAO.cs" />
+    <Compile Include="LopHocPhanDAO.cs" />
+    <Compile Include="LopKhoaHocDAO.cs" />
+    <Compile Include="MonHocDAO.cs" />
+    <Compile Include="NhomDAO.cs" />
+    <Compile Include="PhanQuyenDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\MODEL_Tier\MODEL_Tier.csproj">
-      <Project>{86c5e573-4767-4fd9-b74f-63d54d218ce3}</Project>
-      <Name>MODEL_Tier</Name>
-    </ProjectReference>
+    <Compile Include="QuyenDAO.cs" />
+    <Compile Include="SinhVienDAO.cs" />
+    <Compile Include="TaiKhoanDAO.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

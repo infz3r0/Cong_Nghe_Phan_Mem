@@ -10,6 +10,9 @@ using System.Windows.Forms;
 using DevExpress.XtraBars;
 using System.Threading;
 
+using BUS_Tier;
+using MODEL_Tier;
+
 namespace UI_Tier
 {
     public partial class frmmain : DevExpress.XtraBars.Ribbon.RibbonForm
