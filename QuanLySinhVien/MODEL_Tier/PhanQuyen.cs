@@ -8,5 +8,21 @@ namespace MODEL_Tier
 {
     class PhanQuyen
     {
+        private int gID;
+        private int maQuyen;
+        
+        public PhanQuyen()
+        {
+
+        }
+
+        public PhanQuyen(int gID, int maQuyen)
+        {
+            this.GID = gID;
+            this.MaQuyen = maQuyen;
+        }
+
+        public int GID { get => gID; set => gID = value; }
+        public int MaQuyen { get => maQuyen; set => maQuyen = value; }
     }
 }

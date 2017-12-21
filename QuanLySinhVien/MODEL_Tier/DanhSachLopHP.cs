@@ -8,5 +8,21 @@ namespace MODEL_Tier
 {
     class DanhSachLopHP
     {
+        private string maLopHP;
+        private string maSV;
+
+        public DanhSachLopHP()
+        {
+
+        }
+
+        public DanhSachLopHP(string maLopHP, string maSV)
+        {
+            this.MaLopHP = maLopHP;
+            this.MaSV = maSV;
+        }
+
+        public string MaLopHP { get => maLopHP; set => maLopHP = value; }
+        public string MaSV { get => maSV; set => maSV = value; }
     }
 }

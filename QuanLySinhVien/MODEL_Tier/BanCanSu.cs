@@ -8,5 +8,21 @@ namespace MODEL_Tier
 {
     class BanCanSu
     {
+        private string maSV;
+        private string chucVu;
+
+        public BanCanSu()
+        {
+
+        }
+
+        public BanCanSu(string maSV, string chucVu)
+        {
+            this.MaSV = maSV;
+            this.ChucVu = chucVu;
+        }
+
+        public string MaSV { get => maSV; set => maSV = value; }
+        public string ChucVu { get => chucVu; set => chucVu = value; }
     }
 }
