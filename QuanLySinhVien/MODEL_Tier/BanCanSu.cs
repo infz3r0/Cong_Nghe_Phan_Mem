@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MODEL_Tier
 {
-    class BanCanSu
+    public class BanCanSu
     {
         private string maSV;
         private string chucVu;

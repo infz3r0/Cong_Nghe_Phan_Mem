@@ -17,11 +17,12 @@ namespace UI_Tier
 {
     public partial class frmmain : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+        public static string username;
+
         public frmmain()
         {
-            
             InitializeComponent();
-         
+            username = "";
         }
 
         private void navBarControl1_Click(object sender, EventArgs e)
@@ -31,14 +32,9 @@ namespace UI_Tier
 
         private void frmmain_Load(object sender, EventArgs e)
         {
-            for(int i=0; i<100; i++)
-            {
-                Thread.Sleep(50);
-            }
-
             frmdangnhap f = new frmdangnhap();
             f.ShowDialog();
-
+            txtusername.EditValue = username;
         }
 
         private void btnthoat_Click_1(object sender, EventArgs e)
@@ -87,7 +83,7 @@ namespace UI_Tier
             {
                 frm.Activate();
             }
-           
+
         }
 
         private void navBarItem2_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
@@ -253,6 +249,14 @@ namespace UI_Tier
             {
                 frm.Activate();
             }
+        }
+
+        private void btnDangXuat_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            username = "";
+            txtusername.EditValue = username;
+            frmdangnhap f = new frmdangnhap();
+            f.ShowDialog();
         }
     }
 }

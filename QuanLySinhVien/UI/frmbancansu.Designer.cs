@@ -33,28 +33,28 @@
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.gridviewbcs = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbbchucvubancansu = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cbbhotenbancansu = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cbbmssvbancansu = new DevExpress.XtraEditors.ComboBoxEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.btnthoatbcs = new DevExpress.XtraEditors.SimpleButton();
             this.btnxoabcs = new DevExpress.XtraEditors.SimpleButton();
             this.btnsuabcs = new DevExpress.XtraEditors.SimpleButton();
             this.btnthembcs = new DevExpress.XtraEditors.SimpleButton();
-            this.cbbmssvbancansu = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.cbbhotenbancansu = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.cbbchucvubancansu = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.gridviewbcs)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbchucvubancansu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbhotenbancansu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbmssvbancansu.Properties)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbmssvbancansu.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbhotenbancansu.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbchucvubancansu.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // defaultLookAndFeel1
@@ -88,6 +88,45 @@
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin";
+            // 
+            // cbbchucvubancansu
+            // 
+            this.cbbchucvubancansu.Location = new System.Drawing.Point(143, 120);
+            this.cbbchucvubancansu.Name = "cbbchucvubancansu";
+            this.cbbchucvubancansu.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.cbbchucvubancansu.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.cbbchucvubancansu.Properties.Appearance.Options.UseBackColor = true;
+            this.cbbchucvubancansu.Properties.Appearance.Options.UseForeColor = true;
+            this.cbbchucvubancansu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbbchucvubancansu.Size = new System.Drawing.Size(275, 20);
+            this.cbbchucvubancansu.TabIndex = 2;
+            // 
+            // cbbhotenbancansu
+            // 
+            this.cbbhotenbancansu.Location = new System.Drawing.Point(143, 79);
+            this.cbbhotenbancansu.Name = "cbbhotenbancansu";
+            this.cbbhotenbancansu.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.cbbhotenbancansu.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.cbbhotenbancansu.Properties.Appearance.Options.UseBackColor = true;
+            this.cbbhotenbancansu.Properties.Appearance.Options.UseForeColor = true;
+            this.cbbhotenbancansu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbbhotenbancansu.Size = new System.Drawing.Size(275, 20);
+            this.cbbhotenbancansu.TabIndex = 1;
+            // 
+            // cbbmssvbancansu
+            // 
+            this.cbbmssvbancansu.Location = new System.Drawing.Point(143, 42);
+            this.cbbmssvbancansu.Name = "cbbmssvbancansu";
+            this.cbbmssvbancansu.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.cbbmssvbancansu.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.cbbmssvbancansu.Properties.Appearance.Options.UseBackColor = true;
+            this.cbbmssvbancansu.Properties.Appearance.Options.UseForeColor = true;
+            this.cbbmssvbancansu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbbmssvbancansu.Size = new System.Drawing.Size(275, 20);
+            this.cbbmssvbancansu.TabIndex = 0;
             // 
             // labelControl4
             // 
@@ -165,13 +204,13 @@
             this.btnthoatbcs.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnthoatbcs.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnthoatbcs.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnthoatbcs.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthoatkhoa.ImageOptions.Image")));
+            this.btnthoatbcs.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthoatbcs.ImageOptions.Image")));
             this.btnthoatbcs.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnthoatbcs.Location = new System.Drawing.Point(23, 161);
             this.btnthoatbcs.Name = "btnthoatbcs";
             this.btnthoatbcs.Size = new System.Drawing.Size(94, 36);
             this.btnthoatbcs.TabIndex = 24;
-            this.btnthoatbcs.Text = "Thoát";
+            this.btnthoatbcs.Text = "Đóng";
             this.btnthoatbcs.Click += new System.EventHandler(this.btnthoatbcs_Click);
             // 
             // btnxoabcs
@@ -184,7 +223,7 @@
             this.btnxoabcs.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnxoabcs.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnxoabcs.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnxoabcs.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnxoakhoa.ImageOptions.Image")));
+            this.btnxoabcs.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnxoabcs.ImageOptions.Image")));
             this.btnxoabcs.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnxoabcs.Location = new System.Drawing.Point(21, 111);
             this.btnxoabcs.Name = "btnxoabcs";
@@ -202,7 +241,7 @@
             this.btnsuabcs.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnsuabcs.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnsuabcs.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnsuabcs.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnsuakhoa.ImageOptions.Image")));
+            this.btnsuabcs.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnsuabcs.ImageOptions.Image")));
             this.btnsuabcs.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnsuabcs.Location = new System.Drawing.Point(21, 69);
             this.btnsuabcs.Name = "btnsuabcs";
@@ -220,52 +259,13 @@
             this.btnthembcs.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnthembcs.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnthembcs.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnthembcs.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthemkhoa.ImageOptions.Image")));
+            this.btnthembcs.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthembcs.ImageOptions.Image")));
             this.btnthembcs.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnthembcs.Location = new System.Drawing.Point(22, 25);
             this.btnthembcs.Name = "btnthembcs";
             this.btnthembcs.Size = new System.Drawing.Size(96, 32);
             this.btnthembcs.TabIndex = 0;
             this.btnthembcs.Text = "Thêm";
-            // 
-            // cbbmssvbancansu
-            // 
-            this.cbbmssvbancansu.Location = new System.Drawing.Point(143, 42);
-            this.cbbmssvbancansu.Name = "cbbmssvbancansu";
-            this.cbbmssvbancansu.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.cbbmssvbancansu.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.cbbmssvbancansu.Properties.Appearance.Options.UseBackColor = true;
-            this.cbbmssvbancansu.Properties.Appearance.Options.UseForeColor = true;
-            this.cbbmssvbancansu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbbmssvbancansu.Size = new System.Drawing.Size(275, 20);
-            this.cbbmssvbancansu.TabIndex = 3;
-            // 
-            // cbbhotenbancansu
-            // 
-            this.cbbhotenbancansu.Location = new System.Drawing.Point(143, 79);
-            this.cbbhotenbancansu.Name = "cbbhotenbancansu";
-            this.cbbhotenbancansu.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.cbbhotenbancansu.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.cbbhotenbancansu.Properties.Appearance.Options.UseBackColor = true;
-            this.cbbhotenbancansu.Properties.Appearance.Options.UseForeColor = true;
-            this.cbbhotenbancansu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbbhotenbancansu.Size = new System.Drawing.Size(275, 20);
-            this.cbbhotenbancansu.TabIndex = 4;
-            // 
-            // cbbchucvubancansu
-            // 
-            this.cbbchucvubancansu.Location = new System.Drawing.Point(143, 120);
-            this.cbbchucvubancansu.Name = "cbbchucvubancansu";
-            this.cbbchucvubancansu.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.cbbchucvubancansu.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.cbbchucvubancansu.Properties.Appearance.Options.UseBackColor = true;
-            this.cbbchucvubancansu.Properties.Appearance.Options.UseForeColor = true;
-            this.cbbchucvubancansu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbbchucvubancansu.Size = new System.Drawing.Size(275, 20);
-            this.cbbchucvubancansu.TabIndex = 5;
             // 
             // frmbancansu
             // 
@@ -283,12 +283,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridviewbcs)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbchucvubancansu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbhotenbancansu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbmssvbancansu.Properties)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbmssvbancansu.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbhotenbancansu.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbchucvubancansu.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

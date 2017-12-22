@@ -101,7 +101,7 @@
             this.btnthoatxem.Name = "btnthoatxem";
             this.btnthoatxem.Size = new System.Drawing.Size(99, 41);
             this.btnthoatxem.TabIndex = 24;
-            this.btnthoatxem.Text = "Thoát";
+            this.btnthoatxem.Text = "Đóng";
             this.btnthoatxem.Click += new System.EventHandler(this.btnthoatxem_Click);
             // 
             // groupBox3

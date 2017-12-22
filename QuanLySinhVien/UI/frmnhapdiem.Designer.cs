@@ -85,7 +85,7 @@
             this.btnthoatnhapdiem.Name = "btnthoatnhapdiem";
             this.btnthoatnhapdiem.Size = new System.Drawing.Size(99, 41);
             this.btnthoatnhapdiem.TabIndex = 24;
-            this.btnthoatnhapdiem.Text = "Thoát";
+            this.btnthoatnhapdiem.Text = "Đóng";
             this.btnthoatnhapdiem.Click += new System.EventHandler(this.btnthoatnhapdiem_Click);
             // 
             // btnsuadiem

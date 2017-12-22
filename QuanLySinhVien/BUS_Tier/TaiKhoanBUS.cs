@@ -9,7 +9,15 @@ using DATA_Tier;
 
 namespace BUS_Tier
 {
-    class TaiKhoanBUS
+    public class TaiKhoanBUS
     {
+        public bool DangNhap(TaiKhoan taikhoan)
+        {
+            if (taikhoan.Username.Equals("admin"))
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }

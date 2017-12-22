@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MODEL_Tier
 {
-    class TaiKhoan
+    public class TaiKhoan
     {
         private string username;
         private string password;

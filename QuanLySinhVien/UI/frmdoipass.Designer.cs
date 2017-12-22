@@ -139,7 +139,7 @@
             this.btnthoatdoipass.Name = "btnthoatdoipass";
             this.btnthoatdoipass.Size = new System.Drawing.Size(94, 36);
             this.btnthoatdoipass.TabIndex = 5;
-            this.btnthoatdoipass.Text = "Thoát";
+            this.btnthoatdoipass.Text = "Đóng";
             this.btnthoatdoipass.Click += new System.EventHandler(this.btnthoatdoipass_Click);
             // 
             // txtsuausename

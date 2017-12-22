@@ -115,7 +115,7 @@
             this.btnthoatlophp.Name = "btnthoatlophp";
             this.btnthoatlophp.Size = new System.Drawing.Size(97, 36);
             this.btnthoatlophp.TabIndex = 24;
-            this.btnthoatlophp.Text = "Thoát";
+            this.btnthoatlophp.Text = "Đóng";
             this.btnthoatlophp.Click += new System.EventHandler(this.btnthoatlophp_Click);
             // 
             // btnxoalophp

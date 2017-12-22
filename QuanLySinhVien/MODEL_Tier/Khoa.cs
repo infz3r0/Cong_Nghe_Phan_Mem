@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MODEL_Tier
 {
-    class Khoa
+    public class Khoa
     {
         private string maKhoa;
         private string tenKhoa;

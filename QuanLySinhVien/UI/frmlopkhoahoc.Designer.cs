@@ -158,7 +158,7 @@
             this.btnthoatlopkh.Name = "btnthoatlopkh";
             this.btnthoatlopkh.Size = new System.Drawing.Size(97, 36);
             this.btnthoatlopkh.TabIndex = 24;
-            this.btnthoatlopkh.Text = "Thoát";
+            this.btnthoatlopkh.Text = "Đóng";
             this.btnthoatlopkh.Click += new System.EventHandler(this.btnthoatlopkh_Click);
             // 
             // groupBox2

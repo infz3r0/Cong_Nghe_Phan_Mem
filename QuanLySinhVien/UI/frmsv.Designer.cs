@@ -391,7 +391,7 @@
             this.btnthoatsv.Name = "btnthoatsv";
             this.btnthoatsv.Size = new System.Drawing.Size(81, 38);
             this.btnthoatsv.TabIndex = 23;
-            this.btnthoatsv.Text = "Thoát";
+            this.btnthoatsv.Text = "Đóng";
             this.btnthoatsv.Click += new System.EventHandler(this.btnthoatsv_Click);
             // 
             // btnxoasv

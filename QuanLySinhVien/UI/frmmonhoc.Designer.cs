@@ -220,7 +220,7 @@
             this.btnthoathp.Name = "btnthoathp";
             this.btnthoathp.Size = new System.Drawing.Size(99, 41);
             this.btnthoathp.TabIndex = 24;
-            this.btnthoathp.Text = "Thoát";
+            this.btnthoathp.Text = "Đóng";
             this.btnthoathp.Click += new System.EventHandler(this.btnthoathp_Click);
             // 
             // btnxoahp

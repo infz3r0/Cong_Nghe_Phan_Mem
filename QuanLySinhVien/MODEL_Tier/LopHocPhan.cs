@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MODEL_Tier
 {
-    class LopHocPhan
+    public class LopHocPhan
     {
         private string maLopHP;
         private int soLuongSV;

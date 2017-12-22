@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MODEL_Tier
 {
-    class DanhSachLopHP
+    public class DanhSachLopHP
     {
         private string maLopHP;
         private string maSV;

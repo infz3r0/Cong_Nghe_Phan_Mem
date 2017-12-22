@@ -115,7 +115,7 @@
             this.btnthoatracuu.Name = "btnthoatracuu";
             this.btnthoatracuu.Size = new System.Drawing.Size(99, 32);
             this.btnthoatracuu.TabIndex = 2;
-            this.btnthoatracuu.Text = "Thoát";
+            this.btnthoatracuu.Text = "Đóng";
             this.btnthoatracuu.Click += new System.EventHandler(this.btnthoatracuu_Click);
             // 
             // labelControl1

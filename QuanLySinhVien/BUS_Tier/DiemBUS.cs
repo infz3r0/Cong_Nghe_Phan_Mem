@@ -9,7 +9,7 @@ using DATA_Tier;
 
 namespace BUS_Tier
 {
-    class DiemBUS
+    public class DiemBUS
     {
     }
 }

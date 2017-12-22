@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MODEL_Tier
 {
-    class Nhom
+    public class Nhom
     {
         private int gID;
         private string tenNhom;

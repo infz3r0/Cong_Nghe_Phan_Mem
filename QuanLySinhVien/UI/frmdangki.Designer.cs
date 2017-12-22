@@ -137,7 +137,7 @@
             this.btnthoatdk.Name = "btnthoatdk";
             this.btnthoatdk.Size = new System.Drawing.Size(94, 36);
             this.btnthoatdk.TabIndex = 5;
-            this.btnthoatdk.Text = "Thoát";
+            this.btnthoatdk.Text = "Đóng";
             this.btnthoatdk.Click += new System.EventHandler(this.btnthoatdk_Click);
             // 
             // txtusenamedk
