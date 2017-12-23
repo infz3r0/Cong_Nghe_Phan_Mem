@@ -41,9 +41,9 @@
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.txttenlophp = new DevExpress.XtraEditors.TextEdit();
-            this.txtslsv = new DevExpress.XtraEditors.TextEdit();
-            this.txtmlophp = new DevExpress.XtraEditors.TextEdit();
+            this.txtTenHPLopHP = new DevExpress.XtraEditors.TextEdit();
+            this.txtSLSVLopHP = new DevExpress.XtraEditors.TextEdit();
+            this.txtMaHPLopHP = new DevExpress.XtraEditors.TextEdit();
             this.txtmalophp = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
@@ -53,9 +53,9 @@
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txttenlophp.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtslsv.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtmlophp.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenHPLopHP.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSLSVLopHP.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaHPLopHP.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtmalophp.Properties)).BeginInit();
             this.SuspendLayout();
             // 
@@ -115,7 +115,7 @@
             this.btnthoatlophp.Name = "btnthoatlophp";
             this.btnthoatlophp.Size = new System.Drawing.Size(97, 36);
             this.btnthoatlophp.TabIndex = 24;
-            this.btnthoatlophp.Text = "Thoát";
+            this.btnthoatlophp.Text = "Đóng";
             this.btnthoatlophp.Click += new System.EventHandler(this.btnthoatlophp_Click);
             // 
             // btnxoalophp
@@ -177,9 +177,9 @@
             this.groupBox1.BackColor = System.Drawing.Color.White;
             this.groupBox1.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
             this.groupBox1.Controls.Add(this.labelControl1);
-            this.groupBox1.Controls.Add(this.txttenlophp);
-            this.groupBox1.Controls.Add(this.txtslsv);
-            this.groupBox1.Controls.Add(this.txtmlophp);
+            this.groupBox1.Controls.Add(this.txtTenHPLopHP);
+            this.groupBox1.Controls.Add(this.txtSLSVLopHP);
+            this.groupBox1.Controls.Add(this.txtMaHPLopHP);
             this.groupBox1.Controls.Add(this.txtmalophp);
             this.groupBox1.Controls.Add(this.labelControl5);
             this.groupBox1.Controls.Add(this.labelControl3);
@@ -201,50 +201,50 @@
             this.labelControl1.Appearance.Options.UseBackColor = true;
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.Location = new System.Drawing.Point(20, 114);
+            this.labelControl1.Location = new System.Drawing.Point(20, 117);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(117, 23);
             this.labelControl1.TabIndex = 5;
             this.labelControl1.Text = "Tên học phần";
             // 
-            // txttenlophp
+            // txtTenHPLopHP
             // 
-            this.txttenlophp.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txttenlophp.Location = new System.Drawing.Point(192, 116);
-            this.txttenlophp.Name = "txttenlophp";
-            this.txttenlophp.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txttenlophp.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.txttenlophp.Properties.Appearance.Options.UseBackColor = true;
-            this.txttenlophp.Properties.Appearance.Options.UseForeColor = true;
-            this.txttenlophp.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.txttenlophp.Size = new System.Drawing.Size(313, 20);
-            this.txttenlophp.TabIndex = 2;
+            this.txtTenHPLopHP.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTenHPLopHP.Location = new System.Drawing.Point(192, 116);
+            this.txtTenHPLopHP.Name = "txtTenHPLopHP";
+            this.txtTenHPLopHP.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtTenHPLopHP.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.txtTenHPLopHP.Properties.Appearance.Options.UseBackColor = true;
+            this.txtTenHPLopHP.Properties.Appearance.Options.UseForeColor = true;
+            this.txtTenHPLopHP.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.txtTenHPLopHP.Size = new System.Drawing.Size(313, 20);
+            this.txtTenHPLopHP.TabIndex = 2;
             // 
-            // txtslsv
+            // txtSLSVLopHP
             // 
-            this.txtslsv.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtslsv.Location = new System.Drawing.Point(192, 158);
-            this.txtslsv.Name = "txtslsv";
-            this.txtslsv.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txtslsv.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.txtslsv.Properties.Appearance.Options.UseBackColor = true;
-            this.txtslsv.Properties.Appearance.Options.UseForeColor = true;
-            this.txtslsv.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.txtslsv.Size = new System.Drawing.Size(313, 20);
-            this.txtslsv.TabIndex = 3;
+            this.txtSLSVLopHP.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSLSVLopHP.Location = new System.Drawing.Point(192, 158);
+            this.txtSLSVLopHP.Name = "txtSLSVLopHP";
+            this.txtSLSVLopHP.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtSLSVLopHP.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.txtSLSVLopHP.Properties.Appearance.Options.UseBackColor = true;
+            this.txtSLSVLopHP.Properties.Appearance.Options.UseForeColor = true;
+            this.txtSLSVLopHP.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.txtSLSVLopHP.Size = new System.Drawing.Size(313, 20);
+            this.txtSLSVLopHP.TabIndex = 3;
             // 
-            // txtmlophp
+            // txtMaHPLopHP
             // 
-            this.txtmlophp.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtmlophp.Location = new System.Drawing.Point(192, 77);
-            this.txtmlophp.Name = "txtmlophp";
-            this.txtmlophp.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txtmlophp.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.txtmlophp.Properties.Appearance.Options.UseBackColor = true;
-            this.txtmlophp.Properties.Appearance.Options.UseForeColor = true;
-            this.txtmlophp.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.txtmlophp.Size = new System.Drawing.Size(313, 20);
-            this.txtmlophp.TabIndex = 1;
+            this.txtMaHPLopHP.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMaHPLopHP.Location = new System.Drawing.Point(192, 77);
+            this.txtMaHPLopHP.Name = "txtMaHPLopHP";
+            this.txtMaHPLopHP.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtMaHPLopHP.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.txtMaHPLopHP.Properties.Appearance.Options.UseBackColor = true;
+            this.txtMaHPLopHP.Properties.Appearance.Options.UseForeColor = true;
+            this.txtMaHPLopHP.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.txtMaHPLopHP.Size = new System.Drawing.Size(313, 20);
+            this.txtMaHPLopHP.TabIndex = 1;
             // 
             // txtmalophp
             // 
@@ -309,6 +309,7 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmlophp";
             this.Text = "LỚP HỌC PHẦN";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmlophp_FormClosing);
@@ -318,9 +319,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txttenlophp.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtslsv.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtmlophp.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTenHPLopHP.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSLSVLopHP.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaHPLopHP.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtmalophp.Properties)).EndInit();
             this.ResumeLayout(false);
 
@@ -331,8 +332,8 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView gridviewkhoa;
         private System.Windows.Forms.GroupBox groupBox1;
-        private DevExpress.XtraEditors.TextEdit txtslsv;
-        private DevExpress.XtraEditors.TextEdit txtmlophp;
+        private DevExpress.XtraEditors.TextEdit txtSLSVLopHP;
+        private DevExpress.XtraEditors.TextEdit txtMaHPLopHP;
         private DevExpress.XtraEditors.TextEdit txtmalophp;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LabelControl labelControl3;
@@ -345,6 +346,6 @@
         private DevExpress.XtraEditors.SimpleButton btnthemlophp;
         private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.TextEdit txttenlophp;
+        private DevExpress.XtraEditors.TextEdit txtTenHPLopHP;
     }
 }

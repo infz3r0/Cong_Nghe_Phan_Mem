@@ -62,7 +62,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(492, 260);
+            this.groupBox1.Size = new System.Drawing.Size(477, 262);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin tài khoản";
@@ -137,7 +137,7 @@
             this.btnthoatdk.Name = "btnthoatdk";
             this.btnthoatdk.Size = new System.Drawing.Size(94, 36);
             this.btnthoatdk.TabIndex = 5;
-            this.btnthoatdk.Text = "Thoát";
+            this.btnthoatdk.Text = "Đóng";
             this.btnthoatdk.Click += new System.EventHandler(this.btnthoatdk_Click);
             // 
             // txtusenamedk
@@ -205,8 +205,9 @@
             this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Tile;
             this.BackgroundImageStore = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
             this.CancelButton = this.btnthoatdk;
-            this.ClientSize = new System.Drawing.Size(525, 286);
+            this.ClientSize = new System.Drawing.Size(506, 286);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmdangki";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ĐĂNG KÍ TÀI KHOẢN";

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MODEL_Tier
 {
-    class DieuKien
+    public class DieuKien
     {
         private string maHP;
         private string loaiDK;

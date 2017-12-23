@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DATA_Tier
 {
-    class MonHocDAO
+    public class MonHocDAO
     {
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::UI_Tier.frmload), true, true);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmmain));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnthoatmain = new DevExpress.XtraBars.BarButtonItem();
@@ -46,11 +47,9 @@
             this.txtusenameht = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
-            this.txttenht = new DevExpress.XtraBars.BarEditItem();
+            this.txtusername = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemTextEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
-            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.btnDangXuat = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
@@ -96,6 +95,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
             this.SuspendLayout();
             // 
+            // splashScreenManager1
+            // 
+            splashScreenManager1.ClosingDelay = 3000;
+            // 
             // ribbon
             // 
             this.ribbon.ColorScheme = DevExpress.XtraBars.Ribbon.RibbonControlColorScheme.DarkBlue;
@@ -112,14 +115,13 @@
             this.barEditItem4,
             this.txtusenameht,
             this.barStaticItem1,
-            this.txttenht,
-            this.barButtonItem4});
+            this.txtusername,
+            this.btnDangXuat});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ribbon.MaxItemId = 13;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.ribbonPage1,
             this.ribbonPage2});
             this.ribbon.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemDisplayFormat1,
@@ -154,6 +156,8 @@
             this.barButtonItem3.Id = 3;
             this.barButtonItem3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.Image")));
             this.barButtonItem3.Name = "barButtonItem3";
+            this.barButtonItem3.Visibility = DevExpress.XtraBars.BarItemVisibility.OnlyInRuntime;
+            this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
             // 
             // barEditItem1
             // 
@@ -245,37 +249,30 @@
             this.barStaticItem1.Id = 10;
             this.barStaticItem1.Name = "barStaticItem1";
             // 
-            // txttenht
+            // txtusername
             // 
-            this.txttenht.Caption = "Usename";
-            this.txttenht.Edit = this.repositoryItemTextEdit2;
-            this.txttenht.Id = 11;
-            this.txttenht.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("txttenht.ImageOptions.Image")));
-            this.txttenht.Name = "txttenht";
+            this.txtusername.Caption = "Usename";
+            this.txtusername.CaptionAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.txtusername.Edit = this.repositoryItemTextEdit2;
+            this.txtusername.EditValue = "";
+            this.txtusername.EditWidth = 120;
+            this.txtusername.Id = 11;
+            this.txtusername.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("txtusername.ImageOptions.Image")));
+            this.txtusername.Name = "txtusername";
             // 
             // repositoryItemTextEdit2
             // 
             this.repositoryItemTextEdit2.AutoHeight = false;
             this.repositoryItemTextEdit2.Name = "repositoryItemTextEdit2";
+            this.repositoryItemTextEdit2.ReadOnly = true;
             // 
-            // barButtonItem4
+            // btnDangXuat
             // 
-            this.barButtonItem4.Caption = "Đăng xuất";
-            this.barButtonItem4.Id = 12;
-            this.barButtonItem4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.Image")));
-            this.barButtonItem4.Name = "barButtonItem4";
-            // 
-            // ribbonPage1
-            // 
-            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup1});
-            this.ribbonPage1.Name = "ribbonPage1";
-            this.ribbonPage1.Text = "Hệ thống";
-            // 
-            // ribbonPageGroup1
-            // 
-            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.Text = "ribbonPageGroup1";
+            this.btnDangXuat.Caption = "Đăng xuất";
+            this.btnDangXuat.Id = 12;
+            this.btnDangXuat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDangXuat.ImageOptions.Image")));
+            this.btnDangXuat.Name = "btnDangXuat";
+            this.btnDangXuat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDangXuat_ItemClick);
             // 
             // ribbonPage2
             // 
@@ -292,8 +289,8 @@
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.ItemLinks.Add(this.txttenht);
-            this.ribbonStatusBar.ItemLinks.Add(this.barButtonItem4);
+            this.ribbonStatusBar.ItemLinks.Add(this.txtusername);
+            this.ribbonStatusBar.ItemLinks.Add(this.btnDangXuat);
             this.ribbonStatusBar.Location = new System.Drawing.Point(0, 418);
             this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
@@ -337,7 +334,7 @@
             this.dockPanel1.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
             this.dockPanel1.ID = new System.Guid("28d9130a-5615-4bcb-9cc3-1cda02a8dd3d");
             this.dockPanel1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("dockPanel1.ImageOptions.Image")));
-            this.dockPanel1.Location = new System.Drawing.Point(0, 0);
+            this.dockPanel1.Location = new System.Drawing.Point(42, 93);
             this.dockPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dockPanel1.Name = "dockPanel1";
             this.dockPanel1.Options.ShowCloseButton = false;
@@ -404,7 +401,6 @@
             this.navBarGroup1.AppearancePressed.FontSizeDelta = 14;
             this.navBarGroup1.AppearancePressed.Options.UseFont = true;
             this.navBarGroup1.Caption = "Quản lí";
-            this.navBarGroup1.Expanded = true;
             this.navBarGroup1.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarGroup1.ImageOptions.SmallImage")));
             this.navBarGroup1.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem1),
@@ -601,6 +597,7 @@
             this.navBarItem15.Caption = "Bảng điểm hệ 4";
             this.navBarItem15.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem15.ImageOptions.SmallImage")));
             this.navBarItem15.Name = "navBarItem15";
+            this.navBarItem15.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem15_LinkClicked);
             // 
             // frmmain
             // 
@@ -649,8 +646,6 @@
         #endregion
 
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbon;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar;
         private DevExpress.XtraBars.BarButtonItem btnthoatmain;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
@@ -688,16 +683,16 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit1;
         private DevExpress.XtraBars.BarEditItem barEditItem4;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit2;
-        private DevExpress.XtraBars.Docking.AutoHideContainer hideContainerLeft;
         private DevExpress.XtraBars.BarEditItem txtusenameht;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
         private DevExpress.XtraBars.BarStaticItem barStaticItem1;
-        private DevExpress.XtraBars.BarEditItem txttenht;
+        private DevExpress.XtraBars.BarEditItem txtusername;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit2;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem4;
+        private DevExpress.XtraBars.BarButtonItem btnDangXuat;
         private DevExpress.XtraNavBar.NavBarItem navBarItem13;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup6;
         private DevExpress.XtraNavBar.NavBarItem navBarItem14;
         private DevExpress.XtraNavBar.NavBarItem navBarItem15;
+        private DevExpress.XtraBars.Docking.AutoHideContainer hideContainerLeft;
     }
 }

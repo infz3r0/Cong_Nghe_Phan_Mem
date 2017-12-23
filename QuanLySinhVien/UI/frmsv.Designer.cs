@@ -76,7 +76,7 @@
             // 
             this.txtcmndsv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtcmndsv.ForeColor = System.Drawing.Color.Black;
-            this.txtcmndsv.Location = new System.Drawing.Point(120, 253);
+            this.txtcmndsv.Location = new System.Drawing.Point(120, 251);
             this.txtcmndsv.Mask = "0000000000";
             this.txtcmndsv.Name = "txtcmndsv";
             this.txtcmndsv.PromptChar = ' ';
@@ -87,7 +87,7 @@
             // 
             this.txtdienthoaisv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtdienthoaisv.ForeColor = System.Drawing.Color.Black;
-            this.txtdienthoaisv.Location = new System.Drawing.Point(120, 298);
+            this.txtdienthoaisv.Location = new System.Drawing.Point(120, 296);
             this.txtdienthoaisv.Mask = "000000000000000";
             this.txtdienthoaisv.Name = "txtdienthoaisv";
             this.txtdienthoaisv.PromptChar = ' ';
@@ -97,7 +97,7 @@
             // txtmailsv
             // 
             this.txtmailsv.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtmailsv.Location = new System.Drawing.Point(120, 336);
+            this.txtmailsv.Location = new System.Drawing.Point(120, 334);
             this.txtmailsv.Name = "txtmailsv";
             this.txtmailsv.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtmailsv.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
@@ -129,9 +129,9 @@
             this.groupBox1.Controls.Add(this.labelControl2);
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(9, 15);
+            this.groupBox1.Location = new System.Drawing.Point(9, 5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(414, 377);
+            this.groupBox1.Size = new System.Drawing.Size(414, 401);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin";
@@ -202,8 +202,7 @@
             this.txtmssv.BackColor = System.Drawing.Color.White;
             this.txtmssv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtmssv.ForeColor = System.Drawing.Color.Black;
-            this.txtmssv.Location = new System.Drawing.Point(120, 36);
-            this.txtmssv.Mask = "0000000000";
+            this.txtmssv.Location = new System.Drawing.Point(120, 39);
             this.txtmssv.Name = "txtmssv";
             this.txtmssv.PromptChar = ' ';
             this.txtmssv.Size = new System.Drawing.Size(266, 19);
@@ -287,7 +286,7 @@
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Appearance.Options.UseForeColor = true;
-            this.labelControl2.Location = new System.Drawing.Point(20, 39);
+            this.labelControl2.Location = new System.Drawing.Point(20, 37);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(40, 23);
             this.labelControl2.TabIndex = 0;
@@ -323,9 +322,9 @@
             this.groupBox3.Controls.Add(this.gridviewsv);
             this.groupBox3.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox3.ForeColor = System.Drawing.Color.White;
-            this.groupBox3.Location = new System.Drawing.Point(429, 15);
+            this.groupBox3.Location = new System.Drawing.Point(429, 5);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(691, 459);
+            this.groupBox3.Size = new System.Drawing.Size(771, 483);
             this.groupBox3.TabIndex = 24;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông tin chi tiết";
@@ -337,7 +336,7 @@
             this.gridviewsv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridviewsv.Location = new System.Drawing.Point(6, 20);
             this.gridviewsv.Name = "gridviewsv";
-            this.gridviewsv.Size = new System.Drawing.Size(679, 427);
+            this.gridviewsv.Size = new System.Drawing.Size(759, 457);
             this.gridviewsv.TabIndex = 9;
             // 
             // btnsuasv
@@ -367,7 +366,7 @@
             this.groupBox2.Controls.Add(this.btnthemsv);
             this.groupBox2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(9, 398);
+            this.groupBox2.Location = new System.Drawing.Point(9, 412);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(414, 76);
             this.groupBox2.TabIndex = 23;
@@ -391,7 +390,7 @@
             this.btnthoatsv.Name = "btnthoatsv";
             this.btnthoatsv.Size = new System.Drawing.Size(81, 38);
             this.btnthoatsv.TabIndex = 23;
-            this.btnthoatsv.Text = "Thoát";
+            this.btnthoatsv.Text = "Đóng";
             this.btnthoatsv.Click += new System.EventHandler(this.btnthoatsv_Click);
             // 
             // btnxoasv
@@ -420,12 +419,13 @@
             this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Tile;
             this.BackgroundImageStore = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
             this.CancelButton = this.btnthoatsv;
-            this.ClientSize = new System.Drawing.Size(1132, 483);
+            this.ClientSize = new System.Drawing.Size(1212, 500);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmsv";
-            this.Text = "frmsv";
+            this.Text = "QUẢN LÍ SINH VIÊN";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmsv_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.txtmailsv.Properties)).EndInit();
             this.groupBox1.ResumeLayout(false);

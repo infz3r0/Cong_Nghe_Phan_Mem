@@ -40,9 +40,9 @@
             this.gridviewnhapdiem = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbbMssvNhapDiem = new DevExpress.XtraEditors.ComboBoxEdit();
             this.txtdiemthinhap = new System.Windows.Forms.MaskedTextBox();
             this.txtdiemqtnhap = new System.Windows.Forms.MaskedTextBox();
-            this.txtmssvnhapdiem = new System.Windows.Forms.MaskedTextBox();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -51,6 +51,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridviewnhapdiem)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbMssvNhapDiem.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -81,11 +82,11 @@
             this.btnthoatnhapdiem.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnthoatnhapdiem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthoatnhapdiem.ImageOptions.Image")));
             this.btnthoatnhapdiem.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnthoatnhapdiem.Location = new System.Drawing.Point(22, 161);
+            this.btnthoatnhapdiem.Location = new System.Drawing.Point(22, 153);
             this.btnthoatnhapdiem.Name = "btnthoatnhapdiem";
-            this.btnthoatnhapdiem.Size = new System.Drawing.Size(99, 41);
+            this.btnthoatnhapdiem.Size = new System.Drawing.Size(99, 31);
             this.btnthoatnhapdiem.TabIndex = 24;
-            this.btnthoatnhapdiem.Text = "Thoát";
+            this.btnthoatnhapdiem.Text = "Đóng";
             this.btnthoatnhapdiem.Click += new System.EventHandler(this.btnthoatnhapdiem_Click);
             // 
             // btnsuadiem
@@ -100,9 +101,9 @@
             this.btnsuadiem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnsuadiem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnsuadiem.ImageOptions.Image")));
             this.btnsuadiem.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnsuadiem.Location = new System.Drawing.Point(23, 92);
+            this.btnsuadiem.Location = new System.Drawing.Point(21, 95);
             this.btnsuadiem.Name = "btnsuadiem";
-            this.btnsuadiem.Size = new System.Drawing.Size(100, 41);
+            this.btnsuadiem.Size = new System.Drawing.Size(100, 31);
             this.btnsuadiem.TabIndex = 1;
             this.btnsuadiem.Text = "Sửa ";
             // 
@@ -118,9 +119,9 @@
             this.btnthemdiem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnthemdiem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthemdiem.ImageOptions.Image")));
             this.btnthemdiem.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnthemdiem.Location = new System.Drawing.Point(23, 23);
+            this.btnthemdiem.Location = new System.Drawing.Point(22, 39);
             this.btnthemdiem.Name = "btnthemdiem";
-            this.btnthemdiem.Size = new System.Drawing.Size(99, 41);
+            this.btnthemdiem.Size = new System.Drawing.Size(99, 30);
             this.btnthemdiem.TabIndex = 0;
             this.btnthemdiem.Text = "Thêm";
             // 
@@ -155,9 +156,9 @@
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
             this.groupBox1.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
+            this.groupBox1.Controls.Add(this.cbbMssvNhapDiem);
             this.groupBox1.Controls.Add(this.txtdiemthinhap);
             this.groupBox1.Controls.Add(this.txtdiemqtnhap);
-            this.groupBox1.Controls.Add(this.txtmssvnhapdiem);
             this.groupBox1.Controls.Add(this.labelControl5);
             this.groupBox1.Controls.Add(this.labelControl4);
             this.groupBox1.Controls.Add(this.labelControl2);
@@ -170,6 +171,19 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin";
             // 
+            // cbbMssvNhapDiem
+            // 
+            this.cbbMssvNhapDiem.Location = new System.Drawing.Point(156, 39);
+            this.cbbMssvNhapDiem.Name = "cbbMssvNhapDiem";
+            this.cbbMssvNhapDiem.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.cbbMssvNhapDiem.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.cbbMssvNhapDiem.Properties.Appearance.Options.UseBackColor = true;
+            this.cbbMssvNhapDiem.Properties.Appearance.Options.UseForeColor = true;
+            this.cbbMssvNhapDiem.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbbMssvNhapDiem.Size = new System.Drawing.Size(220, 20);
+            this.cbbMssvNhapDiem.TabIndex = 0;
+            // 
             // txtdiemthinhap
             // 
             this.txtdiemthinhap.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -179,7 +193,7 @@
             this.txtdiemthinhap.Name = "txtdiemthinhap";
             this.txtdiemthinhap.PromptChar = ' ';
             this.txtdiemthinhap.Size = new System.Drawing.Size(220, 19);
-            this.txtdiemthinhap.TabIndex = 7;
+            this.txtdiemthinhap.TabIndex = 2;
             this.txtdiemthinhap.ValidatingType = typeof(int);
             // 
             // txtdiemqtnhap
@@ -191,19 +205,8 @@
             this.txtdiemqtnhap.Name = "txtdiemqtnhap";
             this.txtdiemqtnhap.PromptChar = ' ';
             this.txtdiemqtnhap.Size = new System.Drawing.Size(220, 19);
-            this.txtdiemqtnhap.TabIndex = 6;
+            this.txtdiemqtnhap.TabIndex = 1;
             this.txtdiemqtnhap.ValidatingType = typeof(int);
-            // 
-            // txtmssvnhapdiem
-            // 
-            this.txtmssvnhapdiem.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtmssvnhapdiem.ForeColor = System.Drawing.Color.Black;
-            this.txtmssvnhapdiem.Location = new System.Drawing.Point(156, 41);
-            this.txtmssvnhapdiem.Mask = "0000000000";
-            this.txtmssvnhapdiem.Name = "txtmssvnhapdiem";
-            this.txtmssvnhapdiem.PromptChar = ' ';
-            this.txtmssvnhapdiem.Size = new System.Drawing.Size(220, 19);
-            this.txtmssvnhapdiem.TabIndex = 0;
             // 
             // labelControl5
             // 
@@ -253,6 +256,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmnhapdiem";
             this.Text = "NHẬP ĐIỂM";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmnhapdiem_FormClosing);
@@ -262,6 +266,7 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbMssvNhapDiem.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -281,8 +286,8 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.MaskedTextBox txtmssvnhapdiem;
         private System.Windows.Forms.MaskedTextBox txtdiemthinhap;
         private System.Windows.Forms.MaskedTextBox txtdiemqtnhap;
+        private DevExpress.XtraEditors.ComboBoxEdit cbbMssvNhapDiem;
     }
 }

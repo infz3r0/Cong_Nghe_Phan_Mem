@@ -35,7 +35,7 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.gridviewlopkh = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cbtenkhoalopkh = new System.Windows.Forms.ComboBox();
+            this.cbbTenKhoaLopKH = new DevExpress.XtraEditors.ComboBoxEdit();
             this.txtmalopkhoahoc = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -51,6 +51,7 @@
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridviewlopkh)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbTenKhoaLopKH.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtmalopkhoahoc.Properties)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager2)).BeginInit();
@@ -83,7 +84,7 @@
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
             this.groupBox1.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
-            this.groupBox1.Controls.Add(this.cbtenkhoalopkh);
+            this.groupBox1.Controls.Add(this.cbbTenKhoaLopKH);
             this.groupBox1.Controls.Add(this.txtmalopkhoahoc);
             this.groupBox1.Controls.Add(this.labelControl5);
             this.groupBox1.Controls.Add(this.labelControl2);
@@ -96,13 +97,18 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin";
             // 
-            // cbtenkhoalopkh
+            // cbbTenKhoaLopKH
             // 
-            this.cbtenkhoalopkh.FormattingEnabled = true;
-            this.cbtenkhoalopkh.Location = new System.Drawing.Point(156, 118);
-            this.cbtenkhoalopkh.Name = "cbtenkhoalopkh";
-            this.cbtenkhoalopkh.Size = new System.Drawing.Size(220, 26);
-            this.cbtenkhoalopkh.TabIndex = 4;
+            this.cbbTenKhoaLopKH.Location = new System.Drawing.Point(156, 117);
+            this.cbbTenKhoaLopKH.Name = "cbbTenKhoaLopKH";
+            this.cbbTenKhoaLopKH.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.cbbTenKhoaLopKH.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.cbbTenKhoaLopKH.Properties.Appearance.Options.UseBackColor = true;
+            this.cbbTenKhoaLopKH.Properties.Appearance.Options.UseForeColor = true;
+            this.cbbTenKhoaLopKH.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbbTenKhoaLopKH.Size = new System.Drawing.Size(220, 20);
+            this.cbbTenKhoaLopKH.TabIndex = 1;
             // 
             // txtmalopkhoahoc
             // 
@@ -158,7 +164,7 @@
             this.btnthoatlopkh.Name = "btnthoatlopkh";
             this.btnthoatlopkh.Size = new System.Drawing.Size(97, 36);
             this.btnthoatlopkh.TabIndex = 24;
-            this.btnthoatlopkh.Text = "Thoát";
+            this.btnthoatlopkh.Text = "Đóng";
             this.btnthoatlopkh.Click += new System.EventHandler(this.btnthoatlopkh_Click);
             // 
             // groupBox2
@@ -247,6 +253,7 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.Name = "frmlopkhoahoc";
             this.Text = "LỚP KHÓA HỌC";
@@ -256,6 +263,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridviewlopkh)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbTenKhoaLopKH.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtmalopkhoahoc.Properties)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager2)).EndInit();
@@ -280,6 +288,6 @@
         private DevExpress.XtraEditors.SimpleButton btnthemlopkh;
         private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager2;
         private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel1;
-        private System.Windows.Forms.ComboBox cbtenkhoalopkh;
+        private DevExpress.XtraEditors.ComboBoxEdit cbbTenKhoaLopKH;
     }
 }

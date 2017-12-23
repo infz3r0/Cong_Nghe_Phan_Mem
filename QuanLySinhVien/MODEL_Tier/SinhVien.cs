@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MODEL_Tier
 {
-    class SinhVien
+    public class SinhVien
     {
         private string maSV;
         private string hoTen;

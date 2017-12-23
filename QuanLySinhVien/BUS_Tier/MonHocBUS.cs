@@ -6,10 +6,40 @@ using System.Threading.Tasks;
 
 using MODEL_Tier;
 using DATA_Tier;
+using System.Data;
 
 namespace BUS_Tier
 {
-    class MonHocBUS
+    public class MonHocBUS
     {
+        private MonHocDAO monHocDAO = new MonHocDAO();
+
+        public DataTable DanhSach()
+        {
+            DataTable dt = new DataTable();
+
+            return dt;
+        }
+
+        public bool Them(MonHoc monHoc)
+        {
+            bool result = false;
+
+            return result;
+        }
+
+        public bool Xoa(MonHoc monHoc)
+        {
+            bool result = false;
+
+            return result;
+        }
+
+        public bool Sua(MonHoc monHoc)
+        {
+            bool result = false;
+
+            return result;
+        }
     }
 }

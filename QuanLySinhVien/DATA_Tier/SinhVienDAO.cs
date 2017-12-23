@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DATA_Tier
 {
-    class SinhVienDAO
+    public class SinhVienDAO
     {
         public DataTable getAll()
         {

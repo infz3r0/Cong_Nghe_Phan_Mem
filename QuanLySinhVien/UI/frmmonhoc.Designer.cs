@@ -220,7 +220,7 @@
             this.btnthoathp.Name = "btnthoathp";
             this.btnthoathp.Size = new System.Drawing.Size(99, 41);
             this.btnthoathp.TabIndex = 24;
-            this.btnthoathp.Text = "Thoát";
+            this.btnthoathp.Text = "Đóng";
             this.btnthoathp.Click += new System.EventHandler(this.btnthoathp_Click);
             // 
             // btnxoahp
@@ -306,6 +306,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmmonhoc";
             this.Text = "QUẢN LÍ MÔN HỌC";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmmonhoc_FormClosing);

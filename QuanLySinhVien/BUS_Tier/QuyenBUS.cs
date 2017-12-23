@@ -6,10 +6,40 @@ using System.Threading.Tasks;
 
 using MODEL_Tier;
 using DATA_Tier;
+using System.Data;
 
 namespace BUS_Tier
 {
-    class QuyenBUS
+    public class QuyenBUS
     {
+        private QuyenDAO quyenDAO = new QuyenDAO();
+
+        public DataTable DanhSach()
+        {
+            DataTable dt = new DataTable();
+
+            return dt;
+        }
+
+        public bool Them(Quyen quyen)
+        {
+            bool result = false;
+
+            return result;
+        }
+
+        public bool Xoa(Quyen quyen)
+        {
+            bool result = false;
+
+            return result;
+        }
+
+        public bool Sua(Quyen quyen)
+        {
+            bool result = false;
+
+            return result;
+        }
     }
 }

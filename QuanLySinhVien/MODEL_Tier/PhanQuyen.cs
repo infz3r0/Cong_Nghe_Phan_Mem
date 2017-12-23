@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MODEL_Tier
 {
-    class PhanQuyen
+    public class PhanQuyen
     {
         private int gID;
         private int maQuyen;

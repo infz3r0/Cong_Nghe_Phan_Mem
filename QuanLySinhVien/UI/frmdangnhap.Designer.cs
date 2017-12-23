@@ -31,21 +31,21 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmdangnhap));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtPassword = new DevExpress.XtraEditors.TextEdit();
             this.txtusename = new DevExpress.XtraEditors.TextEdit();
             this.btndangnhap = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtusename.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.textEdit1);
+            this.groupBox1.Controls.Add(this.txtPassword);
             this.groupBox1.Controls.Add(this.txtusename);
             this.groupBox1.Controls.Add(this.btndangnhap);
             this.groupBox1.Controls.Add(this.labelControl4);
@@ -60,20 +60,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin đăng nhập";
             // 
-            // textEdit1
+            // txtPassword
             // 
-            this.textEdit1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textEdit1.EditValue = "";
-            this.textEdit1.Location = new System.Drawing.Point(125, 85);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.textEdit1.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.textEdit1.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit1.Properties.Appearance.Options.UseForeColor = true;
-            this.textEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.textEdit1.Properties.PasswordChar = '*';
-            this.textEdit1.Size = new System.Drawing.Size(220, 20);
-            this.textEdit1.TabIndex = 1;
+            this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPassword.EditValue = "";
+            this.txtPassword.Location = new System.Drawing.Point(125, 85);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtPassword.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.txtPassword.Properties.Appearance.Options.UseBackColor = true;
+            this.txtPassword.Properties.Appearance.Options.UseForeColor = true;
+            this.txtPassword.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.txtPassword.Properties.MaxLength = 100;
+            this.txtPassword.Properties.NullValuePrompt = "Nhập password";
+            this.txtPassword.Properties.NullValuePromptShowForEmptyValue = true;
+            this.txtPassword.Properties.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(220, 20);
+            this.txtPassword.TabIndex = 1;
             // 
             // txtusename
             // 
@@ -87,6 +90,9 @@
             this.txtusename.Properties.Appearance.Options.UseForeColor = true;
             this.txtusename.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.txtusename.Properties.Mask.EditMask = "p3";
+            this.txtusename.Properties.MaxLength = 30;
+            this.txtusename.Properties.NullValuePrompt = "Nhập username";
+            this.txtusename.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtusename.Size = new System.Drawing.Size(220, 20);
             this.txtusename.TabIndex = 0;
             // 
@@ -102,11 +108,12 @@
             this.btndangnhap.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btndangnhap.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btndangnhap.ImageOptions.Image")));
             this.btndangnhap.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btndangnhap.Location = new System.Drawing.Point(177, 131);
+            this.btndangnhap.Location = new System.Drawing.Point(170, 131);
             this.btndangnhap.Name = "btndangnhap";
             this.btndangnhap.Size = new System.Drawing.Size(112, 36);
             this.btndangnhap.TabIndex = 4;
             this.btndangnhap.Text = "Đăng nhập";
+            this.btndangnhap.Click += new System.EventHandler(this.btndangnhap_Click);
             // 
             // labelControl4
             // 
@@ -146,13 +153,15 @@
             this.ClientSize = new System.Drawing.Size(429, 222);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmdangnhap";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ĐĂNG NHẬP HỆ THỐNG";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmdangnhap_FormClosing);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtusename.Properties)).EndInit();
             this.ResumeLayout(false);
 
@@ -161,7 +170,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txtPassword;
         private DevExpress.XtraEditors.TextEdit txtusename;
         private DevExpress.XtraEditors.SimpleButton btndangnhap;
         private DevExpress.XtraEditors.LabelControl labelControl4;

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DATA_Tier
 {
-    class DBConnect
+    public class DBConnect
     {
         private string connect = @"Data Source=DESKTOP-2VGDSHC;Initial Catalog=QLSVDB;Integrated Security=True";
 

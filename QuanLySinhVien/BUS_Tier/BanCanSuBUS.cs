@@ -6,10 +6,40 @@ using System.Threading.Tasks;
 
 using MODEL_Tier;
 using DATA_Tier;
+using System.Data;
 
 namespace BUS_Tier
 {
-    class BanCanSuBUS
+    public class BanCanSuBUS
     {
+        private BanCanSuDAO banCanSuDAO = new BanCanSuDAO();
+
+        public DataTable DanhSach()
+        {
+            DataTable dt = new DataTable();
+
+            return dt;
+        }
+
+        public bool Them(BanCanSu banCanSu)
+        {
+            bool result = false;
+
+            return result;
+        }
+
+        public bool Xoa(BanCanSu banCanSu)
+        {
+            bool result = false;
+
+            return result;
+        }
+
+        public bool Sua(BanCanSu banCanSu)
+        {
+            bool result = false;
+
+            return result;
+        }
     }
 }

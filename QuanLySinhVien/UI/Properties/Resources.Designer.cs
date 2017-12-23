@@ -193,6 +193,16 @@ namespace UI_Tier.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Sự_kiện_thi_thử_thpt_quốc_gia_1467011959058 {
+            get {
+                object obj = ResourceManager.GetObject("Sự kiện thi thử thpt quốc gia-1467011959058", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap summer_dandelion_landscape_1920x12001_1170x731 {
             get {
                 object obj = ResourceManager.GetObject("summer-dandelion-landscape-1920x12001-1170x731", resourceCulture);

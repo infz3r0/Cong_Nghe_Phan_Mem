@@ -16,31 +16,53 @@ namespace UI_Tier
 {
     public partial class frmdangnhap : DevExpress.XtraEditors.XtraForm
     {
+        private bool dadangnhap;
+
         public frmdangnhap()
         {
             InitializeComponent();
-        }
 
-        private void hyperlinkLabeCntrol1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void hypertextdk_Click(object sender, EventArgs e)
-        {
-            frmdangki f = new frmdangki();
-            f.ShowDialog();
-        }
-
-        private void btnhthoatdangnhap_Click(object sender, EventArgs e)
-        {
-            Close();
+            dadangnhap = false;
         }
 
         private void frmdangnhap_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult dlr = MessageBox.Show("Bạn muốn thoát?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dlr == DialogResult.No) e.Cancel = true;
+            if (!dadangnhap)
+            {
+                DialogResult dlr = MessageBox.Show("Bạn muốn thoát chương trình?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dlr == DialogResult.No)
+                {
+                    e.Cancel = true;
+                }
+                else
+                {
+                    this.DialogResult = DialogResult.Yes;
+                }
+            }
         }
+
+        private void btndangnhap_Click(object sender, EventArgs e)
+        {
+            TaiKhoanBUS taikhoanBUS = new TaiKhoanBUS();
+            TaiKhoan taikhoan = new TaiKhoan();
+
+            taikhoan.Username = txtusename.Text;
+            taikhoan.Password = txtPassword.Text;
+
+            bool thanhcong = taikhoanBUS.DangNhap(taikhoan);
+            
+            if (thanhcong)
+            {
+                dadangnhap = true;
+                frmmain.username = txtusename.Text;
+                Dispose();
+            }
+            else
+            {
+                MessageBox.Show("Sai thông tin đăng nhập", "Lỗi đăng nhập", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        
     }
 }

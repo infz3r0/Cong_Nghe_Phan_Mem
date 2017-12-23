@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MODEL_Tier
 {
-    class MonHoc
+    public class MonHoc
     {
         private string maHP;
         private string tenHP;
