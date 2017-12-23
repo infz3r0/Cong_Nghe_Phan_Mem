@@ -42,15 +42,16 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtdiemthinhap = new System.Windows.Forms.MaskedTextBox();
             this.txtdiemqtnhap = new System.Windows.Forms.MaskedTextBox();
-            this.txtmssvnhapdiem = new System.Windows.Forms.MaskedTextBox();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.cbbMssvNhapDiem = new DevExpress.XtraEditors.ComboBoxEdit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridviewnhapdiem)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbMssvNhapDiem.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -155,9 +156,9 @@
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
             this.groupBox1.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
+            this.groupBox1.Controls.Add(this.cbbMssvNhapDiem);
             this.groupBox1.Controls.Add(this.txtdiemthinhap);
             this.groupBox1.Controls.Add(this.txtdiemqtnhap);
-            this.groupBox1.Controls.Add(this.txtmssvnhapdiem);
             this.groupBox1.Controls.Add(this.labelControl5);
             this.groupBox1.Controls.Add(this.labelControl4);
             this.groupBox1.Controls.Add(this.labelControl2);
@@ -193,17 +194,6 @@
             this.txtdiemqtnhap.Size = new System.Drawing.Size(220, 19);
             this.txtdiemqtnhap.TabIndex = 6;
             this.txtdiemqtnhap.ValidatingType = typeof(int);
-            // 
-            // txtmssvnhapdiem
-            // 
-            this.txtmssvnhapdiem.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtmssvnhapdiem.ForeColor = System.Drawing.Color.Black;
-            this.txtmssvnhapdiem.Location = new System.Drawing.Point(156, 41);
-            this.txtmssvnhapdiem.Mask = "0000000000";
-            this.txtmssvnhapdiem.Name = "txtmssvnhapdiem";
-            this.txtmssvnhapdiem.PromptChar = ' ';
-            this.txtmssvnhapdiem.Size = new System.Drawing.Size(220, 19);
-            this.txtmssvnhapdiem.TabIndex = 0;
             // 
             // labelControl5
             // 
@@ -241,6 +231,19 @@
             this.labelControl2.TabIndex = 0;
             this.labelControl2.Text = "Mssv";
             // 
+            // cbbMssvNhapDiem
+            // 
+            this.cbbMssvNhapDiem.Location = new System.Drawing.Point(156, 39);
+            this.cbbMssvNhapDiem.Name = "cbbMssvNhapDiem";
+            this.cbbMssvNhapDiem.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.cbbMssvNhapDiem.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.cbbMssvNhapDiem.Properties.Appearance.Options.UseBackColor = true;
+            this.cbbMssvNhapDiem.Properties.Appearance.Options.UseForeColor = true;
+            this.cbbMssvNhapDiem.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbbMssvNhapDiem.Size = new System.Drawing.Size(220, 20);
+            this.cbbMssvNhapDiem.TabIndex = 8;
+            // 
             // frmnhapdiem
             // 
             this.AcceptButton = this.btnthemdiem;
@@ -253,6 +256,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmnhapdiem";
             this.Text = "NHẬP ĐIỂM";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmnhapdiem_FormClosing);
@@ -262,6 +266,7 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbMssvNhapDiem.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -281,8 +286,8 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.MaskedTextBox txtmssvnhapdiem;
         private System.Windows.Forms.MaskedTextBox txtdiemthinhap;
         private System.Windows.Forms.MaskedTextBox txtdiemqtnhap;
+        private DevExpress.XtraEditors.ComboBoxEdit cbbMssvNhapDiem;
     }
 }
