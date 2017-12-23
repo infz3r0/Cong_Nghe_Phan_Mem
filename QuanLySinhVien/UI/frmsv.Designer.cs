@@ -203,7 +203,6 @@
             this.txtmssv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtmssv.ForeColor = System.Drawing.Color.Black;
             this.txtmssv.Location = new System.Drawing.Point(120, 36);
-            this.txtmssv.Mask = "0000000000";
             this.txtmssv.Name = "txtmssv";
             this.txtmssv.PromptChar = ' ';
             this.txtmssv.Size = new System.Drawing.Size(266, 19);
@@ -424,8 +423,9 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmsv";
-            this.Text = "frmsv";
+            this.Text = "QUẢN LÍ SINH VIÊN";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmsv_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.txtmailsv.Properties)).EndInit();
             this.groupBox1.ResumeLayout(false);

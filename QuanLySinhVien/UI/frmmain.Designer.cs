@@ -253,6 +253,7 @@
             // txtusername
             // 
             this.txtusername.Caption = "Usename";
+            this.txtusername.CaptionAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtusername.Edit = this.repositoryItemTextEdit2;
             this.txtusername.EditValue = "";
             this.txtusername.EditWidth = 120;
@@ -264,6 +265,7 @@
             // 
             this.repositoryItemTextEdit2.AutoHeight = false;
             this.repositoryItemTextEdit2.Name = "repositoryItemTextEdit2";
+            this.repositoryItemTextEdit2.ReadOnly = true;
             // 
             // btnDangXuat
             // 
@@ -412,7 +414,6 @@
             this.navBarGroup1.AppearancePressed.FontSizeDelta = 14;
             this.navBarGroup1.AppearancePressed.Options.UseFont = true;
             this.navBarGroup1.Caption = "Quản lí";
-            this.navBarGroup1.Expanded = true;
             this.navBarGroup1.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarGroup1.ImageOptions.SmallImage")));
             this.navBarGroup1.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem1),
@@ -591,7 +592,6 @@
             this.navBarGroup6.AppearancePressed.FontSizeDelta = 14;
             this.navBarGroup6.AppearancePressed.Options.UseFont = true;
             this.navBarGroup6.Caption = "Cài đặt";
-            this.navBarGroup6.Expanded = true;
             this.navBarGroup6.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarGroup6.ImageOptions.SmallImage")));
             this.navBarGroup6.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem14),
@@ -696,7 +696,6 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit1;
         private DevExpress.XtraBars.BarEditItem barEditItem4;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit2;
-        private DevExpress.XtraBars.Docking.AutoHideContainer hideContainerLeft;
         private DevExpress.XtraBars.BarEditItem txtusenameht;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
         private DevExpress.XtraBars.BarStaticItem barStaticItem1;
@@ -707,5 +706,6 @@
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup6;
         private DevExpress.XtraNavBar.NavBarItem navBarItem14;
         private DevExpress.XtraNavBar.NavBarItem navBarItem15;
+        private DevExpress.XtraBars.Docking.AutoHideContainer hideContainerLeft;
     }
 }
