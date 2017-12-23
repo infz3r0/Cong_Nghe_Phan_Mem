@@ -29,11 +29,15 @@ namespace UI_Tier
         {
             if (!dadangnhap)
             {
-                Application.Exit();
-            }
-            else
-            {
-                frmmain.username = txtusename.Text;
+                DialogResult dlr = MessageBox.Show("Bạn muốn thoát chương trình?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dlr == DialogResult.No)
+                {
+                    e.Cancel = true;
+                }
+                else
+                {
+                    this.DialogResult = DialogResult.Yes;
+                }
             }
         }
 
@@ -50,6 +54,7 @@ namespace UI_Tier
             if (thanhcong)
             {
                 dadangnhap = true;
+                frmmain.username = txtusename.Text;
                 Dispose();
             }
             else
@@ -57,5 +62,7 @@ namespace UI_Tier
                 MessageBox.Show("Sai thông tin đăng nhập", "Lỗi đăng nhập", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        
     }
 }

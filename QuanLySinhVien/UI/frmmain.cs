@@ -18,11 +18,25 @@ namespace UI_Tier
     public partial class frmmain : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         public static string username;
+        private bool exit_dangnhap;
 
         public frmmain()
         {
             InitializeComponent();
             username = "";
+            exit_dangnhap = false;
+        }
+
+        private void OpenFormDangNhap()
+        {
+            frmdangnhap f = new frmdangnhap();
+            DialogResult dlr =  f.ShowDialog();
+            txtusername.EditValue = username;
+            if (dlr == DialogResult.Yes)
+            {
+                exit_dangnhap = true;
+                Application.Exit();
+            }
         }
 
         private void navBarControl1_Click(object sender, EventArgs e)
@@ -32,9 +46,7 @@ namespace UI_Tier
 
         private void frmmain_Load(object sender, EventArgs e)
         {
-            frmdangnhap f = new frmdangnhap();
-            f.ShowDialog();
-            txtusername.EditValue = username;
+            OpenFormDangNhap();
         }
 
         private void btnthoat_Click_1(object sender, EventArgs e)
@@ -56,8 +68,16 @@ namespace UI_Tier
 
         private void frmmain_FormClosing(object sender, FormClosingEventArgs e)
         {
+            if (exit_dangnhap)
+            {
+                return;
+            }
+
             DialogResult dlr = MessageBox.Show("Bạn muốn thoát chương trình?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dlr == DialogResult.No) e.Cancel = true;
+            if (dlr == DialogResult.No)
+            {
+                e.Cancel = true;
+            }            
         }
 
         private void btnthoatmain_ItemClick(object sender, ItemClickEventArgs e)
@@ -255,8 +275,7 @@ namespace UI_Tier
         {
             username = "";
             txtusername.EditValue = username;
-            frmdangnhap f = new frmdangnhap();
-            f.ShowDialog();
+            OpenFormDangNhap();
         }
     }
 }
