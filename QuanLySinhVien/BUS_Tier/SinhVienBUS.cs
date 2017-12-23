@@ -8,16 +8,17 @@ using MODEL_Tier;
 using DATA_Tier;
 using System.Data;
 
+
 namespace BUS_Tier
 {
     public class SinhVienBUS
     {
-        private SinhVienDAO sinhVienDAO = new SinhVienDAO();
+         private SinhVienDAO sinhVienDAO = new SinhVienDAO();
 
         public DataTable DanhSach()
         {
             DataTable dt = new DataTable();
-
+            dt = sinhVienDAO.getAll();
             return dt;
         }
 

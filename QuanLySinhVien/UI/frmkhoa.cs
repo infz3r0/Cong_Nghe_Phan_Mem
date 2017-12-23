@@ -35,5 +35,12 @@ namespace UI_Tier
             DialogResult dlr = MessageBox.Show("Bạn muốn đóng Form?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dlr == DialogResult.No) e.Cancel = true;
         }
+
+        KhoaBUS khoaBUS = new KhoaBUS();
+        
+        private void frmkhoa_Load(object sender, EventArgs e)
+        {
+            gridviewkhoa.DataSource = khoaBUS.DanhSach();
+        }
     }
 }

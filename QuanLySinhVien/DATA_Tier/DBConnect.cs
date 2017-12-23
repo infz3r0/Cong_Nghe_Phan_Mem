@@ -11,7 +11,7 @@ namespace DATA_Tier
 {
     public class DBConnect
     {
-        private string connect = @"Data Source=DESKTOP-2VGDSHC;Initial Catalog=QLSVDB;Integrated Security=True";
+        private string connect = @"Data Source=DELL3558;Initial Catalog=QLSinhVien;Integrated Security=True";
 
         private SqlDataAdapter myAdapter;
         private SqlConnection conn;
