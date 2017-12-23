@@ -56,5 +56,11 @@
     <Compile Include="SinhVienDAO.cs" />
     <Compile Include="TaiKhoanDAO.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MODEL_Tier\MODEL_Tier.csproj">
+      <Project>{86C5E573-4767-4FD9-B74F-63D54D218CE3}</Project>
+      <Name>MODEL_Tier</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
