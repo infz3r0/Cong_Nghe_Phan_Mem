@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DATA_Tier
 {
-    class NhomDAO
+    public class NhomDAO
     {
     }
 }
