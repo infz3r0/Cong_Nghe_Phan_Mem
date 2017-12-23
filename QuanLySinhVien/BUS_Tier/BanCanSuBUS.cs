@@ -17,7 +17,7 @@ namespace BUS_Tier
         public DataTable DanhSach()
         {
             DataTable dt = new DataTable();
-
+            //dt = BanCanSuDAO.getAll();
             return dt;
         }
 
