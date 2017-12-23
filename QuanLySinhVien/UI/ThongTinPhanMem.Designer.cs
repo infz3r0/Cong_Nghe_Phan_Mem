@@ -49,7 +49,7 @@
             // 
             this.simpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.simpleButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.simpleButton1.Location = new System.Drawing.Point(490, 409);
+            this.simpleButton1.Location = new System.Drawing.Point(493, 460);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(75, 23);
             this.simpleButton1.TabIndex = 15;
@@ -62,7 +62,7 @@
             this.labelControl6.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl6.Appearance.Options.UseFont = true;
             this.labelControl6.Appearance.Options.UseForeColor = true;
-            this.labelControl6.Location = new System.Drawing.Point(29, 346);
+            this.labelControl6.Location = new System.Drawing.Point(43, 408);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(124, 18);
             this.labelControl6.TabIndex = 14;
@@ -74,7 +74,7 @@
             this.labelControl5.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl5.Appearance.Options.UseFont = true;
             this.labelControl5.Appearance.Options.UseForeColor = true;
-            this.labelControl5.Location = new System.Drawing.Point(218, 346);
+            this.labelControl5.Location = new System.Drawing.Point(232, 408);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(97, 18);
             this.labelControl5.TabIndex = 13;
@@ -86,7 +86,7 @@
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl4.Appearance.Options.UseFont = true;
             this.labelControl4.Appearance.Options.UseForeColor = true;
-            this.labelControl4.Location = new System.Drawing.Point(393, 346);
+            this.labelControl4.Location = new System.Drawing.Point(407, 408);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(148, 18);
             this.labelControl4.TabIndex = 12;
@@ -98,7 +98,7 @@
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl3.Appearance.Options.UseFont = true;
             this.labelControl3.Appearance.Options.UseForeColor = true;
-            this.labelControl3.Location = new System.Drawing.Point(181, 287);
+            this.labelControl3.Location = new System.Drawing.Point(190, 362);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(185, 18);
             this.labelControl3.TabIndex = 11;
@@ -110,7 +110,7 @@
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Appearance.Options.UseForeColor = true;
-            this.labelControl2.Location = new System.Drawing.Point(229, 243);
+            this.labelControl2.Location = new System.Drawing.Point(243, 325);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(86, 18);
             this.labelControl2.TabIndex = 10;
@@ -122,7 +122,7 @@
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.Location = new System.Drawing.Point(131, 197);
+            this.labelControl1.Location = new System.Drawing.Point(145, 279);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(305, 23);
             this.labelControl1.TabIndex = 9;
@@ -132,11 +132,12 @@
             // 
             this.pictureEdit1.Cursor = System.Windows.Forms.Cursors.Default;
             this.pictureEdit1.EditValue = global::UI_Tier.Properties.Resources.Sự_kiện_thi_thử_thpt_quốc_gia_1467011959058;
-            this.pictureEdit1.Location = new System.Drawing.Point(0, 1);
+            this.pictureEdit1.Location = new System.Drawing.Point(0, 0);
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit1.Size = new System.Drawing.Size(576, 190);
-            this.pictureEdit1.TabIndex = 8;
+            this.pictureEdit1.Properties.ZoomAcceleration = 0D;
+            this.pictureEdit1.Size = new System.Drawing.Size(576, 273);
+            this.pictureEdit1.TabIndex = 16;
             // 
             // ThongTinPhanMem
             // 
@@ -144,7 +145,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Tile;
             this.BackgroundImageStore = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
-            this.ClientSize = new System.Drawing.Size(577, 444);
+            this.ClientSize = new System.Drawing.Size(577, 495);
+            this.Controls.Add(this.pictureEdit1);
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.labelControl6);
             this.Controls.Add(this.labelControl5);
@@ -152,7 +154,6 @@
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
-            this.Controls.Add(this.pictureEdit1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ThongTinPhanMem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

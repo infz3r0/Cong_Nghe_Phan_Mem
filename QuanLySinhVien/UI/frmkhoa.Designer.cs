@@ -90,9 +90,9 @@
             this.btnsuakhoa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnsuakhoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnsuakhoa.ImageOptions.Image")));
             this.btnsuakhoa.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnsuakhoa.Location = new System.Drawing.Point(23, 63);
+            this.btnsuakhoa.Location = new System.Drawing.Point(23, 65);
             this.btnsuakhoa.Name = "btnsuakhoa";
-            this.btnsuakhoa.Size = new System.Drawing.Size(96, 37);
+            this.btnsuakhoa.Size = new System.Drawing.Size(96, 34);
             this.btnsuakhoa.TabIndex = 1;
             this.btnsuakhoa.Text = "Sửa ";
             // 
@@ -145,7 +145,7 @@
             this.btnthoatkhoa.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnthoatkhoa.Location = new System.Drawing.Point(23, 161);
             this.btnthoatkhoa.Name = "btnthoatkhoa";
-            this.btnthoatkhoa.Size = new System.Drawing.Size(96, 36);
+            this.btnthoatkhoa.Size = new System.Drawing.Size(96, 33);
             this.btnthoatkhoa.TabIndex = 24;
             this.btnthoatkhoa.Text = "Đóng";
             this.btnthoatkhoa.Click += new System.EventHandler(this.btnthoatkhoa_Click);

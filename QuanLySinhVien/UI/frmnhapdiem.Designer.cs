@@ -82,9 +82,9 @@
             this.btnthoatnhapdiem.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnthoatnhapdiem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthoatnhapdiem.ImageOptions.Image")));
             this.btnthoatnhapdiem.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnthoatnhapdiem.Location = new System.Drawing.Point(22, 161);
+            this.btnthoatnhapdiem.Location = new System.Drawing.Point(22, 153);
             this.btnthoatnhapdiem.Name = "btnthoatnhapdiem";
-            this.btnthoatnhapdiem.Size = new System.Drawing.Size(99, 41);
+            this.btnthoatnhapdiem.Size = new System.Drawing.Size(99, 31);
             this.btnthoatnhapdiem.TabIndex = 24;
             this.btnthoatnhapdiem.Text = "Đóng";
             this.btnthoatnhapdiem.Click += new System.EventHandler(this.btnthoatnhapdiem_Click);
@@ -101,9 +101,9 @@
             this.btnsuadiem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnsuadiem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnsuadiem.ImageOptions.Image")));
             this.btnsuadiem.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnsuadiem.Location = new System.Drawing.Point(23, 92);
+            this.btnsuadiem.Location = new System.Drawing.Point(21, 95);
             this.btnsuadiem.Name = "btnsuadiem";
-            this.btnsuadiem.Size = new System.Drawing.Size(100, 41);
+            this.btnsuadiem.Size = new System.Drawing.Size(100, 31);
             this.btnsuadiem.TabIndex = 1;
             this.btnsuadiem.Text = "Sửa ";
             // 
@@ -119,9 +119,9 @@
             this.btnthemdiem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnthemdiem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthemdiem.ImageOptions.Image")));
             this.btnthemdiem.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnthemdiem.Location = new System.Drawing.Point(23, 23);
+            this.btnthemdiem.Location = new System.Drawing.Point(22, 39);
             this.btnthemdiem.Name = "btnthemdiem";
-            this.btnthemdiem.Size = new System.Drawing.Size(99, 41);
+            this.btnthemdiem.Size = new System.Drawing.Size(99, 30);
             this.btnthemdiem.TabIndex = 0;
             this.btnthemdiem.Text = "Thêm";
             // 
@@ -182,7 +182,7 @@
             this.cbbMssvNhapDiem.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbbMssvNhapDiem.Size = new System.Drawing.Size(220, 20);
-            this.cbbMssvNhapDiem.TabIndex = 8;
+            this.cbbMssvNhapDiem.TabIndex = 0;
             // 
             // txtdiemthinhap
             // 
@@ -193,7 +193,7 @@
             this.txtdiemthinhap.Name = "txtdiemthinhap";
             this.txtdiemthinhap.PromptChar = ' ';
             this.txtdiemthinhap.Size = new System.Drawing.Size(220, 19);
-            this.txtdiemthinhap.TabIndex = 7;
+            this.txtdiemthinhap.TabIndex = 2;
             this.txtdiemthinhap.ValidatingType = typeof(int);
             // 
             // txtdiemqtnhap
@@ -205,7 +205,7 @@
             this.txtdiemqtnhap.Name = "txtdiemqtnhap";
             this.txtdiemqtnhap.PromptChar = ' ';
             this.txtdiemqtnhap.Size = new System.Drawing.Size(220, 19);
-            this.txtdiemqtnhap.TabIndex = 6;
+            this.txtdiemqtnhap.TabIndex = 1;
             this.txtdiemqtnhap.ValidatingType = typeof(int);
             // 
             // labelControl5
