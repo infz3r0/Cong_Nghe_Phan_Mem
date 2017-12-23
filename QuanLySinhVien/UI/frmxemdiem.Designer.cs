@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmxemdiem));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnXemDiem = new DevExpress.XtraEditors.SimpleButton();
             this.btnthoatxem = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.gridviewxemdiem = new System.Windows.Forms.DataGridView();
@@ -55,7 +56,6 @@
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.txtXepLoaiXem = new DevExpress.XtraEditors.TextEdit();
-            this.btnXemDiem = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridviewxemdiem)).BeginInit();
@@ -85,6 +85,25 @@
             this.groupBox2.TabIndex = 25;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chức năng";
+            // 
+            // btnXemDiem
+            // 
+            this.btnXemDiem.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnXemDiem.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnXemDiem.Appearance.Options.UseFont = true;
+            this.btnXemDiem.Appearance.Options.UseForeColor = true;
+            this.btnXemDiem.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
+            this.btnXemDiem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnXemDiem.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnXemDiem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnXemDiem.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnXemDiem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXemDiem.ImageOptions.Image")));
+            this.btnXemDiem.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnXemDiem.Location = new System.Drawing.Point(22, 34);
+            this.btnXemDiem.Name = "btnXemDiem";
+            this.btnXemDiem.Size = new System.Drawing.Size(99, 41);
+            this.btnXemDiem.TabIndex = 0;
+            this.btnXemDiem.Text = "Xem";
             // 
             // btnthoatxem
             // 
@@ -373,25 +392,6 @@
             this.txtXepLoaiXem.Properties.ReadOnly = true;
             this.txtXepLoaiXem.Size = new System.Drawing.Size(99, 20);
             this.txtXepLoaiXem.TabIndex = 16;
-            // 
-            // btnXemDiem
-            // 
-            this.btnXemDiem.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnXemDiem.Appearance.ForeColor = System.Drawing.Color.White;
-            this.btnXemDiem.Appearance.Options.UseFont = true;
-            this.btnXemDiem.Appearance.Options.UseForeColor = true;
-            this.btnXemDiem.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
-            this.btnXemDiem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnXemDiem.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.btnXemDiem.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnXemDiem.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnXemDiem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.btnXemDiem.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnXemDiem.Location = new System.Drawing.Point(22, 34);
-            this.btnXemDiem.Name = "btnXemDiem";
-            this.btnXemDiem.Size = new System.Drawing.Size(99, 41);
-            this.btnXemDiem.TabIndex = 0;
-            this.btnXemDiem.Text = "Xem";
             // 
             // frmxemdiem
             // 

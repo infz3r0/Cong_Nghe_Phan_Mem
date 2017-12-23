@@ -277,5 +277,20 @@ namespace UI_Tier
             txtusername.EditValue = username;
             OpenFormDangNhap();
         }
+
+        private void navBarItem15_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            Form frm = kiemtraform(typeof(frmDiemHe4));
+            if (frm == null)
+            {
+                frmDiemHe4 forms = new frmDiemHe4();
+                forms.MdiParent = this;
+                forms.Show();
+            }
+            else
+            {
+                frm.Activate();
+            }
+        }
     }
 }

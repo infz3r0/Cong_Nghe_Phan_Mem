@@ -347,7 +347,7 @@
             this.dockPanel1.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
             this.dockPanel1.ID = new System.Guid("28d9130a-5615-4bcb-9cc3-1cda02a8dd3d");
             this.dockPanel1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("dockPanel1.ImageOptions.Image")));
-            this.dockPanel1.Location = new System.Drawing.Point(0, 0);
+            this.dockPanel1.Location = new System.Drawing.Point(42, 93);
             this.dockPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dockPanel1.Name = "dockPanel1";
             this.dockPanel1.Options.ShowCloseButton = false;
@@ -592,6 +592,7 @@
             this.navBarGroup6.AppearancePressed.FontSizeDelta = 14;
             this.navBarGroup6.AppearancePressed.Options.UseFont = true;
             this.navBarGroup6.Caption = "Cài đặt";
+            this.navBarGroup6.Expanded = true;
             this.navBarGroup6.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarGroup6.ImageOptions.SmallImage")));
             this.navBarGroup6.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem14),
@@ -609,6 +610,7 @@
             this.navBarItem15.Caption = "Bảng điểm hệ 4";
             this.navBarItem15.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem15.ImageOptions.SmallImage")));
             this.navBarItem15.Name = "navBarItem15";
+            this.navBarItem15.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem15_LinkClicked);
             // 
             // frmmain
             // 
