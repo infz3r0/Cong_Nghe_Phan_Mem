@@ -306,6 +306,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmmonhoc";
             this.Text = "QUẢN LÍ MÔN HỌC";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmmonhoc_FormClosing);

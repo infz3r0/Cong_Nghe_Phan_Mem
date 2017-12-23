@@ -23,7 +23,7 @@ namespace UI_Tier
 
         private void frmdoipass_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult dlr = MessageBox.Show("Bạn muốn thoát?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult dlr = MessageBox.Show("Bạn muốn đóng Form?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dlr == DialogResult.No) e.Cancel = true;
         }
 
