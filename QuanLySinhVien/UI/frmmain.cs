@@ -292,5 +292,11 @@ namespace UI_Tier
                 frm.Activate();
             }
         }
+
+        private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ThongTinPhanMem t = new ThongTinPhanMem();
+            t.ShowDialog();
+        }
     }
 }
