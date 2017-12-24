@@ -36,7 +36,6 @@ namespace DATA_Tier
             }
             finally
             {
-                conn.Close();
             }
             return conn;
         }
