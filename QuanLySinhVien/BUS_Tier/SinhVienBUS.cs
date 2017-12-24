@@ -25,7 +25,15 @@ namespace BUS_Tier
         public bool Them(SinhVien sinhVien)
         {
             bool result = false;
-
+            if (!sinhVien.GioiTinh.Equals('M') && !sinhVien.GioiTinh.Equals('F'))
+            {
+                return false;
+            }
+            if (DateTime.Now.Year - sinhVien.NgaySinh.Year <= 18)
+            {
+                return false;
+            }
+            //result = sinhVienDAO.Them(sinhVien);
             return result;
         }
 

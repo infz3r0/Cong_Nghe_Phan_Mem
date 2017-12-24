@@ -11,7 +11,7 @@ namespace DATA_Tier
 {
     public class DBConnect
     {
-        private string connect = @"Data Source=DELL3558;Initial Catalog=QLSinhVien;Integrated Security=True";
+        private string connect = @"Data Source=.\SQLEXPRESS;Initial Catalog=QLSinhVien;Integrated Security=True";
 
         private SqlDataAdapter myAdapter;
         private SqlConnection conn;
@@ -23,9 +23,20 @@ namespace DATA_Tier
 
         private SqlConnection openConnection()
         {
-            if (conn.State == ConnectionState.Closed || conn.State == ConnectionState.Broken)
+            try
             {
-                conn.Open();
+                if (conn.State == ConnectionState.Closed || conn.State == ConnectionState.Broken)
+                {
+                    conn.Open();
+                }
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.ToString());
+            }
+            finally
+            {
+                conn.Close();
             }
             return conn;
         }
@@ -52,7 +63,7 @@ namespace DATA_Tier
             }
             finally
             {
-
+                conn.Close();
             }
             return dataTable;
         }
@@ -76,6 +87,7 @@ namespace DATA_Tier
             }
             finally
             {
+                conn.Close();
             }
             return true;
         }
@@ -98,6 +110,7 @@ namespace DATA_Tier
             }
             finally
             {
+                conn.Close();
             }
             return true;
         }
@@ -120,6 +133,7 @@ namespace DATA_Tier
             }
             finally
             {
+                conn.Close();
             }
             return true;
         }
