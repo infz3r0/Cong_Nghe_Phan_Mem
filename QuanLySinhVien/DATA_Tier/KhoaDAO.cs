@@ -36,7 +36,7 @@ namespace DATA_Tier
         public bool update(Khoa khoa)
         {
             string query = "Update Khoa " +
-                           "Set TenKhoa=@TenKhoa, Sdt=@Sdt, Email=@Email"+
+                           "Set TenKhoa=@TenKhoa, Sdt=@Sdt, Email=@Email "+
                            "Where MaKhoa=@MaKhoa";
             SqlParameter[] sqlParameters = new SqlParameter[4];
             sqlParameters[0] = new SqlParameter("@MaKhoa", SqlDbType.VarChar);

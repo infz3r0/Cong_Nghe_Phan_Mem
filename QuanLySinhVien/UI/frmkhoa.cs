@@ -69,7 +69,7 @@ namespace UI_Tier
             string email = txtmailkhoa.Text;
             string sdt = txtsdtkhoa.Text;
 
-            Khoa khoa = new Khoa(ma, ten, email, sdt);
+            Khoa khoa = new Khoa(ma, ten, sdt, email);
             bool thanhcong = khoaBUS.Sua(khoa);
             if (thanhcong)
             {
