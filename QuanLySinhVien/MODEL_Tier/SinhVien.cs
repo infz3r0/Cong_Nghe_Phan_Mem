@@ -18,13 +18,14 @@ namespace MODEL_Tier
         private string email;
         private string diemTB;
         private string maLop;
+        private string xeploai;
 
         public SinhVien()
         {
 
         }
 
-        public SinhVien(string maSV, string hoTen, DateTime ngaySinh, char gioiTinh, string diaChi, string soCMND, string sdt, string email, string diemTB, string maLop)
+        public SinhVien(string maSV, string hoTen, DateTime ngaySinh, char gioiTinh, string diaChi, string soCMND, string sdt, string email, string diemTB, string maLop, string xeploai)
         {
             this.MaSV = maSV;
             this.HoTen = hoTen;
@@ -36,6 +37,7 @@ namespace MODEL_Tier
             this.Email = email;
             this.DiemTB = diemTB;
             this.MaLop = maLop;
+            this.Xeploai = xeploai;
         }
 
         public string MaSV { get => maSV; set => maSV = value; }
@@ -48,5 +50,6 @@ namespace MODEL_Tier
         public string Email { get => email; set => email = value; }
         public string DiemTB { get => diemTB; set => diemTB = value; }
         public string MaLop { get => maLop; set => maLop = value; }
+        public string Xeploai { get => xeploai; set => xeploai = value; }
     }
 }

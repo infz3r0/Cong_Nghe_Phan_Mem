@@ -43,6 +43,7 @@
     <Compile Include="BanCanSu.cs" />
     <Compile Include="DanhSachLopHP.cs" />
     <Compile Include="Diem.cs" />
+    <Compile Include="DiemHe4.cs" />
     <Compile Include="DieuKien.cs" />
     <Compile Include="Khoa.cs" />
     <Compile Include="LopHocPhan.cs" />
@@ -54,6 +55,7 @@
     <Compile Include="Quyen.cs" />
     <Compile Include="SinhVien.cs" />
     <Compile Include="TaiKhoan.cs" />
+    <Compile Include="ThamSo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

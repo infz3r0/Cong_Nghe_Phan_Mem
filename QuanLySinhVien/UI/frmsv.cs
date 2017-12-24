@@ -31,5 +31,11 @@ namespace UI_Tier
         {
             Close();
         }
+
+        SinhVienBUS sinhvienBUS = new SinhVienBUS();
+        private void frmsv_Load(object sender, EventArgs e)
+        {
+            gridviewsv.DataSource = sinhvienBUS.DanhSach();
+        }
     }
 }

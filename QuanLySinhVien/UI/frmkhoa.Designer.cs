@@ -315,6 +315,7 @@
             this.Name = "frmkhoa";
             this.Text = "QUẢN LÍ KHOA";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmkhoa_FormClosing);
+            this.Load += new System.EventHandler(this.frmkhoa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtmakhoa.Properties)).EndInit();
