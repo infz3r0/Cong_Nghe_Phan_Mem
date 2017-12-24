@@ -43,25 +43,27 @@ namespace DATA_Tier
         }
         public bool insert(SinhVien sv)
         {
-            string query = "Insert into SinhVien (HoTen, NgaySinh, GioiTinh, DiaChi, SoCMND, Sdt, Email, MaLop)"+
-                            "VALUES (@HoTen, @NgaySinh, @GioiTinh, @DiaChi, @SoCMND, @Sdt, @Email, @MaLop)";
-            SqlParameter[] sqlParameters = new SqlParameter[8];
-            sqlParameters[0] = new SqlParameter("@HoTen", SqlDbType.NVarChar);
-            sqlParameters[0].Value = sv.HoTen;
-            sqlParameters[1] = new SqlParameter("@NgaySinh", SqlDbType.DateTime);
-            sqlParameters[1].Value = sv.NgaySinh;
-            sqlParameters[2] = new SqlParameter("@GioiTinh", SqlDbType.Char);
-            sqlParameters[2].Value = sv.GioiTinh;
-            sqlParameters[3] = new SqlParameter("@DiaChi", SqlDbType.NVarChar);
-            sqlParameters[3].Value = sv.DiaChi;
-            sqlParameters[4] = new SqlParameter("@SoCMND", SqlDbType.VarChar);
-            sqlParameters[4].Value = sv.SoCMND;
-            sqlParameters[5] = new SqlParameter("@Sdt", SqlDbType.VarChar);
-            sqlParameters[5].Value = sv.Sdt;
-            sqlParameters[6] = new SqlParameter("@Email", SqlDbType.NVarChar);
-            sqlParameters[6].Value = sv.Email;
-            sqlParameters[7] = new SqlParameter("@MaLop", SqlDbType.VarChar);
-            sqlParameters[7].Value = sv.MaLop;
+            string query = "Insert into SinhVien (MaSV, HoTen, NgaySinh, GioiTinh, DiaChi, SoCMND, Sdt, Email, MaLop)"+
+                            "VALUES (@MaSV, @HoTen, @NgaySinh, @GioiTinh, @DiaChi, @SoCMND, @Sdt, @Email, @MaLop)";
+            SqlParameter[] sqlParameters = new SqlParameter[9];
+            sqlParameters[0] = new SqlParameter("@MaSV", SqlDbType.VarChar);
+            sqlParameters[0].Value = sv.MaSV;
+            sqlParameters[1] = new SqlParameter("@HoTen", SqlDbType.NVarChar);
+            sqlParameters[1].Value = sv.HoTen;
+            sqlParameters[2] = new SqlParameter("@NgaySinh", SqlDbType.DateTime);
+            sqlParameters[2].Value = sv.NgaySinh;
+            sqlParameters[3] = new SqlParameter("@GioiTinh", SqlDbType.Char);
+            sqlParameters[3].Value = sv.GioiTinh;
+            sqlParameters[4] = new SqlParameter("@DiaChi", SqlDbType.NVarChar);
+            sqlParameters[4].Value = sv.DiaChi;
+            sqlParameters[5] = new SqlParameter("@SoCMND", SqlDbType.VarChar);
+            sqlParameters[5].Value = sv.SoCMND;
+            sqlParameters[6] = new SqlParameter("@Sdt", SqlDbType.VarChar);
+            sqlParameters[6].Value = sv.Sdt;
+            sqlParameters[7] = new SqlParameter("@Email", SqlDbType.NVarChar);
+            sqlParameters[7].Value = sv.Email;
+            sqlParameters[8] = new SqlParameter("@MaLop", SqlDbType.VarChar);
+            sqlParameters[8].Value = sv.MaLop;
             return executeInsertQuery(query, sqlParameters);
         }
         public bool update(SinhVien sv)

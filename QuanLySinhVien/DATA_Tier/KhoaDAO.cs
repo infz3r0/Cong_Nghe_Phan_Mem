@@ -20,15 +20,17 @@ namespace DATA_Tier
         }
         public bool insert(Khoa khoa)
         {
-            string query = "Insert into Khoa (TenKhoa, Sdt, Email) " +
+            string query = "Insert into Khoa (MaKhoa,TenKhoa, Sdt, Email) " +
                            "Values (@TenKhoa, @Sdt, @Email)";
-            SqlParameter[] sqlParameters = new SqlParameter[3];
-            sqlParameters[0] = new SqlParameter("@TenKhoa", SqlDbType.NVarChar);
-            sqlParameters[0].Value = khoa.TenKhoa;
-            sqlParameters[1] = new SqlParameter("@Sdt", SqlDbType.VarChar);
-            sqlParameters[1].Value = khoa.Sdt;
-            sqlParameters[2] = new SqlParameter("@Email", SqlDbType.NVarChar);
-            sqlParameters[2].Value = khoa.Email;
+            SqlParameter[] sqlParameters = new SqlParameter[4];
+            sqlParameters[0] = new SqlParameter("@MaKhoa", SqlDbType.VarChar);
+            sqlParameters[0].Value = khoa.MaKhoa;
+            sqlParameters[1] = new SqlParameter("@TenKhoa", SqlDbType.NVarChar);
+            sqlParameters[1].Value = khoa.TenKhoa;
+            sqlParameters[2] = new SqlParameter("@Sdt", SqlDbType.VarChar);
+            sqlParameters[2].Value = khoa.Sdt;
+            sqlParameters[3] = new SqlParameter("@Email", SqlDbType.NVarChar);
+            sqlParameters[3].Value = khoa.Email;
             return executeInsertQuery(query, sqlParameters);
         }
         public bool update(Khoa khoa)
