@@ -37,7 +37,6 @@ namespace UI_Tier
         }
 
         KhoaBUS khoaBUS = new KhoaBUS();
-       
         
         private void frmkhoa_Load(object sender, EventArgs e)
         {
@@ -46,14 +45,57 @@ namespace UI_Tier
 
         private void btnthemkhoa_Click(object sender, EventArgs e)
         {
-           
-            
-            
+            string ma = txtmakhoa.Text;
+            string ten = txttenkhoa.Text;
+            string email = txtmailkhoa.Text;
+            string sdt = txtsdtkhoa.Text;
+
+            Khoa khoa = new Khoa(ma, ten, email, sdt);
+            bool thanhcong = khoaBUS.Them(khoa);
+            if (thanhcong)
+            {
+                MessageBox.Show("Thành công");
+            }
+            else
+            {
+                MessageBox.Show("Lỗi");
+            }
         }
 
-        private void gridviewkhoa_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnsuakhoa_Click(object sender, EventArgs e)
         {
+            string ma = gridviewkhoa.SelectedCells[0].OwningRow.Cells[0].Value.ToString();
+            string ten = txttenkhoa.Text;
+            string email = txtmailkhoa.Text;
+            string sdt = txtsdtkhoa.Text;
 
+            Khoa khoa = new Khoa(ma, ten, sdt, email);
+            bool thanhcong = khoaBUS.Sua(khoa);
+            if (thanhcong)
+            {
+                MessageBox.Show("Thành công");
+            }
+            else
+            {
+                MessageBox.Show("Lỗi");
+            }
+        }
+
+        private void btnxoakhoa_Click(object sender, EventArgs e)
+        {
+            string ma = gridviewkhoa.SelectedCells[0].OwningRow.Cells[0].Value.ToString();
+            
+            Khoa khoa = new Khoa();
+            khoa.MaKhoa = ma;
+            bool thanhcong = khoaBUS.Xoa(khoa);
+            if (thanhcong)
+            {
+                MessageBox.Show("Thành công");
+            }
+            else
+            {
+                MessageBox.Show("Lỗi");
+            }
         }
     }
 }
