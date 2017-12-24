@@ -37,10 +37,14 @@ namespace UI_Tier
         }
 
         KhoaBUS khoaBUS = new KhoaBUS();
+        private void LoadDB()
+        {
+            gridviewkhoa.DataSource = khoaBUS.DanhSach();
+        }
         
         private void frmkhoa_Load(object sender, EventArgs e)
         {
-            gridviewkhoa.DataSource = khoaBUS.DanhSach();
+            LoadDB();
         }
 
         private void btnthemkhoa_Click(object sender, EventArgs e)
@@ -50,7 +54,7 @@ namespace UI_Tier
             string email = txtmailkhoa.Text;
             string sdt = txtsdtkhoa.Text;
 
-            Khoa khoa = new Khoa(ma, ten, email, sdt);
+            Khoa khoa = new Khoa(ma, ten, sdt, email);
             bool thanhcong = khoaBUS.Them(khoa);
             if (thanhcong)
             {
@@ -60,6 +64,7 @@ namespace UI_Tier
             {
                 MessageBox.Show("Lỗi");
             }
+            LoadDB();
         }
 
         private void btnsuakhoa_Click(object sender, EventArgs e)
@@ -79,6 +84,7 @@ namespace UI_Tier
             {
                 MessageBox.Show("Lỗi");
             }
+            LoadDB();
         }
 
         private void btnxoakhoa_Click(object sender, EventArgs e)
@@ -96,6 +102,7 @@ namespace UI_Tier
             {
                 MessageBox.Show("Lỗi");
             }
+            LoadDB();
         }
     }
 }
