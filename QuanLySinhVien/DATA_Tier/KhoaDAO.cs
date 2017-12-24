@@ -21,7 +21,7 @@ namespace DATA_Tier
         public bool insert(Khoa khoa)
         {
             string query = "Insert into Khoa (MaKhoa,TenKhoa, Sdt, Email) " +
-                           "Values (@TenKhoa, @Sdt, @Email)";
+                           "Values (@Makhoa, @TenKhoa, @Sdt, @Email)";
             SqlParameter[] sqlParameters = new SqlParameter[4];
             sqlParameters[0] = new SqlParameter("@MaKhoa", SqlDbType.VarChar);
             sqlParameters[0].Value = khoa.MaKhoa;
@@ -29,7 +29,7 @@ namespace DATA_Tier
             sqlParameters[1].Value = khoa.TenKhoa;
             sqlParameters[2] = new SqlParameter("@Sdt", SqlDbType.VarChar);
             sqlParameters[2].Value = khoa.Sdt;
-            sqlParameters[3] = new SqlParameter("@Email", SqlDbType.NVarChar);
+            sqlParameters[3] = new SqlParameter("@Email", SqlDbType.VarChar);
             sqlParameters[3].Value = khoa.Email;
             return executeInsertQuery(query, sqlParameters);
         }
@@ -45,7 +45,7 @@ namespace DATA_Tier
             sqlParameters[1].Value = khoa.TenKhoa;
             sqlParameters[2] = new SqlParameter("@Sdt", SqlDbType.VarChar);
             sqlParameters[2].Value = khoa.Sdt;
-            sqlParameters[3] = new SqlParameter("@Email", SqlDbType.NVarChar);
+            sqlParameters[3] = new SqlParameter("@Email", SqlDbType.VarChar);
             sqlParameters[3].Value = khoa.Email;
             return executeUpdateQuery(query, sqlParameters);
         }
