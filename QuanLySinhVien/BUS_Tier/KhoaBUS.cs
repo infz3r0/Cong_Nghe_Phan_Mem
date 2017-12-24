@@ -40,7 +40,7 @@ namespace BUS_Tier
             }
             for (int i=0; i < 4; i++)
             {
-                if (char.IsLetter(s1[i]))
+                if (char.IsLetter(s2[i]))
                 {
                     return false;
                 }

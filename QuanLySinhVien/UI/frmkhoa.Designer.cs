@@ -77,6 +77,7 @@
             this.btnthemkhoa.Size = new System.Drawing.Size(96, 32);
             this.btnthemkhoa.TabIndex = 0;
             this.btnthemkhoa.Text = "Thêm";
+            this.btnthemkhoa.Click += new System.EventHandler(this.btnthemkhoa_Click);
             // 
             // btnsuakhoa
             // 
@@ -95,6 +96,7 @@
             this.btnsuakhoa.Size = new System.Drawing.Size(96, 34);
             this.btnsuakhoa.TabIndex = 1;
             this.btnsuakhoa.Text = "Sửa ";
+            this.btnsuakhoa.Click += new System.EventHandler(this.btnsuakhoa_Click);
             // 
             // btnxoakhoa
             // 
@@ -113,6 +115,7 @@
             this.btnxoakhoa.Size = new System.Drawing.Size(96, 36);
             this.btnxoakhoa.TabIndex = 2;
             this.btnxoakhoa.Text = "Xóa";
+            this.btnxoakhoa.Click += new System.EventHandler(this.btnxoakhoa_Click);
             // 
             // groupBox2
             // 
