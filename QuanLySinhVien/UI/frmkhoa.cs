@@ -41,11 +41,12 @@ namespace UI_Tier
         private void LoadDB()
         {
             bs.DataSource = khoaBUS.DanhSach();
+            
             gridviewkhoa.DataSource = bs;
-            txtmakhoa.DataBindings.Add("Text", bs, "MaKhoa");
-            txttenkhoa.DataBindings.Add("Text", bs, "TenKhoa");
-            txtsdtkhoa.DataBindings.Add("Text", bs, "Sdt");
-            txtmailkhoa.DataBindings.Add("Text", bs, "Email");
+            txtmakhoa.DataBindings.Add("Text", bs, "MaKhoa", false, DataSourceUpdateMode.Never);
+            txttenkhoa.DataBindings.Add("Text", bs, "TenKhoa", false, DataSourceUpdateMode.Never);
+            txtsdtkhoa.DataBindings.Add("Text", bs, "Sdt", false, DataSourceUpdateMode.Never);
+            txtmailkhoa.DataBindings.Add("Text", bs, "Email", false, DataSourceUpdateMode.Never);
         }
         
         private void frmkhoa_Load(object sender, EventArgs e)

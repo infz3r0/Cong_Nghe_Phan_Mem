@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmkhoa));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.btnthemkhoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnsuakhoa = new DevExpress.XtraEditors.SimpleButton();
@@ -279,8 +279,6 @@
             this.txtsdtkhoa.Properties.Appearance.Options.UseBackColor = true;
             this.txtsdtkhoa.Properties.Appearance.Options.UseForeColor = true;
             this.txtsdtkhoa.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.txtsdtkhoa.Properties.Mask.EditMask = "(+84)";
-            this.txtsdtkhoa.Properties.Mask.PlaceHolder = '-';
             this.txtsdtkhoa.Size = new System.Drawing.Size(281, 20);
             this.txtsdtkhoa.TabIndex = 2;
             // 
@@ -308,8 +306,8 @@
             // MaKhoa
             // 
             this.MaKhoa.DataPropertyName = "MaKhoa";
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
-            this.MaKhoa.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            this.MaKhoa.DefaultCellStyle = dataGridViewCellStyle9;
             this.MaKhoa.HeaderText = "Mã Khoa";
             this.MaKhoa.Name = "MaKhoa";
             this.MaKhoa.ReadOnly = true;
@@ -317,8 +315,8 @@
             // TenKhoa
             // 
             this.TenKhoa.DataPropertyName = "TenKhoa";
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
-            this.TenKhoa.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            this.TenKhoa.DefaultCellStyle = dataGridViewCellStyle10;
             this.TenKhoa.HeaderText = "Tên Khoa";
             this.TenKhoa.Name = "TenKhoa";
             this.TenKhoa.ReadOnly = true;
@@ -326,8 +324,8 @@
             // Sdt
             // 
             this.Sdt.DataPropertyName = "Sdt";
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
-            this.Sdt.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            this.Sdt.DefaultCellStyle = dataGridViewCellStyle11;
             this.Sdt.HeaderText = "Số Điện Thoại";
             this.Sdt.Name = "Sdt";
             this.Sdt.ReadOnly = true;
@@ -335,8 +333,8 @@
             // Email
             // 
             this.Email.DataPropertyName = "Email";
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
-            this.Email.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            this.Email.DefaultCellStyle = dataGridViewCellStyle12;
             this.Email.HeaderText = "Email";
             this.Email.Name = "Email";
             this.Email.ReadOnly = true;
