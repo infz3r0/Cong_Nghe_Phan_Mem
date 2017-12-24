@@ -21,9 +21,42 @@ namespace BUS_Tier
             return dt;
         }
 
+        //Kiểm tra mã khoa có đúng quy định hay không
+        //6 ký tự, 2 ký tự đầu là chữ, 4 ký tự tiếp theo là số
+        public bool MaKhoaHopLe(string makhoa)
+        {
+            if (makhoa.Length != 6)
+            {
+                return false;
+            }                
+            string s1 = makhoa.Substring(0, 2);
+            string s2 = makhoa.Substring(2, 4);
+            for (int i=0; i < 2; i++)
+            {
+                if (char.IsDigit(s1[i]))
+                {
+                    return false;
+                }
+            }
+            for (int i=0; i < 4; i++)
+            {
+                if (char.IsLetter(s1[i]))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
         public bool Them(Khoa khoa)
         {
             bool result = false;
+
+            if (!MaKhoaHopLe(khoa.MaKhoa))
+            {
+                return false;
+            }
+
             result = khoaDAO.insert(khoa);
             return result;
         }

@@ -55,6 +55,7 @@
     <Compile Include="QuyenDAO.cs" />
     <Compile Include="SinhVienDAO.cs" />
     <Compile Include="TaiKhoanDAO.cs" />
+    <Compile Include="ThamSoDAO.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MODEL_Tier\MODEL_Tier.csproj">
