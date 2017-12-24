@@ -37,6 +37,7 @@ namespace UI_Tier
         }
 
         KhoaBUS khoaBUS = new KhoaBUS();
+       
         
         private void frmkhoa_Load(object sender, EventArgs e)
         {
@@ -44,6 +45,13 @@ namespace UI_Tier
         }
 
         private void btnthemkhoa_Click(object sender, EventArgs e)
+        {
+           
+            
+            
+        }
+
+        private void gridviewkhoa_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

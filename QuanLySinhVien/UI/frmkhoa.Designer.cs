@@ -285,10 +285,12 @@
             this.TenKhoa,
             this.Sdt,
             this.Email});
+            this.gridviewkhoa.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.gridviewkhoa.Location = new System.Drawing.Point(7, 20);
             this.gridviewkhoa.Name = "gridviewkhoa";
             this.gridviewkhoa.Size = new System.Drawing.Size(629, 235);
             this.gridviewkhoa.TabIndex = 9;
+            this.gridviewkhoa.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridviewkhoa_CellContentClick);
             // 
             // MaKhoa
             // 
