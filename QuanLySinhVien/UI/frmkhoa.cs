@@ -37,9 +37,15 @@ namespace UI_Tier
         }
 
         KhoaBUS khoaBUS = new KhoaBUS();
+        BindingSource bs = new BindingSource();
         private void LoadDB()
         {
-            gridviewkhoa.DataSource = khoaBUS.DanhSach();
+            bs.DataSource = khoaBUS.DanhSach();
+            gridviewkhoa.DataSource = bs;
+            txtmakhoa.DataBindings.Add("Text", bs, "MaKhoa");
+            txttenkhoa.DataBindings.Add("Text", bs, "TenKhoa");
+            txtsdtkhoa.DataBindings.Add("Text", bs, "Sdt");
+            txtmailkhoa.DataBindings.Add("Text", bs, "Email");
         }
         
         private void frmkhoa_Load(object sender, EventArgs e)
@@ -64,7 +70,7 @@ namespace UI_Tier
             {
                 MessageBox.Show("Lỗi");
             }
-            LoadDB();
+            bs.DataSource = khoaBUS.DanhSach();
         }
 
         private void btnsuakhoa_Click(object sender, EventArgs e)
@@ -84,7 +90,7 @@ namespace UI_Tier
             {
                 MessageBox.Show("Lỗi");
             }
-            LoadDB();
+            bs.DataSource = khoaBUS.DanhSach();
         }
 
         private void btnxoakhoa_Click(object sender, EventArgs e)
@@ -102,7 +108,7 @@ namespace UI_Tier
             {
                 MessageBox.Show("Lỗi");
             }
-            LoadDB();
+            bs.DataSource = khoaBUS.DanhSach();
         }
     }
 }
