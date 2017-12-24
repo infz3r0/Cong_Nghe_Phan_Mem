@@ -54,6 +54,7 @@
     <Compile Include="QuyenBUS.cs" />
     <Compile Include="SinhVienBUS.cs" />
     <Compile Include="TaiKhoanBUS.cs" />
+    <Compile Include="ThamSo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DATA_Tier\DATA_Tier.csproj">
