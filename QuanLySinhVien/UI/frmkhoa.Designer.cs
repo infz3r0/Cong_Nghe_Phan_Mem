@@ -51,12 +51,12 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtsdtkhoa = new DevExpress.XtraEditors.TextEdit();
             this.gridviewkhoa = new System.Windows.Forms.DataGridView();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.MaKhoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenKhoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtmakhoa.Properties)).BeginInit();
@@ -284,6 +284,8 @@
             // 
             // gridviewkhoa
             // 
+            this.gridviewkhoa.AllowUserToAddRows = false;
+            this.gridviewkhoa.AllowUserToDeleteRows = false;
             this.gridviewkhoa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridviewkhoa.BackgroundColor = System.Drawing.Color.White;
             this.gridviewkhoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -294,9 +296,48 @@
             this.Email});
             this.gridviewkhoa.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.gridviewkhoa.Location = new System.Drawing.Point(7, 20);
+            this.gridviewkhoa.MultiSelect = false;
             this.gridviewkhoa.Name = "gridviewkhoa";
+            this.gridviewkhoa.ReadOnly = true;
+            this.gridviewkhoa.RowHeadersVisible = false;
             this.gridviewkhoa.Size = new System.Drawing.Size(629, 235);
             this.gridviewkhoa.TabIndex = 9;
+            // 
+            // MaKhoa
+            // 
+            this.MaKhoa.DataPropertyName = "MaKhoa";
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.MaKhoa.DefaultCellStyle = dataGridViewCellStyle1;
+            this.MaKhoa.HeaderText = "Mã Khoa";
+            this.MaKhoa.Name = "MaKhoa";
+            this.MaKhoa.ReadOnly = true;
+            // 
+            // TenKhoa
+            // 
+            this.TenKhoa.DataPropertyName = "TenKhoa";
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.TenKhoa.DefaultCellStyle = dataGridViewCellStyle2;
+            this.TenKhoa.HeaderText = "Tên Khoa";
+            this.TenKhoa.Name = "TenKhoa";
+            this.TenKhoa.ReadOnly = true;
+            // 
+            // Sdt
+            // 
+            this.Sdt.DataPropertyName = "Sdt";
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.Sdt.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Sdt.HeaderText = "Số Điện Thoại";
+            this.Sdt.Name = "Sdt";
+            this.Sdt.ReadOnly = true;
+            // 
+            // Email
+            // 
+            this.Email.DataPropertyName = "Email";
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.Email.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
             // 
             // groupBox3
             // 
@@ -314,38 +355,6 @@
             // defaultLookAndFeel1
             // 
             this.defaultLookAndFeel1.LookAndFeel.SkinName = "Blueprint";
-            // 
-            // MaKhoa
-            // 
-            this.MaKhoa.DataPropertyName = "MaKhoa";
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.MaKhoa.DefaultCellStyle = dataGridViewCellStyle1;
-            this.MaKhoa.HeaderText = "Mã Khoa";
-            this.MaKhoa.Name = "MaKhoa";
-            // 
-            // TenKhoa
-            // 
-            this.TenKhoa.DataPropertyName = "TenKhoa";
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            this.TenKhoa.DefaultCellStyle = dataGridViewCellStyle2;
-            this.TenKhoa.HeaderText = "Tên Khoa";
-            this.TenKhoa.Name = "TenKhoa";
-            // 
-            // Sdt
-            // 
-            this.Sdt.DataPropertyName = "Sdt";
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            this.Sdt.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Sdt.HeaderText = "Số Điện Thoại";
-            this.Sdt.Name = "Sdt";
-            // 
-            // Email
-            // 
-            this.Email.DataPropertyName = "Email";
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.Email.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
             // 
             // frmkhoa
             // 
