@@ -42,5 +42,10 @@ namespace UI_Tier
         {
             gridviewkhoa.DataSource = khoaBUS.DanhSach();
         }
+
+        private void btnthemkhoa_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
