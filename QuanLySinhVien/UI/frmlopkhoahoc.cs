@@ -31,5 +31,11 @@ namespace UI_Tier
         {
             Close();
         }
+
+        LopKhoaHocBUS lopKhoaHocBUS = new LopKhoaHocBUS();
+        private void frmlopkhoahoc_Load(object sender, EventArgs e)
+        {
+            gridviewlopkh.DataSource = lopKhoaHocBUS.DanhSach();
+        }
     }
 }

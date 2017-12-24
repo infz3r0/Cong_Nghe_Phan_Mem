@@ -28,10 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmlopkhoahoc));
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
+            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.gridviewlopkh = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -45,8 +44,8 @@
             this.btnxoalopkh = new DevExpress.XtraEditors.SimpleButton();
             this.btnsualopkh = new DevExpress.XtraEditors.SimpleButton();
             this.btnthemlopkh = new DevExpress.XtraEditors.SimpleButton();
-            this.behaviorManager2 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
-            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
+            this.behaviorManager2 = new DevExpress.Utils.Behaviors.BehaviorManager();
+            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridviewlopkh)).BeginInit();
@@ -258,6 +257,7 @@
             this.Name = "frmlopkhoahoc";
             this.Text = "LỚP KHÓA HỌC";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmlopkhoahoc_FormClosing);
+            this.Load += new System.EventHandler(this.frmlopkhoahoc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridviewlopkh)).EndInit();

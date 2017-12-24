@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmkhoa));
-            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
+            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager();
             this.btnthemkhoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnsuakhoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnxoakhoa = new DevExpress.XtraEditors.SimpleButton();
@@ -48,7 +47,11 @@
             this.txtsdtkhoa = new DevExpress.XtraEditors.TextEdit();
             this.gridviewkhoa = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
+            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel();
+            this.MaKhoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenKhoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtmakhoa.Properties)).BeginInit();
@@ -276,6 +279,11 @@
             this.gridviewkhoa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridviewkhoa.BackgroundColor = System.Drawing.Color.White;
             this.gridviewkhoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridviewkhoa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaKhoa,
+            this.TenKhoa,
+            this.Sdt,
+            this.Email});
             this.gridviewkhoa.Location = new System.Drawing.Point(7, 20);
             this.gridviewkhoa.Name = "gridviewkhoa";
             this.gridviewkhoa.Size = new System.Drawing.Size(629, 235);
@@ -297,6 +305,30 @@
             // defaultLookAndFeel1
             // 
             this.defaultLookAndFeel1.LookAndFeel.SkinName = "Blueprint";
+            // 
+            // MaKhoa
+            // 
+            this.MaKhoa.DataPropertyName = "MaKhoa";
+            this.MaKhoa.HeaderText = "Mã Khoa";
+            this.MaKhoa.Name = "MaKhoa";
+            // 
+            // TenKhoa
+            // 
+            this.TenKhoa.DataPropertyName = "TenKhoa";
+            this.TenKhoa.HeaderText = "Tên Khoa";
+            this.TenKhoa.Name = "TenKhoa";
+            // 
+            // Sdt
+            // 
+            this.Sdt.DataPropertyName = "Sdt";
+            this.Sdt.HeaderText = "Số Điện Thoại";
+            this.Sdt.Name = "Sdt";
+            // 
+            // Email
+            // 
+            this.Email.DataPropertyName = "Email";
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
             // 
             // frmkhoa
             // 
@@ -351,5 +383,9 @@
         private DevExpress.XtraEditors.SimpleButton btnthoatkhoa;
         private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel1;
         private DevExpress.XtraEditors.TextEdit txtsdtkhoa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaKhoa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenKhoa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Sdt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
     }
 }
