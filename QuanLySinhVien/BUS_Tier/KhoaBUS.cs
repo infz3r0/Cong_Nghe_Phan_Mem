@@ -17,28 +17,28 @@ namespace BUS_Tier
         public DataTable DanhSach()
         {
             DataTable dt = new DataTable();
-            //dt = khoaDAO.getAll();
+            dt = khoaDAO.getAll();
             return dt;
         }
 
         public bool Them(Khoa khoa)
         {
             bool result = false;
-            //result = KhoaDAO.Insert(khoa);
+            result = khoaDAO.insert(khoa);
             return result;
         }
 
         public bool Xoa(Khoa khoa)
         {
             bool result = false;
-            //result = KhoaDAO.Delete(khoa);
+            result = khoaDAO.delete(khoa);
             return result;
         }
 
         public bool Sua(Khoa khoa)
         {
             bool result = false;
-            //result = KhoaDAO.Update(khoa);
+            result = khoaDAO.update(khoa);
             return result;
         }
     }
