@@ -208,8 +208,8 @@
             this.btnthoatbcs.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnthoatbcs.Location = new System.Drawing.Point(23, 161);
             this.btnthoatbcs.Name = "btnthoatbcs";
-            this.btnthoatbcs.Size = new System.Drawing.Size(94, 36);
-            this.btnthoatbcs.TabIndex = 24;
+            this.btnthoatbcs.Size = new System.Drawing.Size(96, 33);
+            this.btnthoatbcs.TabIndex = 3;
             this.btnthoatbcs.Text = "Đóng";
             this.btnthoatbcs.Click += new System.EventHandler(this.btnthoatbcs_Click);
             // 
@@ -225,9 +225,9 @@
             this.btnxoabcs.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnxoabcs.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnxoabcs.ImageOptions.Image")));
             this.btnxoabcs.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnxoabcs.Location = new System.Drawing.Point(21, 111);
+            this.btnxoabcs.Location = new System.Drawing.Point(23, 117);
             this.btnxoabcs.Name = "btnxoabcs";
-            this.btnxoabcs.Size = new System.Drawing.Size(96, 36);
+            this.btnxoabcs.Size = new System.Drawing.Size(96, 33);
             this.btnxoabcs.TabIndex = 2;
             this.btnxoabcs.Text = "Xóa";
             // 
@@ -243,9 +243,9 @@
             this.btnsuabcs.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnsuabcs.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnsuabcs.ImageOptions.Image")));
             this.btnsuabcs.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnsuabcs.Location = new System.Drawing.Point(21, 69);
+            this.btnsuabcs.Location = new System.Drawing.Point(23, 76);
             this.btnsuabcs.Name = "btnsuabcs";
-            this.btnsuabcs.Size = new System.Drawing.Size(96, 31);
+            this.btnsuabcs.Size = new System.Drawing.Size(96, 33);
             this.btnsuabcs.TabIndex = 1;
             this.btnsuabcs.Text = "Sửa ";
             // 
@@ -261,9 +261,9 @@
             this.btnthembcs.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnthembcs.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthembcs.ImageOptions.Image")));
             this.btnthembcs.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnthembcs.Location = new System.Drawing.Point(22, 25);
+            this.btnthembcs.Location = new System.Drawing.Point(23, 32);
             this.btnthembcs.Name = "btnthembcs";
-            this.btnthembcs.Size = new System.Drawing.Size(96, 32);
+            this.btnthembcs.Size = new System.Drawing.Size(96, 33);
             this.btnthembcs.TabIndex = 0;
             this.btnthembcs.Text = "Thêm";
             // 

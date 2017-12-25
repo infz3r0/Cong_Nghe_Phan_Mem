@@ -157,7 +157,7 @@
             this.btnthoatkhoa.Location = new System.Drawing.Point(23, 161);
             this.btnthoatkhoa.Name = "btnthoatkhoa";
             this.btnthoatkhoa.Size = new System.Drawing.Size(96, 33);
-            this.btnthoatkhoa.TabIndex = 24;
+            this.btnthoatkhoa.TabIndex = 3;
             this.btnthoatkhoa.Text = "Đóng";
             this.btnthoatkhoa.Click += new System.EventHandler(this.btnthoatkhoa_Click);
             // 

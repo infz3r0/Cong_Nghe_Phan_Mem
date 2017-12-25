@@ -101,7 +101,7 @@
             this.btnXemDiem.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnXemDiem.Location = new System.Drawing.Point(22, 34);
             this.btnXemDiem.Name = "btnXemDiem";
-            this.btnXemDiem.Size = new System.Drawing.Size(99, 41);
+            this.btnXemDiem.Size = new System.Drawing.Size(96, 33);
             this.btnXemDiem.TabIndex = 0;
             this.btnXemDiem.Text = "Xem";
             // 
@@ -118,10 +118,10 @@
             this.btnthoatxem.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnthoatxem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthoatxem.ImageOptions.Image")));
             this.btnthoatxem.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnthoatxem.Location = new System.Drawing.Point(22, 97);
+            this.btnthoatxem.Location = new System.Drawing.Point(24, 94);
             this.btnthoatxem.Name = "btnthoatxem";
-            this.btnthoatxem.Size = new System.Drawing.Size(99, 41);
-            this.btnthoatxem.TabIndex = 24;
+            this.btnthoatxem.Size = new System.Drawing.Size(96, 33);
+            this.btnthoatxem.TabIndex = 1;
             this.btnthoatxem.Text = "Đóng";
             this.btnthoatxem.Click += new System.EventHandler(this.btnthoatxem_Click);
             // 
@@ -188,11 +188,11 @@
             this.cbbTenHPXem.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbbTenHPXem.Size = new System.Drawing.Size(226, 20);
-            this.cbbTenHPXem.TabIndex = 3;
+            this.cbbTenHPXem.TabIndex = 2;
             // 
             // cbbTenXem
             // 
-            this.cbbTenXem.Location = new System.Drawing.Point(178, 77);
+            this.cbbTenXem.Location = new System.Drawing.Point(178, 80);
             this.cbbTenXem.Name = "cbbTenXem";
             this.cbbTenXem.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.cbbTenXem.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
@@ -218,7 +218,7 @@
             // 
             // txtDTBHPXem
             // 
-            this.txtDTBHPXem.Location = new System.Drawing.Point(602, 118);
+            this.txtDTBHPXem.Location = new System.Drawing.Point(602, 120);
             this.txtDTBHPXem.Name = "txtDTBHPXem";
             this.txtDTBHPXem.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtDTBHPXem.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
@@ -235,7 +235,7 @@
             this.labelControl7.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl7.Appearance.Options.UseFont = true;
             this.labelControl7.Appearance.Options.UseForeColor = true;
-            this.labelControl7.Location = new System.Drawing.Point(455, 115);
+            this.labelControl7.Location = new System.Drawing.Point(455, 118);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(100, 23);
             this.labelControl7.TabIndex = 12;
@@ -243,7 +243,7 @@
             // 
             // txtDiemThiXem
             // 
-            this.txtDiemThiXem.Location = new System.Drawing.Point(602, 79);
+            this.txtDiemThiXem.Location = new System.Drawing.Point(602, 78);
             this.txtDiemThiXem.Name = "txtDiemThiXem";
             this.txtDiemThiXem.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtDiemThiXem.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
@@ -256,7 +256,7 @@
             // 
             // txtDiemQTXem
             // 
-            this.txtDiemQTXem.Location = new System.Drawing.Point(602, 36);
+            this.txtDiemQTXem.Location = new System.Drawing.Point(602, 38);
             this.txtDiemQTXem.Name = "txtDiemQTXem";
             this.txtDiemQTXem.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtDiemQTXem.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
@@ -285,7 +285,7 @@
             this.labelControl5.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl5.Appearance.Options.UseFont = true;
             this.labelControl5.Appearance.Options.UseForeColor = true;
-            this.labelControl5.Location = new System.Drawing.Point(455, 74);
+            this.labelControl5.Location = new System.Drawing.Point(455, 78);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(70, 23);
             this.labelControl5.TabIndex = 3;

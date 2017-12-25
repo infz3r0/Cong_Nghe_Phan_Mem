@@ -14,7 +14,7 @@ namespace DATA_Tier
     {
         public DataTable getAll()
         {
-            string query = "Select * from SinhVien";
+            string query = "Select MaSV, HoTen, NgaySinh, GioiTinh, DiaChi, SoCMND, Sdt, Email from SinhVien";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return executeSelectQuery(query, sqlParameters);
         }

@@ -86,7 +86,6 @@
             this.txtcmndsv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtcmndsv.ForeColor = System.Drawing.Color.Black;
             this.txtcmndsv.Location = new System.Drawing.Point(808, 81);
-            this.txtcmndsv.Mask = "0000000000";
             this.txtcmndsv.Name = "txtcmndsv";
             this.txtcmndsv.PromptChar = ' ';
             this.txtcmndsv.Size = new System.Drawing.Size(266, 19);
@@ -97,7 +96,6 @@
             this.txtdienthoaisv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtdienthoaisv.ForeColor = System.Drawing.Color.Black;
             this.txtdienthoaisv.Location = new System.Drawing.Point(808, 126);
-            this.txtdienthoaisv.Mask = "000000000000000";
             this.txtdienthoaisv.Name = "txtdienthoaisv";
             this.txtdienthoaisv.PromptChar = ' ';
             this.txtdienthoaisv.Size = new System.Drawing.Size(266, 19);
@@ -319,9 +317,9 @@
             this.btnthemsv.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnthemsv.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthemsv.ImageOptions.Image")));
             this.btnthemsv.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnthemsv.Location = new System.Drawing.Point(96, 24);
+            this.btnthemsv.Location = new System.Drawing.Point(64, 25);
             this.btnthemsv.Name = "btnthemsv";
-            this.btnthemsv.Size = new System.Drawing.Size(85, 39);
+            this.btnthemsv.Size = new System.Drawing.Size(96, 33);
             this.btnthemsv.TabIndex = 0;
             this.btnthemsv.Text = "Thêm";
             // 
@@ -337,9 +335,9 @@
             this.btnsuasv.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnsuasv.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnsuasv.ImageOptions.Image")));
             this.btnsuasv.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnsuasv.Location = new System.Drawing.Point(187, 24);
+            this.btnsuasv.Location = new System.Drawing.Point(166, 25);
             this.btnsuasv.Name = "btnsuasv";
-            this.btnsuasv.Size = new System.Drawing.Size(79, 39);
+            this.btnsuasv.Size = new System.Drawing.Size(96, 33);
             this.btnsuasv.TabIndex = 1;
             this.btnsuasv.Text = "Sửa ";
             // 
@@ -372,10 +370,10 @@
             this.btnthoatsv.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnthoatsv.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthoatsv.ImageOptions.Image")));
             this.btnthoatsv.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnthoatsv.Location = new System.Drawing.Point(354, 24);
+            this.btnthoatsv.Location = new System.Drawing.Point(370, 25);
             this.btnthoatsv.Name = "btnthoatsv";
-            this.btnthoatsv.Size = new System.Drawing.Size(81, 38);
-            this.btnthoatsv.TabIndex = 23;
+            this.btnthoatsv.Size = new System.Drawing.Size(96, 33);
+            this.btnthoatsv.TabIndex = 3;
             this.btnthoatsv.Text = "Đóng";
             this.btnthoatsv.Click += new System.EventHandler(this.btnthoatsv_Click);
             // 
@@ -391,9 +389,9 @@
             this.btnxoasv.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnxoasv.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnxoasv.ImageOptions.Image")));
             this.btnxoasv.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnxoasv.Location = new System.Drawing.Point(272, 25);
+            this.btnxoasv.Location = new System.Drawing.Point(268, 25);
             this.btnxoasv.Name = "btnxoasv";
-            this.btnxoasv.Size = new System.Drawing.Size(76, 38);
+            this.btnxoasv.Size = new System.Drawing.Size(96, 33);
             this.btnxoasv.TabIndex = 2;
             this.btnxoasv.Text = "Xóa";
             // 
@@ -405,7 +403,7 @@
             this.groupBox3.ForeColor = System.Drawing.Color.White;
             this.groupBox3.Location = new System.Drawing.Point(2, 302);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1207, 183);
+            this.groupBox3.Size = new System.Drawing.Size(1207, 289);
             this.groupBox3.TabIndex = 25;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông tin chi tiết";
@@ -426,7 +424,7 @@
             this.Email});
             this.gridviewsv.Location = new System.Drawing.Point(6, 22);
             this.gridviewsv.Name = "gridviewsv";
-            this.gridviewsv.Size = new System.Drawing.Size(1192, 151);
+            this.gridviewsv.Size = new System.Drawing.Size(1192, 261);
             this.gridviewsv.TabIndex = 9;
             // 
             // MaSV
@@ -469,7 +467,7 @@
             // 
             // DienThoai
             // 
-            this.DienThoai.DataPropertyName = "DienThoai";
+            this.DienThoai.DataPropertyName = "Sdt";
             this.DienThoai.HeaderText = "Điện thoại";
             this.DienThoai.Name = "DienThoai";
             // 
@@ -487,7 +485,7 @@
             this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Tile;
             this.BackgroundImageStore = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
             this.CancelButton = this.btnthoatsv;
-            this.ClientSize = new System.Drawing.Size(1212, 497);
+            this.ClientSize = new System.Drawing.Size(1212, 603);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);

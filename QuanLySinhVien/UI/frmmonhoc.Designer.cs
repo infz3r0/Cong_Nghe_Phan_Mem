@@ -34,7 +34,6 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.gridviewhp = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cbbloaihp = new System.Windows.Forms.ComboBox();
             this.txtmahp = new DevExpress.XtraEditors.TextEdit();
             this.txtstchp = new DevExpress.XtraEditors.TextEdit();
             this.txttenhp = new DevExpress.XtraEditors.TextEdit();
@@ -49,6 +48,7 @@
             this.btnsuahp = new DevExpress.XtraEditors.SimpleButton();
             this.btnthemhp = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cbbloaihp = new DevExpress.XtraEditors.ComboBoxEdit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridviewhp)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -57,6 +57,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txttenhp.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbloaihp.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // defaultLookAndFeel1
@@ -107,15 +108,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin";
             // 
-            // cbbloaihp
-            // 
-            this.cbbloaihp.Cursor = System.Windows.Forms.Cursors.Default;
-            this.cbbloaihp.FormattingEnabled = true;
-            this.cbbloaihp.Location = new System.Drawing.Point(188, 161);
-            this.cbbloaihp.Name = "cbbloaihp";
-            this.cbbloaihp.Size = new System.Drawing.Size(297, 26);
-            this.cbbloaihp.TabIndex = 3;
-            // 
             // txtmahp
             // 
             this.txtmahp.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -145,7 +137,7 @@
             // txttenhp
             // 
             this.txttenhp.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txttenhp.Location = new System.Drawing.Point(188, 77);
+            this.txttenhp.Location = new System.Drawing.Point(188, 80);
             this.txttenhp.Name = "txttenhp";
             this.txttenhp.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txttenhp.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
@@ -218,8 +210,8 @@
             this.btnthoathp.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnthoathp.Location = new System.Drawing.Point(22, 161);
             this.btnthoathp.Name = "btnthoathp";
-            this.btnthoathp.Size = new System.Drawing.Size(99, 41);
-            this.btnthoathp.TabIndex = 24;
+            this.btnthoathp.Size = new System.Drawing.Size(96, 33);
+            this.btnthoathp.TabIndex = 3;
             this.btnthoathp.Text = "Đóng";
             this.btnthoathp.Click += new System.EventHandler(this.btnthoathp_Click);
             // 
@@ -237,7 +229,7 @@
             this.btnxoahp.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnxoahp.Location = new System.Drawing.Point(23, 116);
             this.btnxoahp.Name = "btnxoahp";
-            this.btnxoahp.Size = new System.Drawing.Size(99, 39);
+            this.btnxoahp.Size = new System.Drawing.Size(96, 33);
             this.btnxoahp.TabIndex = 2;
             this.btnxoahp.Text = "Xóa";
             // 
@@ -253,9 +245,9 @@
             this.btnsuahp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnsuahp.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnsuahp.ImageOptions.Image")));
             this.btnsuahp.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnsuahp.Location = new System.Drawing.Point(22, 70);
+            this.btnsuahp.Location = new System.Drawing.Point(23, 70);
             this.btnsuahp.Name = "btnsuahp";
-            this.btnsuahp.Size = new System.Drawing.Size(100, 40);
+            this.btnsuahp.Size = new System.Drawing.Size(96, 33);
             this.btnsuahp.TabIndex = 1;
             this.btnsuahp.Text = "Sửa ";
             // 
@@ -273,7 +265,7 @@
             this.btnthemhp.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnthemhp.Location = new System.Drawing.Point(23, 23);
             this.btnthemhp.Name = "btnthemhp";
-            this.btnthemhp.Size = new System.Drawing.Size(99, 39);
+            this.btnthemhp.Size = new System.Drawing.Size(96, 33);
             this.btnthemhp.TabIndex = 0;
             this.btnthemhp.Text = "Thêm";
             // 
@@ -292,6 +284,19 @@
             this.groupBox2.TabIndex = 19;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chức năng";
+            // 
+            // cbbloaihp
+            // 
+            this.cbbloaihp.Location = new System.Drawing.Point(188, 163);
+            this.cbbloaihp.Name = "cbbloaihp";
+            this.cbbloaihp.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.cbbloaihp.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.cbbloaihp.Properties.Appearance.Options.UseBackColor = true;
+            this.cbbloaihp.Properties.Appearance.Options.UseForeColor = true;
+            this.cbbloaihp.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbbloaihp.Size = new System.Drawing.Size(297, 20);
+            this.cbbloaihp.TabIndex = 3;
             // 
             // frmmonhoc
             // 
@@ -319,6 +324,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txttenhp.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cbbloaihp.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -343,6 +349,6 @@
         private DevExpress.XtraEditors.SimpleButton btnthemhp;
         private System.Windows.Forms.GroupBox groupBox2;
         private DevExpress.XtraEditors.TextEdit txtmahp;
-        private System.Windows.Forms.ComboBox cbbloaihp;
+        private DevExpress.XtraEditors.ComboBoxEdit cbbloaihp;
     }
 }

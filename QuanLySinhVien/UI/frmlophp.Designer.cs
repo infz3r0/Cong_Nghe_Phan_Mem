@@ -111,10 +111,10 @@
             this.btnthoatlophp.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnthoatlophp.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthoatlophp.ImageOptions.Image")));
             this.btnthoatlophp.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnthoatlophp.Location = new System.Drawing.Point(43, 161);
+            this.btnthoatlophp.Location = new System.Drawing.Point(43, 160);
             this.btnthoatlophp.Name = "btnthoatlophp";
-            this.btnthoatlophp.Size = new System.Drawing.Size(97, 36);
-            this.btnthoatlophp.TabIndex = 24;
+            this.btnthoatlophp.Size = new System.Drawing.Size(96, 33);
+            this.btnthoatlophp.TabIndex = 3;
             this.btnthoatlophp.Text = "Đóng";
             this.btnthoatlophp.Click += new System.EventHandler(this.btnthoatlophp_Click);
             // 
@@ -130,9 +130,9 @@
             this.btnxoalophp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnxoalophp.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnxoalophp.ImageOptions.Image")));
             this.btnxoalophp.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnxoalophp.Location = new System.Drawing.Point(44, 113);
+            this.btnxoalophp.Location = new System.Drawing.Point(43, 113);
             this.btnxoalophp.Name = "btnxoalophp";
-            this.btnxoalophp.Size = new System.Drawing.Size(96, 36);
+            this.btnxoalophp.Size = new System.Drawing.Size(96, 33);
             this.btnxoalophp.TabIndex = 2;
             this.btnxoalophp.Text = "Xóa";
             // 
@@ -150,7 +150,7 @@
             this.btnsualophp.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnsualophp.Location = new System.Drawing.Point(43, 69);
             this.btnsualophp.Name = "btnsualophp";
-            this.btnsualophp.Size = new System.Drawing.Size(97, 31);
+            this.btnsualophp.Size = new System.Drawing.Size(96, 33);
             this.btnsualophp.TabIndex = 1;
             this.btnsualophp.Text = "Sửa ";
             // 
@@ -168,7 +168,7 @@
             this.btnthemlophp.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnthemlophp.Location = new System.Drawing.Point(43, 25);
             this.btnthemlophp.Name = "btnthemlophp";
-            this.btnthemlophp.Size = new System.Drawing.Size(96, 32);
+            this.btnthemlophp.Size = new System.Drawing.Size(96, 33);
             this.btnthemlophp.TabIndex = 0;
             this.btnthemlophp.Text = "Thêm";
             // 
@@ -210,7 +210,7 @@
             // txtTenHPLopHP
             // 
             this.txtTenHPLopHP.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTenHPLopHP.Location = new System.Drawing.Point(192, 116);
+            this.txtTenHPLopHP.Location = new System.Drawing.Point(192, 119);
             this.txtTenHPLopHP.Name = "txtTenHPLopHP";
             this.txtTenHPLopHP.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtTenHPLopHP.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
@@ -223,7 +223,7 @@
             // txtSLSVLopHP
             // 
             this.txtSLSVLopHP.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSLSVLopHP.Location = new System.Drawing.Point(192, 158);
+            this.txtSLSVLopHP.Location = new System.Drawing.Point(192, 161);
             this.txtSLSVLopHP.Name = "txtSLSVLopHP";
             this.txtSLSVLopHP.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtSLSVLopHP.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
@@ -236,7 +236,7 @@
             // txtMaHPLopHP
             // 
             this.txtMaHPLopHP.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMaHPLopHP.Location = new System.Drawing.Point(192, 77);
+            this.txtMaHPLopHP.Location = new System.Drawing.Point(192, 79);
             this.txtMaHPLopHP.Name = "txtMaHPLopHP";
             this.txtMaHPLopHP.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtMaHPLopHP.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
@@ -249,7 +249,7 @@
             // txtmalophp
             // 
             this.txtmalophp.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtmalophp.Location = new System.Drawing.Point(192, 37);
+            this.txtmalophp.Location = new System.Drawing.Point(192, 39);
             this.txtmalophp.Name = "txtmalophp";
             this.txtmalophp.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtmalophp.Properties.Appearance.ForeColor = System.Drawing.Color.Black;

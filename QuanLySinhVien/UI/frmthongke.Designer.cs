@@ -168,7 +168,7 @@
             this.btnthoattk.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnthoattk.Location = new System.Drawing.Point(80, 70);
             this.btnthoattk.Name = "btnthoattk";
-            this.btnthoattk.Size = new System.Drawing.Size(109, 41);
+            this.btnthoattk.Size = new System.Drawing.Size(96, 33);
             this.btnthoattk.TabIndex = 2;
             this.btnthoattk.Text = "Đóng";
             this.btnthoattk.Click += new System.EventHandler(this.btnthoattk_Click);
@@ -187,9 +187,9 @@
             this.btnthongke.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnthongke.Location = new System.Drawing.Point(80, 23);
             this.btnthongke.Name = "btnthongke";
-            this.btnthongke.Size = new System.Drawing.Size(109, 41);
+            this.btnthongke.Size = new System.Drawing.Size(96, 33);
             this.btnthongke.TabIndex = 0;
-            this.btnthongke.Text = "Thống kê";
+            this.btnthongke.Text = "OK";
             // 
             // defaultLookAndFeel1
             // 

@@ -113,7 +113,7 @@
             this.btnthoatracuu.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnthoatracuu.Location = new System.Drawing.Point(755, 31);
             this.btnthoatracuu.Name = "btnthoatracuu";
-            this.btnthoatracuu.Size = new System.Drawing.Size(99, 32);
+            this.btnthoatracuu.Size = new System.Drawing.Size(96, 33);
             this.btnthoatracuu.TabIndex = 2;
             this.btnthoatracuu.Text = "Đóng";
             this.btnthoatracuu.Click += new System.EventHandler(this.btnthoatracuu_Click);
@@ -124,7 +124,7 @@
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.Location = new System.Drawing.Point(7, 36);
+            this.labelControl1.Location = new System.Drawing.Point(22, 36);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(171, 23);
             this.labelControl1.TabIndex = 2;
@@ -144,7 +144,7 @@
             this.btntracuu.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btntracuu.Location = new System.Drawing.Point(619, 31);
             this.btntracuu.Name = "btntracuu";
-            this.btntracuu.Size = new System.Drawing.Size(96, 32);
+            this.btntracuu.Size = new System.Drawing.Size(96, 33);
             this.btntracuu.TabIndex = 1;
             this.btntracuu.Text = "Tìm";
             // 

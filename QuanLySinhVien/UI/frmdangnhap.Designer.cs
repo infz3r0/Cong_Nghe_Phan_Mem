@@ -110,9 +110,9 @@
             this.btndangnhap.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btndangnhap.Location = new System.Drawing.Point(170, 131);
             this.btndangnhap.Name = "btndangnhap";
-            this.btndangnhap.Size = new System.Drawing.Size(112, 36);
-            this.btndangnhap.TabIndex = 4;
-            this.btndangnhap.Text = "Đăng nhập";
+            this.btndangnhap.Size = new System.Drawing.Size(96, 33);
+            this.btndangnhap.TabIndex = 0;
+            this.btndangnhap.Text = "OK";
             this.btndangnhap.Click += new System.EventHandler(this.btndangnhap_Click);
             // 
             // labelControl4

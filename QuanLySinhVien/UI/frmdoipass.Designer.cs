@@ -73,7 +73,7 @@
             // 
             this.txtmkmoi.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtmkmoi.EditValue = "";
-            this.txtmkmoi.Location = new System.Drawing.Point(176, 129);
+            this.txtmkmoi.Location = new System.Drawing.Point(176, 126);
             this.txtmkmoi.Name = "txtmkmoi";
             this.txtmkmoi.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtmkmoi.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
@@ -111,7 +111,7 @@
             // 
             this.txtmkcu.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtmkcu.EditValue = "";
-            this.txtmkcu.Location = new System.Drawing.Point(176, 82);
+            this.txtmkcu.Location = new System.Drawing.Point(176, 81);
             this.txtmkcu.Name = "txtmkcu";
             this.txtmkcu.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtmkcu.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
@@ -137,8 +137,8 @@
             this.btnthoatdoipass.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnthoatdoipass.Location = new System.Drawing.Point(302, 181);
             this.btnthoatdoipass.Name = "btnthoatdoipass";
-            this.btnthoatdoipass.Size = new System.Drawing.Size(94, 36);
-            this.btnthoatdoipass.TabIndex = 5;
+            this.btnthoatdoipass.Size = new System.Drawing.Size(96, 33);
+            this.btnthoatdoipass.TabIndex = 1;
             this.btnthoatdoipass.Text = "Đóng";
             this.btnthoatdoipass.Click += new System.EventHandler(this.btnthoatdoipass_Click);
             // 
@@ -171,8 +171,8 @@
             this.btnokdoipass.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnokdoipass.Location = new System.Drawing.Point(176, 181);
             this.btnokdoipass.Name = "btnokdoipass";
-            this.btnokdoipass.Size = new System.Drawing.Size(96, 36);
-            this.btnokdoipass.TabIndex = 4;
+            this.btnokdoipass.Size = new System.Drawing.Size(96, 33);
+            this.btnokdoipass.TabIndex = 0;
             this.btnokdoipass.Text = "OK";
             // 
             // labelControl4

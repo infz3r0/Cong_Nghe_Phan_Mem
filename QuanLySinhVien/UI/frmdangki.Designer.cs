@@ -135,8 +135,8 @@
             this.btnthoatdk.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnthoatdk.Location = new System.Drawing.Point(343, 188);
             this.btnthoatdk.Name = "btnthoatdk";
-            this.btnthoatdk.Size = new System.Drawing.Size(94, 36);
-            this.btnthoatdk.TabIndex = 5;
+            this.btnthoatdk.Size = new System.Drawing.Size(96, 33);
+            this.btnthoatdk.TabIndex = 1;
             this.btnthoatdk.Text = "Đóng";
             this.btnthoatdk.Click += new System.EventHandler(this.btnthoatdk_Click);
             // 
@@ -169,8 +169,8 @@
             this.btndangki.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btndangki.Location = new System.Drawing.Point(217, 188);
             this.btndangki.Name = "btndangki";
-            this.btndangki.Size = new System.Drawing.Size(96, 36);
-            this.btndangki.TabIndex = 4;
+            this.btndangki.Size = new System.Drawing.Size(96, 33);
+            this.btndangki.TabIndex = 0;
             this.btndangki.Text = "Đăng kí";
             // 
             // labelControl4

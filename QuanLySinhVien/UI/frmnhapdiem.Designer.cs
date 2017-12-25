@@ -64,7 +64,7 @@
             this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(433, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(139, 208);
+            this.groupBox2.Size = new System.Drawing.Size(139, 160);
             this.groupBox2.TabIndex = 22;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chức năng";
@@ -82,10 +82,10 @@
             this.btnthoatnhapdiem.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnthoatnhapdiem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthoatnhapdiem.ImageOptions.Image")));
             this.btnthoatnhapdiem.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnthoatnhapdiem.Location = new System.Drawing.Point(22, 153);
+            this.btnthoatnhapdiem.Location = new System.Drawing.Point(22, 107);
             this.btnthoatnhapdiem.Name = "btnthoatnhapdiem";
-            this.btnthoatnhapdiem.Size = new System.Drawing.Size(99, 31);
-            this.btnthoatnhapdiem.TabIndex = 24;
+            this.btnthoatnhapdiem.Size = new System.Drawing.Size(96, 33);
+            this.btnthoatnhapdiem.TabIndex = 2;
             this.btnthoatnhapdiem.Text = "Đóng";
             this.btnthoatnhapdiem.Click += new System.EventHandler(this.btnthoatnhapdiem_Click);
             // 
@@ -101,9 +101,9 @@
             this.btnsuadiem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnsuadiem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnsuadiem.ImageOptions.Image")));
             this.btnsuadiem.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnsuadiem.Location = new System.Drawing.Point(21, 95);
+            this.btnsuadiem.Location = new System.Drawing.Point(22, 68);
             this.btnsuadiem.Name = "btnsuadiem";
-            this.btnsuadiem.Size = new System.Drawing.Size(100, 31);
+            this.btnsuadiem.Size = new System.Drawing.Size(96, 33);
             this.btnsuadiem.TabIndex = 1;
             this.btnsuadiem.Text = "Sửa ";
             // 
@@ -119,9 +119,9 @@
             this.btnthemdiem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnthemdiem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthemdiem.ImageOptions.Image")));
             this.btnthemdiem.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnthemdiem.Location = new System.Drawing.Point(22, 39);
+            this.btnthemdiem.Location = new System.Drawing.Point(22, 29);
             this.btnthemdiem.Name = "btnthemdiem";
-            this.btnthemdiem.Size = new System.Drawing.Size(99, 30);
+            this.btnthemdiem.Size = new System.Drawing.Size(96, 33);
             this.btnthemdiem.TabIndex = 0;
             this.btnthemdiem.Text = "Thêm";
             // 
@@ -145,7 +145,7 @@
             this.groupBox3.Controls.Add(this.gridviewnhapdiem);
             this.groupBox3.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox3.ForeColor = System.Drawing.Color.White;
-            this.groupBox3.Location = new System.Drawing.Point(12, 226);
+            this.groupBox3.Location = new System.Drawing.Point(12, 178);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(560, 258);
             this.groupBox3.TabIndex = 23;
@@ -166,14 +166,14 @@
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(404, 208);
+            this.groupBox1.Size = new System.Drawing.Size(404, 160);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin";
             // 
             // cbbMssvNhapDiem
             // 
-            this.cbbMssvNhapDiem.Location = new System.Drawing.Point(156, 39);
+            this.cbbMssvNhapDiem.Location = new System.Drawing.Point(156, 34);
             this.cbbMssvNhapDiem.Name = "cbbMssvNhapDiem";
             this.cbbMssvNhapDiem.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.cbbMssvNhapDiem.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
@@ -188,7 +188,7 @@
             // 
             this.txtdiemthinhap.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtdiemthinhap.ForeColor = System.Drawing.Color.Black;
-            this.txtdiemthinhap.Location = new System.Drawing.Point(156, 165);
+            this.txtdiemthinhap.Location = new System.Drawing.Point(156, 111);
             this.txtdiemthinhap.Mask = "00000";
             this.txtdiemthinhap.Name = "txtdiemthinhap";
             this.txtdiemthinhap.PromptChar = ' ';
@@ -200,7 +200,7 @@
             // 
             this.txtdiemqtnhap.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtdiemqtnhap.ForeColor = System.Drawing.Color.Black;
-            this.txtdiemqtnhap.Location = new System.Drawing.Point(156, 104);
+            this.txtdiemqtnhap.Location = new System.Drawing.Point(156, 72);
             this.txtdiemqtnhap.Mask = "00000";
             this.txtdiemqtnhap.Name = "txtdiemqtnhap";
             this.txtdiemqtnhap.PromptChar = ' ';
@@ -214,7 +214,7 @@
             this.labelControl5.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl5.Appearance.Options.UseFont = true;
             this.labelControl5.Appearance.Options.UseForeColor = true;
-            this.labelControl5.Location = new System.Drawing.Point(20, 161);
+            this.labelControl5.Location = new System.Drawing.Point(20, 107);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(70, 23);
             this.labelControl5.TabIndex = 3;
@@ -226,7 +226,7 @@
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl4.Appearance.Options.UseFont = true;
             this.labelControl4.Appearance.Options.UseForeColor = true;
-            this.labelControl4.Location = new System.Drawing.Point(20, 99);
+            this.labelControl4.Location = new System.Drawing.Point(20, 71);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(126, 23);
             this.labelControl4.TabIndex = 2;
@@ -238,7 +238,7 @@
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Appearance.Options.UseForeColor = true;
-            this.labelControl2.Location = new System.Drawing.Point(20, 39);
+            this.labelControl2.Location = new System.Drawing.Point(20, 34);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(40, 23);
             this.labelControl2.TabIndex = 0;
@@ -252,7 +252,7 @@
             this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Tile;
             this.BackgroundImageStore = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
             this.CancelButton = this.btnthoatnhapdiem;
-            this.ClientSize = new System.Drawing.Size(592, 499);
+            this.ClientSize = new System.Drawing.Size(582, 445);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);

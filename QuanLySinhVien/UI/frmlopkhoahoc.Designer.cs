@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmlopkhoahoc));
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager();
+            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.gridviewlopkh = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -44,8 +45,8 @@
             this.btnxoalopkh = new DevExpress.XtraEditors.SimpleButton();
             this.btnsualopkh = new DevExpress.XtraEditors.SimpleButton();
             this.btnthemlopkh = new DevExpress.XtraEditors.SimpleButton();
-            this.behaviorManager2 = new DevExpress.Utils.Behaviors.BehaviorManager();
-            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel();
+            this.behaviorManager2 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
+            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridviewlopkh)).BeginInit();
@@ -159,10 +160,10 @@
             this.btnthoatlopkh.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnthoatlopkh.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthoatlopkh.ImageOptions.Image")));
             this.btnthoatlopkh.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnthoatlopkh.Location = new System.Drawing.Point(23, 161);
+            this.btnthoatlopkh.Location = new System.Drawing.Point(23, 160);
             this.btnthoatlopkh.Name = "btnthoatlopkh";
-            this.btnthoatlopkh.Size = new System.Drawing.Size(97, 36);
-            this.btnthoatlopkh.TabIndex = 24;
+            this.btnthoatlopkh.Size = new System.Drawing.Size(96, 33);
+            this.btnthoatlopkh.TabIndex = 3;
             this.btnthoatlopkh.Text = "Đóng";
             this.btnthoatlopkh.Click += new System.EventHandler(this.btnthoatlopkh_Click);
             // 
@@ -194,9 +195,9 @@
             this.btnxoalopkh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnxoalopkh.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnxoalopkh.ImageOptions.Image")));
             this.btnxoalopkh.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnxoalopkh.Location = new System.Drawing.Point(24, 113);
+            this.btnxoalopkh.Location = new System.Drawing.Point(23, 113);
             this.btnxoalopkh.Name = "btnxoalopkh";
-            this.btnxoalopkh.Size = new System.Drawing.Size(96, 36);
+            this.btnxoalopkh.Size = new System.Drawing.Size(96, 33);
             this.btnxoalopkh.TabIndex = 2;
             this.btnxoalopkh.Text = "Xóa";
             // 
@@ -214,7 +215,7 @@
             this.btnsualopkh.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnsualopkh.Location = new System.Drawing.Point(23, 69);
             this.btnsualopkh.Name = "btnsualopkh";
-            this.btnsualopkh.Size = new System.Drawing.Size(97, 31);
+            this.btnsualopkh.Size = new System.Drawing.Size(96, 33);
             this.btnsualopkh.TabIndex = 1;
             this.btnsualopkh.Text = "Sửa ";
             // 
@@ -232,7 +233,7 @@
             this.btnthemlopkh.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnthemlopkh.Location = new System.Drawing.Point(23, 25);
             this.btnthemlopkh.Name = "btnthemlopkh";
-            this.btnthemlopkh.Size = new System.Drawing.Size(96, 32);
+            this.btnthemlopkh.Size = new System.Drawing.Size(96, 33);
             this.btnthemlopkh.TabIndex = 0;
             this.btnthemlopkh.Text = "Thêm";
             // 
