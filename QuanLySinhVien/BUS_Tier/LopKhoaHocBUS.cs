@@ -29,8 +29,8 @@ namespace BUS_Tier
             }
             string s1 = malop.Substring(0, 2);
             string s2 = malop.Substring(2, 4);
-            string s3 = malop.Substring(4, 4);
-            string s4 = malop.Substring();
+            string s3 = malop.Substring(3, 4);
+            string s4 = malop.Substring(4,4);
             for (int i = 0; i < 2; i++)
             {
                 if (char.IsDigit(s1[i]))
