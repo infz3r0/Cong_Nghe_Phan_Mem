@@ -38,6 +38,7 @@ namespace UI_Tier
         private void LoadDB()
         {
             gridviewlopkh.DataSource = lopKhoaHocBUS.DanhSach();
+
             cbbTenKhoaLopKH.DataSource = khoaBUS.DanhSach();
             cbbTenKhoaLopKH.DisplayMember = "TenKhoa";
             cbbTenKhoaLopKH.ValueMember = "MaKhoa";
@@ -50,9 +51,12 @@ namespace UI_Tier
 
         private void btnthemlopkh_Click(object sender, EventArgs e)
         {
-            string malop = txtmalopkhoahoc.Text;
-            string makhoa = cbbTenKhoaLopKH.SelectedValue.ToString();
-            LopKhoaHoc lopKhoaHoc = new LopKhoaHoc(malop,makhoa);
+           
+            string lop = txtmalopkhoahoc.Text;
+            string khoa = cbbTenKhoaLopKH.SelectedValue.ToString();
+
+            LopKhoaHoc lopKhoaHoc = new LopKhoaHoc(lop,khoa);
+
             bool thanhcong = lopKhoaHocBUS.Them(lopKhoaHoc);
             if (thanhcong)
             {
@@ -64,5 +68,7 @@ namespace UI_Tier
             }
             LoadDB();
         }
+
+        
     }
 }
