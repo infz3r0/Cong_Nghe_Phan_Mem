@@ -64,7 +64,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(419, 241);
+            this.groupBox1.Size = new System.Drawing.Size(482, 262);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin tài khoản";
@@ -73,7 +73,7 @@
             // 
             this.txtmkmoi.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtmkmoi.EditValue = "";
-            this.txtmkmoi.Location = new System.Drawing.Point(176, 126);
+            this.txtmkmoi.Location = new System.Drawing.Point(176, 127);
             this.txtmkmoi.Name = "txtmkmoi";
             this.txtmkmoi.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtmkmoi.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
@@ -111,7 +111,7 @@
             // 
             this.txtmkcu.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtmkcu.EditValue = "";
-            this.txtmkcu.Location = new System.Drawing.Point(176, 81);
+            this.txtmkcu.Location = new System.Drawing.Point(176, 82);
             this.txtmkcu.Name = "txtmkcu";
             this.txtmkcu.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtmkcu.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
@@ -128,14 +128,12 @@
             this.btnthoatdoipass.Appearance.ForeColor = System.Drawing.Color.Transparent;
             this.btnthoatdoipass.Appearance.Options.UseFont = true;
             this.btnthoatdoipass.Appearance.Options.UseForeColor = true;
-            this.btnthoatdoipass.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
             this.btnthoatdoipass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnthoatdoipass.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnthoatdoipass.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnthoatdoipass.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnthoatdoipass.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthoatdoipass.ImageOptions.Image")));
             this.btnthoatdoipass.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnthoatdoipass.Location = new System.Drawing.Point(302, 181);
+            this.btnthoatdoipass.Location = new System.Drawing.Point(300, 191);
             this.btnthoatdoipass.Name = "btnthoatdoipass";
             this.btnthoatdoipass.Size = new System.Drawing.Size(96, 33);
             this.btnthoatdoipass.TabIndex = 1;
@@ -163,13 +161,11 @@
             this.btnokdoipass.Appearance.ForeColor = System.Drawing.Color.White;
             this.btnokdoipass.Appearance.Options.UseFont = true;
             this.btnokdoipass.Appearance.Options.UseForeColor = true;
-            this.btnokdoipass.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
             this.btnokdoipass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnokdoipass.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnokdoipass.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnokdoipass.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnokdoipass.ImageOptions.Image")));
             this.btnokdoipass.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnokdoipass.Location = new System.Drawing.Point(176, 181);
+            this.btnokdoipass.Location = new System.Drawing.Point(174, 191);
             this.btnokdoipass.Name = "btnokdoipass";
             this.btnokdoipass.Size = new System.Drawing.Size(96, 33);
             this.btnokdoipass.TabIndex = 0;
@@ -208,10 +204,8 @@
             this.AcceptButton = this.btnokdoipass;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Tile;
-            this.BackgroundImageStore = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
             this.CancelButton = this.btnthoatdoipass;
-            this.ClientSize = new System.Drawing.Size(448, 267);
+            this.ClientSize = new System.Drawing.Size(506, 286);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmdoipass";

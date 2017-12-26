@@ -65,11 +65,11 @@ namespace UI_Tier
             bool thanhcong = khoaBUS.Them(khoa);
             if (thanhcong)
             {
-                MessageBox.Show("Thành công");
+                MessageBox.Show("Thành công !");
             }
             else
             {
-                MessageBox.Show("Lỗi");
+                MessageBox.Show("Lỗi","", MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
             bs.DataSource = khoaBUS.DanhSach();
         }

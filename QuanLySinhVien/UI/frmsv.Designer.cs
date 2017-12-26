@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmsv));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.txtcmndsv = new System.Windows.Forms.MaskedTextBox();
             this.txtdienthoaisv = new System.Windows.Forms.MaskedTextBox();
@@ -116,8 +116,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.White;
-            this.groupBox1.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.txtcmndsv);
             this.groupBox1.Controls.Add(this.txtdienthoaisv);
             this.groupBox1.Controls.Add(this.txtmailsv);
@@ -311,9 +310,7 @@
             this.btnthemsv.AppearanceHovered.Options.UseBackColor = true;
             this.btnthemsv.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnthemsv.AppearancePressed.Options.UseBackColor = true;
-            this.btnthemsv.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
             this.btnthemsv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnthemsv.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnthemsv.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnthemsv.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthemsv.ImageOptions.Image")));
             this.btnthemsv.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
@@ -322,6 +319,7 @@
             this.btnthemsv.Size = new System.Drawing.Size(96, 33);
             this.btnthemsv.TabIndex = 0;
             this.btnthemsv.Text = "Thêm";
+            this.btnthemsv.Click += new System.EventHandler(this.btnthemsv_Click);
             // 
             // btnsuasv
             // 
@@ -329,9 +327,7 @@
             this.btnsuasv.Appearance.ForeColor = System.Drawing.Color.White;
             this.btnsuasv.Appearance.Options.UseFont = true;
             this.btnsuasv.Appearance.Options.UseForeColor = true;
-            this.btnsuasv.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
             this.btnsuasv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnsuasv.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnsuasv.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnsuasv.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnsuasv.ImageOptions.Image")));
             this.btnsuasv.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
@@ -340,6 +336,7 @@
             this.btnsuasv.Size = new System.Drawing.Size(96, 33);
             this.btnsuasv.TabIndex = 1;
             this.btnsuasv.Text = "Sửa ";
+            this.btnsuasv.Click += new System.EventHandler(this.btnsuasv_Click);
             // 
             // groupBox2
             // 
@@ -363,9 +360,7 @@
             this.btnthoatsv.Appearance.ForeColor = System.Drawing.Color.Transparent;
             this.btnthoatsv.Appearance.Options.UseFont = true;
             this.btnthoatsv.Appearance.Options.UseForeColor = true;
-            this.btnthoatsv.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
             this.btnthoatsv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnthoatsv.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnthoatsv.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnthoatsv.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnthoatsv.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthoatsv.ImageOptions.Image")));
@@ -383,9 +378,7 @@
             this.btnxoasv.Appearance.ForeColor = System.Drawing.Color.White;
             this.btnxoasv.Appearance.Options.UseFont = true;
             this.btnxoasv.Appearance.Options.UseForeColor = true;
-            this.btnxoasv.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
             this.btnxoasv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnxoasv.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnxoasv.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnxoasv.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnxoasv.ImageOptions.Image")));
             this.btnxoasv.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
@@ -394,6 +387,7 @@
             this.btnxoasv.Size = new System.Drawing.Size(96, 33);
             this.btnxoasv.TabIndex = 2;
             this.btnxoasv.Text = "Xóa";
+            this.btnxoasv.Click += new System.EventHandler(this.btnxoasv_Click);
             // 
             // groupBox3
             // 
@@ -430,8 +424,8 @@
             // MaSV
             // 
             this.MaSV.DataPropertyName = "MaSV";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.MaSV.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.MaSV.DefaultCellStyle = dataGridViewCellStyle3;
             this.MaSV.HeaderText = "MSSV";
             this.MaSV.Name = "MaSV";
             // 
@@ -482,8 +476,6 @@
             this.AcceptButton = this.btnthemsv;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Tile;
-            this.BackgroundImageStore = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
             this.CancelButton = this.btnthoatsv;
             this.ClientSize = new System.Drawing.Size(1212, 603);
             this.Controls.Add(this.groupBox3);

@@ -92,9 +92,7 @@
             this.btnXemDiem.Appearance.ForeColor = System.Drawing.Color.White;
             this.btnXemDiem.Appearance.Options.UseFont = true;
             this.btnXemDiem.Appearance.Options.UseForeColor = true;
-            this.btnXemDiem.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
             this.btnXemDiem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnXemDiem.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnXemDiem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnXemDiem.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnXemDiem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXemDiem.ImageOptions.Image")));
@@ -111,9 +109,7 @@
             this.btnthoatxem.Appearance.ForeColor = System.Drawing.Color.Transparent;
             this.btnthoatxem.Appearance.Options.UseFont = true;
             this.btnthoatxem.Appearance.Options.UseForeColor = true;
-            this.btnthoatxem.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
             this.btnthoatxem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnthoatxem.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnthoatxem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnthoatxem.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnthoatxem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthoatxem.ImageOptions.Image")));
@@ -154,8 +150,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.White;
-            this.groupBox1.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.cbbTenHPXem);
             this.groupBox1.Controls.Add(this.cbbTenXem);
             this.groupBox1.Controls.Add(this.cbbMasvXem);
@@ -398,8 +393,6 @@
             this.AcceptButton = this.btnXemDiem;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Tile;
-            this.BackgroundImageStore = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
             this.CancelButton = this.btnthoatxem;
             this.ClientSize = new System.Drawing.Size(946, 493);
             this.Controls.Add(this.groupBox4);

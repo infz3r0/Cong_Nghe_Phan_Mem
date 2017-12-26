@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmthongke));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.gridviewsv = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cbbmaloptk = new DevExpress.XtraEditors.ComboBoxEdit();
             this.cbbtenkhoatk = new DevExpress.XtraEditors.ComboBoxEdit();
@@ -41,12 +40,13 @@
             this.btnthoattk = new DevExpress.XtraEditors.SimpleButton();
             this.btnthongke = new DevExpress.XtraEditors.SimpleButton();
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
+            this.gridviewsv = new System.Windows.Forms.DataGridView();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridviewsv)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbbmaloptk.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbtenkhoatk.Properties)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridviewsv)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox3
@@ -61,16 +61,6 @@
             this.groupBox3.TabIndex = 25;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông tin chi tiết";
-            // 
-            // gridviewsv
-            // 
-            this.gridviewsv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gridviewsv.BackgroundColor = System.Drawing.Color.White;
-            this.gridviewsv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridviewsv.Location = new System.Drawing.Point(10, 27);
-            this.gridviewsv.Name = "gridviewsv";
-            this.gridviewsv.Size = new System.Drawing.Size(768, 284);
-            this.gridviewsv.TabIndex = 9;
             // 
             // groupBox2
             // 
@@ -159,9 +149,7 @@
             this.btnthoattk.Appearance.ForeColor = System.Drawing.Color.Transparent;
             this.btnthoattk.Appearance.Options.UseFont = true;
             this.btnthoattk.Appearance.Options.UseForeColor = true;
-            this.btnthoattk.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
             this.btnthoattk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnthoattk.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnthoattk.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnthoattk.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnthoattk.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthoattk.ImageOptions.Image")));
@@ -179,9 +167,7 @@
             this.btnthongke.Appearance.ForeColor = System.Drawing.Color.White;
             this.btnthongke.Appearance.Options.UseFont = true;
             this.btnthongke.Appearance.Options.UseForeColor = true;
-            this.btnthongke.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
             this.btnthongke.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnthongke.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnthongke.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnthongke.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthongke.ImageOptions.Image")));
             this.btnthongke.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
@@ -195,13 +181,21 @@
             // 
             this.defaultLookAndFeel1.LookAndFeel.SkinName = "Blueprint";
             // 
+            // gridviewsv
+            // 
+            this.gridviewsv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridviewsv.BackgroundColor = System.Drawing.Color.White;
+            this.gridviewsv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridviewsv.Location = new System.Drawing.Point(10, 27);
+            this.gridviewsv.Name = "gridviewsv";
+            this.gridviewsv.Size = new System.Drawing.Size(768, 284);
+            this.gridviewsv.TabIndex = 9;
+            // 
             // frmthongke
             // 
             this.AcceptButton = this.btnthongke;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Tile;
-            this.BackgroundImageStore = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
             this.CancelButton = this.btnthoattk;
             this.ClientSize = new System.Drawing.Size(808, 482);
             this.Controls.Add(this.groupBox1);
@@ -212,19 +206,18 @@
             this.Text = "THỐNG KÊ";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmthongke_FormClosing);
             this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridviewsv)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbbmaloptk.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbbtenkhoatk.Properties)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridviewsv)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.DataGridView gridviewsv;
         private System.Windows.Forms.GroupBox groupBox2;
         private DevExpress.XtraEditors.ComboBoxEdit cbbmaloptk;
         private DevExpress.XtraEditors.ComboBoxEdit cbbtenkhoatk;
@@ -234,5 +227,6 @@
         private DevExpress.XtraEditors.SimpleButton btnthoattk;
         private DevExpress.XtraEditors.SimpleButton btnthongke;
         private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel1;
+        private System.Windows.Forms.DataGridView gridviewsv;
     }
 }

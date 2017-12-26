@@ -34,6 +34,7 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.gridviewhp = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbbloaihp = new DevExpress.XtraEditors.ComboBoxEdit();
             this.txtmahp = new DevExpress.XtraEditors.TextEdit();
             this.txtstchp = new DevExpress.XtraEditors.TextEdit();
             this.txttenhp = new DevExpress.XtraEditors.TextEdit();
@@ -48,16 +49,15 @@
             this.btnsuahp = new DevExpress.XtraEditors.SimpleButton();
             this.btnthemhp = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.cbbloaihp = new DevExpress.XtraEditors.ComboBoxEdit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridviewhp)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbloaihp.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtmahp.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtstchp.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txttenhp.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbloaihp.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // defaultLookAndFeel1
@@ -89,8 +89,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.White;
-            this.groupBox1.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.cbbloaihp);
             this.groupBox1.Controls.Add(this.txtmahp);
             this.groupBox1.Controls.Add(this.txtstchp);
@@ -107,6 +106,19 @@
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin";
+            // 
+            // cbbloaihp
+            // 
+            this.cbbloaihp.Location = new System.Drawing.Point(188, 163);
+            this.cbbloaihp.Name = "cbbloaihp";
+            this.cbbloaihp.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.cbbloaihp.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.cbbloaihp.Properties.Appearance.Options.UseBackColor = true;
+            this.cbbloaihp.Properties.Appearance.Options.UseForeColor = true;
+            this.cbbloaihp.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbbloaihp.Size = new System.Drawing.Size(297, 20);
+            this.cbbloaihp.TabIndex = 3;
             // 
             // txtmahp
             // 
@@ -201,9 +213,7 @@
             this.btnthoathp.Appearance.ForeColor = System.Drawing.Color.Transparent;
             this.btnthoathp.Appearance.Options.UseFont = true;
             this.btnthoathp.Appearance.Options.UseForeColor = true;
-            this.btnthoathp.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
             this.btnthoathp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnthoathp.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnthoathp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnthoathp.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnthoathp.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthoathp.ImageOptions.Image")));
@@ -221,9 +231,7 @@
             this.btnxoahp.Appearance.ForeColor = System.Drawing.Color.White;
             this.btnxoahp.Appearance.Options.UseFont = true;
             this.btnxoahp.Appearance.Options.UseForeColor = true;
-            this.btnxoahp.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
             this.btnxoahp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnxoahp.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnxoahp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnxoahp.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnxoahp.ImageOptions.Image")));
             this.btnxoahp.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
@@ -239,9 +247,7 @@
             this.btnsuahp.Appearance.ForeColor = System.Drawing.Color.White;
             this.btnsuahp.Appearance.Options.UseFont = true;
             this.btnsuahp.Appearance.Options.UseForeColor = true;
-            this.btnsuahp.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
             this.btnsuahp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnsuahp.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnsuahp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnsuahp.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnsuahp.ImageOptions.Image")));
             this.btnsuahp.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
@@ -257,9 +263,7 @@
             this.btnthemhp.Appearance.ForeColor = System.Drawing.Color.White;
             this.btnthemhp.Appearance.Options.UseFont = true;
             this.btnthemhp.Appearance.Options.UseForeColor = true;
-            this.btnthemhp.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
             this.btnthemhp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnthemhp.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnthemhp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnthemhp.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthemhp.ImageOptions.Image")));
             this.btnthemhp.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
@@ -285,26 +289,11 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chức năng";
             // 
-            // cbbloaihp
-            // 
-            this.cbbloaihp.Location = new System.Drawing.Point(188, 163);
-            this.cbbloaihp.Name = "cbbloaihp";
-            this.cbbloaihp.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.cbbloaihp.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.cbbloaihp.Properties.Appearance.Options.UseBackColor = true;
-            this.cbbloaihp.Properties.Appearance.Options.UseForeColor = true;
-            this.cbbloaihp.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbbloaihp.Size = new System.Drawing.Size(297, 20);
-            this.cbbloaihp.TabIndex = 3;
-            // 
             // frmmonhoc
             // 
             this.AcceptButton = this.btnthemhp;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Tile;
-            this.BackgroundImageStore = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
             this.CancelButton = this.btnthoathp;
             this.ClientSize = new System.Drawing.Size(700, 486);
             this.Controls.Add(this.groupBox3);
@@ -319,12 +308,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridviewhp)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbloaihp.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtmahp.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtstchp.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txttenhp.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.cbbloaihp.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

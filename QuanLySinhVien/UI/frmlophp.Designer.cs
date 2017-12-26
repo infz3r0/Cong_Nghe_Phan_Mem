@@ -104,9 +104,7 @@
             this.btnthoatlophp.Appearance.ForeColor = System.Drawing.Color.Transparent;
             this.btnthoatlophp.Appearance.Options.UseFont = true;
             this.btnthoatlophp.Appearance.Options.UseForeColor = true;
-            this.btnthoatlophp.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
             this.btnthoatlophp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnthoatlophp.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnthoatlophp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnthoatlophp.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnthoatlophp.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthoatlophp.ImageOptions.Image")));
@@ -124,9 +122,7 @@
             this.btnxoalophp.Appearance.ForeColor = System.Drawing.Color.White;
             this.btnxoalophp.Appearance.Options.UseFont = true;
             this.btnxoalophp.Appearance.Options.UseForeColor = true;
-            this.btnxoalophp.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
             this.btnxoalophp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnxoalophp.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnxoalophp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnxoalophp.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnxoalophp.ImageOptions.Image")));
             this.btnxoalophp.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
@@ -141,10 +137,8 @@
             this.btnsualophp.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnsualophp.Appearance.ForeColor = System.Drawing.Color.White;
             this.btnsualophp.Appearance.Options.UseFont = true;
-            this.btnsualophp.Appearance.Options.UseForeColor = true;
-            this.btnsualophp.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
+            this.btnsualophp.Appearance.Options.UseForeColor = true;         
             this.btnsualophp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnsualophp.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnsualophp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnsualophp.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnsualophp.ImageOptions.Image")));
             this.btnsualophp.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
@@ -160,9 +154,7 @@
             this.btnthemlophp.Appearance.ForeColor = System.Drawing.Color.White;
             this.btnthemlophp.Appearance.Options.UseFont = true;
             this.btnthemlophp.Appearance.Options.UseForeColor = true;
-            this.btnthemlophp.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
             this.btnthemlophp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnthemlophp.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnthemlophp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnthemlophp.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthemlophp.ImageOptions.Image")));
             this.btnthemlophp.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
@@ -174,8 +166,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.White;
-            this.groupBox1.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.labelControl1);
             this.groupBox1.Controls.Add(this.txtTenHPLopHP);
             this.groupBox1.Controls.Add(this.txtSLSVLopHP);
@@ -302,8 +293,6 @@
             this.AcceptButton = this.btnthemlophp;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Tile;
-            this.BackgroundImageStore = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
             this.CancelButton = this.btnthoatlophp;
             this.ClientSize = new System.Drawing.Size(786, 507);
             this.Controls.Add(this.groupBox3);

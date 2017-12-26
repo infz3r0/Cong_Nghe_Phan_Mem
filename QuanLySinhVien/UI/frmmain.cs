@@ -298,5 +298,10 @@ namespace UI_Tier
             ThongTinPhanMem t = new ThongTinPhanMem();
             t.ShowDialog();
         }
+
+        private void btnThoat_Click_2(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

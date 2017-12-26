@@ -104,9 +104,7 @@
             this.btnXoaHe4.Appearance.ForeColor = System.Drawing.Color.White;
             this.btnXoaHe4.Appearance.Options.UseFont = true;
             this.btnXoaHe4.Appearance.Options.UseForeColor = true;
-            this.btnXoaHe4.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
             this.btnXoaHe4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnXoaHe4.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnXoaHe4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnXoaHe4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoaHe4.ImageOptions.Image")));
             this.btnXoaHe4.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
@@ -122,9 +120,7 @@
             this.btnSuaHe4.Appearance.ForeColor = System.Drawing.Color.White;
             this.btnSuaHe4.Appearance.Options.UseFont = true;
             this.btnSuaHe4.Appearance.Options.UseForeColor = true;
-            this.btnSuaHe4.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
             this.btnSuaHe4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnSuaHe4.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnSuaHe4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSuaHe4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSuaHe4.ImageOptions.Image")));
             this.btnSuaHe4.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
@@ -141,9 +137,7 @@
             this.btnThemHe4.Appearance.Options.UseFont = true;
             this.btnThemHe4.AppearanceDisabled.BackColor = System.Drawing.Color.White;
             this.btnThemHe4.AppearanceDisabled.Options.UseBackColor = true;
-            this.btnThemHe4.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
             this.btnThemHe4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnThemHe4.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnThemHe4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThemHe4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThemHe4.ImageOptions.Image")));
             this.btnThemHe4.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
@@ -159,9 +153,7 @@
             this.btnXemDiemHe4.Appearance.ForeColor = System.Drawing.Color.White;
             this.btnXemDiemHe4.Appearance.Options.UseFont = true;
             this.btnXemDiemHe4.Appearance.Options.UseForeColor = true;
-            this.btnXemDiemHe4.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
             this.btnXemDiemHe4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnXemDiemHe4.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnXemDiemHe4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnXemDiemHe4.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnXemDiemHe4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXemDiemHe4.ImageOptions.Image")));
@@ -178,9 +170,7 @@
             this.btnthoaHe4.Appearance.ForeColor = System.Drawing.Color.Transparent;
             this.btnthoaHe4.Appearance.Options.UseFont = true;
             this.btnthoaHe4.Appearance.Options.UseForeColor = true;
-            this.btnthoaHe4.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
             this.btnthoaHe4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnthoaHe4.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnthoaHe4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnthoaHe4.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnthoaHe4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthoaHe4.ImageOptions.Image")));
@@ -389,8 +379,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Tile;
-            this.BackgroundImageStore = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
             this.ClientSize = new System.Drawing.Size(723, 501);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);

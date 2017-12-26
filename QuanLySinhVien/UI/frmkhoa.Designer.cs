@@ -74,9 +74,7 @@
             this.btnthemkhoa.Appearance.ForeColor = System.Drawing.Color.White;
             this.btnthemkhoa.Appearance.Options.UseFont = true;
             this.btnthemkhoa.Appearance.Options.UseForeColor = true;
-            this.btnthemkhoa.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
             this.btnthemkhoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnthemkhoa.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnthemkhoa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnthemkhoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthemkhoa.ImageOptions.Image")));
             this.btnthemkhoa.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
@@ -93,9 +91,7 @@
             this.btnsuakhoa.Appearance.ForeColor = System.Drawing.Color.White;
             this.btnsuakhoa.Appearance.Options.UseFont = true;
             this.btnsuakhoa.Appearance.Options.UseForeColor = true;
-            this.btnsuakhoa.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
             this.btnsuakhoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnsuakhoa.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnsuakhoa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnsuakhoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnsuakhoa.ImageOptions.Image")));
             this.btnsuakhoa.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
@@ -112,9 +108,7 @@
             this.btnxoakhoa.Appearance.ForeColor = System.Drawing.Color.White;
             this.btnxoakhoa.Appearance.Options.UseFont = true;
             this.btnxoakhoa.Appearance.Options.UseForeColor = true;
-            this.btnxoakhoa.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
             this.btnxoakhoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnxoakhoa.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnxoakhoa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnxoakhoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnxoakhoa.ImageOptions.Image")));
             this.btnxoakhoa.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
@@ -147,9 +141,7 @@
             this.btnthoatkhoa.Appearance.ForeColor = System.Drawing.Color.Transparent;
             this.btnthoatkhoa.Appearance.Options.UseFont = true;
             this.btnthoatkhoa.Appearance.Options.UseForeColor = true;
-            this.btnthoatkhoa.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
             this.btnthoatkhoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnthoatkhoa.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnthoatkhoa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnthoatkhoa.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnthoatkhoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthoatkhoa.ImageOptions.Image")));
@@ -295,6 +287,7 @@
             this.gridviewkhoa.AllowUserToDeleteRows = false;
             this.gridviewkhoa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridviewkhoa.BackgroundColor = System.Drawing.Color.White;
+            this.gridviewkhoa.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.gridviewkhoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridviewkhoa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaKhoa,
@@ -368,8 +361,7 @@
             this.AcceptButton = this.btnthemkhoa;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(119)))), ((int)(((byte)(176)))));
             this.CancelButton = this.btnthoatkhoa;
             this.ClientSize = new System.Drawing.Size(663, 489);
             this.Controls.Add(this.groupBox3);

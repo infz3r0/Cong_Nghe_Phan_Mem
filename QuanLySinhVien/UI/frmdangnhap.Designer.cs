@@ -102,9 +102,7 @@
             this.btndangnhap.Appearance.ForeColor = System.Drawing.Color.White;
             this.btndangnhap.Appearance.Options.UseFont = true;
             this.btndangnhap.Appearance.Options.UseForeColor = true;
-            this.btndangnhap.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
             this.btndangnhap.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btndangnhap.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btndangnhap.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btndangnhap.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btndangnhap.ImageOptions.Image")));
             this.btndangnhap.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
@@ -148,8 +146,6 @@
             this.AcceptButton = this.btndangnhap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Tile;
-            this.BackgroundImageStore = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
             this.ClientSize = new System.Drawing.Size(429, 222);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
