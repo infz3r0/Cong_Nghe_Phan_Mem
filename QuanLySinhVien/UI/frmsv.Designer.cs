@@ -36,13 +36,13 @@
             this.txtdienthoaisv = new System.Windows.Forms.MaskedTextBox();
             this.txtmailsv = new DevExpress.XtraEditors.TextEdit();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbbGioiTinh = new System.Windows.Forms.ComboBox();
             this.txtdicchisv = new DevExpress.XtraEditors.TextEdit();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.txtmssv = new System.Windows.Forms.MaskedTextBox();
-            this.cbgioitinhsv = new DevExpress.XtraEditors.ComboBoxEdit();
             this.ngaysinhsv = new System.Windows.Forms.DateTimePicker();
             this.txttensv = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
@@ -69,7 +69,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtmailsv.Properties)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtdicchisv.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbgioitinhsv.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txttensv.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -86,7 +85,6 @@
             this.txtcmndsv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtcmndsv.ForeColor = System.Drawing.Color.Black;
             this.txtcmndsv.Location = new System.Drawing.Point(808, 81);
-            this.txtcmndsv.Mask = "0000000000";
             this.txtcmndsv.Name = "txtcmndsv";
             this.txtcmndsv.PromptChar = ' ';
             this.txtcmndsv.Size = new System.Drawing.Size(266, 19);
@@ -97,7 +95,6 @@
             this.txtdienthoaisv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtdienthoaisv.ForeColor = System.Drawing.Color.Black;
             this.txtdienthoaisv.Location = new System.Drawing.Point(808, 126);
-            this.txtdienthoaisv.Mask = "000000000000000";
             this.txtdienthoaisv.Name = "txtdienthoaisv";
             this.txtdienthoaisv.PromptChar = ' ';
             this.txtdienthoaisv.Size = new System.Drawing.Size(266, 19);
@@ -118,8 +115,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.White;
-            this.groupBox1.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.cbbGioiTinh);
             this.groupBox1.Controls.Add(this.txtcmndsv);
             this.groupBox1.Controls.Add(this.txtdienthoaisv);
             this.groupBox1.Controls.Add(this.txtmailsv);
@@ -129,7 +126,6 @@
             this.groupBox1.Controls.Add(this.labelControl7);
             this.groupBox1.Controls.Add(this.labelControl6);
             this.groupBox1.Controls.Add(this.txtmssv);
-            this.groupBox1.Controls.Add(this.cbgioitinhsv);
             this.groupBox1.Controls.Add(this.ngaysinhsv);
             this.groupBox1.Controls.Add(this.txttensv);
             this.groupBox1.Controls.Add(this.labelControl5);
@@ -144,6 +140,14 @@
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin";
+            // 
+            // cbbGioiTinh
+            // 
+            this.cbbGioiTinh.FormattingEnabled = true;
+            this.cbbGioiTinh.Location = new System.Drawing.Point(199, 159);
+            this.cbbGioiTinh.Name = "cbbGioiTinh";
+            this.cbbGioiTinh.Size = new System.Drawing.Size(266, 26);
+            this.cbbGioiTinh.TabIndex = 3;
             // 
             // txtdicchisv
             // 
@@ -216,20 +220,6 @@
             this.txtmssv.PromptChar = ' ';
             this.txtmssv.Size = new System.Drawing.Size(266, 19);
             this.txtmssv.TabIndex = 0;
-            // 
-            // cbgioitinhsv
-            // 
-            this.cbgioitinhsv.Location = new System.Drawing.Point(199, 160);
-            this.cbgioitinhsv.Name = "cbgioitinhsv";
-            this.cbgioitinhsv.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.cbgioitinhsv.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.cbgioitinhsv.Properties.Appearance.Options.UseBackColor = true;
-            this.cbgioitinhsv.Properties.Appearance.Options.UseForeColor = true;
-            this.cbgioitinhsv.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.cbgioitinhsv.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbgioitinhsv.Size = new System.Drawing.Size(266, 20);
-            this.cbgioitinhsv.TabIndex = 3;
             // 
             // ngaysinhsv
             // 
@@ -313,17 +303,16 @@
             this.btnthemsv.AppearanceHovered.Options.UseBackColor = true;
             this.btnthemsv.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnthemsv.AppearancePressed.Options.UseBackColor = true;
-            this.btnthemsv.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
             this.btnthemsv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnthemsv.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnthemsv.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnthemsv.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthemsv.ImageOptions.Image")));
             this.btnthemsv.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnthemsv.Location = new System.Drawing.Point(96, 24);
+            this.btnthemsv.Location = new System.Drawing.Point(64, 25);
             this.btnthemsv.Name = "btnthemsv";
-            this.btnthemsv.Size = new System.Drawing.Size(85, 39);
+            this.btnthemsv.Size = new System.Drawing.Size(96, 33);
             this.btnthemsv.TabIndex = 0;
             this.btnthemsv.Text = "Thêm";
+            this.btnthemsv.Click += new System.EventHandler(this.btnthemsv_Click);
             // 
             // btnsuasv
             // 
@@ -331,17 +320,16 @@
             this.btnsuasv.Appearance.ForeColor = System.Drawing.Color.White;
             this.btnsuasv.Appearance.Options.UseFont = true;
             this.btnsuasv.Appearance.Options.UseForeColor = true;
-            this.btnsuasv.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
             this.btnsuasv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnsuasv.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnsuasv.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnsuasv.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnsuasv.ImageOptions.Image")));
             this.btnsuasv.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnsuasv.Location = new System.Drawing.Point(187, 24);
+            this.btnsuasv.Location = new System.Drawing.Point(166, 25);
             this.btnsuasv.Name = "btnsuasv";
-            this.btnsuasv.Size = new System.Drawing.Size(79, 39);
+            this.btnsuasv.Size = new System.Drawing.Size(96, 33);
             this.btnsuasv.TabIndex = 1;
             this.btnsuasv.Text = "Sửa ";
+            this.btnsuasv.Click += new System.EventHandler(this.btnsuasv_Click);
             // 
             // groupBox2
             // 
@@ -365,17 +353,15 @@
             this.btnthoatsv.Appearance.ForeColor = System.Drawing.Color.Transparent;
             this.btnthoatsv.Appearance.Options.UseFont = true;
             this.btnthoatsv.Appearance.Options.UseForeColor = true;
-            this.btnthoatsv.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
             this.btnthoatsv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnthoatsv.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnthoatsv.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnthoatsv.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnthoatsv.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthoatsv.ImageOptions.Image")));
             this.btnthoatsv.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnthoatsv.Location = new System.Drawing.Point(354, 24);
+            this.btnthoatsv.Location = new System.Drawing.Point(370, 25);
             this.btnthoatsv.Name = "btnthoatsv";
-            this.btnthoatsv.Size = new System.Drawing.Size(81, 38);
-            this.btnthoatsv.TabIndex = 23;
+            this.btnthoatsv.Size = new System.Drawing.Size(96, 33);
+            this.btnthoatsv.TabIndex = 3;
             this.btnthoatsv.Text = "Đóng";
             this.btnthoatsv.Click += new System.EventHandler(this.btnthoatsv_Click);
             // 
@@ -385,17 +371,16 @@
             this.btnxoasv.Appearance.ForeColor = System.Drawing.Color.White;
             this.btnxoasv.Appearance.Options.UseFont = true;
             this.btnxoasv.Appearance.Options.UseForeColor = true;
-            this.btnxoasv.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
             this.btnxoasv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnxoasv.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnxoasv.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnxoasv.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnxoasv.ImageOptions.Image")));
             this.btnxoasv.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnxoasv.Location = new System.Drawing.Point(272, 25);
+            this.btnxoasv.Location = new System.Drawing.Point(268, 25);
             this.btnxoasv.Name = "btnxoasv";
-            this.btnxoasv.Size = new System.Drawing.Size(76, 38);
+            this.btnxoasv.Size = new System.Drawing.Size(96, 33);
             this.btnxoasv.TabIndex = 2;
             this.btnxoasv.Text = "Xóa";
+            this.btnxoasv.Click += new System.EventHandler(this.btnxoasv_Click);
             // 
             // groupBox3
             // 
@@ -405,7 +390,7 @@
             this.groupBox3.ForeColor = System.Drawing.Color.White;
             this.groupBox3.Location = new System.Drawing.Point(2, 302);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1207, 183);
+            this.groupBox3.Size = new System.Drawing.Size(1207, 289);
             this.groupBox3.TabIndex = 25;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông tin chi tiết";
@@ -426,7 +411,7 @@
             this.Email});
             this.gridviewsv.Location = new System.Drawing.Point(6, 22);
             this.gridviewsv.Name = "gridviewsv";
-            this.gridviewsv.Size = new System.Drawing.Size(1192, 151);
+            this.gridviewsv.Size = new System.Drawing.Size(1192, 261);
             this.gridviewsv.TabIndex = 9;
             // 
             // MaSV
@@ -469,7 +454,7 @@
             // 
             // DienThoai
             // 
-            this.DienThoai.DataPropertyName = "DienThoai";
+            this.DienThoai.DataPropertyName = "Sdt";
             this.DienThoai.HeaderText = "Điện thoại";
             this.DienThoai.Name = "DienThoai";
             // 
@@ -484,10 +469,8 @@
             this.AcceptButton = this.btnthemsv;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Tile;
-            this.BackgroundImageStore = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
             this.CancelButton = this.btnthoatsv;
-            this.ClientSize = new System.Drawing.Size(1212, 497);
+            this.ClientSize = new System.Drawing.Size(1212, 603);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
@@ -500,7 +483,6 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtdicchisv.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbgioitinhsv.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txttensv.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             this.groupBox2.ResumeLayout(false);
@@ -523,7 +505,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private System.Windows.Forms.MaskedTextBox txtmssv;
-        private DevExpress.XtraEditors.ComboBoxEdit cbgioitinhsv;
         private System.Windows.Forms.DateTimePicker ngaysinhsv;
         private DevExpress.XtraEditors.TextEdit txttensv;
         private DevExpress.XtraEditors.LabelControl labelControl5;
@@ -547,5 +528,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SoCMND;
         private System.Windows.Forms.DataGridViewTextBoxColumn DienThoai;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.ComboBox cbbGioiTinh;
     }
 }

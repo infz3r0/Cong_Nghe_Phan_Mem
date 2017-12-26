@@ -104,16 +104,14 @@
             this.btnthoatracuu.Appearance.ForeColor = System.Drawing.Color.Transparent;
             this.btnthoatracuu.Appearance.Options.UseFont = true;
             this.btnthoatracuu.Appearance.Options.UseForeColor = true;
-            this.btnthoatracuu.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
             this.btnthoatracuu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnthoatracuu.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnthoatracuu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnthoatracuu.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnthoatracuu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthoatracuu.ImageOptions.Image")));
             this.btnthoatracuu.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnthoatracuu.Location = new System.Drawing.Point(755, 31);
             this.btnthoatracuu.Name = "btnthoatracuu";
-            this.btnthoatracuu.Size = new System.Drawing.Size(99, 32);
+            this.btnthoatracuu.Size = new System.Drawing.Size(96, 33);
             this.btnthoatracuu.TabIndex = 2;
             this.btnthoatracuu.Text = "Đóng";
             this.btnthoatracuu.Click += new System.EventHandler(this.btnthoatracuu_Click);
@@ -124,7 +122,7 @@
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.Location = new System.Drawing.Point(7, 36);
+            this.labelControl1.Location = new System.Drawing.Point(22, 36);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(171, 23);
             this.labelControl1.TabIndex = 2;
@@ -136,15 +134,13 @@
             this.btntracuu.Appearance.ForeColor = System.Drawing.Color.White;
             this.btntracuu.Appearance.Options.UseFont = true;
             this.btntracuu.Appearance.Options.UseForeColor = true;
-            this.btntracuu.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
             this.btntracuu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btntracuu.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btntracuu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btntracuu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btntracuu.ImageOptions.Image")));
             this.btntracuu.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btntracuu.Location = new System.Drawing.Point(619, 31);
             this.btntracuu.Name = "btntracuu";
-            this.btntracuu.Size = new System.Drawing.Size(96, 32);
+            this.btntracuu.Size = new System.Drawing.Size(96, 33);
             this.btntracuu.TabIndex = 1;
             this.btntracuu.Text = "Tìm";
             // 
@@ -153,8 +149,6 @@
             this.AcceptButton = this.btntracuu;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Tile;
-            this.BackgroundImageStore = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
             this.CancelButton = this.btnthoatracuu;
             this.ClientSize = new System.Drawing.Size(912, 433);
             this.Controls.Add(this.groupBox3);

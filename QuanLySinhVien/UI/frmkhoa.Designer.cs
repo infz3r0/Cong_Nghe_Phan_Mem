@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmkhoa));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.btnthemkhoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnsuakhoa = new DevExpress.XtraEditors.SimpleButton();
@@ -74,15 +74,13 @@
             this.btnthemkhoa.Appearance.ForeColor = System.Drawing.Color.White;
             this.btnthemkhoa.Appearance.Options.UseFont = true;
             this.btnthemkhoa.Appearance.Options.UseForeColor = true;
-            this.btnthemkhoa.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
             this.btnthemkhoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnthemkhoa.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnthemkhoa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnthemkhoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthemkhoa.ImageOptions.Image")));
             this.btnthemkhoa.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnthemkhoa.Location = new System.Drawing.Point(23, 25);
+            this.btnthemkhoa.Location = new System.Drawing.Point(23, 34);
             this.btnthemkhoa.Name = "btnthemkhoa";
-            this.btnthemkhoa.Size = new System.Drawing.Size(96, 32);
+            this.btnthemkhoa.Size = new System.Drawing.Size(96, 33);
             this.btnthemkhoa.TabIndex = 0;
             this.btnthemkhoa.Text = "Thêm";
             this.btnthemkhoa.Click += new System.EventHandler(this.btnthemkhoa_Click);
@@ -93,15 +91,13 @@
             this.btnsuakhoa.Appearance.ForeColor = System.Drawing.Color.White;
             this.btnsuakhoa.Appearance.Options.UseFont = true;
             this.btnsuakhoa.Appearance.Options.UseForeColor = true;
-            this.btnsuakhoa.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
             this.btnsuakhoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnsuakhoa.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnsuakhoa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnsuakhoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnsuakhoa.ImageOptions.Image")));
             this.btnsuakhoa.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnsuakhoa.Location = new System.Drawing.Point(23, 65);
+            this.btnsuakhoa.Location = new System.Drawing.Point(23, 76);
             this.btnsuakhoa.Name = "btnsuakhoa";
-            this.btnsuakhoa.Size = new System.Drawing.Size(96, 34);
+            this.btnsuakhoa.Size = new System.Drawing.Size(96, 33);
             this.btnsuakhoa.TabIndex = 1;
             this.btnsuakhoa.Text = "Sửa ";
             this.btnsuakhoa.Click += new System.EventHandler(this.btnsuakhoa_Click);
@@ -112,15 +108,13 @@
             this.btnxoakhoa.Appearance.ForeColor = System.Drawing.Color.White;
             this.btnxoakhoa.Appearance.Options.UseFont = true;
             this.btnxoakhoa.Appearance.Options.UseForeColor = true;
-            this.btnxoakhoa.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
             this.btnxoakhoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnxoakhoa.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnxoakhoa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnxoakhoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnxoakhoa.ImageOptions.Image")));
             this.btnxoakhoa.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnxoakhoa.Location = new System.Drawing.Point(23, 111);
+            this.btnxoakhoa.Location = new System.Drawing.Point(23, 117);
             this.btnxoakhoa.Name = "btnxoakhoa";
-            this.btnxoakhoa.Size = new System.Drawing.Size(96, 36);
+            this.btnxoakhoa.Size = new System.Drawing.Size(96, 33);
             this.btnxoakhoa.TabIndex = 2;
             this.btnxoakhoa.Text = "Xóa";
             this.btnxoakhoa.Click += new System.EventHandler(this.btnxoakhoa_Click);
@@ -147,9 +141,7 @@
             this.btnthoatkhoa.Appearance.ForeColor = System.Drawing.Color.Transparent;
             this.btnthoatkhoa.Appearance.Options.UseFont = true;
             this.btnthoatkhoa.Appearance.Options.UseForeColor = true;
-            this.btnthoatkhoa.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
             this.btnthoatkhoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnthoatkhoa.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnthoatkhoa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnthoatkhoa.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnthoatkhoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthoatkhoa.ImageOptions.Image")));
@@ -157,7 +149,7 @@
             this.btnthoatkhoa.Location = new System.Drawing.Point(23, 161);
             this.btnthoatkhoa.Name = "btnthoatkhoa";
             this.btnthoatkhoa.Size = new System.Drawing.Size(96, 33);
-            this.btnthoatkhoa.TabIndex = 24;
+            this.btnthoatkhoa.TabIndex = 3;
             this.btnthoatkhoa.Text = "Đóng";
             this.btnthoatkhoa.Click += new System.EventHandler(this.btnthoatkhoa_Click);
             // 
@@ -212,13 +204,16 @@
             // txtmakhoa
             // 
             this.txtmakhoa.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtmakhoa.Location = new System.Drawing.Point(170, 37);
+            this.txtmakhoa.Location = new System.Drawing.Point(170, 44);
             this.txtmakhoa.Name = "txtmakhoa";
             this.txtmakhoa.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtmakhoa.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.txtmakhoa.Properties.Appearance.Options.UseBackColor = true;
             this.txtmakhoa.Properties.Appearance.Options.UseForeColor = true;
             this.txtmakhoa.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.txtmakhoa.Properties.Mask.BeepOnError = true;
+            this.txtmakhoa.Properties.Mask.EditMask = "n";
+            this.txtmakhoa.Properties.MaxLength = 6;
             this.txtmakhoa.Size = new System.Drawing.Size(281, 20);
             this.txtmakhoa.TabIndex = 0;
             this.txtmakhoa.TextChanged += new System.EventHandler(this.txtmakhoa_TextChanged);
@@ -226,7 +221,7 @@
             // txttenkhoa
             // 
             this.txttenkhoa.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txttenkhoa.Location = new System.Drawing.Point(170, 77);
+            this.txttenkhoa.Location = new System.Drawing.Point(170, 81);
             this.txttenkhoa.Name = "txttenkhoa";
             this.txttenkhoa.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txttenkhoa.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
@@ -239,13 +234,14 @@
             // txtmailkhoa
             // 
             this.txtmailkhoa.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtmailkhoa.Location = new System.Drawing.Point(170, 158);
+            this.txtmailkhoa.Location = new System.Drawing.Point(170, 166);
             this.txtmailkhoa.Name = "txtmailkhoa";
             this.txtmailkhoa.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtmailkhoa.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.txtmailkhoa.Properties.Appearance.Options.UseBackColor = true;
             this.txtmailkhoa.Properties.Appearance.Options.UseForeColor = true;
             this.txtmailkhoa.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.txtmailkhoa.Properties.Mask.EditMask = "\\s@\\s.\\s";
             this.txtmailkhoa.Size = new System.Drawing.Size(281, 20);
             this.txtmailkhoa.TabIndex = 3;
             // 
@@ -272,13 +268,16 @@
             // txtsdtkhoa
             // 
             this.txtsdtkhoa.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtsdtkhoa.Location = new System.Drawing.Point(170, 114);
+            this.txtsdtkhoa.Location = new System.Drawing.Point(170, 122);
             this.txtsdtkhoa.Name = "txtsdtkhoa";
             this.txtsdtkhoa.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtsdtkhoa.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.txtsdtkhoa.Properties.Appearance.Options.UseBackColor = true;
             this.txtsdtkhoa.Properties.Appearance.Options.UseForeColor = true;
             this.txtsdtkhoa.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.txtsdtkhoa.Properties.Mask.BeepOnError = true;
+            this.txtsdtkhoa.Properties.Mask.EditMask = "(\\d?\\d?\\d?) \\d\\d\\d\\d\\d\\d\\d\\d";
+            this.txtsdtkhoa.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Regular;
             this.txtsdtkhoa.Size = new System.Drawing.Size(281, 20);
             this.txtsdtkhoa.TabIndex = 2;
             // 
@@ -288,6 +287,7 @@
             this.gridviewkhoa.AllowUserToDeleteRows = false;
             this.gridviewkhoa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridviewkhoa.BackgroundColor = System.Drawing.Color.White;
+            this.gridviewkhoa.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.gridviewkhoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridviewkhoa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaKhoa,
@@ -306,8 +306,8 @@
             // MaKhoa
             // 
             this.MaKhoa.DataPropertyName = "MaKhoa";
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            this.MaKhoa.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.MaKhoa.DefaultCellStyle = dataGridViewCellStyle1;
             this.MaKhoa.HeaderText = "Mã Khoa";
             this.MaKhoa.Name = "MaKhoa";
             this.MaKhoa.ReadOnly = true;
@@ -315,8 +315,8 @@
             // TenKhoa
             // 
             this.TenKhoa.DataPropertyName = "TenKhoa";
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            this.TenKhoa.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.TenKhoa.DefaultCellStyle = dataGridViewCellStyle2;
             this.TenKhoa.HeaderText = "Tên Khoa";
             this.TenKhoa.Name = "TenKhoa";
             this.TenKhoa.ReadOnly = true;
@@ -324,8 +324,8 @@
             // Sdt
             // 
             this.Sdt.DataPropertyName = "Sdt";
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
-            this.Sdt.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.Sdt.DefaultCellStyle = dataGridViewCellStyle3;
             this.Sdt.HeaderText = "Số Điện Thoại";
             this.Sdt.Name = "Sdt";
             this.Sdt.ReadOnly = true;
@@ -333,8 +333,8 @@
             // Email
             // 
             this.Email.DataPropertyName = "Email";
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
-            this.Email.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.Email.DefaultCellStyle = dataGridViewCellStyle4;
             this.Email.HeaderText = "Email";
             this.Email.Name = "Email";
             this.Email.ReadOnly = true;
@@ -361,8 +361,7 @@
             this.AcceptButton = this.btnthemkhoa;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(119)))), ((int)(((byte)(176)))));
             this.CancelButton = this.btnthoatkhoa;
             this.ClientSize = new System.Drawing.Size(663, 489);
             this.Controls.Add(this.groupBox3);

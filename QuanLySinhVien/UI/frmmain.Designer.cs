@@ -73,12 +73,17 @@
             this.navBarGroup4 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItem9 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup5 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.navBarItem10 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem11 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem12 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup6 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItem14 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem15 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem10 = new DevExpress.XtraNavBar.NavBarItem();
+            this.buttonEdit1 = new DevExpress.XtraEditors.ButtonEdit();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.buttonEdit2 = new DevExpress.XtraEditors.ButtonEdit();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDisplayFormat1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1)).BeginInit();
@@ -91,6 +96,8 @@
             this.dockPanel1.SuspendLayout();
             this.dockPanel1_Container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit2.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // splashScreenManager1
@@ -99,7 +106,6 @@
             // 
             // ribbon
             // 
-            this.ribbon.ColorScheme = DevExpress.XtraBars.Ribbon.RibbonControlColorScheme.DarkBlue;
             this.ribbon.ExpandCollapseItem.Id = 0;
             this.ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbon.ExpandCollapseItem,
@@ -318,8 +324,6 @@
             // 
             // dockPanel1
             // 
-            this.dockPanel1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dockPanel1.Appearance.Options.UseBackColor = true;
             this.dockPanel1.Controls.Add(this.dockPanel1_Container);
             this.dockPanel1.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
             this.dockPanel1.ID = new System.Guid("28d9130a-5615-4bcb-9cc3-1cda02a8dd3d");
@@ -362,7 +366,6 @@
             this.navBarItem7,
             this.navBarItem8,
             this.navBarItem9,
-            this.navBarItem10,
             this.navBarItem11,
             this.navBarItem12,
             this.navBarItem13,
@@ -385,8 +388,6 @@
             this.navBarGroup1.AppearanceBackground.Options.UseFont = true;
             this.navBarGroup1.AppearanceHotTracked.FontSizeDelta = 3;
             this.navBarGroup1.AppearanceHotTracked.Options.UseFont = true;
-            this.navBarGroup1.AppearancePressed.FontSizeDelta = 14;
-            this.navBarGroup1.AppearancePressed.Options.UseFont = true;
             this.navBarGroup1.Caption = "Quản lí";
             this.navBarGroup1.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarGroup1.ImageOptions.SmallImage")));
             this.navBarGroup1.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
@@ -448,8 +449,6 @@
             this.navBarGroup2.AppearanceBackground.Options.UseFont = true;
             this.navBarGroup2.AppearanceHotTracked.FontSizeDelta = 3;
             this.navBarGroup2.AppearanceHotTracked.Options.UseFont = true;
-            this.navBarGroup2.AppearancePressed.FontSizeDelta = 14;
-            this.navBarGroup2.AppearancePressed.Options.UseFont = true;
             this.navBarGroup2.Caption = "Điểm";
             this.navBarGroup2.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarGroup2.ImageOptions.SmallImage")));
             this.navBarGroup2.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
@@ -479,8 +478,6 @@
             this.navBarGroup3.AppearanceBackground.Options.UseFont = true;
             this.navBarGroup3.AppearanceHotTracked.FontSizeDelta = 3;
             this.navBarGroup3.AppearanceHotTracked.Options.UseFont = true;
-            this.navBarGroup3.AppearancePressed.FontSizeDelta = 14;
-            this.navBarGroup3.AppearancePressed.Options.UseFont = true;
             this.navBarGroup3.Caption = "Tra cứu";
             this.navBarGroup3.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarGroup3.ImageOptions.SmallImage")));
             this.navBarGroup3.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
@@ -502,8 +499,6 @@
             this.navBarGroup4.AppearanceBackground.Options.UseFont = true;
             this.navBarGroup4.AppearanceHotTracked.FontSizeDelta = 3;
             this.navBarGroup4.AppearanceHotTracked.Options.UseFont = true;
-            this.navBarGroup4.AppearancePressed.FontSizeDelta = 14;
-            this.navBarGroup4.AppearancePressed.Options.UseFont = true;
             this.navBarGroup4.Caption = "Thống kê";
             this.navBarGroup4.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarGroup4.ImageOptions.SmallImage")));
             this.navBarGroup4.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
@@ -525,21 +520,12 @@
             this.navBarGroup5.AppearanceBackground.Options.UseFont = true;
             this.navBarGroup5.AppearanceHotTracked.FontSizeDelta = 3;
             this.navBarGroup5.AppearanceHotTracked.Options.UseFont = true;
-            this.navBarGroup5.AppearancePressed.FontSizeDelta = 14;
-            this.navBarGroup5.AppearancePressed.Options.UseFont = true;
             this.navBarGroup5.Caption = "Tài khoản";
             this.navBarGroup5.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarGroup5.ImageOptions.SmallImage")));
             this.navBarGroup5.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem10),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem11),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem12)});
             this.navBarGroup5.Name = "navBarGroup5";
-            // 
-            // navBarItem10
-            // 
-            this.navBarItem10.Caption = "Thông tin tài khoản";
-            this.navBarItem10.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem10.ImageOptions.SmallImage")));
-            this.navBarItem10.Name = "navBarItem10";
             // 
             // navBarItem11
             // 
@@ -563,8 +549,6 @@
             this.navBarGroup6.AppearanceBackground.Options.UseFont = true;
             this.navBarGroup6.AppearanceHotTracked.FontSizeDelta = 3;
             this.navBarGroup6.AppearanceHotTracked.Options.UseFont = true;
-            this.navBarGroup6.AppearancePressed.FontSizeDelta = 14;
-            this.navBarGroup6.AppearancePressed.Options.UseFont = true;
             this.navBarGroup6.Caption = "Cài đặt";
             this.navBarGroup6.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarGroup6.ImageOptions.SmallImage")));
             this.navBarGroup6.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
@@ -585,8 +569,60 @@
             this.navBarItem15.Name = "navBarItem15";
             this.navBarItem15.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem15_LinkClicked);
             // 
+            // navBarItem10
+            // 
+            this.navBarItem10.Caption = "Thông tin tài khoản";
+            this.navBarItem10.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem10.ImageOptions.SmallImage")));
+            this.navBarItem10.Name = "navBarItem10";
+            // 
+            // buttonEdit1
+            // 
+            this.buttonEdit1.Location = new System.Drawing.Point(-20, -15);
+            this.buttonEdit1.MenuManager = this.ribbon;
+            this.buttonEdit1.Name = "buttonEdit1";
+            this.buttonEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.buttonEdit1.Size = new System.Drawing.Size(100, 20);
+            this.buttonEdit1.TabIndex = 4;
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Location = new System.Drawing.Point(-20, -15);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton1.TabIndex = 10;
+            this.simpleButton1.Text = "simpleButton1";
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Location = new System.Drawing.Point(-20, -15);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton2.TabIndex = 11;
+            this.simpleButton2.Text = "simpleButton2";
+            // 
+            // buttonEdit2
+            // 
+            this.buttonEdit2.Location = new System.Drawing.Point(-20, -15);
+            this.buttonEdit2.MenuManager = this.ribbon;
+            this.buttonEdit2.Name = "buttonEdit2";
+            this.buttonEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.buttonEdit2.Size = new System.Drawing.Size(100, 20);
+            this.buttonEdit2.TabIndex = 12;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(-20, -15);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // frmmain
             // 
+            this.ActiveGlowColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(119)))), ((int)(((byte)(176)))));
             this.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.Appearance.Options.UseBackColor = true;
             this.Appearance.Options.UseFont = true;
@@ -594,13 +630,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Tile;
-            this.BackgroundImageStore = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
+            this.BackgroundImageStore = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImageStore")));
             this.ClientSize = new System.Drawing.Size(876, 449);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonEdit2);
+            this.Controls.Add(this.simpleButton2);
+            this.Controls.Add(this.simpleButton1);
+            this.Controls.Add(this.buttonEdit1);
             this.Controls.Add(this.dockPanel1);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.InactiveGlowColor = System.Drawing.Color.Transparent;
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmmain";
@@ -623,6 +665,8 @@
             this.dockPanel1.ResumeLayout(false);
             this.dockPanel1_Container.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonEdit2.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -655,7 +699,6 @@
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup4;
         private DevExpress.XtraNavBar.NavBarItem navBarItem9;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup5;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem10;
         private DevExpress.XtraNavBar.NavBarItem navBarItem11;
         private DevExpress.XtraNavBar.NavBarItem navBarItem12;
         private DevExpress.XtraBars.Docking.DockManager dockManager1;
@@ -678,5 +721,11 @@
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup6;
         private DevExpress.XtraNavBar.NavBarItem navBarItem14;
         private DevExpress.XtraNavBar.NavBarItem navBarItem15;
+        private DevExpress.XtraNavBar.NavBarItem navBarItem10;
+        private DevExpress.XtraEditors.ButtonEdit buttonEdit1;
+        private System.Windows.Forms.Button button1;
+        private DevExpress.XtraEditors.ButtonEdit buttonEdit2;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
     }
 }

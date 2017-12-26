@@ -33,9 +33,36 @@ namespace UI_Tier
         }
 
         LopKhoaHocBUS lopKhoaHocBUS = new LopKhoaHocBUS();
-        private void frmlopkhoahoc_Load(object sender, EventArgs e)
+        KhoaBUS khoaBUS = new KhoaBUS();
+  
+        private void LoadDB()
         {
             gridviewlopkh.DataSource = lopKhoaHocBUS.DanhSach();
+            cbbTenKhoaLopKH.DataSource = khoaBUS.DanhSach();
+            cbbTenKhoaLopKH.DisplayMember = "TenKhoa";
+            cbbTenKhoaLopKH.ValueMember = "MaKhoa";
+        }
+
+        private void frmlopkhoahoc_Load(object sender, EventArgs e)
+        {
+            LoadDB();
+        }
+
+        private void btnthemlopkh_Click(object sender, EventArgs e)
+        {
+            string malop = txtmalopkhoahoc.Text;
+            string makhoa = cbbTenKhoaLopKH.SelectedValue.ToString();
+            LopKhoaHoc lopKhoaHoc = new LopKhoaHoc(malop,makhoa);
+            bool thanhcong = lopKhoaHocBUS.Them(lopKhoaHoc);
+            if (thanhcong)
+            {
+                MessageBox.Show("Thành công !");
+            }
+            else
+            {
+                MessageBox.Show("Lỗi !", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            LoadDB();
         }
     }
 }

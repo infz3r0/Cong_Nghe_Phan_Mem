@@ -11,7 +11,8 @@ namespace DATA_Tier
 {
     public class DBConnect
     {
-        private string connect = @"Data Source=desktop-2vgdshc;Initial Catalog=QLSinhVien;Integrated Security=True";
+        private string connect = DATA_Tier.Properties.Settings.Default.connectstringPhu;
+
 
         private SqlDataAdapter myAdapter;
         private SqlConnection conn;

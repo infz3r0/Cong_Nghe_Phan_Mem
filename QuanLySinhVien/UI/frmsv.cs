@@ -33,9 +33,47 @@ namespace UI_Tier
         }
 
         SinhVienBUS sinhvienBUS = new SinhVienBUS();
+        BindingSource bs = new BindingSource();
+       
+        private void LoadDB()
+        {
+            
+            bs.DataSource = sinhvienBUS.DanhSach();
+            gridviewsv.DataSource = bs;
+            
+
+            txtmssv.DataBindings.Add("Text", bs, "MaSV", false, DataSourceUpdateMode.Never);
+            txttensv.DataBindings.Add("Text", bs, "HoTen", false, DataSourceUpdateMode.Never);
+            ngaysinhsv.DataBindings.Add("Value", bs, "NgaySinh",false, DataSourceUpdateMode.Never);
+            cbbGioiTinh.DataSource = sinhvienBUS.DanhSach();
+            cbbGioiTinh.DisplayMember = "GioiTinh";
+            cbbGioiTinh.ValueMember = "GioiTinh";
+            cbbGioiTinh.DataBindings.Add("SelectedValue", bs, "GioiTinh");
+            txtdicchisv.DataBindings.Add("Text", bs, "DiaChi", false, DataSourceUpdateMode.Never);
+            txtcmndsv.DataBindings.Add("Text", bs, "SoCMND", false, DataSourceUpdateMode.Never);
+            txtdienthoaisv.DataBindings.Add("Text", bs, "Sdt", false, DataSourceUpdateMode.Never);
+            txtmailsv.DataBindings.Add("Text", bs, "Email", false, DataSourceUpdateMode.Never);
+            
+        }
+
         private void frmsv_Load(object sender, EventArgs e)
         {
-            gridviewsv.DataSource = sinhvienBUS.DanhSach();
+            LoadDB();
+        }
+
+        private void btnthemsv_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnsuasv_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnxoasv_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

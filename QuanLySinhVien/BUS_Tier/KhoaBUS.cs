@@ -23,22 +23,22 @@ namespace BUS_Tier
 
         //Kiểm tra mã khoa có đúng quy định hay không
         //6 ký tự, 2 ký tự đầu là chữ, 4 ký tự tiếp theo là số
-        public bool MaKhoaHopLe(string makhoa)
+        public bool MaHopLe(string ma)
         {
-            if (makhoa.Length != 6)
+            if (ma.Length != 6)
             {
                 return false;
             }                
-            string s1 = makhoa.Substring(0, 2);
-            string s2 = makhoa.Substring(2, 4);
-            for (int i=0; i < 2; i++)
+            string s1 = ma.Substring(0, 2);
+            string s2 = ma.Substring(2, 4);
+            for (int i=0; i < s1.Length; i++)
             {
                 if (char.IsDigit(s1[i]))
                 {
                     return false;
                 }
             }
-            for (int i=0; i < 4; i++)
+            for (int i=0; i < s2.Length; i++)
             {
                 if (char.IsLetter(s2[i]))
                 {
@@ -52,7 +52,7 @@ namespace BUS_Tier
         {
             bool result = false;
 
-            if (!MaKhoaHopLe(khoa.MaKhoa))
+            if (!MaHopLe(khoa.MaKhoa))
             {
                 return false;
             }

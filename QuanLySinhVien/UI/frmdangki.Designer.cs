@@ -71,7 +71,7 @@
             // 
             this.txtnhaplaimkdk.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtnhaplaimkdk.EditValue = "";
-            this.txtnhaplaimkdk.Location = new System.Drawing.Point(217, 129);
+            this.txtnhaplaimkdk.Location = new System.Drawing.Point(217, 126);
             this.txtnhaplaimkdk.Name = "txtnhaplaimkdk";
             this.txtnhaplaimkdk.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtnhaplaimkdk.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
@@ -126,17 +126,15 @@
             this.btnthoatdk.Appearance.ForeColor = System.Drawing.Color.Transparent;
             this.btnthoatdk.Appearance.Options.UseFont = true;
             this.btnthoatdk.Appearance.Options.UseForeColor = true;
-            this.btnthoatdk.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
             this.btnthoatdk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnthoatdk.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnthoatdk.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnthoatdk.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnthoatdk.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthoatdk.ImageOptions.Image")));
             this.btnthoatdk.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnthoatdk.Location = new System.Drawing.Point(343, 188);
             this.btnthoatdk.Name = "btnthoatdk";
-            this.btnthoatdk.Size = new System.Drawing.Size(94, 36);
-            this.btnthoatdk.TabIndex = 5;
+            this.btnthoatdk.Size = new System.Drawing.Size(96, 33);
+            this.btnthoatdk.TabIndex = 1;
             this.btnthoatdk.Text = "Đóng";
             this.btnthoatdk.Click += new System.EventHandler(this.btnthoatdk_Click);
             // 
@@ -161,16 +159,14 @@
             this.btndangki.Appearance.ForeColor = System.Drawing.Color.White;
             this.btndangki.Appearance.Options.UseFont = true;
             this.btndangki.Appearance.Options.UseForeColor = true;
-            this.btndangki.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
             this.btndangki.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btndangki.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btndangki.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btndangki.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btndangki.ImageOptions.Image")));
             this.btndangki.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btndangki.Location = new System.Drawing.Point(217, 188);
             this.btndangki.Name = "btndangki";
-            this.btndangki.Size = new System.Drawing.Size(96, 36);
-            this.btndangki.TabIndex = 4;
+            this.btndangki.Size = new System.Drawing.Size(96, 33);
+            this.btndangki.TabIndex = 0;
             this.btndangki.Text = "Đăng kí";
             // 
             // labelControl4
@@ -200,10 +196,10 @@
             // frmdangki
             // 
             this.AcceptButton = this.btndangki;
+            this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(119)))), ((int)(((byte)(176)))));
+            this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Tile;
-            this.BackgroundImageStore = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
             this.CancelButton = this.btnthoatdk;
             this.ClientSize = new System.Drawing.Size(506, 286);
             this.Controls.Add(this.groupBox1);

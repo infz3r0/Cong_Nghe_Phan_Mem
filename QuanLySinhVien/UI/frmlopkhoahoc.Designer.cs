@@ -28,13 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmlopkhoahoc));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager();
+            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.gridviewlopkh = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cbbTenKhoaLopKH = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cbbTenKhoaLopKH = new System.Windows.Forms.ComboBox();
             this.txtmalopkhoahoc = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -44,13 +46,15 @@
             this.btnxoalopkh = new DevExpress.XtraEditors.SimpleButton();
             this.btnsualopkh = new DevExpress.XtraEditors.SimpleButton();
             this.btnthemlopkh = new DevExpress.XtraEditors.SimpleButton();
-            this.behaviorManager2 = new DevExpress.Utils.Behaviors.BehaviorManager();
-            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel();
+            this.behaviorManager2 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
+            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
+            this.MaLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaKhoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenKhoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridviewlopkh)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbTenKhoaLopKH.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtmalopkhoahoc.Properties)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager2)).BeginInit();
@@ -73,7 +77,12 @@
             // 
             this.gridviewlopkh.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridviewlopkh.BackgroundColor = System.Drawing.Color.White;
+            this.gridviewlopkh.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.gridviewlopkh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridviewlopkh.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaLop,
+            this.MaKhoa,
+            this.TenKhoa});
             this.gridviewlopkh.Location = new System.Drawing.Point(7, 25);
             this.gridviewlopkh.Name = "gridviewlopkh";
             this.gridviewlopkh.Size = new System.Drawing.Size(544, 235);
@@ -81,8 +90,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.White;
-            this.groupBox1.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.cbbTenKhoaLopKH);
             this.groupBox1.Controls.Add(this.txtmalopkhoahoc);
             this.groupBox1.Controls.Add(this.labelControl5);
@@ -98,15 +106,10 @@
             // 
             // cbbTenKhoaLopKH
             // 
+            this.cbbTenKhoaLopKH.FormattingEnabled = true;
             this.cbbTenKhoaLopKH.Location = new System.Drawing.Point(156, 117);
             this.cbbTenKhoaLopKH.Name = "cbbTenKhoaLopKH";
-            this.cbbTenKhoaLopKH.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.cbbTenKhoaLopKH.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.cbbTenKhoaLopKH.Properties.Appearance.Options.UseBackColor = true;
-            this.cbbTenKhoaLopKH.Properties.Appearance.Options.UseForeColor = true;
-            this.cbbTenKhoaLopKH.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbbTenKhoaLopKH.Size = new System.Drawing.Size(220, 20);
+            this.cbbTenKhoaLopKH.Size = new System.Drawing.Size(220, 26);
             this.cbbTenKhoaLopKH.TabIndex = 1;
             // 
             // txtmalopkhoahoc
@@ -152,17 +155,15 @@
             this.btnthoatlopkh.Appearance.ForeColor = System.Drawing.Color.Transparent;
             this.btnthoatlopkh.Appearance.Options.UseFont = true;
             this.btnthoatlopkh.Appearance.Options.UseForeColor = true;
-            this.btnthoatlopkh.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
             this.btnthoatlopkh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnthoatlopkh.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnthoatlopkh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnthoatlopkh.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnthoatlopkh.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthoatlopkh.ImageOptions.Image")));
             this.btnthoatlopkh.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnthoatlopkh.Location = new System.Drawing.Point(23, 161);
+            this.btnthoatlopkh.Location = new System.Drawing.Point(23, 160);
             this.btnthoatlopkh.Name = "btnthoatlopkh";
-            this.btnthoatlopkh.Size = new System.Drawing.Size(97, 36);
-            this.btnthoatlopkh.TabIndex = 24;
+            this.btnthoatlopkh.Size = new System.Drawing.Size(96, 33);
+            this.btnthoatlopkh.TabIndex = 3;
             this.btnthoatlopkh.Text = "Đóng";
             this.btnthoatlopkh.Click += new System.EventHandler(this.btnthoatlopkh_Click);
             // 
@@ -188,15 +189,13 @@
             this.btnxoalopkh.Appearance.ForeColor = System.Drawing.Color.White;
             this.btnxoalopkh.Appearance.Options.UseFont = true;
             this.btnxoalopkh.Appearance.Options.UseForeColor = true;
-            this.btnxoalopkh.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
             this.btnxoalopkh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnxoalopkh.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnxoalopkh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnxoalopkh.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnxoalopkh.ImageOptions.Image")));
             this.btnxoalopkh.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnxoalopkh.Location = new System.Drawing.Point(24, 113);
+            this.btnxoalopkh.Location = new System.Drawing.Point(23, 113);
             this.btnxoalopkh.Name = "btnxoalopkh";
-            this.btnxoalopkh.Size = new System.Drawing.Size(96, 36);
+            this.btnxoalopkh.Size = new System.Drawing.Size(96, 33);
             this.btnxoalopkh.TabIndex = 2;
             this.btnxoalopkh.Text = "Xóa";
             // 
@@ -206,15 +205,13 @@
             this.btnsualopkh.Appearance.ForeColor = System.Drawing.Color.White;
             this.btnsualopkh.Appearance.Options.UseFont = true;
             this.btnsualopkh.Appearance.Options.UseForeColor = true;
-            this.btnsualopkh.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
             this.btnsualopkh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnsualopkh.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnsualopkh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnsualopkh.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnsualopkh.ImageOptions.Image")));
             this.btnsualopkh.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnsualopkh.Location = new System.Drawing.Point(23, 69);
             this.btnsualopkh.Name = "btnsualopkh";
-            this.btnsualopkh.Size = new System.Drawing.Size(97, 31);
+            this.btnsualopkh.Size = new System.Drawing.Size(96, 33);
             this.btnsualopkh.TabIndex = 1;
             this.btnsualopkh.Text = "Sửa ";
             // 
@@ -224,29 +221,47 @@
             this.btnthemlopkh.Appearance.ForeColor = System.Drawing.Color.White;
             this.btnthemlopkh.Appearance.Options.UseFont = true;
             this.btnthemlopkh.Appearance.Options.UseForeColor = true;
-            this.btnthemlopkh.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
             this.btnthemlopkh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnthemlopkh.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnthemlopkh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnthemlopkh.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthemlopkh.ImageOptions.Image")));
             this.btnthemlopkh.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnthemlopkh.Location = new System.Drawing.Point(23, 25);
             this.btnthemlopkh.Name = "btnthemlopkh";
-            this.btnthemlopkh.Size = new System.Drawing.Size(96, 32);
+            this.btnthemlopkh.Size = new System.Drawing.Size(96, 33);
             this.btnthemlopkh.TabIndex = 0;
             this.btnthemlopkh.Text = "Thêm";
+            this.btnthemlopkh.Click += new System.EventHandler(this.btnthemlopkh_Click);
             // 
             // defaultLookAndFeel1
             // 
             this.defaultLookAndFeel1.LookAndFeel.SkinName = "Blueprint";
+            // 
+            // MaLop
+            // 
+            this.MaLop.DataPropertyName = "MaLop";
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.MaLop.DefaultCellStyle = dataGridViewCellStyle2;
+            this.MaLop.HeaderText = "Mã lớp";
+            this.MaLop.Name = "MaLop";
+            // 
+            // MaKhoa
+            // 
+            this.MaKhoa.DataPropertyName = "MaKhoa";
+            this.MaKhoa.HeaderText = "Mã Khoa";
+            this.MaKhoa.Name = "MaKhoa";
+            this.MaKhoa.Visible = false;
+            // 
+            // TenKhoa
+            // 
+            this.TenKhoa.DataPropertyName = "Tên Khoa";
+            this.TenKhoa.HeaderText = "Tên Khoa";
+            this.TenKhoa.Name = "TenKhoa";
             // 
             // frmlopkhoahoc
             // 
             this.AcceptButton = this.btnthemlopkh;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Tile;
-            this.BackgroundImageStore = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
             this.CancelButton = this.btnthoatlopkh;
             this.ClientSize = new System.Drawing.Size(584, 516);
             this.Controls.Add(this.groupBox3);
@@ -263,7 +278,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridviewlopkh)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbTenKhoaLopKH.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtmalopkhoahoc.Properties)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager2)).EndInit();
@@ -288,6 +302,9 @@
         private DevExpress.XtraEditors.SimpleButton btnthemlopkh;
         private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager2;
         private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel1;
-        private DevExpress.XtraEditors.ComboBoxEdit cbbTenKhoaLopKH;
+        private System.Windows.Forms.ComboBox cbbTenKhoaLopKH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaLop;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaKhoa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenKhoa;
     }
 }

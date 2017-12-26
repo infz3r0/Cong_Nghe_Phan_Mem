@@ -65,6 +65,7 @@
             // 
             this.gridviewbcs.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridviewbcs.BackgroundColor = System.Drawing.Color.White;
+            this.gridviewbcs.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.gridviewbcs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridviewbcs.Location = new System.Drawing.Point(7, 20);
             this.gridviewbcs.Name = "gridviewbcs";
@@ -91,7 +92,7 @@
             // 
             // cbbchucvubancansu
             // 
-            this.cbbchucvubancansu.Location = new System.Drawing.Point(143, 120);
+            this.cbbchucvubancansu.Location = new System.Drawing.Point(144, 130);
             this.cbbchucvubancansu.Name = "cbbchucvubancansu";
             this.cbbchucvubancansu.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.cbbchucvubancansu.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
@@ -104,7 +105,7 @@
             // 
             // cbbhotenbancansu
             // 
-            this.cbbhotenbancansu.Location = new System.Drawing.Point(143, 79);
+            this.cbbhotenbancansu.Location = new System.Drawing.Point(144, 89);
             this.cbbhotenbancansu.Name = "cbbhotenbancansu";
             this.cbbhotenbancansu.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.cbbhotenbancansu.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
@@ -117,7 +118,7 @@
             // 
             // cbbmssvbancansu
             // 
-            this.cbbmssvbancansu.Location = new System.Drawing.Point(143, 42);
+            this.cbbmssvbancansu.Location = new System.Drawing.Point(144, 52);
             this.cbbmssvbancansu.Name = "cbbmssvbancansu";
             this.cbbmssvbancansu.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.cbbmssvbancansu.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
@@ -134,7 +135,7 @@
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl4.Appearance.Options.UseFont = true;
             this.labelControl4.Appearance.Options.UseForeColor = true;
-            this.labelControl4.Location = new System.Drawing.Point(20, 117);
+            this.labelControl4.Location = new System.Drawing.Point(21, 127);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(69, 23);
             this.labelControl4.TabIndex = 2;
@@ -146,7 +147,7 @@
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl3.Appearance.Options.UseFont = true;
             this.labelControl3.Appearance.Options.UseForeColor = true;
-            this.labelControl3.Location = new System.Drawing.Point(20, 76);
+            this.labelControl3.Location = new System.Drawing.Point(21, 86);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(56, 23);
             this.labelControl3.TabIndex = 1;
@@ -158,7 +159,7 @@
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Appearance.Options.UseForeColor = true;
-            this.labelControl2.Location = new System.Drawing.Point(20, 39);
+            this.labelControl2.Location = new System.Drawing.Point(21, 49);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(40, 23);
             this.labelControl2.TabIndex = 0;
@@ -199,17 +200,15 @@
             this.btnthoatbcs.Appearance.ForeColor = System.Drawing.Color.Transparent;
             this.btnthoatbcs.Appearance.Options.UseFont = true;
             this.btnthoatbcs.Appearance.Options.UseForeColor = true;
-            this.btnthoatbcs.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
             this.btnthoatbcs.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnthoatbcs.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnthoatbcs.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnthoatbcs.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnthoatbcs.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthoatbcs.ImageOptions.Image")));
             this.btnthoatbcs.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnthoatbcs.Location = new System.Drawing.Point(23, 161);
             this.btnthoatbcs.Name = "btnthoatbcs";
-            this.btnthoatbcs.Size = new System.Drawing.Size(94, 36);
-            this.btnthoatbcs.TabIndex = 24;
+            this.btnthoatbcs.Size = new System.Drawing.Size(96, 33);
+            this.btnthoatbcs.TabIndex = 3;
             this.btnthoatbcs.Text = "Đóng";
             this.btnthoatbcs.Click += new System.EventHandler(this.btnthoatbcs_Click);
             // 
@@ -219,15 +218,13 @@
             this.btnxoabcs.Appearance.ForeColor = System.Drawing.Color.White;
             this.btnxoabcs.Appearance.Options.UseFont = true;
             this.btnxoabcs.Appearance.Options.UseForeColor = true;
-            this.btnxoabcs.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
             this.btnxoabcs.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnxoabcs.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnxoabcs.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnxoabcs.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnxoabcs.ImageOptions.Image")));
             this.btnxoabcs.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnxoabcs.Location = new System.Drawing.Point(21, 111);
+            this.btnxoabcs.Location = new System.Drawing.Point(23, 117);
             this.btnxoabcs.Name = "btnxoabcs";
-            this.btnxoabcs.Size = new System.Drawing.Size(96, 36);
+            this.btnxoabcs.Size = new System.Drawing.Size(96, 33);
             this.btnxoabcs.TabIndex = 2;
             this.btnxoabcs.Text = "Xóa";
             // 
@@ -237,15 +234,13 @@
             this.btnsuabcs.Appearance.ForeColor = System.Drawing.Color.White;
             this.btnsuabcs.Appearance.Options.UseFont = true;
             this.btnsuabcs.Appearance.Options.UseForeColor = true;
-            this.btnsuabcs.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
             this.btnsuabcs.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnsuabcs.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnsuabcs.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnsuabcs.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnsuabcs.ImageOptions.Image")));
             this.btnsuabcs.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnsuabcs.Location = new System.Drawing.Point(21, 69);
+            this.btnsuabcs.Location = new System.Drawing.Point(23, 76);
             this.btnsuabcs.Name = "btnsuabcs";
-            this.btnsuabcs.Size = new System.Drawing.Size(96, 31);
+            this.btnsuabcs.Size = new System.Drawing.Size(96, 33);
             this.btnsuabcs.TabIndex = 1;
             this.btnsuabcs.Text = "Sửa ";
             // 
@@ -255,25 +250,26 @@
             this.btnthembcs.Appearance.ForeColor = System.Drawing.Color.White;
             this.btnthembcs.Appearance.Options.UseFont = true;
             this.btnthembcs.Appearance.Options.UseForeColor = true;
-            this.btnthembcs.BackgroundImage = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ1;
             this.btnthembcs.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnthembcs.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnthembcs.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnthembcs.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthembcs.ImageOptions.Image")));
             this.btnthembcs.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnthembcs.Location = new System.Drawing.Point(22, 25);
+            this.btnthembcs.Location = new System.Drawing.Point(23, 32);
             this.btnthembcs.Name = "btnthembcs";
-            this.btnthembcs.Size = new System.Drawing.Size(96, 32);
+            this.btnthembcs.Size = new System.Drawing.Size(96, 33);
             this.btnthembcs.TabIndex = 0;
             this.btnthembcs.Text = "Thêm";
             // 
             // frmbancansu
             // 
+            this.AcceptButton = this.btnthembcs;
+            this.ActiveGlowColor = System.Drawing.Color.White;
+            this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(119)))), ((int)(((byte)(176)))));
+            this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Tile;
-            this.BackgroundImageStore = global::UI_Tier.Properties.Resources.AAIA_wDGAAAAAQAAAAAAAAs5AAAAJDU2ODE4YTAwLTVkM2YtNGYzOS04MzcyLTg3NTI2NmM1ZDEwZQ;
-            this.ClientSize = new System.Drawing.Size(671, 491);
+            this.CancelButton = this.btnthoatbcs;
+            this.ClientSize = new System.Drawing.Size(665, 491);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
