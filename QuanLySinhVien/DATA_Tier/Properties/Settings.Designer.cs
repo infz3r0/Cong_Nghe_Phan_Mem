@@ -46,6 +46,7 @@ namespace DATA_Tier.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=desktop-2vgdshc;Initial Catalog=QLSinhVien;Integrated Security=True")]
         public string connectstringNhi {
             get {
                 return ((string)(this["connectstringNhi"]));

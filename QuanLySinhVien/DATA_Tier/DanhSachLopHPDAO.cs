@@ -20,11 +20,13 @@ namespace DATA_Tier
         }
         public bool insert(DanhSachLopHP dslophp)
         {
-            string query = "Insert into DanhSachLopHP (MaSV) " +
+            string query = "Insert into DanhSachLopHP (MaLopHP, MaSV) " +
                            "Values (@MaSV)";
-            SqlParameter[] sqlParameters = new SqlParameter[1];
+            SqlParameter[] sqlParameters = new SqlParameter[2];
             sqlParameters[0] = new SqlParameter("@MaSV", SqlDbType.VarChar);
             sqlParameters[0].Value = dslophp.MaSV;
+            sqlParameters[0] = new SqlParameter("@MaLopHP", SqlDbType.VarChar);
+            sqlParameters[0].Value = dslophp.MaLopHP;
             return executeInsertQuery(query, sqlParameters);
         }
         public bool update(DanhSachLopHP dslophp)
