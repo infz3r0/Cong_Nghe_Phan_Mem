@@ -21,33 +21,45 @@ namespace BUS_Tier
             return dt;
         }
 
-        public bool MaKhoaHopLe(string malop)
+        public bool MaHopLe(string ma)
         {
-            if (malop.Length != 6)
+            if (ma.Length != 7)
             {
                 return false;
             }
-            string s1 = malop.Substring(0, 2);
-            string s2 = malop.Substring(2, 4);
-            string s3 = malop.Substring(3, 4);
-            string s4 = malop.Substring(4,4);
-            for (int i = 0; i < 2; i++)
+            //khóa học = số
+            string s1 = ma.Substring(0, 2);
+            //trình độ đào tạo = chữ = D hoặc C
+            string s2 = ma.Substring(2, 1);
+            //ngành = chữ
+            string s3 = ma.Substring(3, 2);
+            //stt = số
+            string s4 = ma.Substring(5, 2);
+
+            for (int i = 0; i < s1.Length; i++)
             {
-                if (char.IsDigit(s1[i]))
+                if (!char.IsDigit(s1[i]))
                 {
                     return false;
                 }
             }
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < s2.Length; i++)
             {
-                if (char.IsLetter(s2[i]))
+                if (!s2[i].Equals('D') && !s2[i].Equals('C'))
                 {
                     return false;
                 }
             }
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < s3.Length; i++)
             {
-                if (char.IsLetter(s3[i]))
+                if (!char.IsLetter(s3[i]))
+                {
+                    return false;
+                }
+            }
+            for (int i = 0; i < s4.Length; i++)
+            {
+                if (!char.IsDigit(s4[i]))
                 {
                     return false;
                 }
@@ -55,10 +67,10 @@ namespace BUS_Tier
             return true;
         }
 
-            public bool Them(LopKhoaHoc lopKhoaHoc)
+        public bool Them(LopKhoaHoc lopKhoaHoc)
         {
             bool result = false;
-            if (!MaKhoaHopLe(lopKhoaHoc.MaLop))
+            if (!MaHopLe(lopKhoaHoc.MaLop))
             {
                 return false;
             }
@@ -69,14 +81,14 @@ namespace BUS_Tier
         public bool Xoa(LopKhoaHoc lopKhoaHoc)
         {
             bool result = false;
-
+            lopKhoaHocDAO.delete(lopKhoaHoc);
             return result;
         }
 
         public bool Sua(LopKhoaHoc lopKhoaHoc)
         {
             bool result = false;
-
+            lopKhoaHocDAO.update(lopKhoaHoc);
             return result;
         }
     }
