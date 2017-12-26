@@ -69,7 +69,7 @@ namespace UI_Tier
             }
             else
             {
-                MessageBox.Show("Lỗi","", MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Lỗi !","", MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
             bs.DataSource = khoaBUS.DanhSach();
         }
