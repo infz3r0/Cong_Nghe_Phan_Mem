@@ -32,16 +32,21 @@ namespace UI_Tier
             Close();
         }
 
+        BindingSource bs = new BindingSource();
         LopKhoaHocBUS lopKhoaHocBUS = new LopKhoaHocBUS();
         KhoaBUS khoaBUS = new KhoaBUS();
   
         private void LoadDB()
         {
-            gridviewlopkh.DataSource = lopKhoaHocBUS.DanhSach();
+            bs.DataSource = lopKhoaHocBUS.DanhSach();
+            gridviewlopkh.DataSource = bs;
 
             cbbTenKhoaLopKH.DataSource = khoaBUS.DanhSach();
             cbbTenKhoaLopKH.DisplayMember = "TenKhoa";
             cbbTenKhoaLopKH.ValueMember = "MaKhoa";
+
+            txtmalopkhoahoc.DataBindings.Add("Text", bs, "MaLop", false, DataSourceUpdateMode.Never);
+            cbbTenKhoaLopKH.DataBindings.Add("SelectedValue", bs, "MaKhoa");
         }
 
         private void frmlopkhoahoc_Load(object sender, EventArgs e)
@@ -52,10 +57,10 @@ namespace UI_Tier
         private void btnthemlopkh_Click(object sender, EventArgs e)
         {
            
-            string lop = txtmalopkhoahoc.Text;
-            string khoa = cbbTenKhoaLopKH.SelectedValue.ToString();
+            string malop = txtmalopkhoahoc.Text;
+            string makhoa = cbbTenKhoaLopKH.SelectedValue.ToString();
 
-            LopKhoaHoc lopKhoaHoc = new LopKhoaHoc(lop,khoa);
+            LopKhoaHoc lopKhoaHoc = new LopKhoaHoc(malop,makhoa);
 
             bool thanhcong = lopKhoaHocBUS.Them(lopKhoaHoc);
             if (thanhcong)
@@ -66,9 +71,47 @@ namespace UI_Tier
             {
                 MessageBox.Show("Lỗi !", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            LoadDB();
+            bs.DataSource = lopKhoaHocBUS.DanhSach();
         }
 
-        
+        private void btnsualopkh_Click(object sender, EventArgs e)
+        {
+            string malop = gridviewlopkh.SelectedCells[0].OwningRow.Cells[0].Value.ToString();
+            string makhoa = cbbTenKhoaLopKH.SelectedValue.ToString();
+
+            LopKhoaHoc lopKhoaHoc = new LopKhoaHoc(malop, makhoa);
+            bool thanhcong = lopKhoaHocBUS.Sua(lopKhoaHoc);
+            if(thanhcong)
+            {
+                MessageBox.Show("Thành công !");
+            }
+            else
+            {
+                MessageBox.Show("Lỗi !", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            bs.DataSource = lopKhoaHocBUS.DanhSach();
+          
+
+        }
+
+        private void btnxoalopkh_Click(object sender, EventArgs e)
+        {
+            string malop = gridviewlopkh.SelectedCells[0].OwningRow.Cells[0].Value.ToString();
+
+            LopKhoaHoc lopKhoaHoc = new LopKhoaHoc();
+            lopKhoaHoc.MaLop = malop;
+            bool thanhcong = lopKhoaHocBUS.Xoa(lopKhoaHoc);
+            if (thanhcong)
+            {
+                MessageBox.Show("Thành công !");
+            }
+            else
+            {
+                MessageBox.Show("Lỗi !", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            bs.DataSource = lopKhoaHocBUS.DanhSach();
+           
+
+        }
     }
 }

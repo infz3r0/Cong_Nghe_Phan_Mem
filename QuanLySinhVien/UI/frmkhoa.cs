@@ -41,8 +41,8 @@ namespace UI_Tier
         private void LoadDB()
         {
             bs.DataSource = khoaBUS.DanhSach();
-            
             gridviewkhoa.DataSource = bs;
+
             txtmakhoa.DataBindings.Add("Text", bs, "MaKhoa", false, DataSourceUpdateMode.Never);
             txttenkhoa.DataBindings.Add("Text", bs, "TenKhoa", false, DataSourceUpdateMode.Never);
             txtsdtkhoa.DataBindings.Add("Text", bs, "Sdt", false, DataSourceUpdateMode.Never);
