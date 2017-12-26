@@ -34,9 +34,10 @@ namespace UI_Tier
 
         SinhVienBUS sinhvienBUS = new SinhVienBUS();
         BindingSource bs = new BindingSource();
+       
         private void LoadDB()
         {
-            /*
+            
             bs.DataSource = sinhvienBUS.DanhSach();
             gridviewsv.DataSource = bs;
             
@@ -44,12 +45,15 @@ namespace UI_Tier
             txtmssv.DataBindings.Add("Text", bs, "MaSV", false, DataSourceUpdateMode.Never);
             txttensv.DataBindings.Add("Text", bs, "HoTen", false, DataSourceUpdateMode.Never);
             ngaysinhsv.DataBindings.Add("Value", bs, "NgaySinh",false, DataSourceUpdateMode.Never);
-            //gioi tinh
+            cbbGioiTinh.DataSource = sinhvienBUS.DanhSach();
+            cbbGioiTinh.DisplayMember = "GioiTinh";
+            cbbGioiTinh.ValueMember = "GioiTinh";
+            cbbGioiTinh.DataBindings.Add("SelectedValue", bs, "GioiTinh");
             txtdicchisv.DataBindings.Add("Text", bs, "DiaChi", false, DataSourceUpdateMode.Never);
             txtcmndsv.DataBindings.Add("Text", bs, "SoCMND", false, DataSourceUpdateMode.Never);
             txtdienthoaisv.DataBindings.Add("Text", bs, "Sdt", false, DataSourceUpdateMode.Never);
             txtmailsv.DataBindings.Add("Text", bs, "Email", false, DataSourceUpdateMode.Never);
-            */
+            
         }
 
         private void frmsv_Load(object sender, EventArgs e)

@@ -36,6 +36,7 @@ namespace DATA_Tier.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DELL3558;Initial Catalog=QLSinhVien;Integrated Security=True")]
         public string connectstringPhu {
             get {
                 return ((string)(this["connectstringPhu"]));

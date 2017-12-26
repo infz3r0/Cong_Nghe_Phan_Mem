@@ -30,19 +30,19 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmsv));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.txtcmndsv = new System.Windows.Forms.MaskedTextBox();
             this.txtdienthoaisv = new System.Windows.Forms.MaskedTextBox();
             this.txtmailsv = new DevExpress.XtraEditors.TextEdit();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbbGioiTinh = new System.Windows.Forms.ComboBox();
             this.txtdicchisv = new DevExpress.XtraEditors.TextEdit();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.txtmssv = new System.Windows.Forms.MaskedTextBox();
-            this.cbgioitinhsv = new DevExpress.XtraEditors.ComboBoxEdit();
             this.ngaysinhsv = new System.Windows.Forms.DateTimePicker();
             this.txttensv = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
@@ -69,7 +69,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtmailsv.Properties)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtdicchisv.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbgioitinhsv.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txttensv.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -117,6 +116,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.cbbGioiTinh);
             this.groupBox1.Controls.Add(this.txtcmndsv);
             this.groupBox1.Controls.Add(this.txtdienthoaisv);
             this.groupBox1.Controls.Add(this.txtmailsv);
@@ -126,7 +126,6 @@
             this.groupBox1.Controls.Add(this.labelControl7);
             this.groupBox1.Controls.Add(this.labelControl6);
             this.groupBox1.Controls.Add(this.txtmssv);
-            this.groupBox1.Controls.Add(this.cbgioitinhsv);
             this.groupBox1.Controls.Add(this.ngaysinhsv);
             this.groupBox1.Controls.Add(this.txttensv);
             this.groupBox1.Controls.Add(this.labelControl5);
@@ -141,6 +140,14 @@
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin";
+            // 
+            // cbbGioiTinh
+            // 
+            this.cbbGioiTinh.FormattingEnabled = true;
+            this.cbbGioiTinh.Location = new System.Drawing.Point(199, 159);
+            this.cbbGioiTinh.Name = "cbbGioiTinh";
+            this.cbbGioiTinh.Size = new System.Drawing.Size(266, 26);
+            this.cbbGioiTinh.TabIndex = 3;
             // 
             // txtdicchisv
             // 
@@ -213,20 +220,6 @@
             this.txtmssv.PromptChar = ' ';
             this.txtmssv.Size = new System.Drawing.Size(266, 19);
             this.txtmssv.TabIndex = 0;
-            // 
-            // cbgioitinhsv
-            // 
-            this.cbgioitinhsv.Location = new System.Drawing.Point(199, 160);
-            this.cbgioitinhsv.Name = "cbgioitinhsv";
-            this.cbgioitinhsv.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.cbgioitinhsv.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.cbgioitinhsv.Properties.Appearance.Options.UseBackColor = true;
-            this.cbgioitinhsv.Properties.Appearance.Options.UseForeColor = true;
-            this.cbgioitinhsv.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.cbgioitinhsv.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbgioitinhsv.Size = new System.Drawing.Size(266, 20);
-            this.cbgioitinhsv.TabIndex = 3;
             // 
             // ngaysinhsv
             // 
@@ -424,8 +417,8 @@
             // MaSV
             // 
             this.MaSV.DataPropertyName = "MaSV";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.MaSV.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.MaSV.DefaultCellStyle = dataGridViewCellStyle1;
             this.MaSV.HeaderText = "MSSV";
             this.MaSV.Name = "MaSV";
             // 
@@ -490,7 +483,6 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtdicchisv.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbgioitinhsv.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txttensv.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             this.groupBox2.ResumeLayout(false);
@@ -513,7 +505,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private System.Windows.Forms.MaskedTextBox txtmssv;
-        private DevExpress.XtraEditors.ComboBoxEdit cbgioitinhsv;
         private System.Windows.Forms.DateTimePicker ngaysinhsv;
         private DevExpress.XtraEditors.TextEdit txttensv;
         private DevExpress.XtraEditors.LabelControl labelControl5;
@@ -537,5 +528,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SoCMND;
         private System.Windows.Forms.DataGridViewTextBoxColumn DienThoai;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.ComboBox cbbGioiTinh;
     }
 }

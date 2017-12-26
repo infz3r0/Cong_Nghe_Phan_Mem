@@ -29,17 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmlopkhoahoc));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.gridviewlopkh = new System.Windows.Forms.DataGridView();
-            this.MaLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenKhoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cbbTenKhoaLopKH = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cbbTenKhoaLopKH = new System.Windows.Forms.ComboBox();
             this.txtmalopkhoahoc = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -51,11 +48,13 @@
             this.btnthemlopkh = new DevExpress.XtraEditors.SimpleButton();
             this.behaviorManager2 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
+            this.MaLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaKhoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenKhoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridviewlopkh)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbTenKhoaLopKH.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtmalopkhoahoc.Properties)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager2)).BeginInit();
@@ -82,27 +81,12 @@
             this.gridviewlopkh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridviewlopkh.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaLop,
+            this.MaKhoa,
             this.TenKhoa});
             this.gridviewlopkh.Location = new System.Drawing.Point(7, 25);
             this.gridviewlopkh.Name = "gridviewlopkh";
             this.gridviewlopkh.Size = new System.Drawing.Size(544, 235);
             this.gridviewlopkh.TabIndex = 9;
-            // 
-            // MaLop
-            // 
-            this.MaLop.DataPropertyName = "MaLop";
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.MaLop.DefaultCellStyle = dataGridViewCellStyle1;
-            this.MaLop.HeaderText = "Mã lớp";
-            this.MaLop.Name = "MaLop";
-            // 
-            // TenKhoa
-            // 
-            this.TenKhoa.DataPropertyName = "TenKhoa";
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            this.TenKhoa.DefaultCellStyle = dataGridViewCellStyle2;
-            this.TenKhoa.HeaderText = "Tên khoa";
-            this.TenKhoa.Name = "TenKhoa";
             // 
             // groupBox1
             // 
@@ -122,15 +106,10 @@
             // 
             // cbbTenKhoaLopKH
             // 
+            this.cbbTenKhoaLopKH.FormattingEnabled = true;
             this.cbbTenKhoaLopKH.Location = new System.Drawing.Point(156, 117);
             this.cbbTenKhoaLopKH.Name = "cbbTenKhoaLopKH";
-            this.cbbTenKhoaLopKH.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.cbbTenKhoaLopKH.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.cbbTenKhoaLopKH.Properties.Appearance.Options.UseBackColor = true;
-            this.cbbTenKhoaLopKH.Properties.Appearance.Options.UseForeColor = true;
-            this.cbbTenKhoaLopKH.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbbTenKhoaLopKH.Size = new System.Drawing.Size(220, 20);
+            this.cbbTenKhoaLopKH.Size = new System.Drawing.Size(220, 26);
             this.cbbTenKhoaLopKH.TabIndex = 1;
             // 
             // txtmalopkhoahoc
@@ -257,6 +236,27 @@
             // 
             this.defaultLookAndFeel1.LookAndFeel.SkinName = "Blueprint";
             // 
+            // MaLop
+            // 
+            this.MaLop.DataPropertyName = "MaLop";
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.MaLop.DefaultCellStyle = dataGridViewCellStyle2;
+            this.MaLop.HeaderText = "Mã lớp";
+            this.MaLop.Name = "MaLop";
+            // 
+            // MaKhoa
+            // 
+            this.MaKhoa.DataPropertyName = "MaKhoa";
+            this.MaKhoa.HeaderText = "Mã Khoa";
+            this.MaKhoa.Name = "MaKhoa";
+            this.MaKhoa.Visible = false;
+            // 
+            // TenKhoa
+            // 
+            this.TenKhoa.DataPropertyName = "Tên Khoa";
+            this.TenKhoa.HeaderText = "Tên Khoa";
+            this.TenKhoa.Name = "TenKhoa";
+            // 
             // frmlopkhoahoc
             // 
             this.AcceptButton = this.btnthemlopkh;
@@ -278,7 +278,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridviewlopkh)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbTenKhoaLopKH.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtmalopkhoahoc.Properties)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager2)).EndInit();
@@ -303,8 +302,9 @@
         private DevExpress.XtraEditors.SimpleButton btnthemlopkh;
         private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager2;
         private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel1;
-        private DevExpress.XtraEditors.ComboBoxEdit cbbTenKhoaLopKH;
+        private System.Windows.Forms.ComboBox cbbTenKhoaLopKH;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaLop;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaKhoa;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenKhoa;
     }
 }

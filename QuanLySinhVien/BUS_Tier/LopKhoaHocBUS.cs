@@ -67,6 +67,8 @@ namespace BUS_Tier
             return true;
         }
 
+       
+        
         public bool Them(LopKhoaHoc lopKhoaHoc)
         {
             bool result = false;
