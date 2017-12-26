@@ -26,10 +26,28 @@ namespace DATA_Tier.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DELL3558;Initial Catalog=QLSinhVien;Integrated Security=True")]
-        public string connectstring {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\SQLEXPRESS;Initial Catalog=QLSinhVien;Integrated Security=True")]
+        public string connectstringLong {
             get {
-                return ((string)(this["connectstring"]));
+                return ((string)(this["connectstringLong"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        public string connectstringPhu {
+            get {
+                return ((string)(this["connectstringPhu"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        public string connectstringNhi {
+            get {
+                return ((string)(this["connectstringNhi"]));
             }
         }
     }
