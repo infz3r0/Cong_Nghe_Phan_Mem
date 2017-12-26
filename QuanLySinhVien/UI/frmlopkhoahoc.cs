@@ -52,11 +52,39 @@ namespace UI_Tier
         private void frmlopkhoahoc_Load(object sender, EventArgs e)
         {
             LoadDB();
+
+            cbbTenKhoaLopKH.AutoCompleteCustomSource = LoadAutoComplete();
+        }
+
+        public AutoCompleteStringCollection LoadAutoComplete()
+        {
+            DataTable dt = khoaBUS.DanhSach();
+            AutoCompleteStringCollection stringCol = new AutoCompleteStringCollection();
+            foreach (DataRow row in dt.Rows)
+            {
+                stringCol.Add(Convert.ToString(row["TenKhoa"]));
+            }
+            return stringCol;
+        }
+
+        private bool IsNull(string input)
+        {
+            if (string.IsNullOrEmpty(input.Trim(' ')))
+            {
+                return true;
+            }
+            return false;
         }
 
         private void btnthemlopkh_Click(object sender, EventArgs e)
         {
-           
+            bool isNull = IsNull(cbbTenKhoaLopKH.Text);
+            if (isNull)
+            {
+                MessageBox.Show("Ma khoa khong duoc de trong");
+                return;
+            }
+
             string malop = txtmalopkhoahoc.Text;
             string makhoa = cbbTenKhoaLopKH.SelectedValue.ToString();
 
@@ -76,6 +104,13 @@ namespace UI_Tier
 
         private void btnsualopkh_Click(object sender, EventArgs e)
         {
+            bool isNull = IsNull(cbbTenKhoaLopKH.Text);
+            if (isNull)
+            {
+                MessageBox.Show("Ma khoa khong duoc de trong");
+                return;
+            }
+
             string malop = gridviewlopkh.SelectedCells[0].OwningRow.Cells[0].Value.ToString();
             string makhoa = cbbTenKhoaLopKH.SelectedValue.ToString();
 
