@@ -30,13 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmlopkhoahoc));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.gridviewlopkh = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cbbTenKhoaLopKH = new System.Windows.Forms.ComboBox();
             this.txtmalopkhoahoc = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -51,6 +50,7 @@
             this.MaLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaKhoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenKhoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cbbTenKhoaLopKH = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridviewlopkh)).BeginInit();
@@ -75,6 +75,8 @@
             // 
             // gridviewlopkh
             // 
+            this.gridviewlopkh.AllowUserToAddRows = false;
+            this.gridviewlopkh.AllowUserToDeleteRows = false;
             this.gridviewlopkh.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridviewlopkh.BackgroundColor = System.Drawing.Color.White;
             this.gridviewlopkh.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -84,7 +86,10 @@
             this.MaKhoa,
             this.TenKhoa});
             this.gridviewlopkh.Location = new System.Drawing.Point(7, 25);
+            this.gridviewlopkh.MultiSelect = false;
             this.gridviewlopkh.Name = "gridviewlopkh";
+            this.gridviewlopkh.ReadOnly = true;
+            this.gridviewlopkh.RowHeadersVisible = false;
             this.gridviewlopkh.Size = new System.Drawing.Size(544, 235);
             this.gridviewlopkh.TabIndex = 9;
             // 
@@ -103,14 +108,6 @@
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin";
-            // 
-            // cbbTenKhoaLopKH
-            // 
-            this.cbbTenKhoaLopKH.FormattingEnabled = true;
-            this.cbbTenKhoaLopKH.Location = new System.Drawing.Point(156, 117);
-            this.cbbTenKhoaLopKH.Name = "cbbTenKhoaLopKH";
-            this.cbbTenKhoaLopKH.Size = new System.Drawing.Size(220, 26);
-            this.cbbTenKhoaLopKH.TabIndex = 1;
             // 
             // txtmalopkhoahoc
             // 
@@ -239,10 +236,11 @@
             // MaLop
             // 
             this.MaLop.DataPropertyName = "MaLop";
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            this.MaLop.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.MaLop.DefaultCellStyle = dataGridViewCellStyle1;
             this.MaLop.HeaderText = "Mã lớp";
             this.MaLop.Name = "MaLop";
+            this.MaLop.ReadOnly = true;
             // 
             // MaKhoa
             // 
@@ -253,9 +251,18 @@
             // 
             // TenKhoa
             // 
-            this.TenKhoa.DataPropertyName = "Tên Khoa";
+            this.TenKhoa.DataPropertyName = "TenKhoa";
             this.TenKhoa.HeaderText = "Tên Khoa";
             this.TenKhoa.Name = "TenKhoa";
+            // 
+            // cbbTenKhoaLopKH
+            // 
+            this.cbbTenKhoaLopKH.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbTenKhoaLopKH.FormattingEnabled = true;
+            this.cbbTenKhoaLopKH.Location = new System.Drawing.Point(156, 117);
+            this.cbbTenKhoaLopKH.Name = "cbbTenKhoaLopKH";
+            this.cbbTenKhoaLopKH.Size = new System.Drawing.Size(220, 26);
+            this.cbbTenKhoaLopKH.TabIndex = 1;
             // 
             // frmlopkhoahoc
             // 
@@ -302,9 +309,11 @@
         private DevExpress.XtraEditors.SimpleButton btnthemlopkh;
         private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager2;
         private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel1;
-        private System.Windows.Forms.ComboBox cbbTenKhoaLopKH;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaLop;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaKhoa;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenKhoa;
+        private System.Windows.Forms.BindingSource dataSet1BindingSource;
+        private DataSet1 dataSet1;
+        private System.Windows.Forms.ComboBox cbbTenKhoaLopKH;
     }
 }

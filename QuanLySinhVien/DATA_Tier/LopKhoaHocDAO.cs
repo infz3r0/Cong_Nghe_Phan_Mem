@@ -14,38 +14,38 @@ namespace DATA_Tier
     {
         public DataTable getAll()
         {
-            string query = "Select * from LopKhoaHoc";
+            string query = "SELECT       LopKhoaHoc.MaLop, LopKhoaHoc.MaKhoa, Khoa.TenKhoa FROM Khoa INNER JOIN LopKhoaHoc ON Khoa.MaKhoa = LopKhoaHoc.MaKhoa";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return executeSelectQuery(query, sqlParameters);
         }
         public DataTable getAll_TenKhoa()
         {
-            string query = "SELECT Khoa.MaKhoa, Khoa.TenKhoa, Khoa.Sdt, Khoa.Email, LopKhoaHoc.MaLop"+
-                            "FROM Khoa INNER JOIN"+
-                            "LopKhoaHoc ON Khoa.MaKhoa = LopKhoaHoc.MaKhoa";
+            string query = "SELECT LopKhoaHoc.MaLop, Khoa.MaKhoa, Khoa.TenKhoa" +
+                            " FROM Khoa INNER JOIN"+
+                            " LopKhoaHoc ON Khoa.MaKhoa = LopKhoaHoc.MaKhoa";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return executeSelectQuery(query, sqlParameters);
         }
         public bool insert(LopKhoaHoc lopkh)
         {
             string query = "Insert into LopKhoaHoc (MaLop, MaKhoa)"+
-                           "Values (@MaLop, @MaKhoa)";
+                           " Values (@MaLop, @MaKhoa)";
             SqlParameter[] sqlParameters = new SqlParameter[2];
             sqlParameters[0] = new SqlParameter("@MaLop", SqlDbType.VarChar);
-            sqlParameters[0].Value = lopkh.MaKhoa;
+            sqlParameters[0].Value = lopkh.MaLop;
             sqlParameters[1] = new SqlParameter("@MaKhoa", SqlDbType.VarChar);
-            sqlParameters[1].Value = lopkh.MaLop;
+            sqlParameters[1].Value = lopkh.MaKhoa;
             return executeInsertQuery(query, sqlParameters);
         }
         public bool update(LopKhoaHoc lopkh)
         {
-            string query = "Update LopKhoaHoc " +
-                           "Set MaKhoa=@MaKhoa"+
-                           "Where MaLop=@MaLop";
+            string query = "Update LopKhoaHoc" +
+                           " Set MaKhoa=@MaKhoa"+
+                           " Where MaLop=@MaLop";
             SqlParameter[] sqlParameters = new SqlParameter[2];
             sqlParameters[0] = new SqlParameter("@MaLop", SqlDbType.VarChar);
             sqlParameters[0].Value = lopkh.MaLop;
-            sqlParameters[1] = new SqlParameter("@makhoa", SqlDbType.VarChar);
+            sqlParameters[1] = new SqlParameter("@MaKhoa", SqlDbType.VarChar);
             sqlParameters[1].Value = lopkh.MaKhoa;
             return executeInsertQuery(query, sqlParameters);
         }
