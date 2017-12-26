@@ -75,6 +75,8 @@
             // 
             // gridviewlopkh
             // 
+            this.gridviewlopkh.AllowUserToAddRows = false;
+            this.gridviewlopkh.AllowUserToDeleteRows = false;
             this.gridviewlopkh.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridviewlopkh.BackgroundColor = System.Drawing.Color.White;
             this.gridviewlopkh.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -84,7 +86,10 @@
             this.MaKhoa,
             this.TenKhoa});
             this.gridviewlopkh.Location = new System.Drawing.Point(7, 25);
+            this.gridviewlopkh.MultiSelect = false;
             this.gridviewlopkh.Name = "gridviewlopkh";
+            this.gridviewlopkh.ReadOnly = true;
+            this.gridviewlopkh.RowHeadersVisible = false;
             this.gridviewlopkh.Size = new System.Drawing.Size(544, 235);
             this.gridviewlopkh.TabIndex = 9;
             // 
@@ -243,6 +248,7 @@
             this.MaLop.DefaultCellStyle = dataGridViewCellStyle2;
             this.MaLop.HeaderText = "Mã lớp";
             this.MaLop.Name = "MaLop";
+            this.MaLop.ReadOnly = true;
             // 
             // MaKhoa
             // 
@@ -253,7 +259,7 @@
             // 
             // TenKhoa
             // 
-            this.TenKhoa.DataPropertyName = "Tên Khoa";
+            this.TenKhoa.DataPropertyName = "TenKhoa";
             this.TenKhoa.HeaderText = "Tên Khoa";
             this.TenKhoa.Name = "TenKhoa";
             // 
