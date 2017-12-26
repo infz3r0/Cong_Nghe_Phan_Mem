@@ -47,12 +47,12 @@ namespace DATA_Tier
             sqlParameters[0].Value = lopkh.MaLop;
             sqlParameters[1] = new SqlParameter("@MaKhoa", SqlDbType.VarChar);
             sqlParameters[1].Value = lopkh.MaKhoa;
-            return executeInsertQuery(query, sqlParameters);
+            return executeUpdateQuery(query, sqlParameters);
         }
         public bool delete(LopKhoaHoc lopkh)
         {
             string query = "Delete from LopKhoaHoc" +
-                           "Where MaLop=@MaLop";
+                           " Where MaLop=@MaLop";
             SqlParameter[] sqlParameters = new SqlParameter[1];
             sqlParameters[0] = new SqlParameter("@MaLop", SqlDbType.VarChar);
             sqlParameters[0].Value = lopkh.MaLop;

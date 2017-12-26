@@ -83,14 +83,14 @@ namespace BUS_Tier
         public bool Xoa(LopKhoaHoc lopKhoaHoc)
         {
             bool result = false;
-            lopKhoaHocDAO.delete(lopKhoaHoc);
+            result = lopKhoaHocDAO.delete(lopKhoaHoc);
             return result;
         }
 
         public bool Sua(LopKhoaHoc lopKhoaHoc)
         {
             bool result = false;
-            lopKhoaHocDAO.update(lopKhoaHoc);
+            result = lopKhoaHocDAO.update(lopKhoaHoc);
             return result;
         }
     }
