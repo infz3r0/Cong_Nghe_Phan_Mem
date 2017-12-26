@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmlophp));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.gridviewkhoa = new System.Windows.Forms.DataGridView();
@@ -74,6 +75,8 @@
             // 
             // gridviewkhoa
             // 
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.gridviewkhoa.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.gridviewkhoa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridviewkhoa.BackgroundColor = System.Drawing.Color.White;
             this.gridviewkhoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -137,7 +140,7 @@
             this.btnsualophp.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnsualophp.Appearance.ForeColor = System.Drawing.Color.White;
             this.btnsualophp.Appearance.Options.UseFont = true;
-            this.btnsualophp.Appearance.Options.UseForeColor = true;         
+            this.btnsualophp.Appearance.Options.UseForeColor = true;
             this.btnsualophp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnsualophp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnsualophp.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnsualophp.ImageOptions.Image")));
@@ -192,7 +195,7 @@
             this.labelControl1.Appearance.Options.UseBackColor = true;
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.Location = new System.Drawing.Point(20, 117);
+            this.labelControl1.Location = new System.Drawing.Point(20, 164);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(117, 23);
             this.labelControl1.TabIndex = 5;
@@ -201,7 +204,7 @@
             // txtTenHPLopHP
             // 
             this.txtTenHPLopHP.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTenHPLopHP.Location = new System.Drawing.Point(192, 119);
+            this.txtTenHPLopHP.Location = new System.Drawing.Point(192, 166);
             this.txtTenHPLopHP.Name = "txtTenHPLopHP";
             this.txtTenHPLopHP.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtTenHPLopHP.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
@@ -214,7 +217,7 @@
             // txtSLSVLopHP
             // 
             this.txtSLSVLopHP.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSLSVLopHP.Location = new System.Drawing.Point(192, 161);
+            this.txtSLSVLopHP.Location = new System.Drawing.Point(192, 82);
             this.txtSLSVLopHP.Name = "txtSLSVLopHP";
             this.txtSLSVLopHP.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtSLSVLopHP.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
@@ -227,7 +230,7 @@
             // txtMaHPLopHP
             // 
             this.txtMaHPLopHP.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMaHPLopHP.Location = new System.Drawing.Point(192, 79);
+            this.txtMaHPLopHP.Location = new System.Drawing.Point(192, 126);
             this.txtMaHPLopHP.Name = "txtMaHPLopHP";
             this.txtMaHPLopHP.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtMaHPLopHP.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
@@ -256,7 +259,7 @@
             this.labelControl5.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl5.Appearance.Options.UseFont = true;
             this.labelControl5.Appearance.Options.UseForeColor = true;
-            this.labelControl5.Location = new System.Drawing.Point(20, 161);
+            this.labelControl5.Location = new System.Drawing.Point(20, 82);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(98, 23);
             this.labelControl5.TabIndex = 3;
@@ -270,7 +273,7 @@
             this.labelControl3.Appearance.Options.UseBackColor = true;
             this.labelControl3.Appearance.Options.UseFont = true;
             this.labelControl3.Appearance.Options.UseForeColor = true;
-            this.labelControl3.Location = new System.Drawing.Point(20, 76);
+            this.labelControl3.Location = new System.Drawing.Point(20, 123);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(110, 23);
             this.labelControl3.TabIndex = 1;
