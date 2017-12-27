@@ -39,11 +39,6 @@ namespace UI_Tier
             }
         }
 
-        private void navBarControl1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void frmmain_Load(object sender, EventArgs e)
         {
             MdiClient ctlMDI;
@@ -51,15 +46,13 @@ namespace UI_Tier
             {
                 try
                 {
-                    // Attempt to cast the control to type MdiClient.
                     ctlMDI = (MdiClient)ctl;
-
-                    // Set the BackColor of the MdiClient control.
+                    
                     ctlMDI.BackColor = this.BackColor;
                 }
                 catch (InvalidCastException exc)
                 {
-                    // Catch and ignore the error if casting failed.
+                    Console.WriteLine(exc.ToString());
                 }
             }
             OpenFormDangNhap();

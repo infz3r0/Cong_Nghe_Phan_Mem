@@ -20,11 +20,6 @@ namespace UI_Tier
             InitializeComponent();
         }
 
-        private void txtmakhoa_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnthoatkhoa_Click(object sender, EventArgs e)
         {
             Close();
@@ -72,6 +67,7 @@ namespace UI_Tier
                 MessageBox.Show("Lỗi !","", MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
             bs.DataSource = khoaBUS.DanhSach();
+            txtmakhoa.Focus();
         }
 
         private void btnsuakhoa_Click(object sender, EventArgs e)
@@ -92,6 +88,7 @@ namespace UI_Tier
                 MessageBox.Show("Lỗi");
             }
             bs.DataSource = khoaBUS.DanhSach();
+            txtmakhoa.Focus();
         }
 
         private void btnxoakhoa_Click(object sender, EventArgs e)
@@ -110,6 +107,7 @@ namespace UI_Tier
                 MessageBox.Show("Lỗi");
             }
             bs.DataSource = khoaBUS.DanhSach();
+            txtmakhoa.Focus();
         }
     }
 }
