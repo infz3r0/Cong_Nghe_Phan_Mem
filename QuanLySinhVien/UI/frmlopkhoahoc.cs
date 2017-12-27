@@ -100,10 +100,15 @@ namespace UI_Tier
                 MessageBox.Show("Lỗi !", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             bs.DataSource = lopKhoaHocBUS.DanhSach();
+            txtmalopkhoahoc.Focus();
         }
 
         private void btnsualopkh_Click(object sender, EventArgs e)
         {
+            if (gridviewlopkh.SelectedCells.Count <= 0)
+            {
+                return;
+            }
             bool isNull = IsNull(cbbTenKhoaLopKH.Text);
             if (isNull)
             {
@@ -112,6 +117,11 @@ namespace UI_Tier
             }
 
             string malop = gridviewlopkh.SelectedCells[0].OwningRow.Cells[0].Value.ToString();
+            if (cbbTenKhoaLopKH.SelectedValue == null)
+            {
+                MessageBox.Show("Khoa khong ton tai");
+                return;
+            }
             string makhoa = cbbTenKhoaLopKH.SelectedValue.ToString();
 
             LopKhoaHoc lopKhoaHoc = new LopKhoaHoc(malop, makhoa);
@@ -125,12 +135,15 @@ namespace UI_Tier
                 MessageBox.Show("Lỗi !", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             bs.DataSource = lopKhoaHocBUS.DanhSach();
-          
-
+            txtmalopkhoahoc.Focus();
         }
 
         private void btnxoalopkh_Click(object sender, EventArgs e)
         {
+            if (gridviewlopkh.SelectedCells.Count <= 0)
+            {
+                return;
+            }
             string malop = gridviewlopkh.SelectedCells[0].OwningRow.Cells[0].Value.ToString();
 
             LopKhoaHoc lopKhoaHoc = new LopKhoaHoc();

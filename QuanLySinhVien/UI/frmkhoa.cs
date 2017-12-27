@@ -72,6 +72,10 @@ namespace UI_Tier
 
         private void btnsuakhoa_Click(object sender, EventArgs e)
         {
+            if (gridviewkhoa.SelectedCells.Count <= 0)
+            {
+                return;
+            }
             string ma = gridviewkhoa.SelectedCells[0].OwningRow.Cells[0].Value.ToString();
             string ten = txttenkhoa.Text;
             string email = txtmailkhoa.Text;
@@ -93,6 +97,10 @@ namespace UI_Tier
 
         private void btnxoakhoa_Click(object sender, EventArgs e)
         {
+            if (gridviewkhoa.SelectedCells.Count <= 0)
+            {
+                return;
+            }
             string ma = gridviewkhoa.SelectedCells[0].OwningRow.Cells[0].Value.ToString();
             
             Khoa khoa = new Khoa();

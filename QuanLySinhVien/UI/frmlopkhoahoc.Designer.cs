@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmlopkhoahoc));
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager();
+            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.gridviewlopkh = new System.Windows.Forms.DataGridView();
             this.MaLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,7 +49,7 @@
             this.btnxoalopkh = new DevExpress.XtraEditors.SimpleButton();
             this.btnsualopkh = new DevExpress.XtraEditors.SimpleButton();
             this.btnthemlopkh = new DevExpress.XtraEditors.SimpleButton();
-            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel();
+            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridviewlopkh)).BeginInit();
@@ -152,6 +153,8 @@
             this.txtmalopkhoahoc.Properties.Appearance.Options.UseBackColor = true;
             this.txtmalopkhoahoc.Properties.Appearance.Options.UseForeColor = true;
             this.txtmalopkhoahoc.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.txtmalopkhoahoc.Properties.Mask.EditMask = "\\d{2}[CD][A-Z]{2}\\d{2}";
+            this.txtmalopkhoahoc.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtmalopkhoahoc.Size = new System.Drawing.Size(220, 20);
             this.txtmalopkhoahoc.TabIndex = 0;
             // 
