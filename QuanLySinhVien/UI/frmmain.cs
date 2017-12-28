@@ -30,7 +30,7 @@ namespace UI_Tier
         private void OpenFormDangNhap()
         {
             frmdangnhap f = new frmdangnhap();
-            DialogResult dlr =  f.ShowDialog();
+            DialogResult dlr =  f.ShowDialog(this);
             txtusername.EditValue = username;
             if (dlr == DialogResult.Yes)
             {
@@ -55,6 +55,7 @@ namespace UI_Tier
                     Console.WriteLine(exc.ToString());
                 }
             }
+            
             OpenFormDangNhap();
         }
 
