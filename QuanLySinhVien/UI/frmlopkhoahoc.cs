@@ -81,7 +81,7 @@ namespace UI_Tier
             bool isNull = IsNull(cbbTenKhoaLopKH.Text);
             if (isNull)
             {
-                MessageBox.Show("Ma khoa khong duoc de trong");
+                MessageBox.Show("Mã khoa không được để trống");
                 return;
             }
 
@@ -112,14 +112,14 @@ namespace UI_Tier
             bool isNull = IsNull(cbbTenKhoaLopKH.Text);
             if (isNull)
             {
-                MessageBox.Show("Ma khoa khong duoc de trong");
+                MessageBox.Show("Mã khoa không được để trống");
                 return;
             }
 
             string malop = gridviewlopkh.SelectedCells[0].OwningRow.Cells[0].Value.ToString();
             if (cbbTenKhoaLopKH.SelectedValue == null)
             {
-                MessageBox.Show("Khoa khong ton tai");
+                MessageBox.Show("Khoa không tồn tại");
                 return;
             }
             string makhoa = cbbTenKhoaLopKH.SelectedValue.ToString();

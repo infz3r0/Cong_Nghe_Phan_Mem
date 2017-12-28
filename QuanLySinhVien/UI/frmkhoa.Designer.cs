@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmkhoa));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.btnthemkhoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnsuakhoa = new DevExpress.XtraEditors.SimpleButton();
@@ -279,8 +279,8 @@
             this.txtsdtkhoa.Properties.Appearance.Options.UseForeColor = true;
             this.txtsdtkhoa.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.txtsdtkhoa.Properties.Mask.BeepOnError = true;
-            this.txtsdtkhoa.Properties.Mask.EditMask = "(\\d{0,3}) \\d{8}";
-            this.txtsdtkhoa.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Regular;
+            this.txtsdtkhoa.Properties.Mask.EditMask = "\\(\\d{0,3}\\) \\d{8}";
+            this.txtsdtkhoa.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtsdtkhoa.Size = new System.Drawing.Size(281, 20);
             this.txtsdtkhoa.TabIndex = 2;
             // 
@@ -310,8 +310,8 @@
             // MaKhoa
             // 
             this.MaKhoa.DataPropertyName = "MaKhoa";
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.MaKhoa.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            this.MaKhoa.DefaultCellStyle = dataGridViewCellStyle5;
             this.MaKhoa.HeaderText = "Mã Khoa";
             this.MaKhoa.Name = "MaKhoa";
             this.MaKhoa.ReadOnly = true;
@@ -319,8 +319,8 @@
             // TenKhoa
             // 
             this.TenKhoa.DataPropertyName = "TenKhoa";
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            this.TenKhoa.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            this.TenKhoa.DefaultCellStyle = dataGridViewCellStyle6;
             this.TenKhoa.HeaderText = "Tên Khoa";
             this.TenKhoa.Name = "TenKhoa";
             this.TenKhoa.ReadOnly = true;
@@ -328,8 +328,8 @@
             // Sdt
             // 
             this.Sdt.DataPropertyName = "Sdt";
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            this.Sdt.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            this.Sdt.DefaultCellStyle = dataGridViewCellStyle7;
             this.Sdt.HeaderText = "Số Điện Thoại";
             this.Sdt.Name = "Sdt";
             this.Sdt.ReadOnly = true;
@@ -337,8 +337,8 @@
             // Email
             // 
             this.Email.DataPropertyName = "Email";
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.Email.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            this.Email.DefaultCellStyle = dataGridViewCellStyle8;
             this.Email.HeaderText = "Email";
             this.Email.Name = "Email";
             this.Email.ReadOnly = true;
