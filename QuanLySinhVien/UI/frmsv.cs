@@ -21,6 +21,15 @@ namespace UI_Tier
             InitializeComponent();
         }
 
+        private bool IsNull(string input)
+        {
+            if (string.IsNullOrEmpty(input.Trim(' ')))
+            {
+                return true;
+            }
+            return false;
+        }
+
         private void frmsv_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult dlr = MessageBox.Show("Bạn muốn đóng Form?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -58,6 +67,7 @@ namespace UI_Tier
 
         private void frmsv_Load(object sender, EventArgs e)
         {
+
             LoadDB();
         }
 

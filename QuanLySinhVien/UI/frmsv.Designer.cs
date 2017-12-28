@@ -30,10 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmsv));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
-            this.txtcmndsv = new System.Windows.Forms.MaskedTextBox();
-            this.txtdienthoaisv = new System.Windows.Forms.MaskedTextBox();
             this.txtmailsv = new DevExpress.XtraEditors.TextEdit();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbbGioiTinh = new System.Windows.Forms.ComboBox();
@@ -42,7 +40,6 @@
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.txtmssv = new System.Windows.Forms.MaskedTextBox();
             this.ngaysinhsv = new System.Windows.Forms.DateTimePicker();
             this.txttensv = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
@@ -66,6 +63,9 @@
             this.SoCMND = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtmssv = new DevExpress.XtraEditors.TextEdit();
+            this.txtcmndsv = new DevExpress.XtraEditors.TextEdit();
+            this.txtdienthoaisv = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.txtmailsv.Properties)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtdicchisv.Properties)).BeginInit();
@@ -74,31 +74,14 @@
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridviewsv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtmssv.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtcmndsv.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtdienthoaisv.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // defaultLookAndFeel1
             // 
             this.defaultLookAndFeel1.LookAndFeel.SkinName = "Blueprint";
-            // 
-            // txtcmndsv
-            // 
-            this.txtcmndsv.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtcmndsv.ForeColor = System.Drawing.Color.Black;
-            this.txtcmndsv.Location = new System.Drawing.Point(808, 81);
-            this.txtcmndsv.Name = "txtcmndsv";
-            this.txtcmndsv.PromptChar = ' ';
-            this.txtcmndsv.Size = new System.Drawing.Size(266, 19);
-            this.txtcmndsv.TabIndex = 15;
-            // 
-            // txtdienthoaisv
-            // 
-            this.txtdienthoaisv.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtdienthoaisv.ForeColor = System.Drawing.Color.Black;
-            this.txtdienthoaisv.Location = new System.Drawing.Point(808, 126);
-            this.txtdienthoaisv.Name = "txtdienthoaisv";
-            this.txtdienthoaisv.PromptChar = ' ';
-            this.txtdienthoaisv.Size = new System.Drawing.Size(266, 19);
-            this.txtdienthoaisv.TabIndex = 16;
             // 
             // txtmailsv
             // 
@@ -110,22 +93,24 @@
             this.txtmailsv.Properties.Appearance.Options.UseBackColor = true;
             this.txtmailsv.Properties.Appearance.Options.UseForeColor = true;
             this.txtmailsv.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.txtmailsv.Properties.Mask.EditMask = "([a-z]|[0-9]|\\.|_)+@([a-z]|[0-9])+\\.([a-z]|[0-9])+";
+            this.txtmailsv.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtmailsv.Size = new System.Drawing.Size(266, 20);
-            this.txtmailsv.TabIndex = 17;
+            this.txtmailsv.TabIndex = 7;
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.cbbGioiTinh);
-            this.groupBox1.Controls.Add(this.txtcmndsv);
             this.groupBox1.Controls.Add(this.txtdienthoaisv);
+            this.groupBox1.Controls.Add(this.txtcmndsv);
+            this.groupBox1.Controls.Add(this.txtmssv);
+            this.groupBox1.Controls.Add(this.cbbGioiTinh);
             this.groupBox1.Controls.Add(this.txtmailsv);
             this.groupBox1.Controls.Add(this.txtdicchisv);
             this.groupBox1.Controls.Add(this.labelControl9);
             this.groupBox1.Controls.Add(this.labelControl8);
             this.groupBox1.Controls.Add(this.labelControl7);
             this.groupBox1.Controls.Add(this.labelControl6);
-            this.groupBox1.Controls.Add(this.txtmssv);
             this.groupBox1.Controls.Add(this.ngaysinhsv);
             this.groupBox1.Controls.Add(this.txttensv);
             this.groupBox1.Controls.Add(this.labelControl5);
@@ -143,6 +128,7 @@
             // 
             // cbbGioiTinh
             // 
+            this.cbbGioiTinh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbGioiTinh.FormattingEnabled = true;
             this.cbbGioiTinh.Location = new System.Drawing.Point(199, 159);
             this.cbbGioiTinh.Name = "cbbGioiTinh";
@@ -159,8 +145,9 @@
             this.txtdicchisv.Properties.Appearance.Options.UseBackColor = true;
             this.txtdicchisv.Properties.Appearance.Options.UseForeColor = true;
             this.txtdicchisv.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.txtdicchisv.Properties.MaxLength = 500;
             this.txtdicchisv.Size = new System.Drawing.Size(266, 20);
-            this.txtdicchisv.TabIndex = 14;
+            this.txtdicchisv.TabIndex = 4;
             // 
             // labelControl9
             // 
@@ -210,17 +197,6 @@
             this.labelControl6.TabIndex = 18;
             this.labelControl6.Text = "Địa chỉ";
             // 
-            // txtmssv
-            // 
-            this.txtmssv.BackColor = System.Drawing.Color.White;
-            this.txtmssv.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtmssv.ForeColor = System.Drawing.Color.Black;
-            this.txtmssv.Location = new System.Drawing.Point(199, 36);
-            this.txtmssv.Name = "txtmssv";
-            this.txtmssv.PromptChar = ' ';
-            this.txtmssv.Size = new System.Drawing.Size(266, 19);
-            this.txtmssv.TabIndex = 0;
-            // 
             // ngaysinhsv
             // 
             this.ngaysinhsv.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -233,13 +209,14 @@
             // txttensv
             // 
             this.txttensv.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txttensv.Location = new System.Drawing.Point(199, 74);
+            this.txttensv.Location = new System.Drawing.Point(199, 78);
             this.txttensv.Name = "txttensv";
             this.txttensv.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txttensv.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.txttensv.Properties.Appearance.Options.UseBackColor = true;
             this.txttensv.Properties.Appearance.Options.UseForeColor = true;
             this.txttensv.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.txttensv.Properties.MaxLength = 50;
             this.txttensv.Size = new System.Drawing.Size(266, 20);
             this.txttensv.TabIndex = 1;
             // 
@@ -310,7 +287,7 @@
             this.btnthemsv.Location = new System.Drawing.Point(64, 25);
             this.btnthemsv.Name = "btnthemsv";
             this.btnthemsv.Size = new System.Drawing.Size(96, 33);
-            this.btnthemsv.TabIndex = 0;
+            this.btnthemsv.TabIndex = 8;
             this.btnthemsv.Text = "Thêm";
             this.btnthemsv.Click += new System.EventHandler(this.btnthemsv_Click);
             // 
@@ -327,7 +304,7 @@
             this.btnsuasv.Location = new System.Drawing.Point(166, 25);
             this.btnsuasv.Name = "btnsuasv";
             this.btnsuasv.Size = new System.Drawing.Size(96, 33);
-            this.btnsuasv.TabIndex = 1;
+            this.btnsuasv.TabIndex = 9;
             this.btnsuasv.Text = "Sửa ";
             this.btnsuasv.Click += new System.EventHandler(this.btnsuasv_Click);
             // 
@@ -361,7 +338,7 @@
             this.btnthoatsv.Location = new System.Drawing.Point(370, 25);
             this.btnthoatsv.Name = "btnthoatsv";
             this.btnthoatsv.Size = new System.Drawing.Size(96, 33);
-            this.btnthoatsv.TabIndex = 3;
+            this.btnthoatsv.TabIndex = 11;
             this.btnthoatsv.Text = "Đóng";
             this.btnthoatsv.Click += new System.EventHandler(this.btnthoatsv_Click);
             // 
@@ -378,7 +355,7 @@
             this.btnxoasv.Location = new System.Drawing.Point(268, 25);
             this.btnxoasv.Name = "btnxoasv";
             this.btnxoasv.Size = new System.Drawing.Size(96, 33);
-            this.btnxoasv.TabIndex = 2;
+            this.btnxoasv.TabIndex = 10;
             this.btnxoasv.Text = "Xóa";
             this.btnxoasv.Click += new System.EventHandler(this.btnxoasv_Click);
             // 
@@ -397,6 +374,8 @@
             // 
             // gridviewsv
             // 
+            this.gridviewsv.AllowUserToAddRows = false;
+            this.gridviewsv.AllowUserToDeleteRows = false;
             this.gridviewsv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridviewsv.BackgroundColor = System.Drawing.Color.White;
             this.gridviewsv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -410,59 +389,117 @@
             this.DienThoai,
             this.Email});
             this.gridviewsv.Location = new System.Drawing.Point(6, 22);
+            this.gridviewsv.MultiSelect = false;
             this.gridviewsv.Name = "gridviewsv";
+            this.gridviewsv.ReadOnly = true;
+            this.gridviewsv.RowHeadersVisible = false;
             this.gridviewsv.Size = new System.Drawing.Size(1192, 261);
             this.gridviewsv.TabIndex = 9;
+            this.gridviewsv.TabStop = false;
             // 
             // MaSV
             // 
             this.MaSV.DataPropertyName = "MaSV";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.MaSV.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.MaSV.DefaultCellStyle = dataGridViewCellStyle8;
             this.MaSV.HeaderText = "MSSV";
             this.MaSV.Name = "MaSV";
+            this.MaSV.ReadOnly = true;
             // 
             // HoTen
             // 
             this.HoTen.DataPropertyName = "HoTen";
             this.HoTen.HeaderText = "Họ và Tên";
             this.HoTen.Name = "HoTen";
+            this.HoTen.ReadOnly = true;
             // 
             // NgaySinh
             // 
             this.NgaySinh.DataPropertyName = "NgaySinh";
             this.NgaySinh.HeaderText = "Ngày sinh";
             this.NgaySinh.Name = "NgaySinh";
+            this.NgaySinh.ReadOnly = true;
             // 
             // GioiTinh
             // 
             this.GioiTinh.DataPropertyName = "GioiTinh";
             this.GioiTinh.HeaderText = "Giới tính";
             this.GioiTinh.Name = "GioiTinh";
+            this.GioiTinh.ReadOnly = true;
             // 
             // DiaChi
             // 
             this.DiaChi.DataPropertyName = "DiaChi";
             this.DiaChi.HeaderText = "Địa chỉ";
             this.DiaChi.Name = "DiaChi";
+            this.DiaChi.ReadOnly = true;
             // 
             // SoCMND
             // 
             this.SoCMND.DataPropertyName = "SoCMND";
             this.SoCMND.HeaderText = "Số CMND";
             this.SoCMND.Name = "SoCMND";
+            this.SoCMND.ReadOnly = true;
             // 
             // DienThoai
             // 
             this.DienThoai.DataPropertyName = "Sdt";
             this.DienThoai.HeaderText = "Điện thoại";
             this.DienThoai.Name = "DienThoai";
+            this.DienThoai.ReadOnly = true;
             // 
             // Email
             // 
             this.Email.DataPropertyName = "Email";
             this.Email.HeaderText = "Email";
             this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            // 
+            // txtmssv
+            // 
+            this.txtmssv.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtmssv.Location = new System.Drawing.Point(199, 39);
+            this.txtmssv.Name = "txtmssv";
+            this.txtmssv.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtmssv.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.txtmssv.Properties.Appearance.Options.UseBackColor = true;
+            this.txtmssv.Properties.Appearance.Options.UseForeColor = true;
+            this.txtmssv.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.txtmssv.Properties.Mask.EditMask = "\\d{10}";
+            this.txtmssv.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txtmssv.Size = new System.Drawing.Size(266, 20);
+            this.txtmssv.TabIndex = 0;
+            // 
+            // txtcmndsv
+            // 
+            this.txtcmndsv.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtcmndsv.Location = new System.Drawing.Point(808, 78);
+            this.txtcmndsv.Name = "txtcmndsv";
+            this.txtcmndsv.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtcmndsv.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.txtcmndsv.Properties.Appearance.Options.UseBackColor = true;
+            this.txtcmndsv.Properties.Appearance.Options.UseForeColor = true;
+            this.txtcmndsv.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.txtcmndsv.Properties.Mask.EditMask = "\\d+";
+            this.txtcmndsv.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txtcmndsv.Properties.MaxLength = 15;
+            this.txtcmndsv.Size = new System.Drawing.Size(266, 20);
+            this.txtcmndsv.TabIndex = 5;
+            // 
+            // txtdienthoaisv
+            // 
+            this.txtdienthoaisv.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtdienthoaisv.Location = new System.Drawing.Point(808, 123);
+            this.txtdienthoaisv.Name = "txtdienthoaisv";
+            this.txtdienthoaisv.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtdienthoaisv.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.txtdienthoaisv.Properties.Appearance.Options.UseBackColor = true;
+            this.txtdienthoaisv.Properties.Appearance.Options.UseForeColor = true;
+            this.txtdienthoaisv.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.txtdienthoaisv.Properties.Mask.EditMask = "\\(\\d?{3}\\) \\d{8}";
+            this.txtdienthoaisv.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txtdienthoaisv.Size = new System.Drawing.Size(266, 20);
+            this.txtdienthoaisv.TabIndex = 6;
             // 
             // frmsv
             // 
@@ -488,6 +525,9 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridviewsv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtmssv.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtcmndsv.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtdienthoaisv.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -495,8 +535,6 @@
         #endregion
 
         private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel1;
-        private System.Windows.Forms.MaskedTextBox txtcmndsv;
-        private System.Windows.Forms.MaskedTextBox txtdienthoaisv;
         private DevExpress.XtraEditors.TextEdit txtmailsv;
         private System.Windows.Forms.GroupBox groupBox1;
         private DevExpress.XtraEditors.TextEdit txtdicchisv;
@@ -504,7 +542,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl8;
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.LabelControl labelControl6;
-        private System.Windows.Forms.MaskedTextBox txtmssv;
         private System.Windows.Forms.DateTimePicker ngaysinhsv;
         private DevExpress.XtraEditors.TextEdit txttensv;
         private DevExpress.XtraEditors.LabelControl labelControl5;
@@ -529,5 +566,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DienThoai;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.ComboBox cbbGioiTinh;
+        private DevExpress.XtraEditors.TextEdit txtdienthoaisv;
+        private DevExpress.XtraEditors.TextEdit txtcmndsv;
+        private DevExpress.XtraEditors.TextEdit txtmssv;
     }
 }
