@@ -54,9 +54,7 @@ namespace UI_Tier
             txtmssv.DataBindings.Add("Text", bs, "MaSV", false, DataSourceUpdateMode.Never);
             txttensv.DataBindings.Add("Text", bs, "HoTen", false, DataSourceUpdateMode.Never);
             ngaysinhsv.DataBindings.Add("Value", bs, "NgaySinh",false, DataSourceUpdateMode.Never);
-            cbbGioiTinh.DataSource = sinhvienBUS.DanhSach();
-            cbbGioiTinh.DisplayMember = "GioiTinh";
-            cbbGioiTinh.ValueMember = "GioiTinh";
+            
             cbbGioiTinh.DataBindings.Add("SelectedValue", bs, "GioiTinh");
             txtdicchisv.DataBindings.Add("Text", bs, "DiaChi", false, DataSourceUpdateMode.Never);
             txtcmndsv.DataBindings.Add("Text", bs, "SoCMND", false, DataSourceUpdateMode.Never);
@@ -65,9 +63,38 @@ namespace UI_Tier
             
         }
 
+        private DataTable GioiTinhTable()
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Text");
+            dt.Columns.Add("Value");
+
+            DataRow row;
+            row = dt.NewRow();
+            row["Text"] = "Nam";
+            row["Value"] = "M";
+            dt.Rows.Add(row);
+
+            row = dt.NewRow();
+            row["Text"] = "Nữ";
+            row["Value"] = "F";
+            dt.Rows.Add(row);
+
+            row = dt.NewRow();
+            row["Text"] = "Khác";
+            row["Value"] = "O";
+            dt.Rows.Add(row);
+
+            return dt;
+        }
+
         private void frmsv_Load(object sender, EventArgs e)
         {
+            DataTable gtTable = GioiTinhTable();
 
+            cbbGioiTinh.DataSource = gtTable;
+            cbbGioiTinh.ValueMember = "Value";
+            cbbGioiTinh.DisplayMember = "Text";
             LoadDB();
         }
 
