@@ -42,25 +42,32 @@ namespace UI_Tier
         }
 
         SinhVienBUS sinhvienBUS = new SinhVienBUS();
+        LopKhoaHocBUS lopkhoahocBUS = new LopKhoaHocBUS();
         BindingSource bs = new BindingSource();
-       
+
         private void LoadDB()
         {
-            
-            bs.DataSource = sinhvienBUS.DanhSach();
-            gridviewsv.DataSource = bs;
-            
 
-            txtmssv.DataBindings.Add("Text", bs, "MaSV", false, DataSourceUpdateMode.Never);
-            txttensv.DataBindings.Add("Text", bs, "HoTen", false, DataSourceUpdateMode.Never);
-            ngaysinhsv.DataBindings.Add("Value", bs, "NgaySinh",false, DataSourceUpdateMode.Never);
-            
-            cbbGioiTinh.DataBindings.Add("SelectedValue", bs, "GioiTinh");
-            txtdicchisv.DataBindings.Add("Text", bs, "DiaChi", false, DataSourceUpdateMode.Never);
-            txtcmndsv.DataBindings.Add("Text", bs, "SoCMND", false, DataSourceUpdateMode.Never);
-            txtdienthoaisv.DataBindings.Add("Text", bs, "Sdt", false, DataSourceUpdateMode.Never);
-            txtmailsv.DataBindings.Add("Text", bs, "Email", false, DataSourceUpdateMode.Never);
-            
+            /*  bs.DataSource = sinhvienBUS.DanhSach();
+              gridviewsv.DataSource = bs;
+
+
+             /* txtmssv.DataBindings.Add("Text", bs, "MaSV", false, DataSourceUpdateMode.Never);
+              txttensv.DataBindings.Add("Text", bs, "HoTen", false, DataSourceUpdateMode.Never);
+              ngaysinhsv.DataBindings.Add("Value", bs, "NgaySinh",false, DataSourceUpdateMode.Never);
+
+              cbbGioiTinh.DataBindings.Add("SelectedValue", bs, "GioiTinh");
+              txtdicchisv.DataBindings.Add("Text", bs, "DiaChi", false, DataSourceUpdateMode.Never);
+              txtcmndsv.DataBindings.Add("Text", bs, "SoCMND", false, DataSourceUpdateMode.Never);
+              txtdienthoaisv.DataBindings.Add("Text", bs, "Sdt", false, DataSourceUpdateMode.Never);
+              txtmailsv.DataBindings.Add("Text", bs, "Email", false, DataSourceUpdateMode.Never);
+              */
+            gridviewsv.DataSource = sinhvienBUS.DanhSach();
+            cbbMaLopSV.DataSource = lopkhoahocBUS.DanhSach();
+            cbbMaLopSV.DisplayMember = "MaLop";
+            cbbMaLopSV.ValueMember = "MaLop";
+            // cbbMaLopSV.DataBindings.Add("SelectedValue", bs, "MaLop");
+
         }
 
         private DataTable GioiTinhTable()
@@ -88,8 +95,20 @@ namespace UI_Tier
             return dt;
         }
 
+        public AutoCompleteStringCollection LoadAutoComplete()
+        {
+            DataTable dt = lopkhoahocBUS.DanhSach();
+            AutoCompleteStringCollection stringCol = new AutoCompleteStringCollection();
+            foreach (DataRow row in dt.Rows)
+            {
+                stringCol.Add(Convert.ToString(row["MaLop"]));
+            }
+            return stringCol;
+        }
+
         private void frmsv_Load(object sender, EventArgs e)
         {
+            cbbMaLopSV.AutoCompleteCustomSource = LoadAutoComplete();
             DataTable gtTable = GioiTinhTable();
 
             cbbGioiTinh.DataSource = gtTable;
@@ -101,15 +120,97 @@ namespace UI_Tier
         private void btnthemsv_Click(object sender, EventArgs e)
         {
 
+            string masv = txtmssv.Text;
+            string hoten = txttensv.Text;
+            DateTime ngaysinh = ngaysinhsv.Value;
+            char gt = char.Parse(cbbGioiTinh.SelectedValue.ToString());
+            string diachi = txtdicchisv.Text;
+            string cmnd = txtcmndsv.Text;
+            string sdt = txtdienthoaisv.Text;
+            string mail = txtmailsv.Text;
+            string malop = cbbMaLopSV.SelectedValue.ToString();
+
+            SinhVien sv = new SinhVien(masv, hoten, ngaysinh, gt, diachi, cmnd, sdt, mail, null , malop, null);
+
+            bool thanhcong = sinhvienBUS.Them(sv);
+
+            if (thanhcong)
+            {
+                MessageBox.Show("Thành công !");
+            }
+            else
+            {
+                MessageBox.Show("Lỗi !", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+
         }
 
         private void btnsuasv_Click(object sender, EventArgs e)
         {
+            if (gridviewsv.SelectedCells.Count <= 0)
+            {
+                return;
+            }
+            bool isNull = IsNull(gridviewsv.Text);
+            if (isNull)
+            {
+                MessageBox.Show("Mã lớp không được để trống");
+                return;
+            }
 
+            string masv = gridviewsv.SelectedCells[0].OwningRow.Cells[0].Value.ToString();
+            if (cbbMaLopSV.SelectedValue == null)
+            {
+                MessageBox.Show("Lớp không tồn tại");
+                return;
+            }
+
+            string hoten = txttensv.Text;
+            DateTime ngaysinh = ngaysinhsv.Value;
+            char gt = char.Parse(cbbGioiTinh.SelectedValue.ToString());
+            string diachi = txtdicchisv.Text;
+            string cmnd = txtcmndsv.Text;
+            string sdt = txtdienthoaisv.Text;
+            string mail = txtmailsv.Text;
+            string malop = cbbMaLopSV.SelectedValue.ToString();
+
+            SinhVien sv = new SinhVien(masv, hoten, ngaysinh, gt, diachi, cmnd, sdt, mail, null, malop, null);
+
+            bool thanhcong = sinhvienBUS.Sua(sv);
+
+            if (thanhcong)
+            {
+                MessageBox.Show("Thành công !");
+            }
+            else
+            {
+                MessageBox.Show("Lỗi !", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            txtmssv.Focus();
         }
 
-        private void btnxoasv_Click(object sender, EventArgs e)
-        {
+         private void btnxoasv_Click(object sender, EventArgs e)
+         {
+            if (gridviewsv.SelectedCells.Count <= 0)
+            {
+                return;
+            }
+            string masv = gridviewsv.SelectedCells[0].OwningRow.Cells[0].Value.ToString();
+
+            SinhVien sv = new SinhVien();
+            sv.MaSV = masv;
+            bool thanhcong = sinhvienBUS.Xoa(sv);
+            if (thanhcong)
+            {
+                MessageBox.Show("Thành công !");
+            }
+            else
+            {
+                MessageBox.Show("Lỗi !", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            bs.DataSource = sinhvienBUS.DanhSach();
 
         }
     }

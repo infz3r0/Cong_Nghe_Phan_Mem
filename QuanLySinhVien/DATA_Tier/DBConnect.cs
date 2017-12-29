@@ -11,7 +11,7 @@ namespace DATA_Tier
 {
     public class DBConnect
     {
-        private string connect = DATA_Tier.Properties.Settings.Default.connectstringLong;
+        private string connect = DATA_Tier.Properties.Settings.Default.connectstringPhu;
 
 
         private SqlDataAdapter myAdapter;
