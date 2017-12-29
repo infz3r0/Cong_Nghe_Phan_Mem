@@ -63,6 +63,9 @@ namespace UI_Tier
             }
         }
 
-        
+        private void frmdangnhap_Shown(object sender, EventArgs e)
+        {
+            this.Activate();
+        }
     }
 }

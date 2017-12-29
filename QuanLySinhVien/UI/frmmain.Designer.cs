@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::UI_Tier.frmload), true, true);
+            DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::UI_Tier.frmload), false, false);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmmain));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnthoatmain = new DevExpress.XtraBars.BarButtonItem();
@@ -92,10 +92,6 @@
             this.dockPanel1_Container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // splashScreenManager1
-            // 
-            splashScreenManager1.ClosingDelay = 3000;
             // 
             // ribbon
             // 
