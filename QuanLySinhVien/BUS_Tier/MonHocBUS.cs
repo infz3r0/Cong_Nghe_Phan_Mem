@@ -17,6 +17,7 @@ namespace BUS_Tier
         public DataTable DanhSach()
         {
             DataTable dt = new DataTable();
+            dt = monHocDAO.getAll();
 
             return dt;
         }

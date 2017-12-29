@@ -281,6 +281,7 @@
             // ngaysinhsv
             // 
             this.ngaysinhsv.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.ngaysinhsv.CustomFormat = "dd/MM/yyyy";
             this.ngaysinhsv.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.ngaysinhsv.Location = new System.Drawing.Point(255, 109);
             this.ngaysinhsv.Name = "ngaysinhsv";
