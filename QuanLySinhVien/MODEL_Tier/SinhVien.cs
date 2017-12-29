@@ -16,7 +16,7 @@ namespace MODEL_Tier
         private string soCMND;
         private string sdt;
         private string email;
-        private string diemTB;
+        private float diemTB;
         private string maLop;
         private string xeploai;
 
@@ -25,7 +25,7 @@ namespace MODEL_Tier
 
         }
 
-        public SinhVien(string maSV, string hoTen, DateTime ngaySinh, char gioiTinh, string diaChi, string soCMND, string sdt, string email, string diemTB, string maLop, string xeploai)
+        public SinhVien(string maSV, string hoTen, DateTime ngaySinh, char gioiTinh, string diaChi, string soCMND, string sdt, string email, float diemTB, string maLop, string xeploai)
         {
             this.MaSV = maSV;
             this.HoTen = hoTen;
@@ -48,7 +48,7 @@ namespace MODEL_Tier
         public string SoCMND { get => soCMND; set => soCMND = value; }
         public string Sdt { get => sdt; set => sdt = value; }
         public string Email { get => email; set => email = value; }
-        public string DiemTB { get => diemTB; set => diemTB = value; }
+        public float DiemTB { get => diemTB; set => diemTB = value; }
         public string MaLop { get => maLop; set => maLop = value; }
         public string Xeploai { get => xeploai; set => xeploai = value; }
     }

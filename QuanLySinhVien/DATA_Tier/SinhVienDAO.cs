@@ -41,9 +41,9 @@ namespace DATA_Tier
         }
         public bool insert(SinhVien sv)
         {
-            string query = "Insert into SinhVien (MaSV, HoTen, NgaySinh, GioiTinh, DiaChi, SoCMND, Sdt, Email, DiemTB, MaLop, XepLoai)"+
-                            "VALUES (@MaSV, @HoTen, @NgaySinh, @GioiTinh, @DiaChi, @SoCMND, @Sdt, @Email,@DiemTB, @MaLop, @XepLoai)";
-            SqlParameter[] sqlParameters = new SqlParameter[11];
+            string query = "Insert into SinhVien (MaSV, HoTen, NgaySinh, GioiTinh, DiaChi, SoCMND, Sdt, Email, MaLop)"+
+                            " VALUES (@MaSV, @HoTen, @NgaySinh, @GioiTinh, @DiaChi, @SoCMND, @Sdt, @Email, @MaLop)";
+            SqlParameter[] sqlParameters = new SqlParameter[9];
             sqlParameters[0] = new SqlParameter("@MaSV", SqlDbType.VarChar);
             sqlParameters[0].Value = sv.MaSV;
             sqlParameters[1] = new SqlParameter("@HoTen", SqlDbType.NVarChar);
@@ -60,19 +60,15 @@ namespace DATA_Tier
             sqlParameters[6].Value = sv.Sdt;
             sqlParameters[7] = new SqlParameter("@Email", SqlDbType.NVarChar);
             sqlParameters[7].Value = sv.Email;
-            sqlParameters[8] = new SqlParameter("@DiemTB", SqlDbType.Float);
-            sqlParameters[8].Value = sv.DiemTB;
-            sqlParameters[9] = new SqlParameter("@MaLop", SqlDbType.VarChar);
-            sqlParameters[9].Value = sv.MaLop;
-            sqlParameters[10] = new SqlParameter("@XepLoai", SqlDbType.NVarChar);
-            sqlParameters[10].Value = sv.Xeploai;
+            sqlParameters[8] = new SqlParameter("@MaLop", SqlDbType.VarChar);
+            sqlParameters[8].Value = sv.MaLop;
             return executeInsertQuery(query, sqlParameters);
         }
         public bool update(SinhVien sv)
         {
             string query = "Update SinhVien"+ 
-                            "Set HoTen=@HoTen, NgaySinh=@NgaySinh, GioiTinh=@GioiTinh, DiaChi=@DiaChi, SoCMND=@SoCMND, Sdt=@Sdt, Email=@Email, MaLop=@MaLop"+
-                            "Where MaSV=@MaSV";
+                            " Set HoTen=@HoTen, NgaySinh=@NgaySinh, GioiTinh=@GioiTinh, DiaChi=@DiaChi, SoCMND=@SoCMND, Sdt=@Sdt, Email=@Email, MaLop=@MaLop"+
+                            " Where MaSV=@MaSV";
             SqlParameter[] sqlParameters = new SqlParameter[9];
             sqlParameters[0] = new SqlParameter("@MaSV", SqlDbType.VarChar);
             sqlParameters[0].Value = sv.MaSV;
@@ -97,7 +93,7 @@ namespace DATA_Tier
         public bool delete(SinhVien sv)
         {
             string query = "Delete From SinhVien"+ 
-                           "Where MaSV=@MaSV";
+                           " Where MaSV=@MaSV";
             SqlParameter[] sqlParameters = new SqlParameter[1];
             sqlParameters[0] = new SqlParameter("@MaSV", SqlDbType.BigInt);
             sqlParameters[0].Value = sv.MaSV;

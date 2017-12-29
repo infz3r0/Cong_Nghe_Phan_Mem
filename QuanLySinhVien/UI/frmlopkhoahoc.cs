@@ -84,7 +84,11 @@ namespace UI_Tier
                 MessageBox.Show("Mã khoa không được để trống");
                 return;
             }
-
+            if (cbbTenKhoaLopKH.SelectedValue == null)
+            {
+                MessageBox.Show("Khoa không tồn tại");
+                return;
+            }
             string malop = txtmalopkhoahoc.Text;
             string makhoa = cbbTenKhoaLopKH.SelectedValue.ToString();
 
