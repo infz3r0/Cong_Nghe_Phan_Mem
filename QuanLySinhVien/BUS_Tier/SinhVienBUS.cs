@@ -48,14 +48,14 @@ namespace BUS_Tier
         public bool Xoa(SinhVien sinhVien)
         {
             bool result = false;
-            sinhVienDAO.delete(sinhVien);
+            result = sinhVienDAO.delete(sinhVien);
             return result;
         }
 
         public bool Sua(SinhVien sinhVien)
         {
             bool result = false;
-            sinhVienDAO.update(sinhVien);
+            result = sinhVienDAO.update(sinhVien);
             return result;
         }
     }

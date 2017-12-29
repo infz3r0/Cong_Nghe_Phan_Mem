@@ -48,7 +48,7 @@ namespace UI_Tier
         private void LoadDB()
         {
 
-            /*  bs.DataSource = sinhvienBUS.DanhSach();
+            bs.DataSource = sinhvienBUS.DanhSach();
               gridviewsv.DataSource = bs;
 
 
@@ -119,6 +119,17 @@ namespace UI_Tier
 
         private void btnthemsv_Click(object sender, EventArgs e)
         {
+            bool isNull = IsNull(cbbMaLopSV.Text);
+            if (isNull)
+            {
+                MessageBox.Show("Mã lớp không được để trống");
+                return;
+            }
+            if (cbbMaLopSV.SelectedValue == null)
+            {
+                MessageBox.Show("Lớp không tồn tại");
+                return;
+            }
 
             string masv = txtmssv.Text;
             string hoten = txttensv.Text;
@@ -130,7 +141,7 @@ namespace UI_Tier
             string mail = txtmailsv.Text;
             string malop = cbbMaLopSV.SelectedValue.ToString();
 
-            SinhVien sv = new SinhVien(masv, hoten, ngaysinh, gt, diachi, cmnd, sdt, mail, null , malop, null);
+            SinhVien sv = new SinhVien(masv, hoten, ngaysinh, gt, diachi, cmnd, sdt, mail, 0, malop, null);
 
             bool thanhcong = sinhvienBUS.Them(sv);
 
@@ -144,7 +155,7 @@ namespace UI_Tier
             }
 
 
-
+            bs.DataSource = sinhvienBUS.DanhSach();
         }
 
         private void btnsuasv_Click(object sender, EventArgs e)
@@ -153,7 +164,7 @@ namespace UI_Tier
             {
                 return;
             }
-            bool isNull = IsNull(gridviewsv.Text);
+            bool isNull = IsNull(cbbMaLopSV.Text);
             if (isNull)
             {
                 MessageBox.Show("Mã lớp không được để trống");
@@ -176,7 +187,7 @@ namespace UI_Tier
             string mail = txtmailsv.Text;
             string malop = cbbMaLopSV.SelectedValue.ToString();
 
-            SinhVien sv = new SinhVien(masv, hoten, ngaysinh, gt, diachi, cmnd, sdt, mail, null, malop, null);
+            SinhVien sv = new SinhVien(masv, hoten, ngaysinh, gt, diachi, cmnd, sdt, mail, 0, malop, null);
 
             bool thanhcong = sinhvienBUS.Sua(sv);
 
@@ -189,6 +200,7 @@ namespace UI_Tier
                 MessageBox.Show("Lỗi !", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             txtmssv.Focus();
+            bs.DataSource = sinhvienBUS.DanhSach();
         }
 
          private void btnxoasv_Click(object sender, EventArgs e)
