@@ -59,25 +59,25 @@ namespace UI_Tier
         {
             if (string.IsNullOrEmpty(txtmahp.Text))
             {
-                MessageBox.Show("");
+                MessageBox.Show("Mã học phần không được bỏ trống!");
                 txtmahp.Focus();
                 return false;
             }
             if (string.IsNullOrEmpty(txttenhp.Text))
             {
-                MessageBox.Show("");
+                MessageBox.Show("Tên học phần không được bỏ trống!");
                 txttenhp.Focus();
                 return false;
             }
             if (string.IsNullOrEmpty(txtTrongSoDQT.Text))
             {
-                MessageBox.Show("");
+                MessageBox.Show("Trọng số điểm quá trình không được bỏ trống!");
                 txtTrongSoDQT.Focus();
                 return false;
             }
             if (string.IsNullOrEmpty(txtTrongSoDThi.Text))
             {
-                MessageBox.Show("");
+                MessageBox.Show("Trọng số điểm thi không được bỏ trống!");
                 txtTrongSoDThi.Focus();
                 return false;
             }
@@ -123,6 +123,27 @@ namespace UI_Tier
             {
                 return;
             }
+
+            string mahp=gridviewhp.SelectedCells[0].OwningRow.Cells[0].Value.ToString();
+            string tenhp = txttenhp.Text;
+            int stc = string.IsNullOrEmpty(txtstchp.Text) ? 0 : int.Parse(txtstchp.Text);
+            string loaihp = cbbLoaiHocPhan.Text;
+            decimal tsdqt = decimal.Parse(txtTrongSoDQT.Text);
+            decimal tsdt = decimal.Parse(txtTrongSoDThi.Text);
+
+            MonHoc monhoc = new MonHoc(mahp, tenhp, stc, loaihp, tsdqt, tsdt);
+            bool thanhcong = monhocBUS.Sua(monhoc);
+            if (thanhcong)
+            {
+                MessageBox.Show("Thành công !");
+            }
+            else
+            {
+                MessageBox.Show("Lỗi !", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            bs.DataSource = monhocBUS.DanhSach();
+            txtmahp.Focus();
         }
 
         private void btnxoahp_Click(object sender, EventArgs e)
@@ -131,7 +152,22 @@ namespace UI_Tier
             {
                 return;
             }
+            string mahp = gridviewhp.SelectedCells[0].OwningRow.Cells[0].Value.ToString();
 
+            MonHoc monhoc = new MonHoc();
+            monhoc.MaHP = mahp;
+            bool thanhcong = monhocBUS.Xoa(monhoc);
+            if (thanhcong)
+            {
+                MessageBox.Show("Thành công !");
+            }
+            else
+            {
+                MessageBox.Show("Lỗi !", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            bs.DataSource = monhocBUS.DanhSach();
+            txtmahp.Focus();
         }
     }
 }
