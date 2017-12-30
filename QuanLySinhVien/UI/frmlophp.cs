@@ -33,10 +33,43 @@ namespace UI_Tier
         {
             Close();
         }
+        BindingSource bs = new BindingSource();
+        LopHocPhanBUS lophpBUS = new LopHocPhanBUS();
+        MonHocBUS monhocBUS = new MonHocBUS();
+        DanhSachLopHPBUS danhsachlophpBUS = new DanhSachLopHPBUS();
+        private void LoadDB()
+        {
+            bs.DataSource = lophpBUS.DanhSach();
+            gridLopHP.DataSource = bs;
+
+            txtmalophp.DataBindings.Add("Text", bs, "MaLopHP");
+            txtSLSVLopHP.DataBindings.Add("Text", bs, "SoLuongSV");
+
+            cbbMaHPLopHP.DataSource = monhocBUS.DanhSach();
+            cbbMaHPLopHP.DisplayMember = "TenHP";
+            cbbMaHPLopHP.ValueMember = "MaHP";
+            cbbMaHPLopHP.DataBindings.Add("SelectedValue", bs, "MaHP");
+
+            /*cbbLopTruong.DataSource = danhsachlophpBUS.DanhSach();
+            cbbLopTruong.DisplayMember = "MaSV";
+            cbbLopTruong.ValueMember = "MaSV";*/
+        }
+
+        public AutoCompleteStringCollection LoadAutoComplete()
+        {
+            DataTable dt = monhocBUS.DanhSach();
+            AutoCompleteStringCollection stringCol = new AutoCompleteStringCollection();
+            foreach (DataRow row in dt.Rows)
+            {
+                stringCol.Add(Convert.ToString(row["TenHP"]));
+            }
+            return stringCol;
+        }
 
         private void frmlophp_Load(object sender, EventArgs e)
         {
-            gridLopHP.DataSource = lopHocPhanBUS.DanhSach();
+            LoadDB();
+            cbbMaHPLopHP.AutoCompleteCustomSource = LoadAutoComplete();
         }
 
         private void btnthemlophp_Click(object sender, EventArgs e)
@@ -46,7 +79,24 @@ namespace UI_Tier
                 MessageBox.Show("Mã học phần không tồn tại");
                 return;
             }
-            
+
+            string malophp = txtmalophp.Text;
+            string tenhp = cbbMaHPLopHP.SelectedValue.ToString();
+            // string loptruong = cbbLopTruong.SelectedValue.ToString();
+
+            LopHocPhan lophp = new LopHocPhan(malophp, tenhp, null);
+            bool thanhcong = lophpBUS.Them(lophp);
+            if (thanhcong)
+            {
+                MessageBox.Show("Thành công !");
+            }
+            else
+            {
+                MessageBox.Show("Lỗi !", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            bs.DataSource = lophpBUS.DanhSach();
+            txtmalophp.Focus();
+
         }
 
         private void btnsualophp_Click(object sender, EventArgs e)
@@ -61,7 +111,22 @@ namespace UI_Tier
                 return;
             }
 
-            
+            string malophp= gridLopHP.SelectedCells[0].OwningRow.Cells[0].Value.ToString();
+            string tenhp = cbbMaHPLopHP.Text;
+            //string loptruong = cbbLopTruong.Text;
+            LopHocPhan lophp = new LopHocPhan(malophp, tenhp, null);
+
+            bool thanhcong = lophpBUS.Sua(lophp);
+            if (thanhcong)
+            {
+                MessageBox.Show("Thành công !");
+            }
+            else
+            {
+                MessageBox.Show("Lỗi !", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            bs.DataSource = lophpBUS.DanhSach();
+            txtmalophp.Focus();
         }
 
         private void btnxoalophp_Click(object sender, EventArgs e)
@@ -70,6 +135,20 @@ namespace UI_Tier
             {
                 return;
             }
+            string malophp = gridLopHP.SelectedCells[0].OwningRow.Cells[0].Value.ToString();
+            LopHocPhan lophp = new LopHocPhan();
+            lophp.MaLopHP = malophp;
+            bool thanhcong = lophpBUS.Xoa(lophp);
+            if (thanhcong)
+            {
+                MessageBox.Show("Thành công !");
+            }
+            else
+            {
+                MessageBox.Show("Lỗi !", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            bs.DataSource = lophpBUS.DanhSach();
+            txtmalophp.Focus();
         }
     }
 }
