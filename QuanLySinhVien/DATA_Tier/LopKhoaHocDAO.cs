@@ -18,6 +18,14 @@ namespace DATA_Tier
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return executeSelectQuery(query, sqlParameters);
         }
+        public DataTable getAll_TenKhoa()
+        {
+            string query = "SELECT LopKhoaHoc.MaLop, Khoa.MaKhoa, Khoa.TenKhoa" +
+                            " FROM Khoa INNER JOIN" +
+                             " LopKhoaHoc ON Khoa.MaKhoa = LopKhoaHoc.MaKhoa";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            return executeSelectQuery(query, sqlParameters);
+        }
         public bool insert(LopKhoaHoc lopkh)
         {
             string query = "Insert into LopKhoaHoc (MaLop, MaKhoa)"+
