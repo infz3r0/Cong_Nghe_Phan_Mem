@@ -30,15 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmsv));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.txtmailsv = new DevExpress.XtraEditors.TextEdit();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -281,6 +281,7 @@
             // ngaysinhsv
             // 
             this.ngaysinhsv.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.ngaysinhsv.CustomFormat = "dd/MM/yyyy";
             this.ngaysinhsv.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.ngaysinhsv.Location = new System.Drawing.Point(255, 109);
             this.ngaysinhsv.Name = "ngaysinhsv";
@@ -482,9 +483,9 @@
             // MaSV
             // 
             this.MaSV.DataPropertyName = "MaSV";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.MaSV.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            this.MaSV.DefaultCellStyle = dataGridViewCellStyle10;
             this.MaSV.HeaderText = "MSSV";
             this.MaSV.Name = "MaSV";
             this.MaSV.ReadOnly = true;
@@ -492,8 +493,8 @@
             // HoTen
             // 
             this.HoTen.DataPropertyName = "HoTen";
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            this.HoTen.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            this.HoTen.DefaultCellStyle = dataGridViewCellStyle11;
             this.HoTen.HeaderText = "Họ và Tên";
             this.HoTen.Name = "HoTen";
             this.HoTen.ReadOnly = true;
@@ -501,8 +502,8 @@
             // NgaySinh
             // 
             this.NgaySinh.DataPropertyName = "NgaySinh";
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            this.NgaySinh.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            this.NgaySinh.DefaultCellStyle = dataGridViewCellStyle12;
             this.NgaySinh.HeaderText = "Ngày sinh";
             this.NgaySinh.Name = "NgaySinh";
             this.NgaySinh.ReadOnly = true;
@@ -510,8 +511,8 @@
             // GioiTinh
             // 
             this.GioiTinh.DataPropertyName = "GioiTinh";
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.GioiTinh.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
+            this.GioiTinh.DefaultCellStyle = dataGridViewCellStyle13;
             this.GioiTinh.HeaderText = "Giới tính";
             this.GioiTinh.Name = "GioiTinh";
             this.GioiTinh.ReadOnly = true;
@@ -519,8 +520,8 @@
             // DiaChi
             // 
             this.DiaChi.DataPropertyName = "DiaChi";
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            this.DiaChi.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
+            this.DiaChi.DefaultCellStyle = dataGridViewCellStyle14;
             this.DiaChi.HeaderText = "Địa chỉ";
             this.DiaChi.Name = "DiaChi";
             this.DiaChi.ReadOnly = true;
@@ -528,8 +529,8 @@
             // SoCMND
             // 
             this.SoCMND.DataPropertyName = "SoCMND";
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            this.SoCMND.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
+            this.SoCMND.DefaultCellStyle = dataGridViewCellStyle15;
             this.SoCMND.HeaderText = "Số CMND";
             this.SoCMND.Name = "SoCMND";
             this.SoCMND.ReadOnly = true;
@@ -537,8 +538,8 @@
             // DienThoai
             // 
             this.DienThoai.DataPropertyName = "Sdt";
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            this.DienThoai.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
+            this.DienThoai.DefaultCellStyle = dataGridViewCellStyle16;
             this.DienThoai.HeaderText = "Điện thoại";
             this.DienThoai.Name = "DienThoai";
             this.DienThoai.ReadOnly = true;
@@ -546,8 +547,8 @@
             // Email
             // 
             this.Email.DataPropertyName = "Email";
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            this.Email.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.Black;
+            this.Email.DefaultCellStyle = dataGridViewCellStyle17;
             this.Email.HeaderText = "Email";
             this.Email.Name = "Email";
             this.Email.ReadOnly = true;
@@ -555,8 +556,8 @@
             // MaLop
             // 
             this.MaLop.DataPropertyName = "MaLop";
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            this.MaLop.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
+            this.MaLop.DefaultCellStyle = dataGridViewCellStyle18;
             this.MaLop.HeaderText = "Mã lớp";
             this.MaLop.Name = "MaLop";
             this.MaLop.ReadOnly = true;
