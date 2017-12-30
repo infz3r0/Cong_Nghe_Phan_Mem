@@ -18,16 +18,15 @@ namespace MODEL_Tier
 
         }
 
-        public LopHocPhan(string maLopHP, int soLuongSV, string maHP, string lopTruong)
+        public LopHocPhan(string maLopHP, string maHP, string lopTruong)
         {
             this.MaLopHP = maLopHP;
-            this.SoLuongSV = soLuongSV;
             this.MaHP = maHP;
             this.LopTruong = lopTruong;
         }
 
         public string MaLopHP { get => maLopHP; set => maLopHP = value; }
-        public int SoLuongSV { get => soLuongSV; set => soLuongSV = value; }
+        public int SoLuongSV { get => soLuongSV; }
         public string MaHP { get => maHP; set => maHP = value; }
         public string LopTruong { get => lopTruong; set => lopTruong = value; }
     }

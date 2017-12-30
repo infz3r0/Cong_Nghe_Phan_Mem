@@ -16,6 +16,8 @@ namespace UI_Tier
 {
     public partial class frmlophp : DevExpress.XtraEditors.XtraForm
     {
+        LopHocPhanBUS lopHocPhanBUS = new LopHocPhanBUS();
+
         public frmlophp()
         {
             InitializeComponent();
@@ -30,6 +32,44 @@ namespace UI_Tier
         private void btnthoatlophp_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void frmlophp_Load(object sender, EventArgs e)
+        {
+            gridLopHP.DataSource = lopHocPhanBUS.DanhSach();
+        }
+
+        private void btnthemlophp_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(cbbMaHPLopHP.Text) || cbbMaHPLopHP.SelectedValue == null)
+            {
+                MessageBox.Show("Mã học phần không tồn tại");
+                return;
+            }
+            
+        }
+
+        private void btnsualophp_Click(object sender, EventArgs e)
+        {
+            if (gridLopHP.SelectedCells.Count <= 0)
+            {
+                return;
+            }
+            if (string.IsNullOrEmpty(cbbMaHPLopHP.Text) || cbbMaHPLopHP.SelectedValue == null)
+            {
+                MessageBox.Show("Mã học phần không tồn tại");
+                return;
+            }
+
+            
+        }
+
+        private void btnxoalophp_Click(object sender, EventArgs e)
+        {
+            if (gridLopHP.SelectedCells.Count <= 0)
+            {
+                return;
+            }
         }
     }
 }
