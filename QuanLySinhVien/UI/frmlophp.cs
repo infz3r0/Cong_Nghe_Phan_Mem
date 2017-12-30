@@ -81,10 +81,11 @@ namespace UI_Tier
             }
 
             string malophp = txtmalophp.Text;
-            string tenhp = cbbMaHPLopHP.SelectedValue.ToString();
-            // string loptruong = cbbLopTruong.SelectedValue.ToString();
+            string mahp = cbbMaHPLopHP.SelectedValue.ToString();
 
-            LopHocPhan lophp = new LopHocPhan(malophp, tenhp, null);
+            LopHocPhan lophp = new LopHocPhan(malophp, mahp, null);
+            lophp.SoLuongSV = 0;
+
             bool thanhcong = lophpBUS.Them(lophp);
             if (thanhcong)
             {
@@ -112,9 +113,10 @@ namespace UI_Tier
             }
 
             string malophp= gridLopHP.SelectedCells[0].OwningRow.Cells[0].Value.ToString();
-            string tenhp = cbbMaHPLopHP.Text;
-            //string loptruong = cbbLopTruong.Text;
-            LopHocPhan lophp = new LopHocPhan(malophp, tenhp, null);
+            string mahp = cbbMaHPLopHP.SelectedValue.ToString();
+
+            //string loptruong = cbbLopTruong.SelectedValue.ToString();
+            LopHocPhan lophp = new LopHocPhan(malophp, mahp, null);
 
             bool thanhcong = lophpBUS.Sua(lophp);
             if (thanhcong)
@@ -136,8 +138,10 @@ namespace UI_Tier
                 return;
             }
             string malophp = gridLopHP.SelectedCells[0].OwningRow.Cells[0].Value.ToString();
+
             LopHocPhan lophp = new LopHocPhan();
             lophp.MaLopHP = malophp;
+
             bool thanhcong = lophpBUS.Xoa(lophp);
             if (thanhcong)
             {

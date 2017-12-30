@@ -20,13 +20,15 @@ namespace DATA_Tier
         }
         public bool insert(LopHocPhan lophp)
         {
-            string query = "Insert into LopHocPhan (MaLopHP, MaHP)" +
-                           "Values (@MaLopHP, @MaHP)";
-            SqlParameter[] sqlParameters = new SqlParameter[2];
+            string query = "Insert into LopHocPhan (MaLopHP, MaHP, SoluongSV)" +
+                           "Values (@MaLopHP, @MaHP, @SoLuongSV)";
+            SqlParameter[] sqlParameters = new SqlParameter[3];
             sqlParameters[0] = new SqlParameter("@MaLopHP", SqlDbType.VarChar);
             sqlParameters[0].Value = lophp.MaLopHP;
             sqlParameters[1] = new SqlParameter("@MaHP", SqlDbType.VarChar);
             sqlParameters[1].Value = lophp.MaHP;
+            sqlParameters[2] = new SqlParameter("@SoLuongSV", SqlDbType.Int);
+            sqlParameters[2].Value = lophp.SoLuongSV;
             return executeInsertQuery(query, sqlParameters);
         }
         public bool update(LopHocPhan lophp)
@@ -40,12 +42,19 @@ namespace DATA_Tier
             sqlParameters[1] = new SqlParameter("@MaHP", SqlDbType.VarChar);
             sqlParameters[1].Value = lophp.MaHP;
             sqlParameters[2] = new SqlParameter("@LopTruong", SqlDbType.VarChar);
-            sqlParameters[2].Value = lophp.LopTruong;
+            if (lophp.LopTruong == null)
+            {
+                sqlParameters[2].Value = DBNull.Value;
+            }
+            else
+            {
+                sqlParameters[2].Value = lophp.LopTruong;
+            }
             return executeInsertQuery(query, sqlParameters);
         }
         public bool delete(LopHocPhan lophp)
         {
-            string query = "Delete from LopHocPhan" +
+            string query = "Delete from LopHocPhan " +
                            "Where MaLopHP=@MaLopHP";
             SqlParameter[] sqlParameters = new SqlParameter[1];
             sqlParameters[0] = new SqlParameter("@MaLopHP", SqlDbType.VarChar);

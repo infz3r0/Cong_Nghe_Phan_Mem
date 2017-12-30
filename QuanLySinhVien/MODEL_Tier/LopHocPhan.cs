@@ -26,7 +26,7 @@ namespace MODEL_Tier
         }
 
         public string MaLopHP { get => maLopHP; set => maLopHP = value; }
-        public int SoLuongSV { get => soLuongSV; }
+        public int SoLuongSV { get => soLuongSV; set => soLuongSV = value; }
         public string MaHP { get => maHP; set => maHP = value; }
         public string LopTruong { get => lopTruong; set => lopTruong = value; }
     }
