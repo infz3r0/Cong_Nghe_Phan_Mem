@@ -20,7 +20,7 @@ namespace DATA_Tier
         }
         public bool insert(LopHocPhan lophp)
         {
-            string query = "Insert into LopKhoaHoc (MaLopHP, SoLuongSV, MaHP, LopTruong)" +
+            string query = "Insert into LopHocPhan (MaLopHP, SoLuongSV, MaHP, LopTruong)" +
                            "Values (@MaLopHP, @SoLuongSV, @MaHP, @LopTruong)";
             SqlParameter[] sqlParameters = new SqlParameter[4];
             sqlParameters[0] = new SqlParameter("@MaLopHP", SqlDbType.VarChar);
@@ -35,7 +35,7 @@ namespace DATA_Tier
         }
         public bool update(LopHocPhan lophp)
         {
-            string query = "Update LopKhoaHoc " +
+            string query = "Update LopHocPhan " +
                            "Set SoLuongSV=@SoLuongSV, MaHP=@MaHP, LopTruong=@LopTruong" +
                            "Where MaLopHP=@MaLopHP";
             SqlParameter[] sqlParameters = new SqlParameter[4];

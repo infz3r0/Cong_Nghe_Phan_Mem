@@ -14,23 +14,7 @@ namespace DATA_Tier
     {
         public DataTable getAll()
         {
-            string query = "Select MaSV, HoTen, NgaySinh, GioiTinh, DiaChi, SoCMND, Sdt, Email from SinhVien";
-            SqlParameter[] sqlParameters = new SqlParameter[0];
-            return executeSelectQuery(query, sqlParameters);
-        }
-        public DataTable getAll_TenLopHP()
-        {
-            string query = "SELECT SinhVien.MaSV, LopHocPhan.MaLopHP, SinhVien.HoTen, SinhVien.NgaySinh, SinhVien.GioiTinh, SinhVien.DiaChi, SinhVien.SoCMND, SinhVien.Sdt, SinhVien.Email, LopHocPhan.LopTruong"+
-                            "FROM SinhVien INNER JOIN"+
-                            "LopHocPhan ON SinhVien.MaSV = LopHocPhan.LopTruong";
-            SqlParameter[] sqlParameters = new SqlParameter[0];
-            return executeSelectQuery(query, sqlParameters);
-        }
-        public DataTable getAll_TenLopKH()
-        {
-            string query = "SELECT LopKhoaHoc.MaLop, SinhVien.MaSV, SinhVien.HoTen, SinhVien.NgaySinh, SinhVien.GioiTinh, SinhVien.DiaChi, SinhVien.SoCMND, SinhVien.Sdt, SinhVien.Email"+
-                            "FROM SinhVien INNER JOIN"+
-                            "LopKhoaHoc ON SinhVien.MaLop = LopKhoaHoc.MaLop";
+            string query = "Select * from SinhVien";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return executeSelectQuery(query, sqlParameters);
         }
