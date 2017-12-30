@@ -13,8 +13,9 @@ namespace MODEL_Tier
         private float diemQT;
         private float diemThi;
         private float diemHP10;
-        private float diemHP4So;
-        private float diemHP4Chu;
+        private float diemHe4So;
+        private float diemHe4Chu;
+        private string xepLoai;
         private string danhGia;
         private string hocKi;
 
@@ -23,15 +24,16 @@ namespace MODEL_Tier
 
         }
 
-        public Diem(string maSV, string maHP, float diemQT, float diemThi, float diemHP10, float diemHP4So, float diemHP4Chu, string danhGia, string hocKi)
+        public Diem(string maSV, string maHP, float diemQT, float diemThi, float diemHP10, float diemHe4So, float diemHe4Chu, string xepLoai, string danhGia, string hocKi)
         {
             this.MaSV = maSV;
             this.MaHP = maHP;
             this.DiemQT = diemQT;
             this.DiemThi = diemThi;
             this.DiemHP10 = diemHP10;
-            this.DiemHP4So = diemHP4So;
-            this.DiemHP4Chu = diemHP4Chu;
+            this.DiemHe4So = diemHe4So;
+            this.DiemHe4Chu = diemHe4Chu;
+            this.XepLoai = xepLoai;
             this.DanhGia = danhGia;
             this.HocKi = hocKi;
         }
@@ -41,8 +43,9 @@ namespace MODEL_Tier
         public float DiemQT { get => diemQT; set => diemQT = value; }
         public float DiemThi { get => diemThi; set => diemThi = value; }
         public float DiemHP10 { get => diemHP10; set => diemHP10 = value; }
-        public float DiemHP4So { get => diemHP4So; set => diemHP4So = value; }
-        public float DiemHP4Chu { get => diemHP4Chu; set => diemHP4Chu = value; }
+        public float DiemHe4So { get => diemHe4So; set => diemHe4So = value; }
+        public float DiemHe4Chu { get => diemHe4Chu; set => diemHe4Chu = value; }
+        public string XepLoai { get => xepLoai; set => xepLoai = value; }
         public string DanhGia { get => danhGia; set => danhGia = value; }
         public string HocKi { get => hocKi; set => hocKi = value; }
     }

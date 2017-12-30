@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmmonhoc));
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -119,8 +119,8 @@
             // MaHP
             // 
             this.MaHP.DataPropertyName = "MaHP";
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            this.MaHP.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.MaHP.DefaultCellStyle = dataGridViewCellStyle1;
             this.MaHP.HeaderText = "Mã học phần";
             this.MaHP.Name = "MaHP";
             this.MaHP.ReadOnly = true;
@@ -128,8 +128,8 @@
             // TenHP
             // 
             this.TenHP.DataPropertyName = "TenHP";
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            this.TenHP.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.TenHP.DefaultCellStyle = dataGridViewCellStyle2;
             this.TenHP.HeaderText = "Tên học phần";
             this.TenHP.Name = "TenHP";
             this.TenHP.ReadOnly = true;
@@ -137,8 +137,8 @@
             // SoTC
             // 
             this.SoTC.DataPropertyName = "SoTinChi";
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            this.SoTC.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.SoTC.DefaultCellStyle = dataGridViewCellStyle3;
             this.SoTC.HeaderText = "Số tín chỉ";
             this.SoTC.Name = "SoTC";
             this.SoTC.ReadOnly = true;
@@ -146,8 +146,8 @@
             // LoaiHP
             // 
             this.LoaiHP.DataPropertyName = "LoaiHP";
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            this.LoaiHP.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.LoaiHP.DefaultCellStyle = dataGridViewCellStyle4;
             this.LoaiHP.HeaderText = "Loại học phần";
             this.LoaiHP.Name = "LoaiHP";
             this.LoaiHP.ReadOnly = true;
@@ -155,8 +155,8 @@
             // TrongSoDQT
             // 
             this.TrongSoDQT.DataPropertyName = "TrongSoDQT";
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
-            this.TrongSoDQT.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            this.TrongSoDQT.DefaultCellStyle = dataGridViewCellStyle5;
             this.TrongSoDQT.HeaderText = "Trọng số điểm quá trình";
             this.TrongSoDQT.Name = "TrongSoDQT";
             this.TrongSoDQT.ReadOnly = true;
@@ -164,8 +164,8 @@
             // TrongSoDThi
             // 
             this.TrongSoDThi.DataPropertyName = "TrongSoDThi";
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
-            this.TrongSoDThi.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            this.TrongSoDThi.DefaultCellStyle = dataGridViewCellStyle6;
             this.TrongSoDThi.HeaderText = "Trọng số điểm thi";
             this.TrongSoDThi.Name = "TrongSoDThi";
             this.TrongSoDThi.ReadOnly = true;
@@ -301,8 +301,7 @@
             this.txttenhp.Properties.Appearance.Options.UseBackColor = true;
             this.txttenhp.Properties.Appearance.Options.UseForeColor = true;
             this.txttenhp.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.txttenhp.Properties.Mask.EditMask = "\\S+";
-            this.txttenhp.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txttenhp.Properties.Mask.EditMask = "\\S+\\s?";
             this.txttenhp.Properties.MaxLength = 100;
             this.txttenhp.Size = new System.Drawing.Size(297, 20);
             this.txttenhp.TabIndex = 1;

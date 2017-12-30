@@ -21,8 +21,8 @@ namespace DATA_Tier
         public DataTable getAll_TenKhoa()
         {
             string query = "SELECT LopKhoaHoc.MaLop, Khoa.MaKhoa, Khoa.TenKhoa" +
-                            " FROM Khoa INNER JOIN"+
-                            " LopKhoaHoc ON Khoa.MaKhoa = LopKhoaHoc.MaKhoa";
+                            " FROM Khoa INNER JOIN" +
+                             " LopKhoaHoc ON Khoa.MaKhoa = LopKhoaHoc.MaKhoa";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return executeSelectQuery(query, sqlParameters);
         }
