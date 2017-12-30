@@ -24,7 +24,7 @@ namespace DATA_Tier
                            "Values (@MaHP,@TenHP,@SoTinChi,@LoaiHP,@TrongSoDQT,@TrongSoDThi)";
             SqlParameter[] sqlParameters = new SqlParameter[6];
             sqlParameters[0] = new SqlParameter("@MaHP", SqlDbType.VarChar);
-            sqlParameters[0].Value = monhoc.TenHP;
+            sqlParameters[0].Value = monhoc.MaHP;
             sqlParameters[1] = new SqlParameter("@TenHP", SqlDbType.NVarChar);
             sqlParameters[1].Value = monhoc.TenHP;
             sqlParameters[2] = new SqlParameter("@SoTinChi", SqlDbType.Int);
