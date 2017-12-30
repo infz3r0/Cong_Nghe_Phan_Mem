@@ -29,18 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmlophp));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.gridLopHP = new System.Windows.Forms.DataGridView();
-            this.MaLopHP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuongSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenHP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LopTruong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnthoatlophp = new DevExpress.XtraEditors.SimpleButton();
@@ -57,6 +54,12 @@
             this.txtmalophp = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
+            this.MaLopHP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuongSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MAHP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenHP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LopTruong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridLopHP)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -83,14 +86,15 @@
             // 
             this.gridLopHP.AllowUserToAddRows = false;
             this.gridLopHP.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.Black;
-            this.gridLopHP.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.gridLopHP.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.gridLopHP.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridLopHP.BackgroundColor = System.Drawing.Color.White;
             this.gridLopHP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridLopHP.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaLopHP,
             this.SoLuongSV,
+            this.MAHP,
             this.TenHP,
             this.LopTruong});
             this.gridLopHP.Location = new System.Drawing.Point(7, 25);
@@ -100,42 +104,6 @@
             this.gridLopHP.RowHeadersVisible = false;
             this.gridLopHP.Size = new System.Drawing.Size(752, 235);
             this.gridLopHP.TabIndex = 9;
-            // 
-            // MaLopHP
-            // 
-            this.MaLopHP.DataPropertyName = "MaLopHP";
-            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.Black;
-            this.MaLopHP.DefaultCellStyle = dataGridViewCellStyle27;
-            this.MaLopHP.HeaderText = "Mã lớp học phần";
-            this.MaLopHP.Name = "MaLopHP";
-            this.MaLopHP.ReadOnly = true;
-            // 
-            // SoLuongSV
-            // 
-            this.SoLuongSV.DataPropertyName = "SoLuongSV";
-            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.Black;
-            this.SoLuongSV.DefaultCellStyle = dataGridViewCellStyle28;
-            this.SoLuongSV.HeaderText = "Số lượng sinh viên";
-            this.SoLuongSV.Name = "SoLuongSV";
-            this.SoLuongSV.ReadOnly = true;
-            // 
-            // TenHP
-            // 
-            this.TenHP.DataPropertyName = "MaHP";
-            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.Black;
-            this.TenHP.DefaultCellStyle = dataGridViewCellStyle29;
-            this.TenHP.HeaderText = "Mã học phần";
-            this.TenHP.Name = "TenHP";
-            this.TenHP.ReadOnly = true;
-            // 
-            // LopTruong
-            // 
-            this.LopTruong.DataPropertyName = "LopTruong";
-            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.Black;
-            this.LopTruong.DefaultCellStyle = dataGridViewCellStyle30;
-            this.LopTruong.HeaderText = "Lớp trưởng";
-            this.LopTruong.Name = "LopTruong";
-            this.LopTruong.ReadOnly = true;
             // 
             // groupBox2
             // 
@@ -266,6 +234,8 @@
             // 
             // cbbMaHPLopHP
             // 
+            this.cbbMaHPLopHP.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbbMaHPLopHP.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.cbbMaHPLopHP.FormattingEnabled = true;
             this.cbbMaHPLopHP.Location = new System.Drawing.Point(192, 124);
             this.cbbMaHPLopHP.Name = "cbbMaHPLopHP";
@@ -282,9 +252,9 @@
             this.labelControl1.Appearance.Options.UseForeColor = true;
             this.labelControl1.Location = new System.Drawing.Point(20, 124);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(110, 23);
+            this.labelControl1.Size = new System.Drawing.Size(117, 23);
             this.labelControl1.TabIndex = 5;
-            this.labelControl1.Text = "Mã học phần";
+            this.labelControl1.Text = "Tên học phần";
             // 
             // txtSLSVLopHP
             // 
@@ -339,6 +309,55 @@
             this.labelControl2.TabIndex = 0;
             this.labelControl2.Text = "Mã lớp";
             // 
+            // defaultLookAndFeel1
+            // 
+            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Blueprint";
+            // 
+            // MaLopHP
+            // 
+            this.MaLopHP.DataPropertyName = "MaLopHP";
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.MaLopHP.DefaultCellStyle = dataGridViewCellStyle2;
+            this.MaLopHP.HeaderText = "Mã lớp học phần";
+            this.MaLopHP.Name = "MaLopHP";
+            this.MaLopHP.ReadOnly = true;
+            // 
+            // SoLuongSV
+            // 
+            this.SoLuongSV.DataPropertyName = "SoLuongSV";
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.SoLuongSV.DefaultCellStyle = dataGridViewCellStyle3;
+            this.SoLuongSV.HeaderText = "Số lượng sinh viên";
+            this.SoLuongSV.Name = "SoLuongSV";
+            this.SoLuongSV.ReadOnly = true;
+            // 
+            // MAHP
+            // 
+            this.MAHP.DataPropertyName = "MaHP";
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.MAHP.DefaultCellStyle = dataGridViewCellStyle4;
+            this.MAHP.HeaderText = "Mã học phần";
+            this.MAHP.Name = "MAHP";
+            this.MAHP.ReadOnly = true;
+            // 
+            // TenHP
+            // 
+            this.TenHP.DataPropertyName = "TenHP";
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            this.TenHP.DefaultCellStyle = dataGridViewCellStyle5;
+            this.TenHP.HeaderText = "Tên học phần";
+            this.TenHP.Name = "TenHP";
+            this.TenHP.ReadOnly = true;
+            // 
+            // LopTruong
+            // 
+            this.LopTruong.DataPropertyName = "LopTruong";
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            this.LopTruong.DefaultCellStyle = dataGridViewCellStyle6;
+            this.LopTruong.HeaderText = "Lớp trưởng";
+            this.LopTruong.Name = "LopTruong";
+            this.LopTruong.ReadOnly = true;
+            // 
             // frmlophp
             // 
             this.AcceptButton = this.btnthemlophp;
@@ -383,12 +402,14 @@
         private DevExpress.XtraEditors.SimpleButton btnthemlophp;
         private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaLopHP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuongSV;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenHP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LopTruong;
         private System.Windows.Forms.ComboBox cbbMaHPLopHP;
         private System.Windows.Forms.ComboBox cbbLopTruong;
         private DevExpress.XtraEditors.LabelControl labelControl3;
+        private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaLopHP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuongSV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MAHP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenHP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LopTruong;
     }
 }
