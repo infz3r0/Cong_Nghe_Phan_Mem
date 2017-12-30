@@ -20,11 +20,6 @@ namespace UI_Tier
             InitializeComponent();
         }
 
-        private void txtmakhoa_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnthoatkhoa_Click(object sender, EventArgs e)
         {
             Close();
@@ -72,10 +67,15 @@ namespace UI_Tier
                 MessageBox.Show("Lỗi !","", MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
             bs.DataSource = khoaBUS.DanhSach();
+            txtmakhoa.Focus();
         }
 
         private void btnsuakhoa_Click(object sender, EventArgs e)
         {
+            if (gridviewkhoa.SelectedCells.Count <= 0)
+            {
+                return;
+            }
             string ma = gridviewkhoa.SelectedCells[0].OwningRow.Cells[0].Value.ToString();
             string ten = txttenkhoa.Text;
             string email = txtmailkhoa.Text;
@@ -92,10 +92,15 @@ namespace UI_Tier
                 MessageBox.Show("Lỗi");
             }
             bs.DataSource = khoaBUS.DanhSach();
+            txtmakhoa.Focus();
         }
 
         private void btnxoakhoa_Click(object sender, EventArgs e)
         {
+            if (gridviewkhoa.SelectedCells.Count <= 0)
+            {
+                return;
+            }
             string ma = gridviewkhoa.SelectedCells[0].OwningRow.Cells[0].Value.ToString();
             
             Khoa khoa = new Khoa();
@@ -110,6 +115,7 @@ namespace UI_Tier
                 MessageBox.Show("Lỗi");
             }
             bs.DataSource = khoaBUS.DanhSach();
+            txtmakhoa.Focus();
         }
     }
 }

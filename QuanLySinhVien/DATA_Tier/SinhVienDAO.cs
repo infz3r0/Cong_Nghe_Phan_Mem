@@ -14,7 +14,21 @@ namespace DATA_Tier
     {
         public DataTable getAll()
         {
-            string query = "Select * from SinhVien";
+            string query = "Select MaSV, HoTen, NgaySinh, GioiTinh, DiaChi, SoCMND, Sdt, Email, MaLop from SinhVien";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            return executeSelectQuery(query, sqlParameters);
+        }
+        public DataTable getAll_TenLopHP()
+        {
+            string query = "SELECT SinhVien.MaSV, LopHocPhan.MaLopHP, SinhVien.HoTen, SinhVien.NgaySinh, SinhVien.GioiTinh, SinhVien.DiaChi, SinhVien.SoCMND, SinhVien.Sdt, SinhVien.Email, LopHocPhan.LopTruong"+
+                            "FROM SinhVien INNER JOIN"+
+                            "LopHocPhan ON SinhVien.MaSV = LopHocPhan.LopTruong";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            return executeSelectQuery(query, sqlParameters);
+        }
+        public DataTable getAll_TenLopKH()
+        {
+            string query = "SELECT * from SinhVien ";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return executeSelectQuery(query, sqlParameters);
         }
@@ -28,7 +42,7 @@ namespace DATA_Tier
         public bool insert(SinhVien sv)
         {
             string query = "Insert into SinhVien (MaSV, HoTen, NgaySinh, GioiTinh, DiaChi, SoCMND, Sdt, Email, MaLop)"+
-                            "VALUES (@MaSV, @HoTen, @NgaySinh, @GioiTinh, @DiaChi, @SoCMND, @Sdt, @Email, @MaLop)";
+                            " VALUES (@MaSV, @HoTen, @NgaySinh, @GioiTinh, @DiaChi, @SoCMND, @Sdt, @Email, @MaLop)";
             SqlParameter[] sqlParameters = new SqlParameter[9];
             sqlParameters[0] = new SqlParameter("@MaSV", SqlDbType.VarChar);
             sqlParameters[0].Value = sv.MaSV;
@@ -53,8 +67,8 @@ namespace DATA_Tier
         public bool update(SinhVien sv)
         {
             string query = "Update SinhVien"+ 
-                            "Set HoTen=@HoTen, NgaySinh=@NgaySinh, GioiTinh=@GioiTinh, DiaChi=@DiaChi, SoCMND=@SoCMND, Sdt=@Sdt, Email=@Email, MaLop=@MaLop"+
-                            "Where MaSV=@MaSV";
+                            " Set HoTen=@HoTen, NgaySinh=@NgaySinh, GioiTinh=@GioiTinh, DiaChi=@DiaChi, SoCMND=@SoCMND, Sdt=@Sdt, Email=@Email, MaLop=@MaLop"+
+                            " Where MaSV=@MaSV";
             SqlParameter[] sqlParameters = new SqlParameter[9];
             sqlParameters[0] = new SqlParameter("@MaSV", SqlDbType.VarChar);
             sqlParameters[0].Value = sv.MaSV;
@@ -79,7 +93,7 @@ namespace DATA_Tier
         public bool delete(SinhVien sv)
         {
             string query = "Delete From SinhVien"+ 
-                           "Where MaSV=@MaSV";
+                           " Where MaSV=@MaSV";
             SqlParameter[] sqlParameters = new SqlParameter[1];
             sqlParameters[0] = new SqlParameter("@MaSV", SqlDbType.BigInt);
             sqlParameters[0].Value = sv.MaSV;

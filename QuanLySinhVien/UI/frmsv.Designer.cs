@@ -30,19 +30,29 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmsv));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
-            this.txtcmndsv = new System.Windows.Forms.MaskedTextBox();
-            this.txtdienthoaisv = new System.Windows.Forms.MaskedTextBox();
             this.txtmailsv = new DevExpress.XtraEditors.TextEdit();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbbMaLopSV = new System.Windows.Forms.ComboBox();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.txtdienthoaisv = new DevExpress.XtraEditors.TextEdit();
+            this.txtcmndsv = new DevExpress.XtraEditors.TextEdit();
+            this.txtmssv = new DevExpress.XtraEditors.TextEdit();
             this.cbbGioiTinh = new System.Windows.Forms.ComboBox();
             this.txtdicchisv = new DevExpress.XtraEditors.TextEdit();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.txtmssv = new System.Windows.Forms.MaskedTextBox();
             this.ngaysinhsv = new System.Windows.Forms.DateTimePicker();
             this.txttensv = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
@@ -66,8 +76,12 @@
             this.SoCMND = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.txtmailsv.Properties)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtdienthoaisv.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtcmndsv.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtmssv.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtdicchisv.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txttensv.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
@@ -80,52 +94,36 @@
             // 
             this.defaultLookAndFeel1.LookAndFeel.SkinName = "Blueprint";
             // 
-            // txtcmndsv
-            // 
-            this.txtcmndsv.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtcmndsv.ForeColor = System.Drawing.Color.Black;
-            this.txtcmndsv.Location = new System.Drawing.Point(808, 81);
-            this.txtcmndsv.Name = "txtcmndsv";
-            this.txtcmndsv.PromptChar = ' ';
-            this.txtcmndsv.Size = new System.Drawing.Size(266, 19);
-            this.txtcmndsv.TabIndex = 15;
-            // 
-            // txtdienthoaisv
-            // 
-            this.txtdienthoaisv.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtdienthoaisv.ForeColor = System.Drawing.Color.Black;
-            this.txtdienthoaisv.Location = new System.Drawing.Point(808, 126);
-            this.txtdienthoaisv.Name = "txtdienthoaisv";
-            this.txtdienthoaisv.PromptChar = ' ';
-            this.txtdienthoaisv.Size = new System.Drawing.Size(266, 19);
-            this.txtdienthoaisv.TabIndex = 16;
-            // 
             // txtmailsv
             // 
             this.txtmailsv.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtmailsv.Location = new System.Drawing.Point(808, 164);
+            this.txtmailsv.Location = new System.Drawing.Point(779, 157);
             this.txtmailsv.Name = "txtmailsv";
             this.txtmailsv.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtmailsv.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.txtmailsv.Properties.Appearance.Options.UseBackColor = true;
             this.txtmailsv.Properties.Appearance.Options.UseForeColor = true;
             this.txtmailsv.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.txtmailsv.Properties.Mask.EditMask = "([a-z]|[0-9]|\\.|_)+@([a-z]|[0-9])+\\.([a-z]|[0-9])+";
+            this.txtmailsv.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtmailsv.Size = new System.Drawing.Size(266, 20);
-            this.txtmailsv.TabIndex = 17;
+            this.txtmailsv.TabIndex = 7;
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.cbbGioiTinh);
-            this.groupBox1.Controls.Add(this.txtcmndsv);
+            this.groupBox1.Controls.Add(this.cbbMaLopSV);
+            this.groupBox1.Controls.Add(this.labelControl1);
             this.groupBox1.Controls.Add(this.txtdienthoaisv);
+            this.groupBox1.Controls.Add(this.txtcmndsv);
+            this.groupBox1.Controls.Add(this.txtmssv);
+            this.groupBox1.Controls.Add(this.cbbGioiTinh);
             this.groupBox1.Controls.Add(this.txtmailsv);
             this.groupBox1.Controls.Add(this.txtdicchisv);
             this.groupBox1.Controls.Add(this.labelControl9);
             this.groupBox1.Controls.Add(this.labelControl8);
             this.groupBox1.Controls.Add(this.labelControl7);
             this.groupBox1.Controls.Add(this.labelControl6);
-            this.groupBox1.Controls.Add(this.txtmssv);
             this.groupBox1.Controls.Add(this.ngaysinhsv);
             this.groupBox1.Controls.Add(this.txttensv);
             this.groupBox1.Controls.Add(this.labelControl5);
@@ -136,15 +134,84 @@
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(9, 5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1200, 209);
+            this.groupBox1.Size = new System.Drawing.Size(1191, 253);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin";
             // 
+            // cbbMaLopSV
+            // 
+            this.cbbMaLopSV.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbbMaLopSV.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.cbbMaLopSV.FormattingEnabled = true;
+            this.cbbMaLopSV.Location = new System.Drawing.Point(779, 200);
+            this.cbbMaLopSV.Name = "cbbMaLopSV";
+            this.cbbMaLopSV.Size = new System.Drawing.Size(266, 26);
+            this.cbbMaLopSV.TabIndex = 22;
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.White;
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Appearance.Options.UseForeColor = true;
+            this.labelControl1.Location = new System.Drawing.Point(679, 199);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(56, 23);
+            this.labelControl1.TabIndex = 23;
+            this.labelControl1.Text = "Mã lớp";
+            // 
+            // txtdienthoaisv
+            // 
+            this.txtdienthoaisv.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtdienthoaisv.Location = new System.Drawing.Point(779, 116);
+            this.txtdienthoaisv.Name = "txtdienthoaisv";
+            this.txtdienthoaisv.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtdienthoaisv.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.txtdienthoaisv.Properties.Appearance.Options.UseBackColor = true;
+            this.txtdienthoaisv.Properties.Appearance.Options.UseForeColor = true;
+            this.txtdienthoaisv.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.txtdienthoaisv.Properties.Mask.EditMask = "\\(\\d?{3}\\) \\d{8}";
+            this.txtdienthoaisv.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txtdienthoaisv.Size = new System.Drawing.Size(266, 20);
+            this.txtdienthoaisv.TabIndex = 6;
+            // 
+            // txtcmndsv
+            // 
+            this.txtcmndsv.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtcmndsv.Location = new System.Drawing.Point(779, 71);
+            this.txtcmndsv.Name = "txtcmndsv";
+            this.txtcmndsv.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtcmndsv.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.txtcmndsv.Properties.Appearance.Options.UseBackColor = true;
+            this.txtcmndsv.Properties.Appearance.Options.UseForeColor = true;
+            this.txtcmndsv.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.txtcmndsv.Properties.Mask.EditMask = "\\d+";
+            this.txtcmndsv.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txtcmndsv.Properties.MaxLength = 15;
+            this.txtcmndsv.Size = new System.Drawing.Size(266, 20);
+            this.txtcmndsv.TabIndex = 5;
+            // 
+            // txtmssv
+            // 
+            this.txtmssv.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtmssv.Location = new System.Drawing.Point(255, 32);
+            this.txtmssv.Name = "txtmssv";
+            this.txtmssv.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtmssv.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.txtmssv.Properties.Appearance.Options.UseBackColor = true;
+            this.txtmssv.Properties.Appearance.Options.UseForeColor = true;
+            this.txtmssv.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.txtmssv.Properties.Mask.EditMask = "\\d{10}";
+            this.txtmssv.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txtmssv.Size = new System.Drawing.Size(266, 20);
+            this.txtmssv.TabIndex = 0;
+            // 
             // cbbGioiTinh
             // 
+            this.cbbGioiTinh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbGioiTinh.FormattingEnabled = true;
-            this.cbbGioiTinh.Location = new System.Drawing.Point(199, 159);
+            this.cbbGioiTinh.Location = new System.Drawing.Point(255, 152);
             this.cbbGioiTinh.Name = "cbbGioiTinh";
             this.cbbGioiTinh.Size = new System.Drawing.Size(266, 26);
             this.cbbGioiTinh.TabIndex = 3;
@@ -152,15 +219,16 @@
             // txtdicchisv
             // 
             this.txtdicchisv.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtdicchisv.Location = new System.Drawing.Point(808, 40);
+            this.txtdicchisv.Location = new System.Drawing.Point(779, 33);
             this.txtdicchisv.Name = "txtdicchisv";
             this.txtdicchisv.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtdicchisv.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.txtdicchisv.Properties.Appearance.Options.UseBackColor = true;
             this.txtdicchisv.Properties.Appearance.Options.UseForeColor = true;
             this.txtdicchisv.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.txtdicchisv.Properties.MaxLength = 500;
             this.txtdicchisv.Size = new System.Drawing.Size(266, 20);
-            this.txtdicchisv.TabIndex = 14;
+            this.txtdicchisv.TabIndex = 4;
             // 
             // labelControl9
             // 
@@ -168,7 +236,7 @@
             this.labelControl9.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl9.Appearance.Options.UseFont = true;
             this.labelControl9.Appearance.Options.UseForeColor = true;
-            this.labelControl9.Location = new System.Drawing.Point(710, 161);
+            this.labelControl9.Location = new System.Drawing.Point(681, 154);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(45, 23);
             this.labelControl9.TabIndex = 21;
@@ -180,7 +248,7 @@
             this.labelControl8.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl8.Appearance.Options.UseFont = true;
             this.labelControl8.Appearance.Options.UseForeColor = true;
-            this.labelControl8.Location = new System.Drawing.Point(710, 120);
+            this.labelControl8.Location = new System.Drawing.Point(681, 113);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(85, 23);
             this.labelControl8.TabIndex = 20;
@@ -192,7 +260,7 @@
             this.labelControl7.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl7.Appearance.Options.UseFont = true;
             this.labelControl7.Appearance.Options.UseForeColor = true;
-            this.labelControl7.Location = new System.Drawing.Point(710, 77);
+            this.labelControl7.Location = new System.Drawing.Point(681, 70);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(52, 23);
             this.labelControl7.TabIndex = 19;
@@ -204,28 +272,18 @@
             this.labelControl6.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl6.Appearance.Options.UseFont = true;
             this.labelControl6.Appearance.Options.UseForeColor = true;
-            this.labelControl6.Location = new System.Drawing.Point(710, 35);
+            this.labelControl6.Location = new System.Drawing.Point(681, 28);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(57, 23);
             this.labelControl6.TabIndex = 18;
             this.labelControl6.Text = "Địa chỉ";
             // 
-            // txtmssv
-            // 
-            this.txtmssv.BackColor = System.Drawing.Color.White;
-            this.txtmssv.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtmssv.ForeColor = System.Drawing.Color.Black;
-            this.txtmssv.Location = new System.Drawing.Point(199, 36);
-            this.txtmssv.Name = "txtmssv";
-            this.txtmssv.PromptChar = ' ';
-            this.txtmssv.Size = new System.Drawing.Size(266, 19);
-            this.txtmssv.TabIndex = 0;
-            // 
             // ngaysinhsv
             // 
             this.ngaysinhsv.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.ngaysinhsv.CustomFormat = "dd/MM/yyyy";
             this.ngaysinhsv.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.ngaysinhsv.Location = new System.Drawing.Point(199, 116);
+            this.ngaysinhsv.Location = new System.Drawing.Point(255, 109);
             this.ngaysinhsv.Name = "ngaysinhsv";
             this.ngaysinhsv.Size = new System.Drawing.Size(266, 26);
             this.ngaysinhsv.TabIndex = 2;
@@ -233,13 +291,14 @@
             // txttensv
             // 
             this.txttensv.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txttensv.Location = new System.Drawing.Point(199, 74);
+            this.txttensv.Location = new System.Drawing.Point(255, 71);
             this.txttensv.Name = "txttensv";
             this.txttensv.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txttensv.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.txttensv.Properties.Appearance.Options.UseBackColor = true;
             this.txttensv.Properties.Appearance.Options.UseForeColor = true;
             this.txttensv.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.txttensv.Properties.MaxLength = 50;
             this.txttensv.Size = new System.Drawing.Size(266, 20);
             this.txttensv.TabIndex = 1;
             // 
@@ -249,7 +308,7 @@
             this.labelControl5.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl5.Appearance.Options.UseFont = true;
             this.labelControl5.Appearance.Options.UseForeColor = true;
-            this.labelControl5.Location = new System.Drawing.Point(99, 158);
+            this.labelControl5.Location = new System.Drawing.Point(155, 151);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(69, 23);
             this.labelControl5.TabIndex = 3;
@@ -261,7 +320,7 @@
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl4.Appearance.Options.UseFont = true;
             this.labelControl4.Appearance.Options.UseForeColor = true;
-            this.labelControl4.Location = new System.Drawing.Point(99, 114);
+            this.labelControl4.Location = new System.Drawing.Point(155, 107);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(83, 23);
             this.labelControl4.TabIndex = 2;
@@ -273,7 +332,7 @@
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl3.Appearance.Options.UseFont = true;
             this.labelControl3.Appearance.Options.UseForeColor = true;
-            this.labelControl3.Location = new System.Drawing.Point(99, 73);
+            this.labelControl3.Location = new System.Drawing.Point(155, 66);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(56, 23);
             this.labelControl3.TabIndex = 1;
@@ -285,7 +344,7 @@
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Appearance.Options.UseForeColor = true;
-            this.labelControl2.Location = new System.Drawing.Point(99, 34);
+            this.labelControl2.Location = new System.Drawing.Point(155, 27);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(40, 23);
             this.labelControl2.TabIndex = 0;
@@ -310,7 +369,7 @@
             this.btnthemsv.Location = new System.Drawing.Point(64, 25);
             this.btnthemsv.Name = "btnthemsv";
             this.btnthemsv.Size = new System.Drawing.Size(96, 33);
-            this.btnthemsv.TabIndex = 0;
+            this.btnthemsv.TabIndex = 8;
             this.btnthemsv.Text = "Thêm";
             this.btnthemsv.Click += new System.EventHandler(this.btnthemsv_Click);
             // 
@@ -327,7 +386,7 @@
             this.btnsuasv.Location = new System.Drawing.Point(166, 25);
             this.btnsuasv.Name = "btnsuasv";
             this.btnsuasv.Size = new System.Drawing.Size(96, 33);
-            this.btnsuasv.TabIndex = 1;
+            this.btnsuasv.TabIndex = 9;
             this.btnsuasv.Text = "Sửa ";
             this.btnsuasv.Click += new System.EventHandler(this.btnsuasv_Click);
             // 
@@ -340,7 +399,7 @@
             this.groupBox2.Controls.Add(this.btnthemsv);
             this.groupBox2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(719, 220);
+            this.groupBox2.Location = new System.Drawing.Point(710, 264);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(490, 76);
             this.groupBox2.TabIndex = 23;
@@ -361,7 +420,7 @@
             this.btnthoatsv.Location = new System.Drawing.Point(370, 25);
             this.btnthoatsv.Name = "btnthoatsv";
             this.btnthoatsv.Size = new System.Drawing.Size(96, 33);
-            this.btnthoatsv.TabIndex = 3;
+            this.btnthoatsv.TabIndex = 11;
             this.btnthoatsv.Text = "Đóng";
             this.btnthoatsv.Click += new System.EventHandler(this.btnthoatsv_Click);
             // 
@@ -378,7 +437,7 @@
             this.btnxoasv.Location = new System.Drawing.Point(268, 25);
             this.btnxoasv.Name = "btnxoasv";
             this.btnxoasv.Size = new System.Drawing.Size(96, 33);
-            this.btnxoasv.TabIndex = 2;
+            this.btnxoasv.TabIndex = 10;
             this.btnxoasv.Text = "Xóa";
             this.btnxoasv.Click += new System.EventHandler(this.btnxoasv_Click);
             // 
@@ -388,15 +447,17 @@
             this.groupBox3.Controls.Add(this.gridviewsv);
             this.groupBox3.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox3.ForeColor = System.Drawing.Color.White;
-            this.groupBox3.Location = new System.Drawing.Point(2, 302);
+            this.groupBox3.Location = new System.Drawing.Point(2, 346);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1207, 289);
+            this.groupBox3.Size = new System.Drawing.Size(1198, 245);
             this.groupBox3.TabIndex = 25;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông tin chi tiết";
             // 
             // gridviewsv
             // 
+            this.gridviewsv.AllowUserToAddRows = false;
+            this.gridviewsv.AllowUserToDeleteRows = false;
             this.gridviewsv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridviewsv.BackgroundColor = System.Drawing.Color.White;
             this.gridviewsv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -408,61 +469,98 @@
             this.DiaChi,
             this.SoCMND,
             this.DienThoai,
-            this.Email});
-            this.gridviewsv.Location = new System.Drawing.Point(6, 22);
+            this.Email,
+            this.MaLop});
+            this.gridviewsv.Location = new System.Drawing.Point(6, 25);
+            this.gridviewsv.MultiSelect = false;
             this.gridviewsv.Name = "gridviewsv";
-            this.gridviewsv.Size = new System.Drawing.Size(1192, 261);
+            this.gridviewsv.ReadOnly = true;
+            this.gridviewsv.RowHeadersVisible = false;
+            this.gridviewsv.Size = new System.Drawing.Size(1186, 214);
             this.gridviewsv.TabIndex = 9;
+            this.gridviewsv.TabStop = false;
             // 
             // MaSV
             // 
             this.MaSV.DataPropertyName = "MaSV";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.MaSV.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            this.MaSV.DefaultCellStyle = dataGridViewCellStyle10;
             this.MaSV.HeaderText = "MSSV";
             this.MaSV.Name = "MaSV";
+            this.MaSV.ReadOnly = true;
             // 
             // HoTen
             // 
             this.HoTen.DataPropertyName = "HoTen";
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            this.HoTen.DefaultCellStyle = dataGridViewCellStyle11;
             this.HoTen.HeaderText = "Họ và Tên";
             this.HoTen.Name = "HoTen";
+            this.HoTen.ReadOnly = true;
             // 
             // NgaySinh
             // 
             this.NgaySinh.DataPropertyName = "NgaySinh";
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            this.NgaySinh.DefaultCellStyle = dataGridViewCellStyle12;
             this.NgaySinh.HeaderText = "Ngày sinh";
             this.NgaySinh.Name = "NgaySinh";
+            this.NgaySinh.ReadOnly = true;
             // 
             // GioiTinh
             // 
             this.GioiTinh.DataPropertyName = "GioiTinh";
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
+            this.GioiTinh.DefaultCellStyle = dataGridViewCellStyle13;
             this.GioiTinh.HeaderText = "Giới tính";
             this.GioiTinh.Name = "GioiTinh";
+            this.GioiTinh.ReadOnly = true;
             // 
             // DiaChi
             // 
             this.DiaChi.DataPropertyName = "DiaChi";
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
+            this.DiaChi.DefaultCellStyle = dataGridViewCellStyle14;
             this.DiaChi.HeaderText = "Địa chỉ";
             this.DiaChi.Name = "DiaChi";
+            this.DiaChi.ReadOnly = true;
             // 
             // SoCMND
             // 
             this.SoCMND.DataPropertyName = "SoCMND";
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
+            this.SoCMND.DefaultCellStyle = dataGridViewCellStyle15;
             this.SoCMND.HeaderText = "Số CMND";
             this.SoCMND.Name = "SoCMND";
+            this.SoCMND.ReadOnly = true;
             // 
             // DienThoai
             // 
             this.DienThoai.DataPropertyName = "Sdt";
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
+            this.DienThoai.DefaultCellStyle = dataGridViewCellStyle16;
             this.DienThoai.HeaderText = "Điện thoại";
             this.DienThoai.Name = "DienThoai";
+            this.DienThoai.ReadOnly = true;
             // 
             // Email
             // 
             this.Email.DataPropertyName = "Email";
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.Black;
+            this.Email.DefaultCellStyle = dataGridViewCellStyle17;
             this.Email.HeaderText = "Email";
             this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            // 
+            // MaLop
+            // 
+            this.MaLop.DataPropertyName = "MaLop";
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
+            this.MaLop.DefaultCellStyle = dataGridViewCellStyle18;
+            this.MaLop.HeaderText = "Mã lớp";
+            this.MaLop.Name = "MaLop";
+            this.MaLop.ReadOnly = true;
             // 
             // frmsv
             // 
@@ -482,6 +580,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtmailsv.Properties)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtdienthoaisv.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtcmndsv.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtmssv.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtdicchisv.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txttensv.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
@@ -495,8 +596,6 @@
         #endregion
 
         private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel1;
-        private System.Windows.Forms.MaskedTextBox txtcmndsv;
-        private System.Windows.Forms.MaskedTextBox txtdienthoaisv;
         private DevExpress.XtraEditors.TextEdit txtmailsv;
         private System.Windows.Forms.GroupBox groupBox1;
         private DevExpress.XtraEditors.TextEdit txtdicchisv;
@@ -504,7 +603,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl8;
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.LabelControl labelControl6;
-        private System.Windows.Forms.MaskedTextBox txtmssv;
         private System.Windows.Forms.DateTimePicker ngaysinhsv;
         private DevExpress.XtraEditors.TextEdit txttensv;
         private DevExpress.XtraEditors.LabelControl labelControl5;
@@ -520,6 +618,12 @@
         private DevExpress.XtraEditors.SimpleButton btnxoasv;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView gridviewsv;
+        private System.Windows.Forms.ComboBox cbbGioiTinh;
+        private DevExpress.XtraEditors.TextEdit txtdienthoaisv;
+        private DevExpress.XtraEditors.TextEdit txtcmndsv;
+        private DevExpress.XtraEditors.TextEdit txtmssv;
+        private System.Windows.Forms.ComboBox cbbMaLopSV;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaSV;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoTen;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgaySinh;
@@ -528,6 +632,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SoCMND;
         private System.Windows.Forms.DataGridViewTextBoxColumn DienThoai;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
-        private System.Windows.Forms.ComboBox cbbGioiTinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaLop;
     }
 }

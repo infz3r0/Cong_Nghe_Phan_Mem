@@ -52,11 +52,43 @@ namespace UI_Tier
         private void frmlopkhoahoc_Load(object sender, EventArgs e)
         {
             LoadDB();
+
+            cbbTenKhoaLopKH.AutoCompleteCustomSource = LoadAutoComplete();
+        }
+
+        public AutoCompleteStringCollection LoadAutoComplete()
+        {
+            DataTable dt = khoaBUS.DanhSach();
+            AutoCompleteStringCollection stringCol = new AutoCompleteStringCollection();
+            foreach (DataRow row in dt.Rows)
+            {
+                stringCol.Add(Convert.ToString(row["TenKhoa"]));
+            }
+            return stringCol;
+        }
+
+        private bool IsNull(string input)
+        {
+            if (string.IsNullOrEmpty(input.Trim(' ')))
+            {
+                return true;
+            }
+            return false;
         }
 
         private void btnthemlopkh_Click(object sender, EventArgs e)
         {
-           
+            bool isNull = IsNull(cbbTenKhoaLopKH.Text);
+            if (isNull)
+            {
+                MessageBox.Show("Mã khoa không được để trống");
+                return;
+            }
+            if (cbbTenKhoaLopKH.SelectedValue == null)
+            {
+                MessageBox.Show("Khoa không tồn tại");
+                return;
+            }
             string malop = txtmalopkhoahoc.Text;
             string makhoa = cbbTenKhoaLopKH.SelectedValue.ToString();
 
@@ -72,11 +104,28 @@ namespace UI_Tier
                 MessageBox.Show("Lỗi !", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             bs.DataSource = lopKhoaHocBUS.DanhSach();
+            txtmalopkhoahoc.Focus();
         }
 
         private void btnsualopkh_Click(object sender, EventArgs e)
         {
+            if (gridviewlopkh.SelectedCells.Count <= 0)
+            {
+                return;
+            }
+            bool isNull = IsNull(cbbTenKhoaLopKH.Text);
+            if (isNull)
+            {
+                MessageBox.Show("Mã khoa không được để trống");
+                return;
+            }
+
             string malop = gridviewlopkh.SelectedCells[0].OwningRow.Cells[0].Value.ToString();
+            if (cbbTenKhoaLopKH.SelectedValue == null)
+            {
+                MessageBox.Show("Khoa không tồn tại");
+                return;
+            }
             string makhoa = cbbTenKhoaLopKH.SelectedValue.ToString();
 
             LopKhoaHoc lopKhoaHoc = new LopKhoaHoc(malop, makhoa);
@@ -90,12 +139,15 @@ namespace UI_Tier
                 MessageBox.Show("Lỗi !", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             bs.DataSource = lopKhoaHocBUS.DanhSach();
-          
-
+            txtmalopkhoahoc.Focus();
         }
 
         private void btnxoalopkh_Click(object sender, EventArgs e)
         {
+            if (gridviewlopkh.SelectedCells.Count <= 0)
+            {
+                return;
+            }
             string malop = gridviewlopkh.SelectedCells[0].OwningRow.Cells[0].Value.ToString();
 
             LopKhoaHoc lopKhoaHoc = new LopKhoaHoc();

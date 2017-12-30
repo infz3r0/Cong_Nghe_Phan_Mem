@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmkhoa));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.btnthemkhoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnsuakhoa = new DevExpress.XtraEditors.SimpleButton();
@@ -81,7 +81,7 @@
             this.btnthemkhoa.Location = new System.Drawing.Point(23, 34);
             this.btnthemkhoa.Name = "btnthemkhoa";
             this.btnthemkhoa.Size = new System.Drawing.Size(96, 33);
-            this.btnthemkhoa.TabIndex = 0;
+            this.btnthemkhoa.TabIndex = 4;
             this.btnthemkhoa.Text = "Thêm";
             this.btnthemkhoa.Click += new System.EventHandler(this.btnthemkhoa_Click);
             // 
@@ -98,7 +98,7 @@
             this.btnsuakhoa.Location = new System.Drawing.Point(23, 76);
             this.btnsuakhoa.Name = "btnsuakhoa";
             this.btnsuakhoa.Size = new System.Drawing.Size(96, 33);
-            this.btnsuakhoa.TabIndex = 1;
+            this.btnsuakhoa.TabIndex = 5;
             this.btnsuakhoa.Text = "Sửa ";
             this.btnsuakhoa.Click += new System.EventHandler(this.btnsuakhoa_Click);
             // 
@@ -115,7 +115,7 @@
             this.btnxoakhoa.Location = new System.Drawing.Point(23, 117);
             this.btnxoakhoa.Name = "btnxoakhoa";
             this.btnxoakhoa.Size = new System.Drawing.Size(96, 33);
-            this.btnxoakhoa.TabIndex = 2;
+            this.btnxoakhoa.TabIndex = 6;
             this.btnxoakhoa.Text = "Xóa";
             this.btnxoakhoa.Click += new System.EventHandler(this.btnxoakhoa_Click);
             // 
@@ -149,7 +149,7 @@
             this.btnthoatkhoa.Location = new System.Drawing.Point(23, 161);
             this.btnthoatkhoa.Name = "btnthoatkhoa";
             this.btnthoatkhoa.Size = new System.Drawing.Size(96, 33);
-            this.btnthoatkhoa.TabIndex = 3;
+            this.btnthoatkhoa.TabIndex = 7;
             this.btnthoatkhoa.Text = "Đóng";
             this.btnthoatkhoa.Click += new System.EventHandler(this.btnthoatkhoa_Click);
             // 
@@ -212,11 +212,11 @@
             this.txtmakhoa.Properties.Appearance.Options.UseForeColor = true;
             this.txtmakhoa.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.txtmakhoa.Properties.Mask.BeepOnError = true;
-            this.txtmakhoa.Properties.Mask.EditMask = "n";
+            this.txtmakhoa.Properties.Mask.EditMask = "[A-Z]{2}\\d{4}";
+            this.txtmakhoa.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtmakhoa.Properties.MaxLength = 6;
             this.txtmakhoa.Size = new System.Drawing.Size(281, 20);
             this.txtmakhoa.TabIndex = 0;
-            this.txtmakhoa.TextChanged += new System.EventHandler(this.txtmakhoa_TextChanged);
             // 
             // txttenkhoa
             // 
@@ -228,6 +228,7 @@
             this.txttenkhoa.Properties.Appearance.Options.UseBackColor = true;
             this.txttenkhoa.Properties.Appearance.Options.UseForeColor = true;
             this.txttenkhoa.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.txttenkhoa.Properties.MaxLength = 100;
             this.txttenkhoa.Size = new System.Drawing.Size(281, 20);
             this.txttenkhoa.TabIndex = 1;
             // 
@@ -241,7 +242,9 @@
             this.txtmailkhoa.Properties.Appearance.Options.UseBackColor = true;
             this.txtmailkhoa.Properties.Appearance.Options.UseForeColor = true;
             this.txtmailkhoa.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.txtmailkhoa.Properties.Mask.EditMask = "\\s@\\s.\\s";
+            this.txtmailkhoa.Properties.Mask.EditMask = "([a-z]|[0-9]|\\.|_)+@([a-z]|[0-9])+\\.([a-z]|[0-9])+";
+            this.txtmailkhoa.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txtmailkhoa.Properties.MaxLength = 100;
             this.txtmailkhoa.Size = new System.Drawing.Size(281, 20);
             this.txtmailkhoa.TabIndex = 3;
             // 
@@ -276,8 +279,8 @@
             this.txtsdtkhoa.Properties.Appearance.Options.UseForeColor = true;
             this.txtsdtkhoa.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.txtsdtkhoa.Properties.Mask.BeepOnError = true;
-            this.txtsdtkhoa.Properties.Mask.EditMask = "(\\d?\\d?\\d?) \\d\\d\\d\\d\\d\\d\\d\\d";
-            this.txtsdtkhoa.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Regular;
+            this.txtsdtkhoa.Properties.Mask.EditMask = "\\(\\d{0,3}\\) \\d{8}";
+            this.txtsdtkhoa.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtsdtkhoa.Size = new System.Drawing.Size(281, 20);
             this.txtsdtkhoa.TabIndex = 2;
             // 
@@ -302,12 +305,13 @@
             this.gridviewkhoa.RowHeadersVisible = false;
             this.gridviewkhoa.Size = new System.Drawing.Size(629, 235);
             this.gridviewkhoa.TabIndex = 9;
+            this.gridviewkhoa.TabStop = false;
             // 
             // MaKhoa
             // 
             this.MaKhoa.DataPropertyName = "MaKhoa";
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.MaKhoa.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            this.MaKhoa.DefaultCellStyle = dataGridViewCellStyle5;
             this.MaKhoa.HeaderText = "Mã Khoa";
             this.MaKhoa.Name = "MaKhoa";
             this.MaKhoa.ReadOnly = true;
@@ -315,8 +319,8 @@
             // TenKhoa
             // 
             this.TenKhoa.DataPropertyName = "TenKhoa";
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            this.TenKhoa.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            this.TenKhoa.DefaultCellStyle = dataGridViewCellStyle6;
             this.TenKhoa.HeaderText = "Tên Khoa";
             this.TenKhoa.Name = "TenKhoa";
             this.TenKhoa.ReadOnly = true;
@@ -324,8 +328,8 @@
             // Sdt
             // 
             this.Sdt.DataPropertyName = "Sdt";
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            this.Sdt.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            this.Sdt.DefaultCellStyle = dataGridViewCellStyle7;
             this.Sdt.HeaderText = "Số Điện Thoại";
             this.Sdt.Name = "Sdt";
             this.Sdt.ReadOnly = true;
@@ -333,8 +337,8 @@
             // Email
             // 
             this.Email.DataPropertyName = "Email";
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.Email.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            this.Email.DefaultCellStyle = dataGridViewCellStyle8;
             this.Email.HeaderText = "Email";
             this.Email.Name = "Email";
             this.Email.ReadOnly = true;

@@ -31,5 +31,107 @@ namespace UI_Tier
         {
             Close();
         }
+
+        MonHocBUS monhocBUS = new MonHocBUS();
+        BindingSource bs = new BindingSource();
+
+        private void LoadDB()
+        {
+            bs.DataSource = monhocBUS.DanhSach();
+            gridviewhp.DataSource = bs;
+
+            txtmahp.DataBindings.Add("Text", bs, "MaHP", false,DataSourceUpdateMode.Never);
+            txttenhp.DataBindings.Add("Text", bs, "TenHP", false, DataSourceUpdateMode.Never);
+            txtstchp.DataBindings.Add("Text", bs, "SoTinChi", false, DataSourceUpdateMode.Never);
+            cbbLoaiHocPhan.DataBindings.Add("SelectedItem", bs, "LoaiHP");
+            txtTrongSoDQT.DataBindings.Add("Text", bs, "TrongSoDQT", false, DataSourceUpdateMode.Never);
+            txtTrongSoDThi.DataBindings.Add("Text", bs, "TrongSoDThi", false, DataSourceUpdateMode.Never);
+            
+        }
+
+        private void frmmonhoc_Load(object sender, EventArgs e)
+        {
+            LoadDB();
+            cbbLoaiHocPhan.SelectedIndex = 0;
+        }
+
+        private bool DuLieuHopLe()
+        {
+            if (string.IsNullOrEmpty(txtmahp.Text))
+            {
+                MessageBox.Show("");
+                txtmahp.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(txttenhp.Text))
+            {
+                MessageBox.Show("");
+                txttenhp.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtTrongSoDQT.Text))
+            {
+                MessageBox.Show("");
+                txtTrongSoDQT.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtTrongSoDThi.Text))
+            {
+                MessageBox.Show("");
+                txtTrongSoDThi.Focus();
+                return false;
+            }
+            return true;
+        }
+
+        private void btnthemhp_Click(object sender, EventArgs e)
+        {
+            if (!DuLieuHopLe())
+            {
+                return;
+            }
+            string mahp = txtmahp.Text;
+            string tenhp = txttenhp.Text;
+            int stc = string.IsNullOrEmpty(txtstchp.Text) ? 0 : int.Parse(txtstchp.Text);
+            string loaihp = cbbLoaiHocPhan.Text;
+            decimal tsdqt = decimal.Parse(txtTrongSoDQT.Text);
+            decimal tsdt = decimal.Parse(txtTrongSoDThi.Text);
+
+            MonHoc monhoc = new MonHoc(mahp, tenhp, stc, loaihp, tsdqt, tsdt);
+
+            bool thanhcong = monhocBUS.Them(monhoc);
+            if (thanhcong)
+            {
+                MessageBox.Show("Thành công !");
+            }
+            else
+            {
+                MessageBox.Show("Lỗi !", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            bs.DataSource = monhocBUS.DanhSach();
+            txtmahp.Focus();
+        }
+
+        private void btnsuahp_Click(object sender, EventArgs e)
+        {
+            if (gridviewhp.SelectedCells.Count <= 0)
+            {
+                return;
+            }
+            if (!DuLieuHopLe())
+            {
+                return;
+            }
+        }
+
+        private void btnxoahp_Click(object sender, EventArgs e)
+        {
+            if (gridviewhp.SelectedCells.Count <= 0)
+            {
+                return;
+            }
+
+        }
     }
 }
