@@ -29,18 +29,28 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmmonhoc));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmmonhoc));
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.gridviewhp = new System.Windows.Forms.DataGridView();
+            this.MaHP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenHP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoTC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LoaiHP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TrongSoDQT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TrongSoDThi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtTrongSoDThi = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.txtTrongSoDQT = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.cbbLoaiHocPhan = new System.Windows.Forms.ComboBox();
             this.txtmahp = new DevExpress.XtraEditors.TextEdit();
             this.txtstchp = new DevExpress.XtraEditors.TextEdit();
             this.txttenhp = new DevExpress.XtraEditors.TextEdit();
@@ -55,27 +65,16 @@
             this.btnsuahp = new DevExpress.XtraEditors.SimpleButton();
             this.btnthemhp = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.cbbLoaiHocPhan = new System.Windows.Forms.ComboBox();
-            this.txtTrongSoDQT = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.txtTrongSoDThi = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.MaHP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenHP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoTC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LoaiHP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TrongSoDQT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TrongSoDThi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridviewhp)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTrongSoDThi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTrongSoDQT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtmahp.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtstchp.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txttenhp.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTrongSoDQT.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTrongSoDThi.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // defaultLookAndFeel1
@@ -97,6 +96,8 @@
             // 
             // gridviewhp
             // 
+            this.gridviewhp.AllowUserToAddRows = false;
+            this.gridviewhp.AllowUserToDeleteRows = false;
             this.gridviewhp.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridviewhp.BackgroundColor = System.Drawing.Color.White;
             this.gridviewhp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -107,18 +108,67 @@
             this.LoaiHP,
             this.TrongSoDQT,
             this.TrongSoDThi});
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridviewhp.DefaultCellStyle = dataGridViewCellStyle14;
             this.gridviewhp.Location = new System.Drawing.Point(6, 23);
+            this.gridviewhp.MultiSelect = false;
             this.gridviewhp.Name = "gridviewhp";
+            this.gridviewhp.ReadOnly = true;
+            this.gridviewhp.RowHeadersVisible = false;
             this.gridviewhp.Size = new System.Drawing.Size(947, 192);
             this.gridviewhp.TabIndex = 9;
+            // 
+            // MaHP
+            // 
+            this.MaHP.DataPropertyName = "MaHP";
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            this.MaHP.DefaultCellStyle = dataGridViewCellStyle7;
+            this.MaHP.HeaderText = "Mã học phần";
+            this.MaHP.Name = "MaHP";
+            this.MaHP.ReadOnly = true;
+            // 
+            // TenHP
+            // 
+            this.TenHP.DataPropertyName = "TenHP";
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            this.TenHP.DefaultCellStyle = dataGridViewCellStyle8;
+            this.TenHP.HeaderText = "Tên học phần";
+            this.TenHP.Name = "TenHP";
+            this.TenHP.ReadOnly = true;
+            // 
+            // SoTC
+            // 
+            this.SoTC.DataPropertyName = "SoTinChi";
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            this.SoTC.DefaultCellStyle = dataGridViewCellStyle9;
+            this.SoTC.HeaderText = "Số tín chỉ";
+            this.SoTC.Name = "SoTC";
+            this.SoTC.ReadOnly = true;
+            // 
+            // LoaiHP
+            // 
+            this.LoaiHP.DataPropertyName = "LoaiHP";
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            this.LoaiHP.DefaultCellStyle = dataGridViewCellStyle10;
+            this.LoaiHP.HeaderText = "Loại học phần";
+            this.LoaiHP.Name = "LoaiHP";
+            this.LoaiHP.ReadOnly = true;
+            // 
+            // TrongSoDQT
+            // 
+            this.TrongSoDQT.DataPropertyName = "TrongSoDQT";
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            this.TrongSoDQT.DefaultCellStyle = dataGridViewCellStyle11;
+            this.TrongSoDQT.HeaderText = "Trọng số điểm quá trình";
+            this.TrongSoDQT.Name = "TrongSoDQT";
+            this.TrongSoDQT.ReadOnly = true;
+            // 
+            // TrongSoDThi
+            // 
+            this.TrongSoDThi.DataPropertyName = "TrongSoDThi";
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            this.TrongSoDThi.DefaultCellStyle = dataGridViewCellStyle12;
+            this.TrongSoDThi.HeaderText = "Trọng số điểm thi";
+            this.TrongSoDThi.Name = "TrongSoDThi";
+            this.TrongSoDThi.ReadOnly = true;
             // 
             // groupBox1
             // 
@@ -144,6 +194,73 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin";
             // 
+            // txtTrongSoDThi
+            // 
+            this.txtTrongSoDThi.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTrongSoDThi.Location = new System.Drawing.Point(718, 117);
+            this.txtTrongSoDThi.Name = "txtTrongSoDThi";
+            this.txtTrongSoDThi.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtTrongSoDThi.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.txtTrongSoDThi.Properties.Appearance.Options.UseBackColor = true;
+            this.txtTrongSoDThi.Properties.Appearance.Options.UseForeColor = true;
+            this.txtTrongSoDThi.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.txtTrongSoDThi.Properties.Mask.EditMask = "0\\.\\d{1,4}";
+            this.txtTrongSoDThi.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txtTrongSoDThi.Size = new System.Drawing.Size(219, 20);
+            this.txtTrongSoDThi.TabIndex = 5;
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelControl6.Appearance.ForeColor = System.Drawing.Color.White;
+            this.labelControl6.Appearance.Options.UseFont = true;
+            this.labelControl6.Appearance.Options.UseForeColor = true;
+            this.labelControl6.Location = new System.Drawing.Point(505, 112);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(148, 23);
+            this.labelControl6.TabIndex = 8;
+            this.labelControl6.Text = "Trọng số điểm thi";
+            // 
+            // txtTrongSoDQT
+            // 
+            this.txtTrongSoDQT.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTrongSoDQT.Location = new System.Drawing.Point(718, 77);
+            this.txtTrongSoDQT.Name = "txtTrongSoDQT";
+            this.txtTrongSoDQT.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtTrongSoDQT.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.txtTrongSoDQT.Properties.Appearance.Options.UseBackColor = true;
+            this.txtTrongSoDQT.Properties.Appearance.Options.UseForeColor = true;
+            this.txtTrongSoDQT.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.txtTrongSoDQT.Properties.Mask.EditMask = "0\\.\\d{1,4}";
+            this.txtTrongSoDQT.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txtTrongSoDQT.Size = new System.Drawing.Size(219, 20);
+            this.txtTrongSoDQT.TabIndex = 4;
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.White;
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Appearance.Options.UseForeColor = true;
+            this.labelControl1.Location = new System.Drawing.Point(505, 72);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(204, 23);
+            this.labelControl1.TabIndex = 6;
+            this.labelControl1.Text = "Trọng số điểm quá trình";
+            // 
+            // cbbLoaiHocPhan
+            // 
+            this.cbbLoaiHocPhan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbLoaiHocPhan.FormattingEnabled = true;
+            this.cbbLoaiHocPhan.Items.AddRange(new object[] {
+            "Học phần bắt buộc",
+            "Học phần tự chọn ",
+            "Học phần bắt buộc tự chọn tuỳ ý"});
+            this.cbbLoaiHocPhan.Location = new System.Drawing.Point(718, 33);
+            this.cbbLoaiHocPhan.Name = "cbbLoaiHocPhan";
+            this.cbbLoaiHocPhan.Size = new System.Drawing.Size(219, 26);
+            this.cbbLoaiHocPhan.TabIndex = 3;
+            // 
             // txtmahp
             // 
             this.txtmahp.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -154,6 +271,8 @@
             this.txtmahp.Properties.Appearance.Options.UseBackColor = true;
             this.txtmahp.Properties.Appearance.Options.UseForeColor = true;
             this.txtmahp.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.txtmahp.Properties.Mask.EditMask = "[A-Z]{3}\\d{3}";
+            this.txtmahp.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtmahp.Size = new System.Drawing.Size(297, 20);
             this.txtmahp.TabIndex = 0;
             // 
@@ -167,6 +286,8 @@
             this.txtstchp.Properties.Appearance.Options.UseBackColor = true;
             this.txtstchp.Properties.Appearance.Options.UseForeColor = true;
             this.txtstchp.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.txtstchp.Properties.Mask.EditMask = "[1-9]\\d?";
+            this.txtstchp.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtstchp.Size = new System.Drawing.Size(297, 20);
             this.txtstchp.TabIndex = 2;
             // 
@@ -180,6 +301,9 @@
             this.txttenhp.Properties.Appearance.Options.UseBackColor = true;
             this.txttenhp.Properties.Appearance.Options.UseForeColor = true;
             this.txttenhp.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.txttenhp.Properties.Mask.EditMask = "\\S+";
+            this.txttenhp.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txttenhp.Properties.MaxLength = 100;
             this.txttenhp.Size = new System.Drawing.Size(297, 20);
             this.txttenhp.TabIndex = 1;
             // 
@@ -316,117 +440,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chức năng";
             // 
-            // cbbLoaiHocPhan
-            // 
-            this.cbbLoaiHocPhan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbLoaiHocPhan.FormattingEnabled = true;
-            this.cbbLoaiHocPhan.Items.AddRange(new object[] {
-            "Học phần bắt buộc",
-            "Học phần tự chọn ",
-            "Học phần bắt buộc tự chọn tuỳ ý"});
-            this.cbbLoaiHocPhan.Location = new System.Drawing.Point(718, 33);
-            this.cbbLoaiHocPhan.Name = "cbbLoaiHocPhan";
-            this.cbbLoaiHocPhan.Size = new System.Drawing.Size(219, 26);
-            this.cbbLoaiHocPhan.TabIndex = 3;
-            // 
-            // txtTrongSoDQT
-            // 
-            this.txtTrongSoDQT.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTrongSoDQT.Location = new System.Drawing.Point(718, 77);
-            this.txtTrongSoDQT.Name = "txtTrongSoDQT";
-            this.txtTrongSoDQT.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txtTrongSoDQT.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.txtTrongSoDQT.Properties.Appearance.Options.UseBackColor = true;
-            this.txtTrongSoDQT.Properties.Appearance.Options.UseForeColor = true;
-            this.txtTrongSoDQT.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.txtTrongSoDQT.Size = new System.Drawing.Size(219, 20);
-            this.txtTrongSoDQT.TabIndex = 4;
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.Location = new System.Drawing.Point(505, 72);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(204, 23);
-            this.labelControl1.TabIndex = 6;
-            this.labelControl1.Text = "Trọng số điểm quá trình";
-            // 
-            // txtTrongSoDThi
-            // 
-            this.txtTrongSoDThi.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTrongSoDThi.Location = new System.Drawing.Point(718, 117);
-            this.txtTrongSoDThi.Name = "txtTrongSoDThi";
-            this.txtTrongSoDThi.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txtTrongSoDThi.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.txtTrongSoDThi.Properties.Appearance.Options.UseBackColor = true;
-            this.txtTrongSoDThi.Properties.Appearance.Options.UseForeColor = true;
-            this.txtTrongSoDThi.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.txtTrongSoDThi.Size = new System.Drawing.Size(219, 20);
-            this.txtTrongSoDThi.TabIndex = 5;
-            // 
-            // labelControl6
-            // 
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.labelControl6.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Appearance.Options.UseForeColor = true;
-            this.labelControl6.Location = new System.Drawing.Point(505, 112);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(148, 23);
-            this.labelControl6.TabIndex = 8;
-            this.labelControl6.Text = "Trọng số điểm thi";
-            // 
-            // MaHP
-            // 
-            this.MaHP.DataPropertyName = "MaHP";
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            this.MaHP.DefaultCellStyle = dataGridViewCellStyle8;
-            this.MaHP.HeaderText = "Mã học phần";
-            this.MaHP.Name = "MaHP";
-            // 
-            // TenHP
-            // 
-            this.TenHP.DataPropertyName = "TenHP";
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            this.TenHP.DefaultCellStyle = dataGridViewCellStyle9;
-            this.TenHP.HeaderText = "Tên học phần";
-            this.TenHP.Name = "TenHP";
-            // 
-            // SoTC
-            // 
-            this.SoTC.DataPropertyName = "SoTinChi";
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            this.SoTC.DefaultCellStyle = dataGridViewCellStyle10;
-            this.SoTC.HeaderText = "Số tín chỉ";
-            this.SoTC.Name = "SoTC";
-            // 
-            // LoaiHP
-            // 
-            this.LoaiHP.DataPropertyName = "LoaiHP";
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
-            this.LoaiHP.DefaultCellStyle = dataGridViewCellStyle11;
-            this.LoaiHP.HeaderText = "Loại học phần";
-            this.LoaiHP.Name = "LoaiHP";
-            // 
-            // TrongSoDQT
-            // 
-            this.TrongSoDQT.DataPropertyName = "TrongSoDQT";
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
-            this.TrongSoDQT.DefaultCellStyle = dataGridViewCellStyle12;
-            this.TrongSoDQT.HeaderText = "Trọng số điểm quá trình";
-            this.TrongSoDQT.Name = "TrongSoDQT";
-            // 
-            // TrongSoDThi
-            // 
-            this.TrongSoDThi.DataPropertyName = "TrongSoDThi";
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
-            this.TrongSoDThi.DefaultCellStyle = dataGridViewCellStyle13;
-            this.TrongSoDThi.HeaderText = "Trọng số điểm thi";
-            this.TrongSoDThi.Name = "TrongSoDThi";
-            // 
             // frmmonhoc
             // 
             this.AcceptButton = this.btnthemhp;
@@ -447,13 +460,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridviewhp)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTrongSoDThi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTrongSoDQT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtmahp.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtstchp.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txttenhp.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.txtTrongSoDQT.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTrongSoDThi.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

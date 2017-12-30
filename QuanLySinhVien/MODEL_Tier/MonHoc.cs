@@ -12,15 +12,15 @@ namespace MODEL_Tier
         private string tenHP;
         private int soTinChi;
         private string loaiHP;
-        private float trongSoDQT;
-        private float trongSoDThi;
+        private decimal trongSoDQT;
+        private decimal trongSoDThi;
 
         public MonHoc()
         {
 
         }
 
-        public MonHoc(string maHP, string tenHP, int soTinChi, string loaiHP, float trongSoDQT, float trongSoDThi)
+        public MonHoc(string maHP, string tenHP, int soTinChi, string loaiHP, decimal trongSoDQT, decimal trongSoDThi)
         {
             this.MaHP = maHP;
             this.TenHP = tenHP;
@@ -34,7 +34,7 @@ namespace MODEL_Tier
         public string TenHP { get => tenHP; set => tenHP = value; }
         public int SoTinChi { get => soTinChi; set => soTinChi = value; }
         public string LoaiHP { get => loaiHP; set => loaiHP = value; }
-        public float TrongSoDQT { get => trongSoDQT; set => trongSoDQT = value; }
-        public float TrongSoDThi { get => trongSoDThi; set => trongSoDThi = value; }
+        public decimal TrongSoDQT { get => trongSoDQT; set => trongSoDQT = value; }
+        public decimal TrongSoDThi { get => trongSoDThi; set => trongSoDThi = value; }
     }
 }
