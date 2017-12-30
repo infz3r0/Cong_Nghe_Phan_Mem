@@ -9,5 +9,6 @@ namespace DATA_Tier
 {
     public class NhomDAO
     {
+
     }
 }
