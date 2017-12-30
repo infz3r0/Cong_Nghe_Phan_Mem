@@ -20,20 +20,20 @@ namespace DATA_Tier
         }
         public bool insert(MonHoc monhoc)
         {
-            string query = "Insert into DanhSachLopHP (MaHP,TenHP,SoTinChi,LoaiHP,TrongSoDQT,TrongSoDThi) " +
+            string query = "Insert into MonHoc (MaHP,TenHP,SoTinChi,LoaiHP,TrongSoDQT,TrongSoDThi) " +
                            "Values (@MaHP,@TenHP,@SoTinChi,@LoaiHP,@TrongSoDQT,@TrongSoDThi)";
             SqlParameter[] sqlParameters = new SqlParameter[6];
             sqlParameters[0] = new SqlParameter("@MaHP", SqlDbType.VarChar);
-            sqlParameters[0].Value = monhoc.TenHP;
+            sqlParameters[0].Value = monhoc.MaHP;
             sqlParameters[1] = new SqlParameter("@TenHP", SqlDbType.NVarChar);
             sqlParameters[1].Value = monhoc.TenHP;
             sqlParameters[2] = new SqlParameter("@SoTinChi", SqlDbType.Int);
             sqlParameters[2].Value = monhoc.SoTinChi;
             sqlParameters[3] = new SqlParameter("@LoaiHP", SqlDbType.NVarChar);
             sqlParameters[3].Value = monhoc.LoaiHP;
-            sqlParameters[4] = new SqlParameter("@TrongSoDQT", SqlDbType.Float);
+            sqlParameters[4] = new SqlParameter("@TrongSoDQT", SqlDbType.Decimal);
             sqlParameters[4].Value = monhoc.TrongSoDQT;
-            sqlParameters[5] = new SqlParameter("@TrongSoDThi", SqlDbType.Float);
+            sqlParameters[5] = new SqlParameter("@TrongSoDThi", SqlDbType.Decimal);
             sqlParameters[5].Value = monhoc.TrongSoDThi;
             return executeInsertQuery(query, sqlParameters);
         }
@@ -51,9 +51,9 @@ namespace DATA_Tier
             sqlParameters[2].Value = monhoc.SoTinChi;
             sqlParameters[3] = new SqlParameter("@LoaiHP", SqlDbType.NVarChar);
             sqlParameters[3].Value = monhoc.LoaiHP;
-            sqlParameters[4] = new SqlParameter("@TrongSoDQT", SqlDbType.Float);
+            sqlParameters[4] = new SqlParameter("@TrongSoDQT", SqlDbType.Decimal);
             sqlParameters[4].Value = monhoc.TrongSoDQT;
-            sqlParameters[5] = new SqlParameter("@TrongSoDThi", SqlDbType.Float);
+            sqlParameters[5] = new SqlParameter("@TrongSoDThi", SqlDbType.Decimal);
             sqlParameters[5].Value = monhoc.TrongSoDThi;
             return executeUpdateQuery(query, sqlParameters);
         }
