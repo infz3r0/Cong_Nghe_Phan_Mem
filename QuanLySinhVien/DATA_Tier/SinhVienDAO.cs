@@ -28,9 +28,7 @@ namespace DATA_Tier
         }
         public DataTable getAll_TenLopKH()
         {
-            string query = "SELECT LopKhoaHoc.MaLop, SinhVien.MaSV, SinhVien.HoTen, SinhVien.NgaySinh, SinhVien.GioiTinh, SinhVien.DiaChi, SinhVien.SoCMND, SinhVien.Sdt, SinhVien.Email"+
-                            "FROM SinhVien INNER JOIN"+
-                            "LopKhoaHoc ON SinhVien.MaLop = LopKhoaHoc.MaLop";
+            string query = "SELECT * from SinhVien ";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return executeSelectQuery(query, sqlParameters);
         }

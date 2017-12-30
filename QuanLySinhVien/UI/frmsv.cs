@@ -52,7 +52,7 @@ namespace UI_Tier
               gridviewsv.DataSource = bs;
 
 
-             /* txtmssv.DataBindings.Add("Text", bs, "MaSV", false, DataSourceUpdateMode.Never);
+             txtmssv.DataBindings.Add("Text", bs, "MaSV", false, DataSourceUpdateMode.Never);
               txttensv.DataBindings.Add("Text", bs, "HoTen", false, DataSourceUpdateMode.Never);
               ngaysinhsv.DataBindings.Add("Value", bs, "NgaySinh",false, DataSourceUpdateMode.Never);
 
@@ -61,12 +61,11 @@ namespace UI_Tier
               txtcmndsv.DataBindings.Add("Text", bs, "SoCMND", false, DataSourceUpdateMode.Never);
               txtdienthoaisv.DataBindings.Add("Text", bs, "Sdt", false, DataSourceUpdateMode.Never);
               txtmailsv.DataBindings.Add("Text", bs, "Email", false, DataSourceUpdateMode.Never);
-              */
-            gridviewsv.DataSource = sinhvienBUS.DanhSach();
+             
             cbbMaLopSV.DataSource = lopkhoahocBUS.DanhSach();
             cbbMaLopSV.DisplayMember = "MaLop";
             cbbMaLopSV.ValueMember = "MaLop";
-            // cbbMaLopSV.DataBindings.Add("SelectedValue", bs, "MaLop");
+            cbbMaLopSV.DataBindings.Add("SelectedValue", bs, "MaLop");
 
         }
 

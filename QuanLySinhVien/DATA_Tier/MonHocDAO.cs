@@ -20,19 +20,21 @@ namespace DATA_Tier
         }
         public bool insert(MonHoc monhoc)
         {
-            string query = "Insert into DanhSachLopHP (TenHP,SoTinChi,LoaiHP,TrongSoDQT,TrongSoDThi) " +
-                           "Values (@TenHP,@SoTinChi,@LoaiHP,@TrongSoDQT,@TrongSoDThi)";
-            SqlParameter[] sqlParameters = new SqlParameter[5];
-            sqlParameters[0] = new SqlParameter("@TenHP", SqlDbType.NVarChar);
+            string query = "Insert into DanhSachLopHP (MaHP,TenHP,SoTinChi,LoaiHP,TrongSoDQT,TrongSoDThi) " +
+                           "Values (@MaHP,@TenHP,@SoTinChi,@LoaiHP,@TrongSoDQT,@TrongSoDThi)";
+            SqlParameter[] sqlParameters = new SqlParameter[6];
+            sqlParameters[0] = new SqlParameter("@MaHP", SqlDbType.VarChar);
             sqlParameters[0].Value = monhoc.TenHP;
-            sqlParameters[1] = new SqlParameter("@SoTinChi", SqlDbType.Int);
-            sqlParameters[1].Value = monhoc.SoTinChi;
-            sqlParameters[2] = new SqlParameter("@LoaiHP", SqlDbType.NVarChar);
-            sqlParameters[2].Value = monhoc.LoaiHP;
-            sqlParameters[3] = new SqlParameter("@TrongSoDQT", SqlDbType.Float);
-            sqlParameters[3].Value = monhoc.TrongSoDQT;
-            sqlParameters[4] = new SqlParameter("@TrongSoDThi", SqlDbType.Float);
-            sqlParameters[4].Value = monhoc.TrongSoDThi;
+            sqlParameters[1] = new SqlParameter("@TenHP", SqlDbType.NVarChar);
+            sqlParameters[1].Value = monhoc.TenHP;
+            sqlParameters[2] = new SqlParameter("@SoTinChi", SqlDbType.Int);
+            sqlParameters[2].Value = monhoc.SoTinChi;
+            sqlParameters[3] = new SqlParameter("@LoaiHP", SqlDbType.NVarChar);
+            sqlParameters[3].Value = monhoc.LoaiHP;
+            sqlParameters[4] = new SqlParameter("@TrongSoDQT", SqlDbType.Float);
+            sqlParameters[4].Value = monhoc.TrongSoDQT;
+            sqlParameters[5] = new SqlParameter("@TrongSoDThi", SqlDbType.Float);
+            sqlParameters[5].Value = monhoc.TrongSoDThi;
             return executeInsertQuery(query, sqlParameters);
         }
         public bool update(MonHoc monhoc)
