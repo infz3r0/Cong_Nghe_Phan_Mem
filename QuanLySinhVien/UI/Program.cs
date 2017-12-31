@@ -20,7 +20,7 @@ namespace UI_Tier
 
             BonusSkins.Register();
             SkinManager.EnableFormSkins();
-            Application.Run(new frmlophp());
+            Application.Run(new frmmain());
         }
     }
 }

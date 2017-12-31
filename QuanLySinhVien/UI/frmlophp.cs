@@ -74,6 +74,11 @@ namespace UI_Tier
 
         private void btnthemlophp_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtmalophp.Text))
+            {
+                MessageBox.Show("Mã lớp không được để trống");
+                return;
+            }
             if (string.IsNullOrEmpty(cbbMaHPLopHP.Text) || cbbMaHPLopHP.SelectedValue == null)
             {
                 MessageBox.Show("Mã học phần không tồn tại");
