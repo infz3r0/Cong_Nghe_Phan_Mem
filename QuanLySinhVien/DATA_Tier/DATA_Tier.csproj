@@ -44,6 +44,7 @@
     <Compile Include="DanhSachLopHPDAO.cs" />
     <Compile Include="DBConnect.cs" />
     <Compile Include="DiemDAO.cs" />
+    <Compile Include="DiemHe4DAO.cs" />
     <Compile Include="DieuKienDAO.cs" />
     <Compile Include="KhoaDAO.cs" />
     <Compile Include="LopHocPhanDAO.cs" />
