@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -49,7 +48,7 @@
             this.btnxoalophp = new DevExpress.XtraEditors.SimpleButton();
             this.btnsualophp = new DevExpress.XtraEditors.SimpleButton();
             this.btnthemlophp = new DevExpress.XtraEditors.SimpleButton();
-            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
+            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbbLopTruong = new System.Windows.Forms.ComboBox();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
@@ -59,7 +58,7 @@
             this.txtmalophp = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
+            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridLopHP)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -104,6 +103,7 @@
             this.gridLopHP.RowHeadersVisible = false;
             this.gridLopHP.Size = new System.Drawing.Size(752, 235);
             this.gridLopHP.TabIndex = 9;
+            this.gridLopHP.TabStop = false;
             // 
             // MaLopHP
             // 

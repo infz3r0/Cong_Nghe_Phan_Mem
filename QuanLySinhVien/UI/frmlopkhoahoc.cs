@@ -67,26 +67,27 @@ namespace UI_Tier
             return stringCol;
         }
 
-        private bool IsNull(string input)
+        private bool DuLieuHopLe()
         {
-            if (string.IsNullOrEmpty(input.Trim(' ')))
+            if (string.IsNullOrEmpty(txtmalopkhoahoc.Text))
             {
-                return true;
+                MessageBox.Show("Mã lớp không được bỏ trống!");
+                txtmalopkhoahoc.Focus();
+                return false;
             }
-            return false;
+            if (string.IsNullOrEmpty(cbbTenKhoaLopKH.Text) || cbbTenKhoaLopKH.SelectedValue == null)
+            {
+                MessageBox.Show("Tên khoa không được bỏ trống!");
+                cbbTenKhoaLopKH.Focus();
+                return false;
+            }
+            return true;
         }
 
         private void btnthemlopkh_Click(object sender, EventArgs e)
         {
-            bool isNull = IsNull(cbbTenKhoaLopKH.Text);
-            if (isNull)
+            if (!DuLieuHopLe())
             {
-                MessageBox.Show("Mã khoa không được để trống");
-                return;
-            }
-            if (cbbTenKhoaLopKH.SelectedValue == null)
-            {
-                MessageBox.Show("Khoa không tồn tại");
                 return;
             }
             string malop = txtmalopkhoahoc.Text;
@@ -113,10 +114,8 @@ namespace UI_Tier
             {
                 return;
             }
-            bool isNull = IsNull(cbbTenKhoaLopKH.Text);
-            if (isNull)
+            if (!DuLieuHopLe())
             {
-                MessageBox.Show("Mã khoa không được để trống");
                 return;
             }
 

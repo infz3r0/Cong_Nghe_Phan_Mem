@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmkhoa));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager();
             this.btnthemkhoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnsuakhoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnxoakhoa = new DevExpress.XtraEditors.SimpleButton();
@@ -56,7 +55,7 @@
             this.Sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
+            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtmakhoa.Properties)).BeginInit();
@@ -228,6 +227,8 @@
             this.txttenkhoa.Properties.Appearance.Options.UseBackColor = true;
             this.txttenkhoa.Properties.Appearance.Options.UseForeColor = true;
             this.txttenkhoa.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.txttenkhoa.Properties.Mask.EditMask = "\\w+( \\w+)*";
+            this.txttenkhoa.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txttenkhoa.Properties.MaxLength = 100;
             this.txttenkhoa.Size = new System.Drawing.Size(281, 20);
             this.txttenkhoa.TabIndex = 1;
@@ -310,8 +311,8 @@
             // MaKhoa
             // 
             this.MaKhoa.DataPropertyName = "MaKhoa";
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            this.MaKhoa.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.MaKhoa.DefaultCellStyle = dataGridViewCellStyle1;
             this.MaKhoa.HeaderText = "Mã Khoa";
             this.MaKhoa.Name = "MaKhoa";
             this.MaKhoa.ReadOnly = true;
@@ -319,8 +320,8 @@
             // TenKhoa
             // 
             this.TenKhoa.DataPropertyName = "TenKhoa";
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            this.TenKhoa.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.TenKhoa.DefaultCellStyle = dataGridViewCellStyle2;
             this.TenKhoa.HeaderText = "Tên Khoa";
             this.TenKhoa.Name = "TenKhoa";
             this.TenKhoa.ReadOnly = true;
@@ -328,8 +329,8 @@
             // Sdt
             // 
             this.Sdt.DataPropertyName = "Sdt";
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            this.Sdt.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.Sdt.DefaultCellStyle = dataGridViewCellStyle3;
             this.Sdt.HeaderText = "Số Điện Thoại";
             this.Sdt.Name = "Sdt";
             this.Sdt.ReadOnly = true;
@@ -337,8 +338,8 @@
             // Email
             // 
             this.Email.DataPropertyName = "Email";
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            this.Email.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.Email.DefaultCellStyle = dataGridViewCellStyle4;
             this.Email.HeaderText = "Email";
             this.Email.Name = "Email";
             this.Email.ReadOnly = true;

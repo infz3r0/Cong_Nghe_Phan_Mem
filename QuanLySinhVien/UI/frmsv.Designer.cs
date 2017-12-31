@@ -28,18 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmsv));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel();
             this.txtmailsv = new DevExpress.XtraEditors.TextEdit();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbbMaLopSV = new System.Windows.Forms.ComboBox();
@@ -59,7 +58,7 @@
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
+            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager();
             this.btnthemsv = new DevExpress.XtraEditors.SimpleButton();
             this.btnsuasv = new DevExpress.XtraEditors.SimpleButton();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
@@ -298,6 +297,8 @@
             this.txttensv.Properties.Appearance.Options.UseBackColor = true;
             this.txttensv.Properties.Appearance.Options.UseForeColor = true;
             this.txttensv.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.txttensv.Properties.Mask.EditMask = "[^0-9]+( [^0-9])*";
+            this.txttensv.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txttensv.Properties.MaxLength = 50;
             this.txttensv.Size = new System.Drawing.Size(266, 20);
             this.txttensv.TabIndex = 1;
@@ -483,9 +484,9 @@
             // MaSV
             // 
             this.MaSV.DataPropertyName = "MaSV";
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            this.MaSV.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.MaSV.DefaultCellStyle = dataGridViewCellStyle1;
             this.MaSV.HeaderText = "MSSV";
             this.MaSV.Name = "MaSV";
             this.MaSV.ReadOnly = true;
@@ -493,8 +494,8 @@
             // HoTen
             // 
             this.HoTen.DataPropertyName = "HoTen";
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
-            this.HoTen.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.HoTen.DefaultCellStyle = dataGridViewCellStyle2;
             this.HoTen.HeaderText = "Họ và Tên";
             this.HoTen.Name = "HoTen";
             this.HoTen.ReadOnly = true;
@@ -502,8 +503,8 @@
             // NgaySinh
             // 
             this.NgaySinh.DataPropertyName = "NgaySinh";
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
-            this.NgaySinh.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.NgaySinh.DefaultCellStyle = dataGridViewCellStyle3;
             this.NgaySinh.HeaderText = "Ngày sinh";
             this.NgaySinh.Name = "NgaySinh";
             this.NgaySinh.ReadOnly = true;
@@ -511,8 +512,8 @@
             // GioiTinh
             // 
             this.GioiTinh.DataPropertyName = "GioiTinh";
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
-            this.GioiTinh.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.GioiTinh.DefaultCellStyle = dataGridViewCellStyle4;
             this.GioiTinh.HeaderText = "Giới tính";
             this.GioiTinh.Name = "GioiTinh";
             this.GioiTinh.ReadOnly = true;
@@ -520,8 +521,8 @@
             // DiaChi
             // 
             this.DiaChi.DataPropertyName = "DiaChi";
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
-            this.DiaChi.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            this.DiaChi.DefaultCellStyle = dataGridViewCellStyle5;
             this.DiaChi.HeaderText = "Địa chỉ";
             this.DiaChi.Name = "DiaChi";
             this.DiaChi.ReadOnly = true;
@@ -529,8 +530,8 @@
             // SoCMND
             // 
             this.SoCMND.DataPropertyName = "SoCMND";
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
-            this.SoCMND.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            this.SoCMND.DefaultCellStyle = dataGridViewCellStyle6;
             this.SoCMND.HeaderText = "Số CMND";
             this.SoCMND.Name = "SoCMND";
             this.SoCMND.ReadOnly = true;
@@ -538,8 +539,8 @@
             // DienThoai
             // 
             this.DienThoai.DataPropertyName = "Sdt";
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
-            this.DienThoai.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            this.DienThoai.DefaultCellStyle = dataGridViewCellStyle7;
             this.DienThoai.HeaderText = "Điện thoại";
             this.DienThoai.Name = "DienThoai";
             this.DienThoai.ReadOnly = true;
@@ -547,8 +548,8 @@
             // Email
             // 
             this.Email.DataPropertyName = "Email";
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.Black;
-            this.Email.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            this.Email.DefaultCellStyle = dataGridViewCellStyle8;
             this.Email.HeaderText = "Email";
             this.Email.Name = "Email";
             this.Email.ReadOnly = true;
@@ -556,8 +557,8 @@
             // MaLop
             // 
             this.MaLop.DataPropertyName = "MaLop";
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
-            this.MaLop.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            this.MaLop.DefaultCellStyle = dataGridViewCellStyle9;
             this.MaLop.HeaderText = "Mã lớp";
             this.MaLop.Name = "MaLop";
             this.MaLop.ReadOnly = true;

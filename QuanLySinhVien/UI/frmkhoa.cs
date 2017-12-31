@@ -49,8 +49,29 @@ namespace UI_Tier
             LoadDB();
         }
 
+        private bool DuLieuHopLe()
+        {
+            if (string.IsNullOrEmpty(txtmakhoa.Text))
+            {
+                MessageBox.Show("Mã khoa không được bỏ trống!");
+                txtmakhoa.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(txttenkhoa.Text))
+            {
+                MessageBox.Show("Tên khoa không được bỏ trống!");
+                txttenkhoa.Focus();
+                return false;
+            }
+            return true;
+        }
+
         private void btnthemkhoa_Click(object sender, EventArgs e)
         {
+            if (!DuLieuHopLe())
+            {
+                return;
+            }
             string ma = txtmakhoa.Text;
             string ten = txttenkhoa.Text;
             string email = txtmailkhoa.Text;
@@ -73,6 +94,10 @@ namespace UI_Tier
         private void btnsuakhoa_Click(object sender, EventArgs e)
         {
             if (gridviewkhoa.SelectedCells.Count <= 0)
+            {
+                return;
+            }
+            if (!DuLieuHopLe())
             {
                 return;
             }

@@ -25,18 +25,6 @@ namespace BUS_Tier
         public bool Them(SinhVien sinhVien)
         {
             bool result = false;
-            if (string.IsNullOrEmpty(sinhVien.MaSV))
-            {
-                return false;
-            }
-            if (string.IsNullOrEmpty(sinhVien.HoTen))
-            {
-                return false;
-            }
-            if (!sinhVien.GioiTinh.Equals('M') && !sinhVien.GioiTinh.Equals('F') && !sinhVien.GioiTinh.Equals('O'))
-            {
-                return false;
-            }
             if (DateTime.Now.Year - sinhVien.NgaySinh.Year <= 18)
             {
                 return false;
@@ -55,6 +43,10 @@ namespace BUS_Tier
         public bool Sua(SinhVien sinhVien)
         {
             bool result = false;
+            if (DateTime.Now.Year - sinhVien.NgaySinh.Year <= 18)
+            {
+                return false;
+            }
             result = sinhVienDAO.update(sinhVien);
             return result;
         }

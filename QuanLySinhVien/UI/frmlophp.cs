@@ -72,16 +72,27 @@ namespace UI_Tier
             cbbMaHPLopHP.AutoCompleteCustomSource = LoadAutoComplete();
         }
 
-        private void btnthemlophp_Click(object sender, EventArgs e)
+        private bool DuLieuHopLe()
         {
             if (string.IsNullOrEmpty(txtmalophp.Text))
             {
                 MessageBox.Show("Mã lớp không được để trống");
-                return;
+                txtmalophp.Focus();
+                return false;
             }
             if (string.IsNullOrEmpty(cbbMaHPLopHP.Text) || cbbMaHPLopHP.SelectedValue == null)
             {
                 MessageBox.Show("Mã học phần không tồn tại");
+                cbbMaHPLopHP.Focus();
+                return false;
+            }
+            return true;
+        }
+
+        private void btnthemlophp_Click(object sender, EventArgs e)
+        {
+            if (!DuLieuHopLe())
+            {
                 return;
             }
 
@@ -111,9 +122,8 @@ namespace UI_Tier
             {
                 return;
             }
-            if (string.IsNullOrEmpty(cbbMaHPLopHP.Text) || cbbMaHPLopHP.SelectedValue == null)
+            if (!DuLieuHopLe())
             {
-                MessageBox.Show("Mã học phần không tồn tại");
                 return;
             }
 

@@ -28,12 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmlopkhoahoc));
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
+            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.gridviewlopkh = new System.Windows.Forms.DataGridView();
             this.MaLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,7 +48,7 @@
             this.btnxoalopkh = new DevExpress.XtraEditors.SimpleButton();
             this.btnsualopkh = new DevExpress.XtraEditors.SimpleButton();
             this.btnthemlopkh = new DevExpress.XtraEditors.SimpleButton();
-            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
+            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridviewlopkh)).BeginInit();
@@ -90,6 +89,7 @@
             this.gridviewlopkh.RowHeadersVisible = false;
             this.gridviewlopkh.Size = new System.Drawing.Size(544, 235);
             this.gridviewlopkh.TabIndex = 9;
+            this.gridviewlopkh.TabStop = false;
             // 
             // MaLop
             // 

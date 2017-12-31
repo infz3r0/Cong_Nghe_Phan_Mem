@@ -40,8 +40,8 @@ namespace DATA_Tier
         public bool update(MonHoc monhoc)
         {
             string query = "Update MonHoc" +
-                           "Set TenHP=@TenHP,SoTinChi=@SoTinChi,LoaiHP=@LoaiHP,TrongSoDQT=@TrongSoDQT,TrongSoDThi=@TrongSoDThi" +
-                           "Where MaHP=@MaHP";
+                           " Set TenHP=@TenHP,SoTinChi=@SoTinChi,LoaiHP=@LoaiHP,TrongSoDQT=@TrongSoDQT,TrongSoDThi=@TrongSoDThi" +
+                           " Where MaHP=@MaHP";
             SqlParameter[] sqlParameters = new SqlParameter[6];
             sqlParameters[0] = new SqlParameter("@MaHP", SqlDbType.VarChar);
             sqlParameters[0].Value = monhoc.MaHP;

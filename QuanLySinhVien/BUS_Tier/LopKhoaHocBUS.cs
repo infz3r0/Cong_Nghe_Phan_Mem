@@ -24,10 +24,6 @@ namespace BUS_Tier
         public bool Them(LopKhoaHoc lopKhoaHoc)
         {
             bool result = false;
-            if (string.IsNullOrEmpty(lopKhoaHoc.MaLop))
-            {
-                return false;
-            }
             result = lopKhoaHocDAO.insert(lopKhoaHoc);
             return result;
         }

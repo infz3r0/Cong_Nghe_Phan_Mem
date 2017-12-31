@@ -116,17 +116,33 @@ namespace UI_Tier
             LoadDB();
         }
 
+        private bool DuLieuHopLe()
+        {
+            if (string.IsNullOrEmpty(txtmssv.Text))
+            {
+                MessageBox.Show("Mã sinh viên không được bỏ trống!");
+                txtmssv.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(txttensv.Text))
+            {
+                MessageBox.Show("Tên sinh viên không được bỏ trống!");
+                txttensv.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(cbbMaLopSV.Text) || cbbMaLopSV.SelectedValue == null)
+            {
+                MessageBox.Show("Lớp không tồn tại!");
+                cbbMaLopSV.Focus();
+                return false;
+            }
+            return true;
+        }
+
         private void btnthemsv_Click(object sender, EventArgs e)
         {
-            bool isNull = IsNull(cbbMaLopSV.Text);
-            if (isNull)
+            if (!DuLieuHopLe())
             {
-                MessageBox.Show("Mã lớp không được để trống");
-                return;
-            }
-            if (cbbMaLopSV.SelectedValue == null)
-            {
-                MessageBox.Show("Lớp không tồn tại");
                 return;
             }
 
@@ -163,20 +179,12 @@ namespace UI_Tier
             {
                 return;
             }
-            bool isNull = IsNull(cbbMaLopSV.Text);
-            if (isNull)
+            if (!DuLieuHopLe())
             {
-                MessageBox.Show("Mã lớp không được để trống");
                 return;
             }
 
             string masv = gridviewsv.SelectedCells[0].OwningRow.Cells[0].Value.ToString();
-            if (cbbMaLopSV.SelectedValue == null)
-            {
-                MessageBox.Show("Lớp không tồn tại");
-                return;
-            }
-
             string hoten = txttensv.Text;
             DateTime ngaysinh = ngaysinhsv.Value;
             char gt = char.Parse(cbbGioiTinh.SelectedValue.ToString());
