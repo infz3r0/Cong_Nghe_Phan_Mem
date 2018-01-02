@@ -20,11 +20,13 @@ namespace DATA_Tier
         }
         public bool insert(BanCanSu bancansu)
         {
-            string query = "Insert into BanCanSu (ChucVu) " +
-                           "Values (@ChucVu)";
-            SqlParameter[] sqlParameters = new SqlParameter[1];
-            sqlParameters[0] = new SqlParameter("@ChucVu", SqlDbType.NVarChar);
-            sqlParameters[0].Value = bancansu.ChucVu;
+            string query = "Insert into BanCanSu (MaSV,ChucVu) " +
+                           "Values (@MaSV,@ChucVu)";
+            SqlParameter[] sqlParameters = new SqlParameter[2];
+            sqlParameters[0] = new SqlParameter("@MaSV", SqlDbType.VarChar);
+            sqlParameters[0].Value = bancansu.MaSV;
+            sqlParameters[1] = new SqlParameter("@ChucVu", SqlDbType.NVarChar);
+            sqlParameters[1].Value = bancansu.ChucVu;
             return executeInsertQuery(query, sqlParameters);
         }
         public bool update(BanCanSu bancansu)

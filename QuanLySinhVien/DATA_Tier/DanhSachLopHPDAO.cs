@@ -21,7 +21,7 @@ namespace DATA_Tier
         public bool insert(DanhSachLopHP dslophp)
         {
             string query = "Insert into DanhSachLopHP (MaLopHP, MaSV) " +
-                           "Values (@MaSV)";
+                           "Values (@MaLopHP,@MaSV)";
             SqlParameter[] sqlParameters = new SqlParameter[2];
             sqlParameters[0] = new SqlParameter("@MaSV", SqlDbType.VarChar);
             sqlParameters[0].Value = dslophp.MaSV;
