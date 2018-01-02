@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using MODEL_Tier;
 using DATA_Tier;
 using System.Data;
+using System.Security.Cryptography;
 
 namespace BUS_Tier
 {
@@ -21,34 +22,58 @@ namespace BUS_Tier
             return dt;
         }
 
-        public bool Them(TaiKhoan taiKhoan)
+        public bool DangKi(TaiKhoan taiKhoan)
         {
-            bool result = false;
-
-            return result;
+            taiKhoan.Password = Md5(taiKhoan.Password);
+            return taiKhoanDAO.Insert(taiKhoan);
         }
 
-        public bool Xoa(TaiKhoan taiKhoan)
+        public bool DangNhap(TaiKhoan taiKhoan)
         {
-            bool result = false;
-
-            return result;
+            taiKhoan.Password = Md5(taiKhoan.Password);
+            return taiKhoanDAO.Login(taiKhoan);
         }
 
-        public bool Sua(TaiKhoan taiKhoan)
+        public bool DoiPassword(TaiKhoan taiKhoanCu, TaiKhoan taiKhoanMoi)
         {
-            bool result = false;
-
-            return result;
-        }
-
-        public bool DangNhap(TaiKhoan taikhoan)
-        {
-            if (taikhoan.Username.Equals("admin"))
+            taiKhoanCu.Password = Md5(taiKhoanCu.Password);
+            if (!taiKhoanDAO.Login(taiKhoanCu))
             {
-                return true;
+                return false;
             }
-            return false;
+
+            taiKhoanMoi.Password = Md5(taiKhoanMoi.Password);
+            return taiKhoanDAO.Update(taiKhoanMoi);
+        }
+
+        private string Md5(string input)
+        {
+            string output = "";
+            using (MD5 md5Hash = MD5.Create())
+            {
+                output = GetMd5Hash(md5Hash, input);
+            }
+            return output;
+        }
+
+        private static string GetMd5Hash(MD5 md5Hash, string input)
+        {
+            // Convert the input string to a byte array and compute the hash.
+            byte[] data = md5Hash.ComputeHash(Encoding.UTF8.GetBytes(input));
+
+            // Create a new Stringbuilder to collect the bytes
+            // and create a string.
+            StringBuilder sBuilder = new StringBuilder();
+
+            // Loop through each byte of the hashed data 
+            // and format each one as a hexadecimal string.
+            for (int i = 0; i < data.Length; i++)
+            {
+                sBuilder.Append(data[i].ToString("x2"));
+            }
+
+            // Return the hexadecimal string.
+            return sBuilder.ToString();
         }
     }
 }
