@@ -313,5 +313,20 @@ namespace UI_Tier
         {
             Close();
         }
+
+        private void navBarItem16_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            Form frm = kiemtraform(typeof(frmPhanQuyen));
+            if (frm == null)
+            {
+                frmPhanQuyen forms = new frmPhanQuyen();
+                forms.MdiParent = this;
+                forms.Show();
+            }
+            else
+            {
+                frm.Activate();
+            }
+        }
     }
 }
