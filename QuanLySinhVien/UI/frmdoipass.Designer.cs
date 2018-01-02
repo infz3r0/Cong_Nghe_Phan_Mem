@@ -41,15 +41,20 @@
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
+            this.txtNhapLaiMK = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtmkmoi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtmkcu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtsuausename.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNhapLaiMK.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.txtNhapLaiMK);
+            this.groupBox1.Controls.Add(this.labelControl5);
             this.groupBox1.Controls.Add(this.txtmkmoi);
             this.groupBox1.Controls.Add(this.labelControl2);
             this.groupBox1.Controls.Add(this.labelControl1);
@@ -73,7 +78,7 @@
             // 
             this.txtmkmoi.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtmkmoi.EditValue = "";
-            this.txtmkmoi.Location = new System.Drawing.Point(176, 127);
+            this.txtmkmoi.Location = new System.Drawing.Point(211, 127);
             this.txtmkmoi.Name = "txtmkmoi";
             this.txtmkmoi.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtmkmoi.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
@@ -90,7 +95,7 @@
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Appearance.Options.UseForeColor = true;
-            this.labelControl2.Location = new System.Drawing.Point(27, 126);
+            this.labelControl2.Location = new System.Drawing.Point(27, 125);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(114, 23);
             this.labelControl2.TabIndex = 7;
@@ -111,7 +116,7 @@
             // 
             this.txtmkcu.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtmkcu.EditValue = "";
-            this.txtmkcu.Location = new System.Drawing.Point(176, 82);
+            this.txtmkcu.Location = new System.Drawing.Point(211, 83);
             this.txtmkcu.Name = "txtmkcu";
             this.txtmkcu.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtmkcu.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
@@ -133,10 +138,10 @@
             this.btnthoatdoipass.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnthoatdoipass.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthoatdoipass.ImageOptions.Image")));
             this.btnthoatdoipass.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnthoatdoipass.Location = new System.Drawing.Point(300, 191);
+            this.btnthoatdoipass.Location = new System.Drawing.Point(335, 210);
             this.btnthoatdoipass.Name = "btnthoatdoipass";
             this.btnthoatdoipass.Size = new System.Drawing.Size(96, 33);
-            this.btnthoatdoipass.TabIndex = 1;
+            this.btnthoatdoipass.TabIndex = 5;
             this.btnthoatdoipass.Text = "Đóng";
             this.btnthoatdoipass.Click += new System.EventHandler(this.btnthoatdoipass_Click);
             // 
@@ -144,16 +149,20 @@
             // 
             this.txtsuausename.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtsuausename.EditValue = "";
-            this.txtsuausename.Location = new System.Drawing.Point(176, 41);
+            this.txtsuausename.Location = new System.Drawing.Point(211, 41);
             this.txtsuausename.Name = "txtsuausename";
             this.txtsuausename.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtsuausename.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.txtsuausename.Properties.Appearance.Options.UseBackColor = true;
             this.txtsuausename.Properties.Appearance.Options.UseForeColor = true;
+            this.txtsuausename.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtsuausename.Properties.AppearanceReadOnly.Options.UseBackColor = true;
             this.txtsuausename.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.txtsuausename.Properties.Mask.EditMask = "p3";
+            this.txtsuausename.Properties.ReadOnly = true;
             this.txtsuausename.Size = new System.Drawing.Size(220, 20);
             this.txtsuausename.TabIndex = 0;
+            this.txtsuausename.TabStop = false;
             // 
             // btnokdoipass
             // 
@@ -165,11 +174,12 @@
             this.btnokdoipass.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnokdoipass.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnokdoipass.ImageOptions.Image")));
             this.btnokdoipass.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnokdoipass.Location = new System.Drawing.Point(174, 191);
+            this.btnokdoipass.Location = new System.Drawing.Point(209, 210);
             this.btnokdoipass.Name = "btnokdoipass";
             this.btnokdoipass.Size = new System.Drawing.Size(96, 33);
-            this.btnokdoipass.TabIndex = 0;
+            this.btnokdoipass.TabIndex = 4;
             this.btnokdoipass.Text = "OK";
+            this.btnokdoipass.Click += new System.EventHandler(this.btnokdoipass_Click);
             // 
             // labelControl4
             // 
@@ -177,11 +187,11 @@
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl4.Appearance.Options.UseFont = true;
             this.labelControl4.Appearance.Options.UseForeColor = true;
-            this.labelControl4.Location = new System.Drawing.Point(27, 77);
+            this.labelControl4.Location = new System.Drawing.Point(27, 80);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(104, 23);
             this.labelControl4.TabIndex = 2;
-            this.labelControl4.Text = "Mật khẩu củ";
+            this.labelControl4.Text = "Mật khẩu cũ";
             // 
             // labelControl3
             // 
@@ -189,7 +199,7 @@
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl3.Appearance.Options.UseFont = true;
             this.labelControl3.Appearance.Options.UseForeColor = true;
-            this.labelControl3.Location = new System.Drawing.Point(27, 36);
+            this.labelControl3.Location = new System.Drawing.Point(27, 38);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(115, 23);
             this.labelControl3.TabIndex = 1;
@@ -198,6 +208,33 @@
             // defaultLookAndFeel1
             // 
             this.defaultLookAndFeel1.LookAndFeel.SkinName = "Blueprint";
+            // 
+            // txtNhapLaiMK
+            // 
+            this.txtNhapLaiMK.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNhapLaiMK.EditValue = "";
+            this.txtNhapLaiMK.Location = new System.Drawing.Point(211, 171);
+            this.txtNhapLaiMK.Name = "txtNhapLaiMK";
+            this.txtNhapLaiMK.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtNhapLaiMK.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.txtNhapLaiMK.Properties.Appearance.Options.UseBackColor = true;
+            this.txtNhapLaiMK.Properties.Appearance.Options.UseForeColor = true;
+            this.txtNhapLaiMK.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.txtNhapLaiMK.Properties.PasswordChar = '*';
+            this.txtNhapLaiMK.Size = new System.Drawing.Size(220, 20);
+            this.txtNhapLaiMK.TabIndex = 3;
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelControl5.Appearance.ForeColor = System.Drawing.Color.White;
+            this.labelControl5.Appearance.Options.UseFont = true;
+            this.labelControl5.Appearance.Options.UseForeColor = true;
+            this.labelControl5.Location = new System.Drawing.Point(27, 169);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(154, 23);
+            this.labelControl5.TabIndex = 9;
+            this.labelControl5.Text = "Nhập lại mật khẩu";
             // 
             // frmdoipass
             // 
@@ -218,6 +255,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtmkmoi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtmkcu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtsuausename.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNhapLaiMK.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -235,5 +273,7 @@
         private DevExpress.XtraEditors.TextEdit txtmkmoi;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.TextEdit txtNhapLaiMK;
+        private DevExpress.XtraEditors.LabelControl labelControl5;
     }
 }

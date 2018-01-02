@@ -11,7 +11,7 @@ namespace DATA_Tier
 {
     public class DBConnect
     {
-        private string connect = DATA_Tier.Properties.Settings.Default.connectstringPhu;
+        private string connect = DATA_Tier.Properties.Settings.Default.connectstringLong;
 
         private SqlDataAdapter myAdapter;
         private SqlConnection conn;
@@ -135,6 +135,30 @@ namespace DATA_Tier
                 conn.Close();
             }
             return true;
+        }
+
+        public int executeNonQuery(string _query, SqlParameter[] sqlParameter)
+        {
+            int row = -1;
+            myAdapter = new SqlDataAdapter();
+            SqlCommand myCommand = new SqlCommand();
+            try
+            {
+                myCommand.Connection = openConnection();
+                myCommand.CommandText = _query;
+                myCommand.Parameters.AddRange(sqlParameter);
+                myAdapter.SelectCommand = myCommand;
+                row = (int)myCommand.ExecuteScalar();
+            }
+            catch (SqlException e)
+            {
+                return -2;
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return row;
         }
 
     }

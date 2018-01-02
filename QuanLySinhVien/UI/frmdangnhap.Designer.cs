@@ -109,7 +109,7 @@
             this.btndangnhap.Location = new System.Drawing.Point(170, 131);
             this.btndangnhap.Name = "btndangnhap";
             this.btndangnhap.Size = new System.Drawing.Size(96, 33);
-            this.btndangnhap.TabIndex = 0;
+            this.btndangnhap.TabIndex = 2;
             this.btndangnhap.Text = "OK";
             this.btndangnhap.Click += new System.EventHandler(this.btndangnhap_Click);
             // 
