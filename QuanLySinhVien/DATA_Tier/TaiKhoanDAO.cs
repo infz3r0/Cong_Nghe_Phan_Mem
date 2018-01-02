@@ -20,10 +20,10 @@ namespace DATA_Tier
         }
         public bool insert(TaiKhoan taikhoan)
         {
-            string query = "Insert into TaiKhoan (Usename,Password) " +
-                           "Values (@Usename,@Password)";
+            string query = "Insert into TaiKhoan (Username,Password) " +
+                           "Values (@Username,@Password)";
             SqlParameter[] sqlParameters = new SqlParameter[2];
-            sqlParameters[0] = new SqlParameter("@Usename", SqlDbType.VarChar);
+            sqlParameters[0] = new SqlParameter("@Username", SqlDbType.VarChar);
             sqlParameters[0].Value = taikhoan.Username;
             sqlParameters[1] = new SqlParameter("@Password", SqlDbType.VarChar);
             sqlParameters[1].Value = taikhoan.Password;
@@ -33,9 +33,9 @@ namespace DATA_Tier
         {
             string query = "Update TaiKhoan " +
                            "Set Password=@Password,GID=@GID" +
-                           "Where Usename=@Usename";
+                           "Where Username=@Username";
             SqlParameter[] sqlParameters = new SqlParameter[3];
-            sqlParameters[0] = new SqlParameter("@Usename", SqlDbType.VarChar);
+            sqlParameters[0] = new SqlParameter("@Username", SqlDbType.VarChar);
             sqlParameters[0].Value = taikhoan.Username;
             sqlParameters[1] = new SqlParameter("@Password", SqlDbType.VarChar);
             sqlParameters[1].Value = taikhoan.Password;
@@ -46,9 +46,9 @@ namespace DATA_Tier
         public bool delete(TaiKhoan taikhoan)
         {
             string query = "Delete from TaiKhoan" +
-                           "Where Usename=@Usename";
+                           "Where Username=@Username";
             SqlParameter[] sqlParameters = new SqlParameter[1];
-            sqlParameters[0] = new SqlParameter("@Usename", SqlDbType.VarChar);
+            sqlParameters[0] = new SqlParameter("@Username", SqlDbType.VarChar);
             sqlParameters[0].Value = taikhoan.Username;
             return executeDeleteQuery(query, sqlParameters);
         }
