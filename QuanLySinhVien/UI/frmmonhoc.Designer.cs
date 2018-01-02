@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -36,7 +35,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmmonhoc));
-            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
+            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.gridviewhp = new System.Windows.Forms.DataGridView();
             this.MaHP = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,7 +59,7 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.btnthoathp = new DevExpress.XtraEditors.SimpleButton();
-            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
+            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager();
             this.btnxoahp = new DevExpress.XtraEditors.SimpleButton();
             this.btnsuahp = new DevExpress.XtraEditors.SimpleButton();
             this.btnthemhp = new DevExpress.XtraEditors.SimpleButton();
@@ -115,6 +114,7 @@
             this.gridviewhp.RowHeadersVisible = false;
             this.gridviewhp.Size = new System.Drawing.Size(947, 192);
             this.gridviewhp.TabIndex = 9;
+            this.gridviewhp.TabStop = false;
             // 
             // MaHP
             // 
@@ -301,7 +301,8 @@
             this.txttenhp.Properties.Appearance.Options.UseBackColor = true;
             this.txttenhp.Properties.Appearance.Options.UseForeColor = true;
             this.txttenhp.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.txttenhp.Properties.Mask.EditMask = "\\S+\\s?";
+            this.txttenhp.Properties.Mask.EditMask = "\\w+( \\w+)*";
+            this.txttenhp.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txttenhp.Properties.MaxLength = 100;
             this.txttenhp.Size = new System.Drawing.Size(297, 20);
             this.txttenhp.TabIndex = 1;

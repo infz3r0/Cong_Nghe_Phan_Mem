@@ -18,22 +18,11 @@ namespace DATA_Tier
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return executeSelectQuery(query, sqlParameters);
         }
-        public bool insert(TaiKhoan taikhoan)
+
+        public bool Insert(TaiKhoan taikhoan)
         {
-            string query = "Insert into TaiKhoan (Username,Password) " +
-                           "Values (@Username,@Password)";
-            SqlParameter[] sqlParameters = new SqlParameter[2];
-            sqlParameters[0] = new SqlParameter("@Username", SqlDbType.VarChar);
-            sqlParameters[0].Value = taikhoan.Username;
-            sqlParameters[1] = new SqlParameter("@Password", SqlDbType.VarChar);
-            sqlParameters[1].Value = taikhoan.Password;
-            return executeInsertQuery(query, sqlParameters);
-        }
-        public bool update(TaiKhoan taikhoan)
-        {
-            string query = "Update TaiKhoan " +
-                           "Set Password=@Password,GID=@GID" +
-                           "Where Username=@Username";
+            string query = "Insert into TaiKhoan (Username, Password, GID) " +
+                           "Values (@Username, @Password, @GID)";
             SqlParameter[] sqlParameters = new SqlParameter[3];
             sqlParameters[0] = new SqlParameter("@Username", SqlDbType.VarChar);
             sqlParameters[0].Value = taikhoan.Username;
@@ -41,16 +30,34 @@ namespace DATA_Tier
             sqlParameters[1].Value = taikhoan.Password;
             sqlParameters[2] = new SqlParameter("@GID", SqlDbType.Int);
             sqlParameters[2].Value = taikhoan.GID;
-            return executeUpdateQuery(query, sqlParameters);
+            return executeInsertQuery(query, sqlParameters);
         }
-        public bool delete(TaiKhoan taikhoan)
+
+        public bool Update(TaiKhoan taikhoan)
         {
-            string query = "Delete from TaiKhoan" +
-                           "Where Username=@Username";
-            SqlParameter[] sqlParameters = new SqlParameter[1];
+            string query = "Update TaiKhoan set Password = @Password where Username = @Username";
+            SqlParameter[] sqlParameters = new SqlParameter[2];
             sqlParameters[0] = new SqlParameter("@Username", SqlDbType.VarChar);
             sqlParameters[0].Value = taikhoan.Username;
-            return executeDeleteQuery(query, sqlParameters);
+            sqlParameters[1] = new SqlParameter("@Password", SqlDbType.VarChar);
+            sqlParameters[1].Value = taikhoan.Password;
+            return executeUpdateQuery(query, sqlParameters);
+        }
+
+        public bool Login(TaiKhoan taikhoan)
+        {
+            string query = "Select count(*) from TaiKhoan where Username = @Username and Password = @Password";
+            SqlParameter[] sqlParameters = new SqlParameter[2];
+            sqlParameters[0] = new SqlParameter("@Username", SqlDbType.VarChar);
+            sqlParameters[0].Value = taikhoan.Username;
+            sqlParameters[1] = new SqlParameter("@Password", SqlDbType.VarChar);
+            sqlParameters[1].Value = taikhoan.Password;
+            int ret =  executeNonQuery(query, sqlParameters);
+            if (ret == 1)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

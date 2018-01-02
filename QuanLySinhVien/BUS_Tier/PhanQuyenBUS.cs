@@ -16,30 +16,17 @@ namespace BUS_Tier
 
         public DataTable DanhSach()
         {
-            DataTable dt = new DataTable();
-
-            return dt;
+            return phanQuyenDAO.getAll();
         }
 
-        public bool Them(PhanQuyen phanQuyen)
+        public bool CapNhat(PhanQuyen phanQuyen)
         {
-            bool result = false;
-
-            return result;
+            return phanQuyenDAO.insert(phanQuyen);
         }
 
         public bool Xoa(PhanQuyen phanQuyen)
         {
-            bool result = false;
-
-            return result;
-        }
-
-        public bool Sua(PhanQuyen phanQuyen)
-        {
-            bool result = false;
-
-            return result;
+            return phanQuyenDAO.deleteAll(phanQuyen);
         }
     }
 }

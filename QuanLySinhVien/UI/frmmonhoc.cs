@@ -90,6 +90,7 @@ namespace UI_Tier
             {
                 return;
             }
+
             string mahp = txtmahp.Text;
             string tenhp = txttenhp.Text;
             int stc = string.IsNullOrEmpty(txtstchp.Text) ? 0 : int.Parse(txtstchp.Text);

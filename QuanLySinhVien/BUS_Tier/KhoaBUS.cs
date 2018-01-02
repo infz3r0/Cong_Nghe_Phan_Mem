@@ -24,16 +24,6 @@ namespace BUS_Tier
         public bool Them(Khoa khoa)
         {
             bool result = false;
-
-            if (string.IsNullOrEmpty(khoa.MaKhoa))
-            {
-                return false;
-            }
-            if (string.IsNullOrEmpty(khoa.TenKhoa))
-            {
-                return false;
-            }
-
             result = khoaDAO.insert(khoa);
             return result;
         }
