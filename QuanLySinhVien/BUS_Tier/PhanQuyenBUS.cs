@@ -28,5 +28,10 @@ namespace BUS_Tier
         {
             return phanQuyenDAO.deleteAll(phanQuyen);
         }
+
+        public DataTable DanhSachQuyenTheoGID(int gid)
+        {
+            return phanQuyenDAO.SelectMaQuyenByGID(gid);
+        }
     }
 }

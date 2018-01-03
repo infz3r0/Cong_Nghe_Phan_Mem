@@ -19,6 +19,15 @@ namespace DATA_Tier
             return executeSelectQuery(query, sqlParameters);
         }
 
+        public DataTable SelectByUsername(TaiKhoan taikhoan)
+        {
+            string query = "Select * from TaiKhoan where Username = @Username";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@Username", SqlDbType.VarChar);
+            sqlParameters[0].Value = taikhoan.Username;
+            return executeSelectQuery(query, sqlParameters);
+        }
+
         public bool Insert(TaiKhoan taikhoan)
         {
             string query = "Insert into TaiKhoan (Username, Password, GID) " +

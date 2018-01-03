@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::UI_Tier.frmload), false, false);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmmain));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
@@ -52,8 +53,8 @@
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel();
-            this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager();
+            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
+            this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager(this.components);
             this.dockPanel1 = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
@@ -74,11 +75,11 @@
             this.navBarGroup5 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItem11 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem12 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem16 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarGroup6 = new DevExpress.XtraNavBar.NavBarGroup();
             this.navBarItem14 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem15 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem10 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem16 = new DevExpress.XtraNavBar.NavBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDisplayFormat1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1)).BeginInit();
@@ -390,6 +391,8 @@
             // 
             // navBarItem1
             // 
+            this.navBarItem1.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Strikeout);
+            this.navBarItem1.AppearanceDisabled.Options.UseFont = true;
             this.navBarItem1.Caption = "Khoa";
             this.navBarItem1.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem1.ImageOptions.SmallImage")));
             this.navBarItem1.Name = "navBarItem1";
@@ -397,6 +400,8 @@
             // 
             // navBarItem2
             // 
+            this.navBarItem2.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Strikeout);
+            this.navBarItem2.AppearanceDisabled.Options.UseFont = true;
             this.navBarItem2.Caption = "Lớp khóa học";
             this.navBarItem2.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem2.ImageOptions.SmallImage")));
             this.navBarItem2.Name = "navBarItem2";
@@ -404,6 +409,8 @@
             // 
             // navBarItem3
             // 
+            this.navBarItem3.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Strikeout);
+            this.navBarItem3.AppearanceDisabled.Options.UseFont = true;
             this.navBarItem3.Caption = "Lớp học phần";
             this.navBarItem3.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem3.ImageOptions.SmallImage")));
             this.navBarItem3.Name = "navBarItem3";
@@ -411,6 +418,8 @@
             // 
             // navBarItem4
             // 
+            this.navBarItem4.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Strikeout);
+            this.navBarItem4.AppearanceDisabled.Options.UseFont = true;
             this.navBarItem4.Caption = "Sinh viên";
             this.navBarItem4.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem4.ImageOptions.SmallImage")));
             this.navBarItem4.Name = "navBarItem4";
@@ -418,6 +427,8 @@
             // 
             // navBarItem5
             // 
+            this.navBarItem5.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Strikeout);
+            this.navBarItem5.AppearanceDisabled.Options.UseFont = true;
             this.navBarItem5.Caption = "Môn học";
             this.navBarItem5.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem5.ImageOptions.SmallImage")));
             this.navBarItem5.Name = "navBarItem5";
@@ -425,6 +436,8 @@
             // 
             // navBarItem13
             // 
+            this.navBarItem13.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Strikeout);
+            this.navBarItem13.AppearanceDisabled.Options.UseFont = true;
             this.navBarItem13.Caption = "Ban cán sự";
             this.navBarItem13.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem13.ImageOptions.SmallImage")));
             this.navBarItem13.Name = "navBarItem13";
@@ -447,6 +460,8 @@
             // 
             // navBarItem6
             // 
+            this.navBarItem6.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Strikeout);
+            this.navBarItem6.AppearanceDisabled.Options.UseFont = true;
             this.navBarItem6.Caption = "Nhập điểm";
             this.navBarItem6.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem6.ImageOptions.SmallImage")));
             this.navBarItem6.Name = "navBarItem6";
@@ -454,6 +469,8 @@
             // 
             // navBarItem7
             // 
+            this.navBarItem7.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Strikeout);
+            this.navBarItem7.AppearanceDisabled.Options.UseFont = true;
             this.navBarItem7.Caption = "Xem điểm";
             this.navBarItem7.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem7.ImageOptions.SmallImage")));
             this.navBarItem7.Name = "navBarItem7";
@@ -475,6 +492,8 @@
             // 
             // navBarItem8
             // 
+            this.navBarItem8.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Strikeout);
+            this.navBarItem8.AppearanceDisabled.Options.UseFont = true;
             this.navBarItem8.Caption = "Thông tin sinh viên";
             this.navBarItem8.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem8.ImageOptions.SmallImage")));
             this.navBarItem8.Name = "navBarItem8";
@@ -496,6 +515,8 @@
             // 
             // navBarItem9
             // 
+            this.navBarItem9.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Strikeout);
+            this.navBarItem9.AppearanceDisabled.Options.UseFont = true;
             this.navBarItem9.Caption = "Danh sách sinh viên";
             this.navBarItem9.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem9.ImageOptions.SmallImage")));
             this.navBarItem9.Name = "navBarItem9";
@@ -510,7 +531,6 @@
             this.navBarGroup5.AppearanceHotTracked.FontSizeDelta = 3;
             this.navBarGroup5.AppearanceHotTracked.Options.UseFont = true;
             this.navBarGroup5.Caption = "Tài khoản";
-            this.navBarGroup5.Expanded = true;
             this.navBarGroup5.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarGroup5.ImageOptions.SmallImage")));
             this.navBarGroup5.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem11),
@@ -520,6 +540,8 @@
             // 
             // navBarItem11
             // 
+            this.navBarItem11.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Strikeout);
+            this.navBarItem11.AppearanceDisabled.Options.UseFont = true;
             this.navBarItem11.Caption = "Đổi mật khẩu";
             this.navBarItem11.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem11.ImageOptions.SmallImage")));
             this.navBarItem11.Name = "navBarItem11";
@@ -527,10 +549,20 @@
             // 
             // navBarItem12
             // 
+            this.navBarItem12.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Strikeout);
+            this.navBarItem12.AppearanceDisabled.Options.UseFont = true;
             this.navBarItem12.Caption = "Đăng kí";
             this.navBarItem12.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem12.ImageOptions.SmallImage")));
             this.navBarItem12.Name = "navBarItem12";
             this.navBarItem12.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem12_LinkClicked);
+            // 
+            // navBarItem16
+            // 
+            this.navBarItem16.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Strikeout);
+            this.navBarItem16.AppearanceDisabled.Options.UseFont = true;
+            this.navBarItem16.Caption = "Phân quyền";
+            this.navBarItem16.Name = "navBarItem16";
+            this.navBarItem16.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem16_LinkClicked);
             // 
             // navBarGroup6
             // 
@@ -549,12 +581,16 @@
             // 
             // navBarItem14
             // 
+            this.navBarItem14.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Strikeout);
+            this.navBarItem14.AppearanceDisabled.Options.UseFont = true;
             this.navBarItem14.Caption = "Hệ thống (tham số)";
             this.navBarItem14.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem14.ImageOptions.SmallImage")));
             this.navBarItem14.Name = "navBarItem14";
             // 
             // navBarItem15
             // 
+            this.navBarItem15.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Strikeout);
+            this.navBarItem15.AppearanceDisabled.Options.UseFont = true;
             this.navBarItem15.Caption = "Bảng điểm hệ 4";
             this.navBarItem15.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem15.ImageOptions.SmallImage")));
             this.navBarItem15.Name = "navBarItem15";
@@ -562,15 +598,11 @@
             // 
             // navBarItem10
             // 
+            this.navBarItem10.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Strikeout);
+            this.navBarItem10.AppearanceDisabled.Options.UseFont = true;
             this.navBarItem10.Caption = "Thông tin tài khoản";
             this.navBarItem10.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem10.ImageOptions.SmallImage")));
             this.navBarItem10.Name = "navBarItem10";
-            // 
-            // navBarItem16
-            // 
-            this.navBarItem16.Caption = "Phân quyền";
-            this.navBarItem16.Name = "navBarItem16";
-            this.navBarItem16.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem16_LinkClicked);
             // 
             // frmmain
             // 

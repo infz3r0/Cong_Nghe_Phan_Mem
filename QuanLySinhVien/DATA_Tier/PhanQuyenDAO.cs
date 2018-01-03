@@ -18,6 +18,16 @@ namespace DATA_Tier
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return executeSelectQuery(query, sqlParameters);
         }
+
+        public DataTable SelectMaQuyenByGID(int gid)
+        {
+            string query = "select MaQuyen from PhanQuyen where GID = @gid";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@GID", SqlDbType.Int);
+            sqlParameters[0].Value = gid;
+            return executeSelectQuery(query, sqlParameters);
+        }
+
         public bool insert(PhanQuyen phanquyen)
         {
             string query = "Insert into PhanQuyen (GID, MaQuyen) " +

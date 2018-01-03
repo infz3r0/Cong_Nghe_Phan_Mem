@@ -46,6 +46,18 @@ namespace BUS_Tier
             return taiKhoanDAO.Update(taiKhoanMoi);
         }
 
+        public int GetGID(TaiKhoan taiKhoan)
+        {
+            int gid = -1;
+            DataTable dt;
+            if (taiKhoanDAO.Login(taiKhoan))
+            {
+                dt = taiKhoanDAO.SelectByUsername(taiKhoan);
+                gid = int.Parse(dt.Rows[0]["GID"].ToString());
+            }
+            return gid;
+        }
+
         private string Md5(string input)
         {
             string output = "";

@@ -17,8 +17,27 @@ namespace UI_Tier
 {
     public partial class frmmain : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+        PhanQuyenBUS phanQuyenBUS = new PhanQuyenBUS();
+
         public static string username;
+        public static int gid;
         private bool exit_dangnhap;
+
+        #region biến phân quyền
+        public static int f_khoa;
+        public static int f_lopKhoaHoc;
+        public static int f_sinhVien;
+        public static int f_monHoc;
+        public static int f_lopHocPhan;
+
+        public static int f_diem;
+        public static int f_traCuu;
+        public static int f_thongKe;
+
+        public static int f_doiPassword;
+        public static int f_dangKiTK;
+        public static int f_heThong;
+        #endregion
 
         public frmmain()
         {
@@ -27,16 +46,70 @@ namespace UI_Tier
             exit_dangnhap = false;
         }
 
+        private void InitPermission()
+        {
+            f_khoa = 0;
+            f_lopKhoaHoc = 0;
+            f_sinhVien = 0;
+            f_monHoc = 0;
+            f_lopHocPhan = 0;
+
+            f_diem = 0;
+            f_traCuu = 0;
+            f_thongKe = 0;
+
+            f_doiPassword = 0;
+            f_dangKiTK = 0;
+            f_heThong = 0;
+        }
+
+        private void DisableAll()
+        {
+            navBarItem1.Enabled = false;
+            navBarItem2.Enabled = false;
+            navBarItem3.Enabled = false;
+            navBarItem4.Enabled = false;
+            navBarItem5.Enabled = false;
+            navBarItem13.Enabled = false;
+
+            navBarItem6.Enabled = false;
+            navBarItem7.Enabled = false;
+
+            navBarItem8.Enabled = false;
+
+            navBarItem9.Enabled = false;
+
+            navBarItem11.Enabled = false;
+            navBarItem12.Enabled = false;
+            navBarItem12.Visible = false;
+            navBarItem16.Enabled = false;
+            navBarItem16.Visible = false;
+
+
+            navBarItem14.Enabled = false;
+            navBarItem14.Visible = false;
+            navBarItem15.Enabled = false;
+        }
+
+        private void PhanQuyen()
+        {
+            DisableAll();
+            InitPermission();
+            DataTable dsQuyen = phanQuyenBUS.DanhSachQuyenTheoGID(gid);
+            ChangePermission(dsQuyen);
+        }
+
         private void OpenFormDangNhap()
         {
             frmdangnhap f = new frmdangnhap();
-            DialogResult dlr =  f.ShowDialog(this);
+            DialogResult dlr = f.ShowDialog(this);
             txtusername.EditValue = username;
             if (dlr == DialogResult.Yes)
             {
                 exit_dangnhap = true;
                 Application.Exit();
             }
+            PhanQuyen();
         }
 
         private void frmmain_Load(object sender, EventArgs e)
@@ -47,7 +120,7 @@ namespace UI_Tier
                 try
                 {
                     ctlMDI = (MdiClient)ctl;
-                    
+
                     ctlMDI.BackColor = this.BackColor;
                 }
                 catch (InvalidCastException exc)
@@ -55,7 +128,7 @@ namespace UI_Tier
                     Console.WriteLine(exc.ToString());
                 }
             }
-            
+
             OpenFormDangNhap();
         }
 
@@ -87,7 +160,7 @@ namespace UI_Tier
             if (dlr == DialogResult.No)
             {
                 e.Cancel = true;
-            }            
+            }
         }
 
         private void btnthoatmain_ItemClick(object sender, ItemClickEventArgs e)
@@ -99,6 +172,8 @@ namespace UI_Tier
         {
             Close();
         }
+
+        #region Các chức năng
 
         private void navBarItem1_LinkClicked_1(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
@@ -283,6 +358,11 @@ namespace UI_Tier
 
         private void btnDangXuat_ItemClick(object sender, ItemClickEventArgs e)
         {
+            Form[] fchilds = this.MdiChildren;
+            foreach (Form f in fchilds)
+            {
+                f.Dispose();
+            }
             username = "";
             txtusername.EditValue = username;
             OpenFormDangNhap();
@@ -326,6 +406,159 @@ namespace UI_Tier
             else
             {
                 frm.Activate();
+            }
+        }
+
+        #endregion
+
+        private void ChangePermission(DataTable danhSachQuyen)
+        {
+            for (int r = 0; r < danhSachQuyen.Rows.Count; r++)
+            {
+                int ma = int.Parse(danhSachQuyen.Rows[r]["MaQuyen"].ToString());
+                switch (ma)
+                {
+                    case 0:
+                        //Xem danh sách khoa
+                        navBarItem1.Enabled = true;
+                        break;
+                    case 1:
+                        //Thêm thông tin khoa
+                        f_khoa += 1;
+                        break;
+                    case 2:
+                        //Xóa thông tin khoa
+                        f_khoa += 2;
+                        break;
+                    case 3:
+                        //Sửa thông tin khoa
+                        f_khoa += 4;
+                        break;
+                    case 4:
+                        //Xem danh sách lớp khóa học
+                        navBarItem2.Enabled = true;
+                        break;
+                    case 5:
+                        //Thêm thông tin lớp khóa học
+                        navBarItem13.Enabled = true;
+                        f_lopKhoaHoc += 1;
+                        break;
+                    case 6:
+                        //Xóa thông tin lớp khóa học
+                        navBarItem13.Enabled = true;
+                        f_lopKhoaHoc += 2;
+                        break;
+                    case 7:
+                        //Sửa thông tin lớp khóa học
+                        navBarItem13.Enabled = true;
+                        f_lopKhoaHoc += 4;
+                        break;
+                    case 8:
+                        //Xem danh sách sinh viên
+                        navBarItem4.Enabled = true;
+                        break;
+                    case 9:
+                        //Thêm thông tin sinh viên
+                        f_sinhVien += 1;
+                        break;
+                    case 10:
+                        //Xóa thông tin sinh viên
+                        f_sinhVien += 2;
+                        break;
+                    case 11:
+                        //Sửa thông tin sinh viên
+                        f_sinhVien += 4;
+                        break;
+                    case 12:
+                        //Xem danh sách môn học
+                        navBarItem5.Enabled = true;
+                        break;
+                    case 13:
+                        //Thêm thông tin môn học
+                        f_monHoc += 1;
+                        break;
+                    case 14:
+                        //Xóa thông tin môn học
+                        f_monHoc += 2;
+                        break;
+                    case 15:
+                        //Sửa thông tin môn học
+                        f_monHoc += 4;
+                        break;
+                    case 16:
+                        //Xem danh sách lớp học phần
+                        navBarItem3.Enabled = true;
+                        break;
+                    case 17:
+                        //Thêm thông tin lớp học phần
+                        f_lopHocPhan += 1;
+                        break;
+                    case 18:
+                        //Xóa thông tin lớp học phần
+                        f_lopHocPhan += 1;
+                        break;
+                    case 19:
+                        //Sửa thông tin lớp học phần
+                        f_lopHocPhan += 1;
+                        break;
+                    case 20:
+                        //Đăng kí môn học
+
+                        break;
+                    case 21:
+                        //Hủy môn học
+
+                        break;
+                    case 22:
+                        //Xem điểm
+                        navBarItem7.Enabled = true;
+                        f_diem += 1;
+                        break;
+                    case 23:
+                        //Nhập điểm
+                        navBarItem6.Enabled = true;
+                        f_diem += 2;
+                        break;
+                    case 24:
+                        //Đổi password
+                        navBarItem11.Enabled = true;
+                        f_doiPassword += 1;
+                        break;
+                    case 25:
+                        //Đăng kí tài khoản
+                        navBarItem12.Enabled = true;
+                        navBarItem12.Visible = true;
+                        f_dangKiTK += 1;
+                        break;
+                    case 26:
+                        //Phân quyền
+                        navBarItem16.Enabled = true;
+                        navBarItem16.Visible = true;
+                        f_heThong += 1;
+                        break;
+                    case 27:
+                        //Xem danh sách tham số
+                        navBarItem14.Enabled = true;
+                        navBarItem14.Visible = true;
+                        f_heThong += 2;
+                        break;
+                    case 28:
+                        //Sửa giá trị tham số
+                        f_heThong += 4;
+                        break;
+                    case 29:
+                        //Tra cứu thông tin sinh viên
+                        navBarItem8.Enabled = true;
+                        f_traCuu += 1;
+                        break;
+                    case 30:
+                        //Thống kê
+                        navBarItem9.Enabled = true;
+                        f_thongKe += 1;
+                        break;
+                    default:
+                        break;
+                }
             }
         }
     }

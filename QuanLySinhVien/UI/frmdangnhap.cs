@@ -55,6 +55,7 @@ namespace UI_Tier
             {
                 dadangnhap = true;
                 frmmain.username = txtusename.Text;
+                frmmain.gid = taikhoanBUS.GetGID(taikhoan);
                 Dispose();
             }
             else
