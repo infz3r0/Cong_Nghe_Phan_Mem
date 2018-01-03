@@ -77,6 +77,8 @@
             this.txtPassword.Properties.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(220, 20);
             this.txtPassword.TabIndex = 1;
+            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
+            this.txtPassword.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyUp);
             // 
             // txtusename
             // 
@@ -156,6 +158,7 @@
             this.Text = "ĐĂNG NHẬP HỆ THỐNG";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmdangnhap_FormClosing);
             this.Shown += new System.EventHandler(this.frmdangnhap_Shown);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmdangnhap_KeyDown);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).EndInit();

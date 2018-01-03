@@ -29,14 +29,11 @@ namespace UI_Tier
             if (dlr == DialogResult.No) e.Cancel = true;
         }
 
-        private void btnthoatlophp_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
         BindingSource bs = new BindingSource();
         LopHocPhanBUS lophpBUS = new LopHocPhanBUS();
         MonHocBUS monhocBUS = new MonHocBUS();
         DanhSachLopHPBUS danhsachlophpBUS = new DanhSachLopHPBUS();
+
         private void LoadDB()
         {
             bs.DataSource = lophpBUS.DanhSach();
@@ -70,6 +67,8 @@ namespace UI_Tier
         {
             LoadDB();
             cbbMaHPLopHP.AutoCompleteCustomSource = LoadAutoComplete();
+
+            PhanQuyen();
         }
 
         private bool DuLieuHopLe()
@@ -89,6 +88,7 @@ namespace UI_Tier
             return true;
         }
 
+        #region Chức năng
         private void btnthemlophp_Click(object sender, EventArgs e)
         {
             if (!DuLieuHopLe())
@@ -127,7 +127,7 @@ namespace UI_Tier
                 return;
             }
 
-            string malophp= gridLopHP.SelectedCells[0].OwningRow.Cells[0].Value.ToString();
+            string malophp = gridLopHP.SelectedCells[0].OwningRow.Cells[0].Value.ToString();
             string mahp = cbbMaHPLopHP.SelectedValue.ToString();
 
             //string loptruong = cbbLopTruong.SelectedValue.ToString();
@@ -169,5 +169,72 @@ namespace UI_Tier
             bs.DataSource = lophpBUS.DanhSach();
             txtmalophp.Focus();
         }
+
+        private void btnthoatlophp_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+        #endregion
+
+        #region Phân quyền
+        private void DisableAll()
+        {
+            btnthemlophp.Enabled = false;
+            btnxoalophp.Enabled = false;
+            btnsualophp.Enabled = false;
+        }
+
+        private void PhanQuyen()
+        {
+            DisableAll();
+            ChangePermission(frmmain.f_lopHocPhan);
+        }
+
+        private void ChangePermission(int value)
+        {
+            //t: Thêm
+            //x: Xóa
+            //s: Sửa
+            switch (value)
+            {
+                case 0:
+                    //---
+                    break;
+                case 1:
+                    //t--
+                    btnthemlophp.Enabled = true;
+                    break;
+                case 2:
+                    //-x-
+                    btnxoalophp.Enabled = true;
+                    break;
+                case 4:
+                    //--s
+                    btnsualophp.Enabled = true;
+                    break;
+                case 3:
+                    //tx-
+                    btnthemlophp.Enabled = true;
+                    btnxoalophp.Enabled = true;
+                    break;
+                case 5:
+                    //t-s
+                    btnthemlophp.Enabled = true;
+                    btnsualophp.Enabled = true;
+                    break;
+                case 6:
+                    //-xs
+                    btnxoalophp.Enabled = true;
+                    btnsualophp.Enabled = true;
+                    break;
+                case 7:
+                    //txs
+                    btnthemlophp.Enabled = true;
+                    btnxoalophp.Enabled = true;
+                    btnsualophp.Enabled = true;
+                    break;
+            }
+        }
+        #endregion
     }
 }

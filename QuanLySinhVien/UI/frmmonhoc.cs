@@ -27,11 +27,6 @@ namespace UI_Tier
             if (dlr == DialogResult.No) e.Cancel = true;
         }
 
-        private void btnthoathp_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         MonHocBUS monhocBUS = new MonHocBUS();
         BindingSource bs = new BindingSource();
 
@@ -40,19 +35,21 @@ namespace UI_Tier
             bs.DataSource = monhocBUS.DanhSach();
             gridviewhp.DataSource = bs;
 
-            txtmahp.DataBindings.Add("Text", bs, "MaHP", false,DataSourceUpdateMode.Never);
+            txtmahp.DataBindings.Add("Text", bs, "MaHP", false, DataSourceUpdateMode.Never);
             txttenhp.DataBindings.Add("Text", bs, "TenHP", false, DataSourceUpdateMode.Never);
             txtstchp.DataBindings.Add("Text", bs, "SoTinChi", false, DataSourceUpdateMode.Never);
             cbbLoaiHocPhan.DataBindings.Add("SelectedItem", bs, "LoaiHP");
             txtTrongSoDQT.DataBindings.Add("Text", bs, "TrongSoDQT", false, DataSourceUpdateMode.Never);
             txtTrongSoDThi.DataBindings.Add("Text", bs, "TrongSoDThi", false, DataSourceUpdateMode.Never);
-            
+
         }
 
         private void frmmonhoc_Load(object sender, EventArgs e)
         {
             LoadDB();
             cbbLoaiHocPhan.SelectedIndex = 0;
+
+            PhanQuyen();
         }
 
         private bool DuLieuHopLe()
@@ -84,6 +81,7 @@ namespace UI_Tier
             return true;
         }
 
+        #region Chức năng
         private void btnthemhp_Click(object sender, EventArgs e)
         {
             if (!DuLieuHopLe())
@@ -125,7 +123,7 @@ namespace UI_Tier
                 return;
             }
 
-            string mahp=gridviewhp.SelectedCells[0].OwningRow.Cells[0].Value.ToString();
+            string mahp = gridviewhp.SelectedCells[0].OwningRow.Cells[0].Value.ToString();
             string tenhp = txttenhp.Text;
             int stc = string.IsNullOrEmpty(txtstchp.Text) ? 0 : int.Parse(txtstchp.Text);
             string loaihp = cbbLoaiHocPhan.Text;
@@ -170,5 +168,72 @@ namespace UI_Tier
             bs.DataSource = monhocBUS.DanhSach();
             txtmahp.Focus();
         }
+
+        private void btnthoathp_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+        #endregion
+
+        #region Phân quyền
+        private void DisableAll()
+        {
+            btnthemhp.Enabled = false;
+            btnxoahp.Enabled = false;
+            btnsuahp.Enabled = false;
+        }
+
+        private void PhanQuyen()
+        {
+            DisableAll();
+            ChangePermission(frmmain.f_monHoc);
+        }
+
+        private void ChangePermission(int value)
+        {
+            //t: Thêm
+            //x: Xóa
+            //s: Sửa
+            switch (value)
+            {
+                case 0:
+                    //---
+                    break;
+                case 1:
+                    //t--
+                    btnthemhp.Enabled = true;
+                    break;
+                case 2:
+                    //-x-
+                    btnxoahp.Enabled = true;
+                    break;
+                case 4:
+                    //--s
+                    btnsuahp.Enabled = true;
+                    break;
+                case 3:
+                    //tx-
+                    btnthemhp.Enabled = true;
+                    btnxoahp.Enabled = true;
+                    break;
+                case 5:
+                    //t-s
+                    btnthemhp.Enabled = true;
+                    btnsuahp.Enabled = true;
+                    break;
+                case 6:
+                    //-xs
+                    btnxoahp.Enabled = true;
+                    btnsuahp.Enabled = true;
+                    break;
+                case 7:
+                    //txs
+                    btnthemhp.Enabled = true;
+                    btnxoahp.Enabled = true;
+                    btnsuahp.Enabled = true;
+                    break;
+            }
+        }
+        #endregion
     }
 }

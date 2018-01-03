@@ -27,15 +27,10 @@ namespace UI_Tier
             if (dlr == DialogResult.No) e.Cancel = true;
         }
 
-        private void btnthoatlopkh_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         BindingSource bs = new BindingSource();
         LopKhoaHocBUS lopKhoaHocBUS = new LopKhoaHocBUS();
         KhoaBUS khoaBUS = new KhoaBUS();
-  
+
         private void LoadDB()
         {
             bs.DataSource = lopKhoaHocBUS.DanhSach();
@@ -54,6 +49,8 @@ namespace UI_Tier
             LoadDB();
 
             cbbTenKhoaLopKH.AutoCompleteCustomSource = LoadAutoComplete();
+
+            PhanQuyen();
         }
 
         public AutoCompleteStringCollection LoadAutoComplete()
@@ -84,6 +81,7 @@ namespace UI_Tier
             return true;
         }
 
+        #region Chức năng
         private void btnthemlopkh_Click(object sender, EventArgs e)
         {
             if (!DuLieuHopLe())
@@ -93,7 +91,7 @@ namespace UI_Tier
             string malop = txtmalopkhoahoc.Text;
             string makhoa = cbbTenKhoaLopKH.SelectedValue.ToString();
 
-            LopKhoaHoc lopKhoaHoc = new LopKhoaHoc(malop,makhoa);
+            LopKhoaHoc lopKhoaHoc = new LopKhoaHoc(malop, makhoa);
 
             bool thanhcong = lopKhoaHocBUS.Them(lopKhoaHoc);
             if (thanhcong)
@@ -129,7 +127,7 @@ namespace UI_Tier
 
             LopKhoaHoc lopKhoaHoc = new LopKhoaHoc(malop, makhoa);
             bool thanhcong = lopKhoaHocBUS.Sua(lopKhoaHoc);
-            if(thanhcong)
+            if (thanhcong)
             {
                 MessageBox.Show("Thành công !");
             }
@@ -161,8 +159,75 @@ namespace UI_Tier
                 MessageBox.Show("Lỗi !", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             bs.DataSource = lopKhoaHocBUS.DanhSach();
-           
+
 
         }
+
+        private void btnthoatlopkh_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+        #endregion
+
+        #region Phân quyền
+        private void DisableAll()
+        {
+            btnthemlopkh.Enabled = false;
+            btnxoalopkh.Enabled = false;
+            btnsualopkh.Enabled = false;
+        }
+
+        private void PhanQuyen()
+        {
+            DisableAll();
+            ChangePermission(frmmain.f_lopKhoaHoc);
+        }
+
+        private void ChangePermission(int value)
+        {
+            //t: Thêm
+            //x: Xóa
+            //s: Sửa
+            switch (value)
+            {
+                case 0:
+                    //---
+                    break;
+                case 1:
+                    //t--
+                    btnthemlopkh.Enabled = true;
+                    break;
+                case 2:
+                    //-x-
+                    btnxoalopkh.Enabled = true;
+                    break;
+                case 4:
+                    //--s
+                    btnsualopkh.Enabled = true;
+                    break;
+                case 3:
+                    //tx-
+                    btnthemlopkh.Enabled = true;
+                    btnxoalopkh.Enabled = true;
+                    break;
+                case 5:
+                    //t-s
+                    btnthemlopkh.Enabled = true;
+                    btnsualopkh.Enabled = true;
+                    break;
+                case 6:
+                    //-xs
+                    btnxoalopkh.Enabled = true;
+                    btnsualopkh.Enabled = true;
+                    break;
+                case 7:
+                    //txs
+                    btnthemlopkh.Enabled = true;
+                    btnxoalopkh.Enabled = true;
+                    btnsualopkh.Enabled = true;
+                    break;
+            }
+        }
+        #endregion
     }
 }

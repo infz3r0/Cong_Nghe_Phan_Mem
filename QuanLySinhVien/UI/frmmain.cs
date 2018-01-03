@@ -46,59 +46,6 @@ namespace UI_Tier
             exit_dangnhap = false;
         }
 
-        private void InitPermission()
-        {
-            f_khoa = 0;
-            f_lopKhoaHoc = 0;
-            f_sinhVien = 0;
-            f_monHoc = 0;
-            f_lopHocPhan = 0;
-
-            f_diem = 0;
-            f_traCuu = 0;
-            f_thongKe = 0;
-
-            f_doiPassword = 0;
-            f_dangKiTK = 0;
-            f_heThong = 0;
-        }
-
-        private void DisableAll()
-        {
-            navBarItem1.Enabled = false;
-            navBarItem2.Enabled = false;
-            navBarItem3.Enabled = false;
-            navBarItem4.Enabled = false;
-            navBarItem5.Enabled = false;
-            navBarItem13.Enabled = false;
-
-            navBarItem6.Enabled = false;
-            navBarItem7.Enabled = false;
-
-            navBarItem8.Enabled = false;
-
-            navBarItem9.Enabled = false;
-
-            navBarItem11.Enabled = false;
-            navBarItem12.Enabled = false;
-            navBarItem12.Visible = false;
-            navBarItem16.Enabled = false;
-            navBarItem16.Visible = false;
-
-
-            navBarItem14.Enabled = false;
-            navBarItem14.Visible = false;
-            navBarItem15.Enabled = false;
-        }
-
-        private void PhanQuyen()
-        {
-            DisableAll();
-            InitPermission();
-            DataTable dsQuyen = phanQuyenBUS.DanhSachQuyenTheoGID(gid);
-            ChangePermission(dsQuyen);
-        }
-
         private void OpenFormDangNhap()
         {
             frmdangnhap f = new frmdangnhap();
@@ -396,21 +343,17 @@ namespace UI_Tier
 
         private void navBarItem16_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            Form frm = kiemtraform(typeof(frmPhanQuyen));
-            if (frm == null)
+            frmPhanQuyen forms = new frmPhanQuyen();
+            DialogResult dlr = forms.ShowDialog(this);
+            if (dlr == DialogResult.Yes)
             {
-                frmPhanQuyen forms = new frmPhanQuyen();
-                forms.MdiParent = this;
-                forms.Show();
-            }
-            else
-            {
-                frm.Activate();
+                PhanQuyen();
             }
         }
 
         #endregion
 
+        #region Phân quyền
         private void ChangePermission(DataTable danhSachQuyen)
         {
             for (int r = 0; r < danhSachQuyen.Rows.Count; r++)
@@ -561,5 +504,63 @@ namespace UI_Tier
                 }
             }
         }
+
+        private void InitPermission()
+        {
+            f_khoa = 0;
+            f_lopKhoaHoc = 0;
+            f_sinhVien = 0;
+            f_monHoc = 0;
+            f_lopHocPhan = 0;
+
+            f_diem = 0;
+            f_traCuu = 0;
+            f_thongKe = 0;
+
+            f_doiPassword = 0;
+            f_dangKiTK = 0;
+            f_heThong = 0;
+        }
+
+        private void DisableAll()
+        {
+            navBarItem1.Enabled = false;
+            navBarItem2.Enabled = false;
+            navBarItem3.Enabled = false;
+            navBarItem4.Enabled = false;
+            navBarItem5.Enabled = false;
+            navBarItem13.Enabled = false;
+
+            navBarItem6.Enabled = false;
+            navBarItem7.Enabled = false;
+
+            navBarItem8.Enabled = false;
+
+            navBarItem9.Enabled = false;
+
+            navBarItem11.Enabled = false;
+            navBarItem12.Enabled = false;
+            navBarItem12.Visible = false;
+            navBarItem16.Enabled = false;
+            navBarItem16.Visible = false;
+
+
+            navBarItem14.Enabled = false;
+            navBarItem14.Visible = false;
+            navBarItem15.Enabled = false;
+        }
+
+        private void PhanQuyen()
+        {
+            dockPanel1.Enabled = false;
+            DisableAll();
+            InitPermission();
+            DataTable dsQuyen = phanQuyenBUS.DanhSachQuyenTheoGID(gid);
+            ChangePermission(dsQuyen);
+            dockPanel1.Enabled = true;
+        }
+
+        #endregion
+        
     }
 }
