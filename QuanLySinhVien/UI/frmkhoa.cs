@@ -15,25 +15,20 @@ namespace UI_Tier
 {
     public partial class frmkhoa : Form
     {
+        private KhoaBUS khoaBUS = new KhoaBUS();
+        private BindingSource bs = new BindingSource();
+
         public frmkhoa()
         {
             InitializeComponent();
         }
 
-        private void frmkhoa_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            DialogResult dlr = MessageBox.Show("Bạn muốn đóng Form?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dlr == DialogResult.No) e.Cancel = true;
-        }
-
-        KhoaBUS khoaBUS = new KhoaBUS();
-        BindingSource bs = new BindingSource();
-
         private void LoadDB()
         {
             bs.DataSource = khoaBUS.DanhSach();
-            gridviewkhoa.DataSource = bs;
 
+            gridviewkhoa.DataSource = bs;
+            
             txtmakhoa.DataBindings.Add("Text", bs, "MaKhoa", false, DataSourceUpdateMode.Never);
             txttenkhoa.DataBindings.Add("Text", bs, "TenKhoa", false, DataSourceUpdateMode.Never);
             txtsdtkhoa.DataBindings.Add("Text", bs, "Sdt", false, DataSourceUpdateMode.Never);
@@ -46,6 +41,15 @@ namespace UI_Tier
             PhanQuyen();
         }
 
+        private void frmkhoa_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dlr = MessageBox.Show("Bạn muốn đóng Form?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dlr == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
+
         private bool DuLieuHopLe()
         {
             if (string.IsNullOrEmpty(txtmakhoa.Text))
@@ -54,12 +58,14 @@ namespace UI_Tier
                 txtmakhoa.Focus();
                 return false;
             }
+
             if (string.IsNullOrEmpty(txttenkhoa.Text))
             {
                 MessageBox.Show("Tên khoa không được bỏ trống!");
                 txttenkhoa.Focus();
                 return false;
             }
+
             return true;
         }
 
@@ -71,56 +77,65 @@ namespace UI_Tier
             {
                 return;
             }
+
             string ma = txtmakhoa.Text;
             string ten = txttenkhoa.Text;
             string email = txtmailkhoa.Text;
             string sdt = txtsdtkhoa.Text;
 
             Khoa khoa = new Khoa(ma, ten, sdt, email);
-            bool thanhcong = khoaBUS.Them(khoa);
-            if (thanhcong)
+
+            if (khoaBUS.Them(khoa))
             {
                 MessageBox.Show("Thành công !");
+                
+                bs.DataSource = khoaBUS.DanhSach();
             }
             else
             {
                 MessageBox.Show("Lỗi !","", MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
-            bs.DataSource = khoaBUS.DanhSach();
+
             txtmakhoa.Focus();
         }
 
         private void btnsuakhoa_Click(object sender, EventArgs e)
         {
+            //Nếu k có dòng nào trong gridview được chọn
             if (gridviewkhoa.SelectedCells.Count <= 0)
             {
                 return;
             }
+
             if (!DuLieuHopLe())
             {
                 return;
             }
+
             string ma = gridviewkhoa.SelectedCells[0].OwningRow.Cells[0].Value.ToString();
             string ten = txttenkhoa.Text;
             string email = txtmailkhoa.Text;
             string sdt = txtsdtkhoa.Text;
 
             Khoa khoa = new Khoa(ma, ten, sdt, email);
-            bool thanhcong = khoaBUS.Sua(khoa);
-            if (thanhcong)
+
+            if (khoaBUS.Sua(khoa))
             {
                 MessageBox.Show("Thành công");
+                
+                bs.DataSource = khoaBUS.DanhSach();
             }
             else
             {
                 MessageBox.Show("Lỗi");
             }
-            bs.DataSource = khoaBUS.DanhSach();
+
             txtmakhoa.Focus();
         }
 
         private void btnxoakhoa_Click(object sender, EventArgs e)
         {
+            //Nếu k có dòng nào trong gridview được chọn
             if (gridviewkhoa.SelectedCells.Count <= 0)
             {
                 return;
@@ -129,16 +144,18 @@ namespace UI_Tier
             
             Khoa khoa = new Khoa();
             khoa.MaKhoa = ma;
-            bool thanhcong = khoaBUS.Xoa(khoa);
-            if (thanhcong)
+
+            if (khoaBUS.Xoa(khoa))
             {
                 MessageBox.Show("Thành công");
+                
+                bs.DataSource = khoaBUS.DanhSach();
             }
             else
             {
                 MessageBox.Show("Lỗi");
             }
-            bs.DataSource = khoaBUS.DanhSach();
+
             txtmakhoa.Focus();
         }
 
@@ -149,6 +166,7 @@ namespace UI_Tier
         #endregion
 
         #region Phân quyền
+        //Disable các button thêm, xóa, sửa
         private void DisableAll()
         {
             btnthemkhoa.Enabled = false;

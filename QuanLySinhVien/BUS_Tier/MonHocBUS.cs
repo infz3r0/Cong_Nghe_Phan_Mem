@@ -16,10 +16,7 @@ namespace BUS_Tier
 
         public DataTable DanhSach()
         {
-            DataTable dt = new DataTable();
-            dt = monHocDAO.getAll();
-
-            return dt;
+            return monHocDAO.GetAll();
         }
 
         private bool TrongSoHopLe(MonHoc monHoc)
@@ -28,36 +25,33 @@ namespace BUS_Tier
             {
                 return false;
             }
+
             return true;
         }
 
         public bool Them(MonHoc monHoc)
         {
-            bool result = false;
             if (!TrongSoHopLe(monHoc))
             {
                 return false;
             }
-            result = monHocDAO.insert(monHoc);
-            return result;
+
+            return monHocDAO.Insert(monHoc);
         }
 
         public bool Xoa(MonHoc monHoc)
         {
-            bool result = false;
-            result = monHocDAO.delete(monHoc);
-            return result;
+            return monHocDAO.Delete(monHoc);
         }
 
         public bool Sua(MonHoc monHoc)
         {
-            bool result = false;
             if (!TrongSoHopLe(monHoc))
             {
                 return false;
             }
-            result = monHocDAO.update(monHoc);
-            return result;
+
+            return monHocDAO.Update(monHoc);
         }
     }
 }

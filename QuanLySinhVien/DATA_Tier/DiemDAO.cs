@@ -12,16 +12,16 @@ namespace DATA_Tier
 {
     public class DiemDAO : DBConnect
     {
-        public DataTable getAll()
+        public DataTable GetAll()
         {
-            string query = "Select * from Diem";
+            string query = "SELECT * FROM Diem";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return executeSelectQuery(query, sqlParameters);
         }
-        public bool insert(Diem d)
+        public bool Insert(Diem d)
         {
-            string query = "Insert into Diem (MaSV, MaHP, DiemQT, DiemThi, DiemHP10, DiemHe4So, DiemHe4Chu, XepLoai, DanhGia, HocKi) " +
-                           "Values (@MaSV, @MaHP, @DiemQT, @DiemThi, @DiemHP10, @DiemHe4So, @DiemHe4Chu, @XepLoai, @DanhGia, @HocKi)";
+            string query = "INSERT INTO Diem (MaSV, MaHP, DiemQT, DiemThi, DiemHP10, DiemHe4So, DiemHe4Chu, XepLoai, DanhGia, HocKi) " +
+                           "VALUES (@MaSV, @MaHP, @DiemQT, @DiemThi, @DiemHP10, @DiemHe4So, @DiemHe4Chu, @XepLoai, @DanhGia, @HocKi)";
             SqlParameter[] sqlParameters = new SqlParameter[10];
             sqlParameters[0] = new SqlParameter("@MaSV", SqlDbType.VarChar);
             sqlParameters[0].Value = d.MaSV;
@@ -45,11 +45,11 @@ namespace DATA_Tier
             sqlParameters[9].Value = d.HocKi;
             return executeInsertQuery(query, sqlParameters);
         }
-        public bool update(Diem d)
+        public bool Update(Diem d)
         {
-            string query = "Update  Diem" +
-                           "Set DiemQT=@DemQT, DiemThi=@DiemThi, DiemHP10=@DiemHP10, DiemHe4So=@DiemHe4So, DiemHe4Chu=@DiemHe4Chu, XepLoai=@XepLoai, DanhGia=@DanhGia, HocKi=@HocKi" +
-                           "Where MaSV=@MaSV, MaHP=@MaHP";
+            string query = "UPDATE Diem" +
+                           " SET DiemQT=@DemQT, DiemThi=@DiemThi, DiemHP10=@DiemHP10, DiemHe4So=@DiemHe4So, DiemHe4Chu=@DiemHe4Chu, XepLoai=@XepLoai, DanhGia=@DanhGia, HocKi=@HocKi" +
+                           " WHERE MaSV=@MaSV, MaHP=@MaHP";
             SqlParameter[] sqlParameters = new SqlParameter[10];
             sqlParameters[0] = new SqlParameter("@MaSV", SqlDbType.VarChar);
             sqlParameters[0].Value = d.MaSV;
@@ -73,10 +73,10 @@ namespace DATA_Tier
             sqlParameters[9].Value = d.HocKi;
             return executeUpdateQuery(query, sqlParameters);
         }
-        public bool delete(Diem d)
+        public bool Delete(Diem d)
         {
-            string query = "Delete from Diem " +
-                           "Where MaSV=@MaSV";
+            string query = "DELETE FROM Diem " +
+                           "WHERE MaSV=@MaSV";
             SqlParameter[] sqlParameters = new SqlParameter[1];
             sqlParameters[0] = new SqlParameter("@MaSV", SqlDbType.VarChar);
             sqlParameters[0].Value = d.MaSV;

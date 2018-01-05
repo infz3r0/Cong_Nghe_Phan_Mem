@@ -12,24 +12,23 @@ namespace DATA_Tier
 {
     public class LopKhoaHocDAO : DBConnect
     {
-        public DataTable getAll()
+        public DataTable GetAll()
         {
             string query = "SELECT LopKhoaHoc.MaLop, LopKhoaHoc.MaKhoa, Khoa.TenKhoa FROM Khoa INNER JOIN LopKhoaHoc ON Khoa.MaKhoa = LopKhoaHoc.MaKhoa";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return executeSelectQuery(query, sqlParameters);
         }
-        public DataTable getAll_TenKhoa()
+
+        public DataTable GetAll_TenKhoa()
         {
-            string query = "SELECT LopKhoaHoc.MaLop, Khoa.MaKhoa, Khoa.TenKhoa" +
-                            " FROM Khoa INNER JOIN" +
-                             " LopKhoaHoc ON Khoa.MaKhoa = LopKhoaHoc.MaKhoa";
+            string query = "SELECT LopKhoaHoc.MaLop, Khoa.MaKhoa, Khoa.TenKhoa FROM Khoa INNER JOIN LopKhoaHoc ON Khoa.MaKhoa = LopKhoaHoc.MaKhoa";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return executeSelectQuery(query, sqlParameters);
         }
-        public bool insert(LopKhoaHoc lopkh)
+
+        public bool Insert(LopKhoaHoc lopkh)
         {
-            string query = "Insert into LopKhoaHoc (MaLop, MaKhoa)"+
-                           " Values (@MaLop, @MaKhoa)";
+            string query = "INSERT INTO LopKhoaHoc (MaLop, MaKhoa) VALUES (@MaLop, @MaKhoa)";
             SqlParameter[] sqlParameters = new SqlParameter[2];
             sqlParameters[0] = new SqlParameter("@MaLop", SqlDbType.VarChar);
             sqlParameters[0].Value = lopkh.MaLop;
@@ -37,11 +36,10 @@ namespace DATA_Tier
             sqlParameters[1].Value = lopkh.MaKhoa;
             return executeInsertQuery(query, sqlParameters);
         }
-        public bool update(LopKhoaHoc lopkh)
+
+        public bool Update(LopKhoaHoc lopkh)
         {
-            string query = "Update LopKhoaHoc" +
-                           " Set MaKhoa=@MaKhoa"+
-                           " Where MaLop=@MaLop";
+            string query = "UPDATE LopKhoaHoc SET MaKhoa=@MaKhoa WHERE MaLop=@MaLop";
             SqlParameter[] sqlParameters = new SqlParameter[2];
             sqlParameters[0] = new SqlParameter("@MaLop", SqlDbType.VarChar);
             sqlParameters[0].Value = lopkh.MaLop;
@@ -49,10 +47,10 @@ namespace DATA_Tier
             sqlParameters[1].Value = lopkh.MaKhoa;
             return executeUpdateQuery(query, sqlParameters);
         }
-        public bool delete(LopKhoaHoc lopkh)
+
+        public bool Delete(LopKhoaHoc lopkh)
         {
-            string query = "Delete from LopKhoaHoc" +
-                           " Where MaLop=@MaLop";
+            string query = "DELETE FROM LopKhoaHoc WHERE MaLop=@MaLop";
             SqlParameter[] sqlParameters = new SqlParameter[1];
             sqlParameters[0] = new SqlParameter("@MaLop", SqlDbType.VarChar);
             sqlParameters[0].Value = lopkh.MaLop;

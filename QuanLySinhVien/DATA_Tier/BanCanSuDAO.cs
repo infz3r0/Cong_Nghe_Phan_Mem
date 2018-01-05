@@ -12,16 +12,16 @@ namespace DATA_Tier
 {
     public class BanCanSuDAO : DBConnect
     {
-        public DataTable getAll()
+        public DataTable GetAll()
         {
-            string query = "Select * from BanCanSu";
+            string query = "SELECT * FROM BanCanSu";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return executeSelectQuery(query, sqlParameters);
         }
-        public bool insert(BanCanSu bancansu)
+        public bool Insert(BanCanSu bancansu)
         {
-            string query = "Insert into BanCanSu (MaSV,ChucVu) " +
-                           "Values (@MaSV,@ChucVu)";
+            string query = "INSERT INTO BanCanSu (MaSV,ChucVu) " +
+                           "VALUES (@MaSV,@ChucVu)";
             SqlParameter[] sqlParameters = new SqlParameter[2];
             sqlParameters[0] = new SqlParameter("@MaSV", SqlDbType.VarChar);
             sqlParameters[0].Value = bancansu.MaSV;
@@ -29,11 +29,11 @@ namespace DATA_Tier
             sqlParameters[1].Value = bancansu.ChucVu;
             return executeInsertQuery(query, sqlParameters);
         }
-        public bool update(BanCanSu bancansu)
+        public bool Update(BanCanSu bancansu)
         {
-            string query = "Update BanCanSu " +
-                           "Set ChucVu=@ChucVu" +
-                           "Where MaSV=@MaSV";
+            string query = "UPDATE BanCanSu " +
+                           "SET ChucVu=@ChucVu " +
+                           "WHERE MaSV=@MaSV";
             SqlParameter[] sqlParameters = new SqlParameter[2];
             sqlParameters[0] = new SqlParameter("@MaSV", SqlDbType.VarChar);
             sqlParameters[0].Value = bancansu.MaSV;
@@ -41,10 +41,10 @@ namespace DATA_Tier
             sqlParameters[1].Value = bancansu.ChucVu;
             return executeUpdateQuery(query, sqlParameters);
         }
-        public bool delete(BanCanSu bancansu)
+        public bool Delete(BanCanSu bancansu)
         {
-            string query = "Delete from BanCanSu " +
-                           "Where MaSV=@MaSV";
+            string query = "DELETE FROM BanCanSu " +
+                           "WHERE MaSV=@MaSV";
             SqlParameter[] sqlParameters = new SqlParameter[1];
             sqlParameters[0] = new SqlParameter("@MaSV", SqlDbType.VarChar);
             sqlParameters[0].Value = bancansu.MaSV;

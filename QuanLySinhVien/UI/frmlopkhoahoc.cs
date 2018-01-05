@@ -16,20 +16,14 @@ namespace UI_Tier
 {
     public partial class frmlopkhoahoc : DevExpress.XtraEditors.XtraForm
     {
+        private BindingSource bs = new BindingSource();
+        private LopKhoaHocBUS lopKhoaHocBUS = new LopKhoaHocBUS();
+        private KhoaBUS khoaBUS = new KhoaBUS();
+
         public frmlopkhoahoc()
         {
             InitializeComponent();
         }
-
-        private void frmlopkhoahoc_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            DialogResult dlr = MessageBox.Show("Bạn muốn đóng Form?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dlr == DialogResult.No) e.Cancel = true;
-        }
-
-        BindingSource bs = new BindingSource();
-        LopKhoaHocBUS lopKhoaHocBUS = new LopKhoaHocBUS();
-        KhoaBUS khoaBUS = new KhoaBUS();
 
         private void LoadDB()
         {
@@ -53,6 +47,16 @@ namespace UI_Tier
             PhanQuyen();
         }
 
+        private void frmlopkhoahoc_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dlr = MessageBox.Show("Bạn muốn đóng Form?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dlr == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
+        
+        //Danh sách chuỗi dùng cho thuộc tính AutoCompleteCustomSource
         public AutoCompleteStringCollection LoadAutoComplete()
         {
             DataTable dt = khoaBUS.DanhSach();
@@ -72,12 +76,14 @@ namespace UI_Tier
                 txtmalopkhoahoc.Focus();
                 return false;
             }
+
             if (string.IsNullOrEmpty(cbbTenKhoaLopKH.Text) || cbbTenKhoaLopKH.SelectedValue == null)
             {
                 MessageBox.Show("Tên khoa không được bỏ trống!");
                 cbbTenKhoaLopKH.Focus();
                 return false;
             }
+
             return true;
         }
 
@@ -97,70 +103,80 @@ namespace UI_Tier
             if (thanhcong)
             {
                 MessageBox.Show("Thành công !");
+                
+                bs.DataSource = lopKhoaHocBUS.DanhSach();
             }
             else
             {
                 MessageBox.Show("Lỗi !", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            bs.DataSource = lopKhoaHocBUS.DanhSach();
+            
             txtmalopkhoahoc.Focus();
         }
 
         private void btnsualopkh_Click(object sender, EventArgs e)
         {
+            //Nếu k có dòng nào trong gridview được chọn
             if (gridviewlopkh.SelectedCells.Count <= 0)
             {
                 return;
             }
+
             if (!DuLieuHopLe())
             {
                 return;
             }
 
-            string malop = gridviewlopkh.SelectedCells[0].OwningRow.Cells[0].Value.ToString();
             if (cbbTenKhoaLopKH.SelectedValue == null)
             {
                 MessageBox.Show("Khoa không tồn tại");
                 return;
             }
+
+            string malop = gridviewlopkh.SelectedCells[0].OwningRow.Cells[0].Value.ToString();           
             string makhoa = cbbTenKhoaLopKH.SelectedValue.ToString();
 
             LopKhoaHoc lopKhoaHoc = new LopKhoaHoc(malop, makhoa);
-            bool thanhcong = lopKhoaHocBUS.Sua(lopKhoaHoc);
-            if (thanhcong)
+            
+            if (lopKhoaHocBUS.Sua(lopKhoaHoc))
             {
                 MessageBox.Show("Thành công !");
+                
+                bs.DataSource = lopKhoaHocBUS.DanhSach();
             }
             else
             {
                 MessageBox.Show("Lỗi !", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            bs.DataSource = lopKhoaHocBUS.DanhSach();
+
             txtmalopkhoahoc.Focus();
         }
 
         private void btnxoalopkh_Click(object sender, EventArgs e)
         {
+            //Nếu k có dòng nào trong gridview được chọn
             if (gridviewlopkh.SelectedCells.Count <= 0)
             {
                 return;
             }
+
             string malop = gridviewlopkh.SelectedCells[0].OwningRow.Cells[0].Value.ToString();
 
             LopKhoaHoc lopKhoaHoc = new LopKhoaHoc();
             lopKhoaHoc.MaLop = malop;
-            bool thanhcong = lopKhoaHocBUS.Xoa(lopKhoaHoc);
-            if (thanhcong)
+
+            if (lopKhoaHocBUS.Xoa(lopKhoaHoc))
             {
                 MessageBox.Show("Thành công !");
+                
+                bs.DataSource = lopKhoaHocBUS.DanhSach();
             }
             else
             {
                 MessageBox.Show("Lỗi !", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            bs.DataSource = lopKhoaHocBUS.DanhSach();
 
-
+            txtmalopkhoahoc.Focus();
         }
 
         private void btnthoatlopkh_Click(object sender, EventArgs e)
@@ -170,6 +186,7 @@ namespace UI_Tier
         #endregion
 
         #region Phân quyền
+        //Disable các button thêm, xóa, sửa
         private void DisableAll()
         {
             btnthemlopkh.Enabled = false;

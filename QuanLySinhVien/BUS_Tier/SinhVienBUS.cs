@@ -17,38 +17,34 @@ namespace BUS_Tier
 
         public DataTable DanhSach()
         {
-            DataTable dt = new DataTable();
-            dt = sinhVienDAO.getAll();
-            return dt;
+            return sinhVienDAO.GetAll();
         }
 
         public bool Them(SinhVien sinhVien)
         {
-            bool result = false;
+            //Tuổi từ 18 trở lên
             if (DateTime.Now.Year - sinhVien.NgaySinh.Year <= 18)
             {
                 return false;
             }
-            result = sinhVienDAO.insert(sinhVien);
-            return result;
+
+            return sinhVienDAO.Insert(sinhVien);
         }
 
         public bool Xoa(SinhVien sinhVien)
         {
-            bool result = false;
-            result = sinhVienDAO.delete(sinhVien);
-            return result;
+            return sinhVienDAO.Delete(sinhVien);
         }
 
         public bool Sua(SinhVien sinhVien)
         {
-            bool result = false;
+            //Tuổi từ 18 trở lên
             if (DateTime.Now.Year - sinhVien.NgaySinh.Year <= 18)
             {
                 return false;
             }
-            result = sinhVienDAO.update(sinhVien);
-            return result;
+
+            return sinhVienDAO.Update(sinhVien);
         }
     }
 }

@@ -11,16 +11,16 @@ namespace DATA_Tier
 {
     class DiemHe4DAO : DBConnect
     {
-        public DataTable getAll()
+        public DataTable GetAll()
         {
-            string query = "Select * from DiemHe4";
+            string query = "SELECT * FROM DiemHe4";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return executeSelectQuery(query, sqlParameters);
         }
-        public bool insert(DiemHe4 diemhe4)
+        public bool Insert(DiemHe4 diemhe4)
         {
-            string query = "Insert into DiemHe4 (DiemHe4Chu,DiemHe4So,DiemHe10Min,DiemHe10Max,XepLoai,DanhGia) " +
-                           "Values (@DiemHe4Chu,@DiemHe4So,@DiemHe10Min,@DiemHe10Max,@XepLoai,@DanhGia)";
+            string query = "INSERT INTO DiemHe4 (DiemHe4Chu, DiemHe4So, DiemHe10Min, DiemHe10Max, XepLoai, DanhGia) " +
+                           "VALUES (@DiemHe4Chu, @DiemHe4So, @DiemHe10Min, @DiemHe10Max, @XepLoai, @DanhGia)";
             SqlParameter[] sqlParameters = new SqlParameter[6];
             sqlParameters[0] = new SqlParameter("@DiemHe4Chu", SqlDbType.VarChar);
             sqlParameters[0].Value = diemhe4.DiemHe4So;
@@ -36,11 +36,11 @@ namespace DATA_Tier
             sqlParameters[5].Value = diemhe4.DanhGia;
             return executeInsertQuery(query, sqlParameters);
         }
-        public bool update(DiemHe4 diemhe4)
+        public bool Update(DiemHe4 diemhe4)
         {
-            string query = "Update DiemHe4 " +
-                           "Set DiemHe4So=@DiemHe4So,DiemHe10Min=@DiemHe10Min,DiemHe10Max=DiemHe10Max,XepLoai=@XepLoai,DanhGia=@DanhGia" +
-                           "Where DiemHe4Chu=@DiemHe4Chu";
+            string query = "UPDATE DiemHe4" +
+                           " SET DiemHe4So=@DiemHe4So, DiemHe10Min=@DiemHe10Min, DiemHe10Max=DiemHe10Max, XepLoai=@XepLoai, DanhGia=@DanhGia" +
+                           " WHERE DiemHe4Chu=@DiemHe4Chu";
             SqlParameter[] sqlParameters = new SqlParameter[6];
             sqlParameters[0] = new SqlParameter("@DiemHe4Chu", SqlDbType.VarChar);
             sqlParameters[0].Value = diemhe4.DiemHe4So;
@@ -56,10 +56,10 @@ namespace DATA_Tier
             sqlParameters[5].Value = diemhe4.DanhGia;
             return executeUpdateQuery(query, sqlParameters);
         }
-        public bool delete(DiemHe4 diemhe4)
+        public bool Delete(DiemHe4 diemhe4)
         {
-            string query = "Delete from DiemHe4" +
-                           "Where DiemHe4Chu=@DiemHe4Chu";
+            string query = "DELETE FROM DiemHe4" +
+                           " WHERE DiemHe4Chu=@DiemHe4Chu";
             SqlParameter[] sqlParameters = new SqlParameter[1];
             sqlParameters[0] = new SqlParameter("@DiemHe4Chu", SqlDbType.VarChar);
             sqlParameters[0].Value = diemhe4.DiemHe4So;

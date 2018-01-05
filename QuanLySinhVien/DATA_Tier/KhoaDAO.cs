@@ -12,16 +12,16 @@ namespace DATA_Tier
 {
     public class KhoaDAO : DBConnect
     {
-        public DataTable getAll()
+        public DataTable GetAll()
         {
-            string query = "Select * from Khoa";
+            string query = "SELECT * FROM Khoa";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return executeSelectQuery(query, sqlParameters);
         }
-        public bool insert(Khoa khoa)
+
+        public bool Insert(Khoa khoa)
         {
-            string query = "Insert into Khoa (MaKhoa,TenKhoa, Sdt, Email) " +
-                           "Values (@Makhoa, @TenKhoa, @Sdt, @Email)";
+            string query = "INSERT INTO Khoa (MaKhoa, TenKhoa, Sdt, Email) Values (@Makhoa, @TenKhoa, @Sdt, @Email)";
             SqlParameter[] sqlParameters = new SqlParameter[4];
             sqlParameters[0] = new SqlParameter("@MaKhoa", SqlDbType.VarChar);
             sqlParameters[0].Value = khoa.MaKhoa;
@@ -33,11 +33,10 @@ namespace DATA_Tier
             sqlParameters[3].Value = khoa.Email;
             return executeInsertQuery(query, sqlParameters);
         }
-        public bool update(Khoa khoa)
+
+        public bool Update(Khoa khoa)
         {
-            string query = "Update Khoa " +
-                           "Set TenKhoa=@TenKhoa, Sdt=@Sdt, Email=@Email "+
-                           "Where MaKhoa=@MaKhoa";
+            string query = "UPDATE Khoa SET TenKhoa=@TenKhoa, Sdt=@Sdt, Email=@Email WHERE MaKhoa=@MaKhoa";
             SqlParameter[] sqlParameters = new SqlParameter[4];
             sqlParameters[0] = new SqlParameter("@MaKhoa", SqlDbType.VarChar);
             sqlParameters[0].Value = khoa.MaKhoa;
@@ -49,10 +48,11 @@ namespace DATA_Tier
             sqlParameters[3].Value = khoa.Email;
             return executeUpdateQuery(query, sqlParameters);
         }
-        public bool delete(Khoa khoa)
+
+        public bool Delete(Khoa khoa)
         {
-            string query = "Delete from Khoa " +
-                           "Where MaKhoa=@MaKhoa";
+            string query = "DELETE FROM Khoa " +
+                           "WHERE MaKhoa=@MaKhoa";
             SqlParameter[] sqlParameters = new SqlParameter[1];
             sqlParameters[0] = new SqlParameter("@MaKhoa", SqlDbType.VarChar);
             sqlParameters[0].Value = khoa.MaKhoa;

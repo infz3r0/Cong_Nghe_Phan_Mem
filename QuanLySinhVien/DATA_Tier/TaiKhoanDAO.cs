@@ -12,16 +12,16 @@ namespace DATA_Tier
 {
     public class TaiKhoanDAO : DBConnect
     {
-        public DataTable getAll()
+        public DataTable GetAll()
         {
-            string query = "Select * from TaiKhoan";
+            string query = "SELECT * FROM TaiKhoan";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return executeSelectQuery(query, sqlParameters);
         }
 
         public DataTable SelectByUsername(TaiKhoan taikhoan)
         {
-            string query = "Select * from TaiKhoan where Username = @Username";
+            string query = "SELECT * FROM TaiKhoan WHERE Username = @Username";
             SqlParameter[] sqlParameters = new SqlParameter[1];
             sqlParameters[0] = new SqlParameter("@Username", SqlDbType.VarChar);
             sqlParameters[0].Value = taikhoan.Username;
@@ -30,8 +30,8 @@ namespace DATA_Tier
 
         public bool Insert(TaiKhoan taikhoan)
         {
-            string query = "Insert into TaiKhoan (Username, Password, GID) " +
-                           "Values (@Username, @Password, @GID)";
+            string query = "INSERT INTO TaiKhoan (Username, Password, GID) " +
+                           "VALUES (@Username, @Password, @GID)";
             SqlParameter[] sqlParameters = new SqlParameter[3];
             sqlParameters[0] = new SqlParameter("@Username", SqlDbType.VarChar);
             sqlParameters[0].Value = taikhoan.Username;
@@ -44,7 +44,7 @@ namespace DATA_Tier
 
         public bool Update(TaiKhoan taikhoan)
         {
-            string query = "Update TaiKhoan set Password = @Password where Username = @Username";
+            string query = "UPDATE TaiKhoan SET Password = @Password WHERE Username = @Username";
             SqlParameter[] sqlParameters = new SqlParameter[2];
             sqlParameters[0] = new SqlParameter("@Username", SqlDbType.VarChar);
             sqlParameters[0].Value = taikhoan.Username;
@@ -55,7 +55,7 @@ namespace DATA_Tier
 
         public bool Login(TaiKhoan taikhoan)
         {
-            string query = "Select count(*) from TaiKhoan where Username = @Username and Password = @Password";
+            string query = "SELECT COUNT(*) FROM TaiKhoan WHERE Username = @Username AND Password = @Password";
             SqlParameter[] sqlParameters = new SqlParameter[2];
             sqlParameters[0] = new SqlParameter("@Username", SqlDbType.VarChar);
             sqlParameters[0].Value = taikhoan.Username;

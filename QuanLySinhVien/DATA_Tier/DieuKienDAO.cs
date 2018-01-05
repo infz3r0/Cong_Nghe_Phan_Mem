@@ -12,16 +12,16 @@ namespace DATA_Tier
 {
     public class DieuKienDAO : DBConnect
     {
-        public DataTable getAll()
+        public DataTable GetAll()
         {
-            string query = "Select * from DieuKien";
+            string query = "SELECT * FROM DieuKien";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return executeSelectQuery(query, sqlParameters);
         }
-        public bool insert(DieuKien dieukien)
+        public bool Insert(DieuKien dieukien)
         {
-            string query = "Insert into DieuKien (MaHP,LoaiDK,MaHPDK) " +
-                           "Values (@MaHP,@LoaiDK,@MaHPDK)";
+            string query = "INSERT INTO DieuKien (MaHP,LoaiDK,MaHPDK) " +
+                           "VALUES (@MaHP,@LoaiDK,@MaHPDK)";
             SqlParameter[] sqlParameters = new SqlParameter[3];
             sqlParameters[0] = new SqlParameter("@MaHP", SqlDbType.VarChar);
             sqlParameters[0].Value = dieukien.MaHP;
@@ -31,11 +31,11 @@ namespace DATA_Tier
             sqlParameters[2].Value = dieukien.MaHPDK;
             return executeInsertQuery(query, sqlParameters);
         }
-        public bool update(DieuKien dieukien)
+        public bool Update(DieuKien dieukien)
         {
-            string query = "Update DieuKien " +
-                           "Set LoaiDK=@LoaiDK" +
-                           "Where MaHP=@MaHP and MaHPDK=@MaHPDK";
+            string query = "UPDATE DieuKien" +
+                           " SET LoaiDK=@LoaiDK" +
+                           " WHERE MaHP=@MaHP AND MaHPDK=@MaHPDK";
             SqlParameter[] sqlParameters = new SqlParameter[3];
             sqlParameters[0] = new SqlParameter("@MaHP", SqlDbType.VarChar);
             sqlParameters[0].Value = dieukien.MaHP;
@@ -45,10 +45,10 @@ namespace DATA_Tier
             sqlParameters[2].Value = dieukien.MaHPDK;
             return executeUpdateQuery(query, sqlParameters);
         }
-        public bool delete(DieuKien dieukien)
+        public bool Delete(DieuKien dieukien)
         {
-            string query = "Delete from DieuKien" +
-                           "Where MaHP=@MaHP or MaHPDK=@MaHPDK";
+            string query = "DELETE FROM DieuKien" +
+                           " WHERE MaHP=@MaHP or MaHPDK=@MaHPDK";
             SqlParameter[] sqlParameters = new SqlParameter[2];
             sqlParameters[0] = new SqlParameter("@MaHP", SqlDbType.VarChar);
             sqlParameters[0].Value = dieukien.MaHP;

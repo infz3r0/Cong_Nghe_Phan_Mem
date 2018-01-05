@@ -16,23 +16,18 @@ namespace UI_Tier
 {
     public partial class frmmonhoc : DevExpress.XtraEditors.XtraForm
     {
+        private MonHocBUS monhocBUS = new MonHocBUS();
+        private BindingSource bs = new BindingSource();
+
         public frmmonhoc()
         {
             InitializeComponent();
         }
 
-        private void frmmonhoc_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            DialogResult dlr = MessageBox.Show("Bạn muốn đóng Form?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dlr == DialogResult.No) e.Cancel = true;
-        }
-
-        MonHocBUS monhocBUS = new MonHocBUS();
-        BindingSource bs = new BindingSource();
-
         private void LoadDB()
         {
             bs.DataSource = monhocBUS.DanhSach();
+
             gridviewhp.DataSource = bs;
 
             txtmahp.DataBindings.Add("Text", bs, "MaHP", false, DataSourceUpdateMode.Never);
@@ -47,9 +42,19 @@ namespace UI_Tier
         private void frmmonhoc_Load(object sender, EventArgs e)
         {
             LoadDB();
+
             cbbLoaiHocPhan.SelectedIndex = 0;
 
             PhanQuyen();
+        }
+
+        private void frmmonhoc_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dlr = MessageBox.Show("Bạn muốn đóng Form?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dlr == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
         }
 
         private bool DuLieuHopLe()
@@ -60,24 +65,28 @@ namespace UI_Tier
                 txtmahp.Focus();
                 return false;
             }
+
             if (string.IsNullOrEmpty(txttenhp.Text))
             {
                 MessageBox.Show("Tên học phần không được bỏ trống!");
                 txttenhp.Focus();
                 return false;
             }
+
             if (string.IsNullOrEmpty(txtTrongSoDQT.Text))
             {
                 MessageBox.Show("Trọng số điểm quá trình không được bỏ trống!");
                 txtTrongSoDQT.Focus();
                 return false;
             }
+
             if (string.IsNullOrEmpty(txtTrongSoDThi.Text))
             {
                 MessageBox.Show("Trọng số điểm thi không được bỏ trống!");
                 txtTrongSoDThi.Focus();
                 return false;
             }
+
             return true;
         }
 
@@ -97,27 +106,29 @@ namespace UI_Tier
             decimal tsdt = decimal.Parse(txtTrongSoDThi.Text);
 
             MonHoc monhoc = new MonHoc(mahp, tenhp, stc, loaihp, tsdqt, tsdt);
-
-            bool thanhcong = monhocBUS.Them(monhoc);
-            if (thanhcong)
+            
+            if (monhocBUS.Them(monhoc))
             {
                 MessageBox.Show("Thành công !");
+
+                bs.DataSource = monhocBUS.DanhSach();
             }
             else
             {
                 MessageBox.Show("Lỗi !", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
             }
-            bs.DataSource = monhocBUS.DanhSach();
+
             txtmahp.Focus();
         }
 
         private void btnsuahp_Click(object sender, EventArgs e)
         {
+            //Nếu k có dòng nào trong gridview được chọn
             if (gridviewhp.SelectedCells.Count <= 0)
             {
                 return;
             }
+
             if (!DuLieuHopLe())
             {
                 return;
@@ -131,41 +142,45 @@ namespace UI_Tier
             decimal tsdt = decimal.Parse(txtTrongSoDThi.Text);
 
             MonHoc monhoc = new MonHoc(mahp, tenhp, stc, loaihp, tsdqt, tsdt);
-            bool thanhcong = monhocBUS.Sua(monhoc);
-            if (thanhcong)
+
+            if (monhocBUS.Sua(monhoc))
             {
                 MessageBox.Show("Thành công !");
+
+                bs.DataSource = monhocBUS.DanhSach();
             }
             else
             {
                 MessageBox.Show("Lỗi !", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
             }
-            bs.DataSource = monhocBUS.DanhSach();
+
             txtmahp.Focus();
         }
 
         private void btnxoahp_Click(object sender, EventArgs e)
         {
+            //Nếu k có dòng nào trong gridview được chọn
             if (gridviewhp.SelectedCells.Count <= 0)
             {
                 return;
             }
+
             string mahp = gridviewhp.SelectedCells[0].OwningRow.Cells[0].Value.ToString();
 
             MonHoc monhoc = new MonHoc();
             monhoc.MaHP = mahp;
-            bool thanhcong = monhocBUS.Xoa(monhoc);
-            if (thanhcong)
+
+            if (monhocBUS.Xoa(monhoc))
             {
                 MessageBox.Show("Thành công !");
+
+                bs.DataSource = monhocBUS.DanhSach();
             }
             else
             {
                 MessageBox.Show("Lỗi !", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
             }
-            bs.DataSource = monhocBUS.DanhSach();
+
             txtmahp.Focus();
         }
 
@@ -176,6 +191,7 @@ namespace UI_Tier
         #endregion
 
         #region Phân quyền
+        //Disable các button thêm, xóa, sửa
         private void DisableAll()
         {
             btnthemhp.Enabled = false;

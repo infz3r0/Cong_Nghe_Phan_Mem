@@ -12,16 +12,16 @@ namespace DATA_Tier
 {
     public class DanhSachLopHPDAO : DBConnect
     {
-        public DataTable getAll()
+        public DataTable GetAll()
         {
-            string query = "Select * from DanhSachLopHP";
+            string query = "SELECT * FROM DanhSachLopHP";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return executeSelectQuery(query, sqlParameters);
         }
-        public bool insert(DanhSachLopHP dslophp)
+        public bool Insert(DanhSachLopHP dslophp)
         {
-            string query = "Insert into DanhSachLopHP (MaLopHP, MaSV) " +
-                           "Values (@MaLopHP,@MaSV)";
+            string query = "INSERT INTO DanhSachLopHP (MaLopHP, MaSV) " +
+                           "VALUES (@MaLopHP,@MaSV)";
             SqlParameter[] sqlParameters = new SqlParameter[2];
             sqlParameters[0] = new SqlParameter("@MaSV", SqlDbType.VarChar);
             sqlParameters[0].Value = dslophp.MaSV;
@@ -29,11 +29,11 @@ namespace DATA_Tier
             sqlParameters[0].Value = dslophp.MaLopHP;
             return executeInsertQuery(query, sqlParameters);
         }
-        public bool update(DanhSachLopHP dslophp)
+        public bool Update(DanhSachLopHP dslophp)
         {
-            string query = "Update  DanhSachLopHP" +
-                           "Set MaSV=@MaSV" +
-                           "Where MaLopHP=@MaLopHP";
+            string query = "UPDATE  DanhSachLopHP" +
+                           " SET MaSV=@MaSV" +
+                           " WHERE MaLopHP=@MaLopHP";
             SqlParameter[] sqlParameters = new SqlParameter[2];
             sqlParameters[0] = new SqlParameter("@MaSV", SqlDbType.VarChar);
             sqlParameters[0].Value = dslophp.MaSV;
@@ -41,10 +41,10 @@ namespace DATA_Tier
             sqlParameters[1].Value = dslophp.MaLopHP;
             return executeUpdateQuery(query, sqlParameters);
         }
-        public bool delete(DanhSachLopHP dslophp)
+        public bool Delete(DanhSachLopHP dslophp)
         {
-            string query = "Delete from DanhSachLopHP " +
-                           "Where MaLopHP=@MaLopHP";
+            string query = "DELETE FROM DanhSachLopHP " +
+                           "WHERE MaLopHP=@MaLopHP";
             SqlParameter[] sqlParameters = new SqlParameter[1];
             sqlParameters[0] = new SqlParameter("@MaLopHP", SqlDbType.VarChar);
             sqlParameters[0].Value = dslophp.MaLopHP;

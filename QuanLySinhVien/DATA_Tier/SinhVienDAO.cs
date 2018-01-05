@@ -12,36 +12,36 @@ namespace DATA_Tier
 {
     public class SinhVienDAO : DBConnect
     {
-        public DataTable getAll()
+        public DataTable GetAll()
         {
-            string query = "Select MaSV, HoTen, NgaySinh, GioiTinh, DiaChi, SoCMND, Sdt, Email, MaLop from SinhVien";
+            string query = "SELECT MaSV, HoTen, NgaySinh, GioiTinh, DiaChi, SoCMND, Sdt, Email, MaLop FROM SinhVien";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return executeSelectQuery(query, sqlParameters);
         }
-        public DataTable getAll_TenLopHP()
+        public DataTable GetAll_TenLopHP()
         {
             string query = "SELECT SinhVien.MaSV, LopHocPhan.MaLopHP, SinhVien.HoTen, SinhVien.NgaySinh, SinhVien.GioiTinh, SinhVien.DiaChi, SinhVien.SoCMND, SinhVien.Sdt, SinhVien.Email, LopHocPhan.LopTruong"+
-                            "FROM SinhVien INNER JOIN"+
-                            "LopHocPhan ON SinhVien.MaSV = LopHocPhan.LopTruong";
+                            " FROM SinhVien INNER JOIN"+
+                            " LopHocPhan ON SinhVien.MaSV = LopHocPhan.LopTruong";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return executeSelectQuery(query, sqlParameters);
         }
-        public DataTable getAll_TenLopKH()
+        public DataTable GetAll_TenLopKH()
         {
-            string query = "SELECT * from SinhVien ";
+            string query = "SELECT * FROM SinhVien ";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return executeSelectQuery(query, sqlParameters);
         }
-        public DataTable selectThongKe()
+        public DataTable SelectThongKe()
         {
             string query = "SELECT MaSV, HoTen, NgaySinh, GioiTinh, DiaChi, SoCMND, Sdt, Email, DiemTB, MaLop, XepLoai"+
-                            "FROM SinhVien";
+                            " FROM SinhVien";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return executeSelectQuery(query, sqlParameters);
         }
-        public bool insert(SinhVien sv)
+        public bool Insert(SinhVien sv)
         {
-            string query = "Insert into SinhVien (MaSV, HoTen, NgaySinh, GioiTinh, DiaChi, SoCMND, Sdt, Email, MaLop)"+
+            string query = "INSERT INTO SinhVien (MaSV, HoTen, NgaySinh, GioiTinh, DiaChi, SoCMND, Sdt, Email, MaLop)"+
                             " VALUES (@MaSV, @HoTen, @NgaySinh, @GioiTinh, @DiaChi, @SoCMND, @Sdt, @Email, @MaLop)";
             SqlParameter[] sqlParameters = new SqlParameter[9];
             sqlParameters[0] = new SqlParameter("@MaSV", SqlDbType.VarChar);
@@ -64,11 +64,11 @@ namespace DATA_Tier
             sqlParameters[8].Value = sv.MaLop;
             return executeInsertQuery(query, sqlParameters);
         }
-        public bool update(SinhVien sv)
+        public bool Update(SinhVien sv)
         {
-            string query = "Update SinhVien"+ 
-                            " Set HoTen=@HoTen, NgaySinh=@NgaySinh, GioiTinh=@GioiTinh, DiaChi=@DiaChi, SoCMND=@SoCMND, Sdt=@Sdt, Email=@Email, MaLop=@MaLop"+
-                            " Where MaSV=@MaSV";
+            string query = "UPDATE SinhVien"+ 
+                            " SET HoTen=@HoTen, NgaySinh=@NgaySinh, GioiTinh=@GioiTinh, DiaChi=@DiaChi, SoCMND=@SoCMND, Sdt=@Sdt, Email=@Email, MaLop=@MaLop"+
+                            " WHERE MaSV=@MaSV";
             SqlParameter[] sqlParameters = new SqlParameter[9];
             sqlParameters[0] = new SqlParameter("@MaSV", SqlDbType.VarChar);
             sqlParameters[0].Value = sv.MaSV;
@@ -90,12 +90,12 @@ namespace DATA_Tier
             sqlParameters[8].Value = sv.MaLop;
             return executeInsertQuery(query, sqlParameters);
         }
-        public bool delete(SinhVien sv)
+        public bool Delete(SinhVien sv)
         {
-            string query = "Delete From SinhVien"+ 
-                           " Where MaSV=@MaSV";
+            string query = "DELETE From SinhVien"+ 
+                           " WHERE MaSV=@MaSV";
             SqlParameter[] sqlParameters = new SqlParameter[1];
-            sqlParameters[0] = new SqlParameter("@MaSV", SqlDbType.BigInt);
+            sqlParameters[0] = new SqlParameter("@MaSV", SqlDbType.VarChar);
             sqlParameters[0].Value = sv.MaSV;
             return executeDeleteQuery(query, sqlParameters);
         }
