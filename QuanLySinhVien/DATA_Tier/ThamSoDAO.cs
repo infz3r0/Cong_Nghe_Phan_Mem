@@ -12,16 +12,16 @@ namespace DATA_Tier
 {
     public class ThamSoDAO : DBConnect
     {
-        public DataTable getAll()
+        public DataTable GetAll()
         {
-            string query = "Select * from ThamSo";
+            string query = "SELECT * FROM ThamSo";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return executeSelectQuery(query, sqlParameters);
         }
-        public bool insert(ThamSo thamso)
+        public bool Insert(ThamSo thamso)
         {
-            string query = "Insert into ThamSo (TenThamSo,Mota,GiaTri) " +
-                           "Values (@TenThamSo,@MoTa,@GiaTri)";
+            string query = "INSERT INTO ThamSo (TenThamSo, Mota, GiaTri) " +
+                           "VALUES (@TenThamSo, @MoTa, @GiaTri)";
             SqlParameter[] sqlParameters = new SqlParameter[3];
             sqlParameters[0] = new SqlParameter("@TenThamSo", SqlDbType.VarChar);
             sqlParameters[0].Value = thamso.TenThamSo;
@@ -31,11 +31,11 @@ namespace DATA_Tier
             sqlParameters[2].Value = thamso.GiaTri;
             return executeInsertQuery(query, sqlParameters);
         }
-        public bool update(ThamSo thamso)
+        public bool Update(ThamSo thamso)
         {
-            string query = "Update ThamSo " +
-                           "Set MoTa=@MoTa,GiaTri=@GiaTri" +
-                           "Where TenThamSo=@TenThamSo";
+            string query = "UPDATE ThamSo" +
+                           " SET MoTa=@MoTa,GiaTri=@GiaTri" +
+                           " WHERE TenThamSo=@TenThamSo";
             SqlParameter[] sqlParameters = new SqlParameter[3];
             sqlParameters[0] = new SqlParameter("@TenThamSo", SqlDbType.VarChar);
             sqlParameters[0].Value = thamso.TenThamSo;
@@ -45,10 +45,10 @@ namespace DATA_Tier
             sqlParameters[2].Value = thamso.GiaTri;
             return executeUpdateQuery(query, sqlParameters);
         }
-        public bool delete(ThamSo thamso)
+        public bool Delete(ThamSo thamso)
         {
-            string query = "Delete from ThamSo" +
-                           "Where TenThamSo=@TenThamSo";
+            string query = "DELETE FROM ThamSo" +
+                           " WHERE TenThamSo=@TenThamSo";
             SqlParameter[] sqlParameters = new SqlParameter[1];
             sqlParameters[0] = new SqlParameter("@TenThamSo", SqlDbType.VarChar);
             sqlParameters[0].Value = thamso.TenThamSo;

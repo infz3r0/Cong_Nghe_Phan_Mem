@@ -16,26 +16,15 @@ namespace UI_Tier
 {
     public partial class frmlopkhoahoc : DevExpress.XtraEditors.XtraForm
     {
+        private BindingSource bs = new BindingSource();
+        private LopKhoaHocBUS lopKhoaHocBUS = new LopKhoaHocBUS();
+        private KhoaBUS khoaBUS = new KhoaBUS();
+
         public frmlopkhoahoc()
         {
             InitializeComponent();
         }
 
-        private void frmlopkhoahoc_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            DialogResult dlr = MessageBox.Show("Bạn muốn đóng Form?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dlr == DialogResult.No) e.Cancel = true;
-        }
-
-        private void btnthoatlopkh_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        BindingSource bs = new BindingSource();
-        LopKhoaHocBUS lopKhoaHocBUS = new LopKhoaHocBUS();
-        KhoaBUS khoaBUS = new KhoaBUS();
-  
         private void LoadDB()
         {
             bs.DataSource = lopKhoaHocBUS.DanhSach();
@@ -54,8 +43,20 @@ namespace UI_Tier
             LoadDB();
 
             cbbTenKhoaLopKH.AutoCompleteCustomSource = LoadAutoComplete();
+
+            PhanQuyen();
         }
 
+        private void frmlopkhoahoc_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dlr = MessageBox.Show("Bạn muốn đóng Form?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dlr == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
+        
+        //Danh sách chuỗi dùng cho thuộc tính AutoCompleteCustomSource
         public AutoCompleteStringCollection LoadAutoComplete()
         {
             DataTable dt = khoaBUS.DanhSach();
@@ -75,15 +76,18 @@ namespace UI_Tier
                 txtmalopkhoahoc.Focus();
                 return false;
             }
+
             if (string.IsNullOrEmpty(cbbTenKhoaLopKH.Text) || cbbTenKhoaLopKH.SelectedValue == null)
             {
                 MessageBox.Show("Tên khoa không được bỏ trống!");
                 cbbTenKhoaLopKH.Focus();
                 return false;
             }
+
             return true;
         }
 
+        #region Chức năng
         private void btnthemlopkh_Click(object sender, EventArgs e)
         {
             if (!DuLieuHopLe())
@@ -93,76 +97,154 @@ namespace UI_Tier
             string malop = txtmalopkhoahoc.Text;
             string makhoa = cbbTenKhoaLopKH.SelectedValue.ToString();
 
-            LopKhoaHoc lopKhoaHoc = new LopKhoaHoc(malop,makhoa);
+            LopKhoaHoc lopKhoaHoc = new LopKhoaHoc(malop, makhoa);
 
             bool thanhcong = lopKhoaHocBUS.Them(lopKhoaHoc);
             if (thanhcong)
             {
                 MessageBox.Show("Thành công !");
+                
+                bs.DataSource = lopKhoaHocBUS.DanhSach();
             }
             else
             {
                 MessageBox.Show("Lỗi !", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            bs.DataSource = lopKhoaHocBUS.DanhSach();
+            
             txtmalopkhoahoc.Focus();
         }
 
         private void btnsualopkh_Click(object sender, EventArgs e)
         {
+            //Nếu k có dòng nào trong gridview được chọn
             if (gridviewlopkh.SelectedCells.Count <= 0)
             {
                 return;
             }
+
             if (!DuLieuHopLe())
             {
                 return;
             }
 
-            string malop = gridviewlopkh.SelectedCells[0].OwningRow.Cells[0].Value.ToString();
             if (cbbTenKhoaLopKH.SelectedValue == null)
             {
                 MessageBox.Show("Khoa không tồn tại");
                 return;
             }
+
+            string malop = gridviewlopkh.SelectedCells[0].OwningRow.Cells[0].Value.ToString();           
             string makhoa = cbbTenKhoaLopKH.SelectedValue.ToString();
 
             LopKhoaHoc lopKhoaHoc = new LopKhoaHoc(malop, makhoa);
-            bool thanhcong = lopKhoaHocBUS.Sua(lopKhoaHoc);
-            if(thanhcong)
+            
+            if (lopKhoaHocBUS.Sua(lopKhoaHoc))
             {
                 MessageBox.Show("Thành công !");
+                
+                bs.DataSource = lopKhoaHocBUS.DanhSach();
             }
             else
             {
                 MessageBox.Show("Lỗi !", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            bs.DataSource = lopKhoaHocBUS.DanhSach();
+
             txtmalopkhoahoc.Focus();
         }
 
         private void btnxoalopkh_Click(object sender, EventArgs e)
         {
+            //Nếu k có dòng nào trong gridview được chọn
             if (gridviewlopkh.SelectedCells.Count <= 0)
             {
                 return;
             }
+
             string malop = gridviewlopkh.SelectedCells[0].OwningRow.Cells[0].Value.ToString();
 
             LopKhoaHoc lopKhoaHoc = new LopKhoaHoc();
             lopKhoaHoc.MaLop = malop;
-            bool thanhcong = lopKhoaHocBUS.Xoa(lopKhoaHoc);
-            if (thanhcong)
+
+            if (lopKhoaHocBUS.Xoa(lopKhoaHoc))
             {
                 MessageBox.Show("Thành công !");
+                
+                bs.DataSource = lopKhoaHocBUS.DanhSach();
             }
             else
             {
                 MessageBox.Show("Lỗi !", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            bs.DataSource = lopKhoaHocBUS.DanhSach();
-           
 
+            txtmalopkhoahoc.Focus();
         }
+
+        private void btnthoatlopkh_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+        #endregion
+
+        #region Phân quyền
+        //Disable các button thêm, xóa, sửa
+        private void DisableAll()
+        {
+            btnthemlopkh.Enabled = false;
+            btnxoalopkh.Enabled = false;
+            btnsualopkh.Enabled = false;
+        }
+
+        private void PhanQuyen()
+        {
+            DisableAll();
+            ChangePermission(frmmain.f_lopKhoaHoc);
+        }
+
+        private void ChangePermission(int value)
+        {
+            //t: Thêm
+            //x: Xóa
+            //s: Sửa
+            switch (value)
+            {
+                case 0:
+                    //---
+                    break;
+                case 1:
+                    //t--
+                    btnthemlopkh.Enabled = true;
+                    break;
+                case 2:
+                    //-x-
+                    btnxoalopkh.Enabled = true;
+                    break;
+                case 4:
+                    //--s
+                    btnsualopkh.Enabled = true;
+                    break;
+                case 3:
+                    //tx-
+                    btnthemlopkh.Enabled = true;
+                    btnxoalopkh.Enabled = true;
+                    break;
+                case 5:
+                    //t-s
+                    btnthemlopkh.Enabled = true;
+                    btnsualopkh.Enabled = true;
+                    break;
+                case 6:
+                    //-xs
+                    btnxoalopkh.Enabled = true;
+                    btnsualopkh.Enabled = true;
+                    break;
+                case 7:
+                    //txs
+                    btnthemlopkh.Enabled = true;
+                    btnxoalopkh.Enabled = true;
+                    btnsualopkh.Enabled = true;
+                    break;
+            }
+        }
+        #endregion
     }
 }

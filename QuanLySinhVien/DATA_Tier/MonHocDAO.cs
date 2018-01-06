@@ -12,16 +12,16 @@ namespace DATA_Tier
 {
     public class MonHocDAO : DBConnect
     {
-        public DataTable getAll()
+        public DataTable GetAll()
         {
-            string query = "Select * from MonHoc";
+            string query = "SELECT * FROM MonHoc";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return executeSelectQuery(query, sqlParameters);
         }
-        public bool insert(MonHoc monhoc)
+        public bool Insert(MonHoc monhoc)
         {
-            string query = "Insert into MonHoc (MaHP,TenHP,SoTinChi,LoaiHP,TrongSoDQT,TrongSoDThi) " +
-                           "Values (@MaHP,@TenHP,@SoTinChi,@LoaiHP,@TrongSoDQT,@TrongSoDThi)";
+            string query = "INSERT INTO MonHoc (MaHP, TenHP, SoTinChi, LoaiHP, TrongSoDQT, TrongSoDThi) " +
+                           "VALUES (@MaHP, @TenHP, @SoTinChi, @LoaiHP, @TrongSoDQT, @TrongSoDThi)";
             SqlParameter[] sqlParameters = new SqlParameter[6];
             sqlParameters[0] = new SqlParameter("@MaHP", SqlDbType.VarChar);
             sqlParameters[0].Value = monhoc.MaHP;
@@ -37,11 +37,11 @@ namespace DATA_Tier
             sqlParameters[5].Value = monhoc.TrongSoDThi;
             return executeInsertQuery(query, sqlParameters);
         }
-        public bool update(MonHoc monhoc)
+        public bool Update(MonHoc monhoc)
         {
-            string query = "Update MonHoc" +
-                           " Set TenHP=@TenHP,SoTinChi=@SoTinChi,LoaiHP=@LoaiHP,TrongSoDQT=@TrongSoDQT,TrongSoDThi=@TrongSoDThi" +
-                           " Where MaHP=@MaHP";
+            string query = "UPDATE MonHoc" +
+                           " SET TenHP=@TenHP, SoTinChi=@SoTinChi, LoaiHP=@LoaiHP, TrongSoDQT=@TrongSoDQT, TrongSoDThi=@TrongSoDThi" +
+                           " WHERE MaHP=@MaHP";
             SqlParameter[] sqlParameters = new SqlParameter[6];
             sqlParameters[0] = new SqlParameter("@MaHP", SqlDbType.VarChar);
             sqlParameters[0].Value = monhoc.MaHP;
@@ -57,10 +57,10 @@ namespace DATA_Tier
             sqlParameters[5].Value = monhoc.TrongSoDThi;
             return executeUpdateQuery(query, sqlParameters);
         }
-        public bool delete(MonHoc monhoc)
+        public bool Delete(MonHoc monhoc)
         {
-            string query = "Delete from MonHoc " +
-                           "Where MaHP=@MaHP";
+            string query = "DELETE FROM MonHoc " +
+                           "WHERE MaHP=@MaHP";
             SqlParameter[] sqlParameters = new SqlParameter[1];
             sqlParameters[0] = new SqlParameter("@MaHP", SqlDbType.VarChar);
             sqlParameters[0].Value = monhoc.MaHP;

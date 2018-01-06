@@ -177,7 +177,7 @@
             this.txtdienthoaisv.Properties.Appearance.Options.UseBackColor = true;
             this.txtdienthoaisv.Properties.Appearance.Options.UseForeColor = true;
             this.txtdienthoaisv.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.txtdienthoaisv.Properties.Mask.EditMask = "\\(\\d?{3}\\) \\d{8}";
+            this.txtdienthoaisv.Properties.Mask.EditMask = "\\d{8,12}";
             this.txtdienthoaisv.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtdienthoaisv.Size = new System.Drawing.Size(310, 22);
             this.txtdienthoaisv.TabIndex = 6;

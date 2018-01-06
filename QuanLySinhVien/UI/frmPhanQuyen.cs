@@ -27,6 +27,8 @@ namespace UI_Tier
         private bool isWrite;
         private bool isSystem;
 
+        private bool isModified;
+
         public frmPhanQuyen()
         {
             InitializeComponent();
@@ -52,6 +54,8 @@ namespace UI_Tier
             isRead = false;
             isWrite = false;
             isSystem = false;
+
+            isModified = false;
         }
 
         private void PhanQuyenTheoGID()
@@ -106,18 +110,22 @@ namespace UI_Tier
                 MessageBox.Show("Cập nhật thành công");
                 bangPhanQuyen = phanQuyenBUS.DanhSach();
                 PhanQuyenTheoGID();
-                return;
+
+                isModified = true;
             }
             else
             {
                 MessageBox.Show("Lỗi");
-                return;
             }
         }
 
         private void btnThoatPhanQuyen_Click(object sender, EventArgs e)
         {
-            Dispose();
+            if (isModified)
+            {
+                DialogResult = DialogResult.Yes;
+            }
+            Close();
         }
 
         private void cbbGID_SelectionChangeCommitted(object sender, EventArgs e)

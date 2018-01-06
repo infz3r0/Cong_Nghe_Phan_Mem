@@ -80,7 +80,6 @@
             this.navBarItem14 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem15 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem10 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem17 = new DevExpress.XtraNavBar.NavBarItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDisplayFormat1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1)).BeginInit();
@@ -126,7 +125,7 @@
             this.repositoryItemTextEdit1,
             this.repositoryItemTextEdit2});
             this.ribbon.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.OfficeUniversal;
-            this.ribbon.Size = new System.Drawing.Size(951, 116);
+            this.ribbon.Size = new System.Drawing.Size(876, 93);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             this.ribbon.UseWaitCursor = true;
             // 
@@ -286,11 +285,11 @@
             // 
             this.ribbonStatusBar.ItemLinks.Add(this.txtusername);
             this.ribbonStatusBar.ItemLinks.Add(this.btnDangXuat);
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 488);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 418);
             this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(951, 40);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(876, 31);
             // 
             // defaultLookAndFeel1
             // 
@@ -319,21 +318,21 @@
             this.dockPanel1.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
             this.dockPanel1.ID = new System.Guid("28d9130a-5615-4bcb-9cc3-1cda02a8dd3d");
             this.dockPanel1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("dockPanel1.ImageOptions.Image")));
-            this.dockPanel1.Location = new System.Drawing.Point(0, 116);
+            this.dockPanel1.Location = new System.Drawing.Point(0, 93);
             this.dockPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dockPanel1.Name = "dockPanel1";
             this.dockPanel1.Options.ShowCloseButton = false;
-            this.dockPanel1.OriginalSize = new System.Drawing.Size(238, 200);
-            this.dockPanel1.Size = new System.Drawing.Size(238, 372);
+            this.dockPanel1.OriginalSize = new System.Drawing.Size(190, 200);
+            this.dockPanel1.Size = new System.Drawing.Size(190, 325);
             this.dockPanel1.Text = "CHỨC NĂNG";
             // 
             // dockPanel1_Container
             // 
             this.dockPanel1_Container.Controls.Add(this.navBarControl1);
-            this.dockPanel1_Container.Location = new System.Drawing.Point(9, 36);
+            this.dockPanel1_Container.Location = new System.Drawing.Point(7, 31);
             this.dockPanel1_Container.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dockPanel1_Container.Name = "dockPanel1_Container";
-            this.dockPanel1_Container.Size = new System.Drawing.Size(218, 327);
+            this.dockPanel1_Container.Size = new System.Drawing.Size(175, 287);
             this.dockPanel1_Container.TabIndex = 0;
             // 
             // navBarControl1
@@ -362,13 +361,12 @@
             this.navBarItem13,
             this.navBarItem14,
             this.navBarItem15,
-            this.navBarItem16,
-            this.navBarItem17});
+            this.navBarItem16});
             this.navBarControl1.Location = new System.Drawing.Point(0, 0);
             this.navBarControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.navBarControl1.Name = "navBarControl1";
-            this.navBarControl1.OptionsNavPane.ExpandedWidth = 218;
-            this.navBarControl1.Size = new System.Drawing.Size(218, 327);
+            this.navBarControl1.OptionsNavPane.ExpandedWidth = 175;
+            this.navBarControl1.Size = new System.Drawing.Size(175, 287);
             this.navBarControl1.TabIndex = 0;
             this.navBarControl1.Text = "navBarControl1";
             // 
@@ -381,7 +379,6 @@
             this.navBarGroup1.AppearanceHotTracked.FontSizeDelta = 3;
             this.navBarGroup1.AppearanceHotTracked.Options.UseFont = true;
             this.navBarGroup1.Caption = "Quản lí";
-            this.navBarGroup1.Expanded = true;
             this.navBarGroup1.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarGroup1.ImageOptions.SmallImage")));
             this.navBarGroup1.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem1),
@@ -389,12 +386,13 @@
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem3),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem4),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem5),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem13),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem17)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem13)});
             this.navBarGroup1.Name = "navBarGroup1";
             // 
             // navBarItem1
             // 
+            this.navBarItem1.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Strikeout);
+            this.navBarItem1.AppearanceDisabled.Options.UseFont = true;
             this.navBarItem1.Caption = "Khoa";
             this.navBarItem1.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem1.ImageOptions.SmallImage")));
             this.navBarItem1.Name = "navBarItem1";
@@ -402,6 +400,8 @@
             // 
             // navBarItem2
             // 
+            this.navBarItem2.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Strikeout);
+            this.navBarItem2.AppearanceDisabled.Options.UseFont = true;
             this.navBarItem2.Caption = "Lớp khóa học";
             this.navBarItem2.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem2.ImageOptions.SmallImage")));
             this.navBarItem2.Name = "navBarItem2";
@@ -409,6 +409,8 @@
             // 
             // navBarItem3
             // 
+            this.navBarItem3.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Strikeout);
+            this.navBarItem3.AppearanceDisabled.Options.UseFont = true;
             this.navBarItem3.Caption = "Lớp học phần";
             this.navBarItem3.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem3.ImageOptions.SmallImage")));
             this.navBarItem3.Name = "navBarItem3";
@@ -416,6 +418,8 @@
             // 
             // navBarItem4
             // 
+            this.navBarItem4.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Strikeout);
+            this.navBarItem4.AppearanceDisabled.Options.UseFont = true;
             this.navBarItem4.Caption = "Sinh viên";
             this.navBarItem4.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem4.ImageOptions.SmallImage")));
             this.navBarItem4.Name = "navBarItem4";
@@ -423,6 +427,8 @@
             // 
             // navBarItem5
             // 
+            this.navBarItem5.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Strikeout);
+            this.navBarItem5.AppearanceDisabled.Options.UseFont = true;
             this.navBarItem5.Caption = "Môn học";
             this.navBarItem5.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem5.ImageOptions.SmallImage")));
             this.navBarItem5.Name = "navBarItem5";
@@ -430,6 +436,8 @@
             // 
             // navBarItem13
             // 
+            this.navBarItem13.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Strikeout);
+            this.navBarItem13.AppearanceDisabled.Options.UseFont = true;
             this.navBarItem13.Caption = "Ban cán sự";
             this.navBarItem13.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem13.ImageOptions.SmallImage")));
             this.navBarItem13.Name = "navBarItem13";
@@ -452,6 +460,8 @@
             // 
             // navBarItem6
             // 
+            this.navBarItem6.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Strikeout);
+            this.navBarItem6.AppearanceDisabled.Options.UseFont = true;
             this.navBarItem6.Caption = "Nhập điểm";
             this.navBarItem6.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem6.ImageOptions.SmallImage")));
             this.navBarItem6.Name = "navBarItem6";
@@ -459,6 +469,8 @@
             // 
             // navBarItem7
             // 
+            this.navBarItem7.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Strikeout);
+            this.navBarItem7.AppearanceDisabled.Options.UseFont = true;
             this.navBarItem7.Caption = "Xem điểm";
             this.navBarItem7.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem7.ImageOptions.SmallImage")));
             this.navBarItem7.Name = "navBarItem7";
@@ -480,6 +492,8 @@
             // 
             // navBarItem8
             // 
+            this.navBarItem8.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Strikeout);
+            this.navBarItem8.AppearanceDisabled.Options.UseFont = true;
             this.navBarItem8.Caption = "Thông tin sinh viên";
             this.navBarItem8.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem8.ImageOptions.SmallImage")));
             this.navBarItem8.Name = "navBarItem8";
@@ -501,6 +515,8 @@
             // 
             // navBarItem9
             // 
+            this.navBarItem9.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Strikeout);
+            this.navBarItem9.AppearanceDisabled.Options.UseFont = true;
             this.navBarItem9.Caption = "Danh sách sinh viên";
             this.navBarItem9.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem9.ImageOptions.SmallImage")));
             this.navBarItem9.Name = "navBarItem9";
@@ -524,6 +540,8 @@
             // 
             // navBarItem11
             // 
+            this.navBarItem11.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Strikeout);
+            this.navBarItem11.AppearanceDisabled.Options.UseFont = true;
             this.navBarItem11.Caption = "Đổi mật khẩu";
             this.navBarItem11.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem11.ImageOptions.SmallImage")));
             this.navBarItem11.Name = "navBarItem11";
@@ -531,6 +549,8 @@
             // 
             // navBarItem12
             // 
+            this.navBarItem12.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Strikeout);
+            this.navBarItem12.AppearanceDisabled.Options.UseFont = true;
             this.navBarItem12.Caption = "Đăng kí";
             this.navBarItem12.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem12.ImageOptions.SmallImage")));
             this.navBarItem12.Name = "navBarItem12";
@@ -538,6 +558,8 @@
             // 
             // navBarItem16
             // 
+            this.navBarItem16.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Strikeout);
+            this.navBarItem16.AppearanceDisabled.Options.UseFont = true;
             this.navBarItem16.Caption = "Phân quyền";
             this.navBarItem16.Name = "navBarItem16";
             this.navBarItem16.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem16_LinkClicked);
@@ -559,12 +581,16 @@
             // 
             // navBarItem14
             // 
+            this.navBarItem14.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Strikeout);
+            this.navBarItem14.AppearanceDisabled.Options.UseFont = true;
             this.navBarItem14.Caption = "Hệ thống (tham số)";
             this.navBarItem14.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem14.ImageOptions.SmallImage")));
             this.navBarItem14.Name = "navBarItem14";
             // 
             // navBarItem15
             // 
+            this.navBarItem15.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Strikeout);
+            this.navBarItem15.AppearanceDisabled.Options.UseFont = true;
             this.navBarItem15.Caption = "Bảng điểm hệ 4";
             this.navBarItem15.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem15.ImageOptions.SmallImage")));
             this.navBarItem15.Name = "navBarItem15";
@@ -572,15 +598,11 @@
             // 
             // navBarItem10
             // 
+            this.navBarItem10.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Strikeout);
+            this.navBarItem10.AppearanceDisabled.Options.UseFont = true;
             this.navBarItem10.Caption = "Thông tin tài khoản";
             this.navBarItem10.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem10.ImageOptions.SmallImage")));
             this.navBarItem10.Name = "navBarItem10";
-            // 
-            // navBarItem17
-            // 
-            this.navBarItem17.Caption = "Đăng ký học phần";
-            this.navBarItem17.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem17.ImageOptions.SmallImage")));
-            this.navBarItem17.Name = "navBarItem17";
             // 
             // frmmain
             // 
@@ -588,10 +610,10 @@
             this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(147)))), ((int)(((byte)(211)))));
             this.Appearance.Options.UseBackColor = true;
             this.Appearance.Options.UseFont = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(951, 528);
+            this.ClientSize = new System.Drawing.Size(876, 449);
             this.Controls.Add(this.dockPanel1);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
@@ -676,6 +698,5 @@
         private DevExpress.XtraNavBar.NavBarItem navBarItem15;
         private DevExpress.XtraNavBar.NavBarItem navBarItem10;
         private DevExpress.XtraNavBar.NavBarItem navBarItem16;
-        private DevExpress.XtraNavBar.NavBarItem navBarItem17;
     }
 }

@@ -16,7 +16,7 @@ namespace BUS_Tier
 
         public DataTable DanhSach()
         {
-            return quyenDAO.getAll();
+            return quyenDAO.GetAll();
         }
 
         public bool Them(Quyen quyen)

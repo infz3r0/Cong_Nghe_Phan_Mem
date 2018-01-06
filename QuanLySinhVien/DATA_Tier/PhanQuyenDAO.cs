@@ -12,16 +12,26 @@ namespace DATA_Tier
 {
     public class PhanQuyenDAO : DBConnect
     {
-        public DataTable getAll()
+        public DataTable GetAll()
         {
-            string query = "select P.GID, TenNhom, P.MaQuyen, Mota from Nhom N, PhanQuyen P, Quyen Q where N.GID = P.GID and P.MaQuyen = Q.MaQuyen";
+            string query = "SELECT P.GID, TenNhom, P.MaQuyen, Mota FROM Nhom N, PhanQuyen P, Quyen Q WHERE N.GID = P.GID AND P.MaQuyen = Q.MaQuyen";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return executeSelectQuery(query, sqlParameters);
         }
-        public bool insert(PhanQuyen phanquyen)
+
+        public DataTable SelectMaQuyenByGID(int gid)
         {
-            string query = "Insert into PhanQuyen (GID, MaQuyen) " +
-                           "Values (@GID, @MaQuyen)";
+            string query = "SELECT MaQuyen FROM PhanQuyen WHERE GID = @gid";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@GID", SqlDbType.Int);
+            sqlParameters[0].Value = gid;
+            return executeSelectQuery(query, sqlParameters);
+        }
+
+        public bool Insert(PhanQuyen phanquyen)
+        {
+            string query = "INSERT INTO PhanQuyen (GID, MaQuyen) " +
+                           "VALUES (@GID, @MaQuyen)";
             SqlParameter[] sqlParameters = new SqlParameter[2];
             sqlParameters[1] = new SqlParameter("@GID", SqlDbType.Int);
             sqlParameters[1].Value = phanquyen.GID;
@@ -29,11 +39,11 @@ namespace DATA_Tier
             sqlParameters[0].Value = phanquyen.MaQuyen;
             return executeInsertQuery(query, sqlParameters);
         }
-        public bool update(PhanQuyen phanquyen)
+        public bool Update(PhanQuyen phanquyen)
         {
-            string query = "Update PhanQuyen " +
-                           "Set MaQuyen=@MaQuyen" +
-                           "Where GID=@GID";
+            string query = "UPDATE PhanQuyen" +
+                           " SET MaQuyen=@MaQuyen" +
+                           " WHERE GID=@GID";
             SqlParameter[] sqlParameters = new SqlParameter[2];
             sqlParameters[1] = new SqlParameter("@GID", SqlDbType.Int);
             sqlParameters[1].Value = phanquyen.GID;
@@ -41,10 +51,10 @@ namespace DATA_Tier
             sqlParameters[0].Value = phanquyen.MaQuyen;
             return executeUpdateQuery(query, sqlParameters);
         }
-        public bool delete(PhanQuyen phanquyen)
+        public bool Delete(PhanQuyen phanquyen)
         {
-            string query = "Delete from PhanQuyen" +
-                           "Where GID=@GID or MaQuyen=@MaQuyen";
+            string query = "DELETE FROM PhanQuyen" +
+                           " WHERE GID=@GID AND MaQuyen=@MaQuyen";
             SqlParameter[] sqlParameters = new SqlParameter[2];
             sqlParameters[0] = new SqlParameter("@GID", SqlDbType.Int);
             sqlParameters[0].Value = phanquyen.GID;
@@ -52,9 +62,9 @@ namespace DATA_Tier
             sqlParameters[1].Value = phanquyen.MaQuyen;
             return executeDeleteQuery(query, sqlParameters);
         }
-        public bool deleteAll(PhanQuyen phanquyen)
+        public bool DeleteAll(PhanQuyen phanquyen)
         {
-            string query = "Delete from PhanQuyen where GID = @GID";
+            string query = "DELETE FROM PhanQuyen WHERE GID = @GID";
             SqlParameter[] sqlParameters = new SqlParameter[1];
             sqlParameters[0] = new SqlParameter("@GID", SqlDbType.Int);
             sqlParameters[0].Value = phanquyen.GID;

@@ -16,17 +16,22 @@ namespace BUS_Tier
 
         public DataTable DanhSach()
         {
-            return phanQuyenDAO.getAll();
+            return phanQuyenDAO.GetAll();
         }
 
         public bool CapNhat(PhanQuyen phanQuyen)
         {
-            return phanQuyenDAO.insert(phanQuyen);
+            return phanQuyenDAO.Insert(phanQuyen);
         }
 
         public bool Xoa(PhanQuyen phanQuyen)
         {
-            return phanQuyenDAO.deleteAll(phanQuyen);
+            return phanQuyenDAO.DeleteAll(phanQuyen);
+        }
+
+        public DataTable DanhSachQuyenTheoGID(int gid)
+        {
+            return phanQuyenDAO.SelectMaQuyenByGID(gid);
         }
     }
 }

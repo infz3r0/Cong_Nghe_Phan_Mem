@@ -12,16 +12,16 @@ namespace DATA_Tier
 {
     public class QuyenDAO : DBConnect
     {
-        public DataTable getAll()
+        public DataTable GetAll()
         {
-            string query = "Select * from Quyen";
+            string query = "SELECT * FROM Quyen";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return executeSelectQuery(query, sqlParameters);
         }
-        public bool insert(Quyen quyen)
+        public bool Insert(Quyen quyen)
         {
-            string query = "Insert into Quyen (MaQuyen,Mota) " +
-                           "Values (@MaQuyen,@MoTa)";
+            string query = "INSERT INTO Quyen (MaQuyen, Mota) " +
+                           "VALUES (@MaQuyen, @MoTa)";
             SqlParameter[] sqlParameters = new SqlParameter[2];
             sqlParameters[0] = new SqlParameter("@MaQuyen", SqlDbType.Int);
             sqlParameters[0].Value = quyen.MaQuyen;
@@ -29,11 +29,11 @@ namespace DATA_Tier
             sqlParameters[1].Value = quyen.MoTa;
             return executeInsertQuery(query, sqlParameters);
         }
-        public bool update(Quyen quyen)
+        public bool Update(Quyen quyen)
         {
-            string query = "Update Quyen " +
-                           "Set MoTa=@MoTa" +
-                           "Where MaQuyen=@MaQuyen";
+            string query = "UPDATE Quyen" +
+                           " SET MoTa=@MoTa" +
+                           " WHERE MaQuyen=@MaQuyen";
             SqlParameter[] sqlParameters = new SqlParameter[2];
             sqlParameters[0] = new SqlParameter("@MaQuyen", SqlDbType.Int);
             sqlParameters[0].Value = quyen.MaQuyen;
@@ -41,10 +41,10 @@ namespace DATA_Tier
             sqlParameters[1].Value = quyen.MoTa;
             return executeUpdateQuery(query, sqlParameters);
         }
-        public bool delete(Quyen quyen)
+        public bool Delete(Quyen quyen)
         {
-            string query = "Delete from Quyen" +
-                           "Where MaQuyen=@MaQuyen";
+            string query = "DELETE FROM Quyen" +
+                           "WHERE MaQuyen=@MaQuyen";
             SqlParameter[] sqlParameters = new SqlParameter[1];
             sqlParameters[0] = new SqlParameter("@MaQuyen", SqlDbType.Int);
             sqlParameters[0].Value = quyen.MaQuyen;
