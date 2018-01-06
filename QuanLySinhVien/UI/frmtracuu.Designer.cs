@@ -35,10 +35,10 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cbbtim = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.btnthoatracuu = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.btntracuu = new DevExpress.XtraEditors.SimpleButton();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
+            this.btntracuu = new DevExpress.XtraEditors.SimpleButton();
+            this.btnthoatracuu = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.gridviewtracuu)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -51,9 +51,10 @@
             this.gridviewtracuu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridviewtracuu.BackgroundColor = System.Drawing.Color.White;
             this.gridviewtracuu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridviewtracuu.Location = new System.Drawing.Point(7, 23);
+            this.gridviewtracuu.Location = new System.Drawing.Point(8, 28);
+            this.gridviewtracuu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridviewtracuu.Name = "gridviewtracuu";
-            this.gridviewtracuu.Size = new System.Drawing.Size(880, 291);
+            this.gridviewtracuu.Size = new System.Drawing.Size(1027, 358);
             this.gridviewtracuu.TabIndex = 9;
             // 
             // groupBox3
@@ -62,9 +63,11 @@
             this.groupBox3.Controls.Add(this.gridviewtracuu);
             this.groupBox3.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox3.ForeColor = System.Drawing.Color.White;
-            this.groupBox3.Location = new System.Drawing.Point(12, 104);
+            this.groupBox3.Location = new System.Drawing.Point(14, 128);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(893, 324);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox3.Size = new System.Drawing.Size(1042, 399);
             this.groupBox3.TabIndex = 23;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông tin chi tiết";
@@ -78,16 +81,19 @@
             this.groupBox2.Controls.Add(this.btntracuu);
             this.groupBox2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(12, 12);
+            this.groupBox2.Location = new System.Drawing.Point(14, 15);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(893, 86);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox2.Size = new System.Drawing.Size(1042, 106);
             this.groupBox2.TabIndex = 22;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chức năng";
             // 
             // cbbtim
             // 
-            this.cbbtim.Location = new System.Drawing.Point(240, 38);
+            this.cbbtim.Location = new System.Drawing.Point(280, 47);
+            this.cbbtim.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbbtim.Name = "cbbtim";
             this.cbbtim.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.cbbtim.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
@@ -95,26 +101,8 @@
             this.cbbtim.Properties.Appearance.Options.UseForeColor = true;
             this.cbbtim.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbbtim.Size = new System.Drawing.Size(307, 20);
+            this.cbbtim.Size = new System.Drawing.Size(358, 22);
             this.cbbtim.TabIndex = 0;
-            // 
-            // btnthoatracuu
-            // 
-            this.btnthoatracuu.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnthoatracuu.Appearance.ForeColor = System.Drawing.Color.Transparent;
-            this.btnthoatracuu.Appearance.Options.UseFont = true;
-            this.btnthoatracuu.Appearance.Options.UseForeColor = true;
-            this.btnthoatracuu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnthoatracuu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnthoatracuu.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnthoatracuu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthoatracuu.ImageOptions.Image")));
-            this.btnthoatracuu.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnthoatracuu.Location = new System.Drawing.Point(755, 31);
-            this.btnthoatracuu.Name = "btnthoatracuu";
-            this.btnthoatracuu.Size = new System.Drawing.Size(96, 33);
-            this.btnthoatracuu.TabIndex = 2;
-            this.btnthoatracuu.Text = "Đóng";
-            this.btnthoatracuu.Click += new System.EventHandler(this.btnthoatracuu_Click);
             // 
             // labelControl1
             // 
@@ -122,9 +110,10 @@
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.Location = new System.Drawing.Point(22, 36);
+            this.labelControl1.Location = new System.Drawing.Point(26, 44);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(171, 23);
+            this.labelControl1.Size = new System.Drawing.Size(217, 29);
             this.labelControl1.TabIndex = 2;
             this.labelControl1.Text = "Nhập mssv hoặc tên";
             // 
@@ -138,22 +127,43 @@
             this.btntracuu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btntracuu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btntracuu.ImageOptions.Image")));
             this.btntracuu.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btntracuu.Location = new System.Drawing.Point(619, 31);
+            this.btntracuu.Location = new System.Drawing.Point(722, 38);
+            this.btntracuu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btntracuu.Name = "btntracuu";
-            this.btntracuu.Size = new System.Drawing.Size(96, 33);
+            this.btntracuu.Size = new System.Drawing.Size(112, 41);
             this.btntracuu.TabIndex = 1;
             this.btntracuu.Text = "Tìm";
+            // 
+            // btnthoatracuu
+            // 
+            this.btnthoatracuu.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnthoatracuu.Appearance.ForeColor = System.Drawing.Color.Transparent;
+            this.btnthoatracuu.Appearance.Options.UseFont = true;
+            this.btnthoatracuu.Appearance.Options.UseForeColor = true;
+            this.btnthoatracuu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnthoatracuu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnthoatracuu.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnthoatracuu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthoatracuu.ImageOptions.Image")));
+            this.btnthoatracuu.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnthoatracuu.Location = new System.Drawing.Point(881, 38);
+            this.btnthoatracuu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnthoatracuu.Name = "btnthoatracuu";
+            this.btnthoatracuu.Size = new System.Drawing.Size(112, 41);
+            this.btnthoatracuu.TabIndex = 2;
+            this.btnthoatracuu.Text = "Đóng";
+            this.btnthoatracuu.Click += new System.EventHandler(this.btnthoatracuu_Click);
             // 
             // frmtracuu
             // 
             this.AcceptButton = this.btntracuu;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnthoatracuu;
-            this.ClientSize = new System.Drawing.Size(912, 433);
+            this.ClientSize = new System.Drawing.Size(1064, 533);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmtracuu";
             this.Text = "TRA CỨU THÔNG TIN SINH VIÊN";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmtracuu_FormClosing);

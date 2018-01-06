@@ -88,7 +88,7 @@ namespace DATA_Tier
             sqlParameters[7].Value = sv.Email;
             sqlParameters[8] = new SqlParameter("@MaLop", SqlDbType.VarChar);
             sqlParameters[8].Value = sv.MaLop;
-            return executeInsertQuery(query, sqlParameters);
+            return executeUpdateQuery(query, sqlParameters);
         }
         public bool delete(SinhVien sv)
         {

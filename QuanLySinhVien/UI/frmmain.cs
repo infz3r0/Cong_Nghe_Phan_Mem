@@ -328,5 +328,19 @@ namespace UI_Tier
                 frm.Activate();
             }
         }
+        private void navBarItem17_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            Form frm = kiemtraform(typeof(frmdangkymonhoc));
+            if (frm == null)
+            {
+                frmdangkymonhoc forms = new frmdangkymonhoc();
+                forms.MdiParent = this;
+                forms.Show();
+            }
+            else
+            {
+                frm.Activate();
+            }
+        }
     }
 }

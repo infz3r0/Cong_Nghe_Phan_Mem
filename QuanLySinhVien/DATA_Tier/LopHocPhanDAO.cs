@@ -50,7 +50,7 @@ namespace DATA_Tier
             {
                 sqlParameters[2].Value = lophp.LopTruong;
             }
-            return executeInsertQuery(query, sqlParameters);
+            return executeUpdateQuery(query, sqlParameters);
         }
         public bool delete(LopHocPhan lophp)
         {
