@@ -93,7 +93,7 @@
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox3.Size = new System.Drawing.Size(1119, 250);
+            this.groupBox3.Size = new System.Drawing.Size(983, 250);
             this.groupBox3.TabIndex = 21;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông tin chi tiết";
@@ -105,7 +105,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(23, 30);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1079, 201);
+            this.dataGridView1.Size = new System.Drawing.Size(947, 201);
             this.dataGridView1.TabIndex = 0;
             // 
             // groupBox2
@@ -116,7 +116,7 @@
             this.groupBox2.Controls.Add(this.btnthemhp);
             this.groupBox2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(639, 333);
+            this.groupBox2.Location = new System.Drawing.Point(520, 333);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -187,7 +187,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(1119, 277);
+            this.groupBox1.Size = new System.Drawing.Size(983, 277);
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách môn học đã chọn";
@@ -199,7 +199,7 @@
             this.dataGridView2.Location = new System.Drawing.Point(23, 47);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(1079, 208);
+            this.dataGridView2.Size = new System.Drawing.Size(947, 208);
             this.dataGridView2.TabIndex = 0;
             // 
             // label2
@@ -227,7 +227,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1152, 714);
+            this.ClientSize = new System.Drawing.Size(1018, 714);
             this.Controls.Add(this.textEdit2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox1);
