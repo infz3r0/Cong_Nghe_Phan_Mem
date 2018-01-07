@@ -17,5 +17,13 @@ namespace UI_Tier
         {
             InitializeComponent();
         }
+        private void frmdangkymonhoc_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dlr = MessageBox.Show("Bạn muốn đóng Form?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dlr == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
     }
 }

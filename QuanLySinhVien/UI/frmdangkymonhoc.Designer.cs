@@ -34,21 +34,21 @@
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnthoathp = new DevExpress.XtraEditors.SimpleButton();
-            this.btnxoahp = new DevExpress.XtraEditors.SimpleButton();
-            this.btnthemhp = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnthoathp = new DevExpress.XtraEditors.SimpleButton();
+            this.btnxoahp = new DevExpress.XtraEditors.SimpleButton();
+            this.btnthemhp = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -108,75 +108,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(947, 201);
             this.dataGridView1.TabIndex = 0;
             // 
-            // groupBox2
-            // 
-            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox2.Controls.Add(this.btnthoathp);
-            this.groupBox2.Controls.Add(this.btnxoahp);
-            this.groupBox2.Controls.Add(this.btnthemhp);
-            this.groupBox2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(520, 333);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox2.Size = new System.Drawing.Size(480, 87);
-            this.groupBox2.TabIndex = 22;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Chức năng";
-            // 
-            // btnthoathp
-            // 
-            this.btnthoathp.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnthoathp.Appearance.ForeColor = System.Drawing.Color.Transparent;
-            this.btnthoathp.Appearance.Options.UseFont = true;
-            this.btnthoathp.Appearance.Options.UseForeColor = true;
-            this.btnthoathp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnthoathp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnthoathp.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnthoathp.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthoathp.ImageOptions.Image")));
-            this.btnthoathp.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnthoathp.Location = new System.Drawing.Point(331, 28);
-            this.btnthoathp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnthoathp.Name = "btnthoathp";
-            this.btnthoathp.Size = new System.Drawing.Size(112, 41);
-            this.btnthoathp.TabIndex = 3;
-            this.btnthoathp.Text = "Đóng";
-            // 
-            // btnxoahp
-            // 
-            this.btnxoahp.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnxoahp.Appearance.ForeColor = System.Drawing.Color.White;
-            this.btnxoahp.Appearance.Options.UseFont = true;
-            this.btnxoahp.Appearance.Options.UseForeColor = true;
-            this.btnxoahp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnxoahp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnxoahp.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnxoahp.ImageOptions.Image")));
-            this.btnxoahp.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnxoahp.Location = new System.Drawing.Point(196, 28);
-            this.btnxoahp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnxoahp.Name = "btnxoahp";
-            this.btnxoahp.Size = new System.Drawing.Size(112, 41);
-            this.btnxoahp.TabIndex = 2;
-            this.btnxoahp.Text = "Xóa";
-            // 
-            // btnthemhp
-            // 
-            this.btnthemhp.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnthemhp.Appearance.ForeColor = System.Drawing.Color.White;
-            this.btnthemhp.Appearance.Options.UseFont = true;
-            this.btnthemhp.Appearance.Options.UseForeColor = true;
-            this.btnthemhp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnthemhp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnthemhp.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthemhp.ImageOptions.Image")));
-            this.btnthemhp.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnthemhp.Location = new System.Drawing.Point(62, 28);
-            this.btnthemhp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnthemhp.Name = "btnthemhp";
-            this.btnthemhp.Size = new System.Drawing.Size(112, 41);
-            this.btnthemhp.TabIndex = 0;
-            this.btnthemhp.Text = "Lưu";
-            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
@@ -223,28 +154,98 @@
             this.textEdit2.Size = new System.Drawing.Size(235, 30);
             this.textEdit2.TabIndex = 26;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.btnthoathp);
+            this.groupBox2.Controls.Add(this.btnxoahp);
+            this.groupBox2.Controls.Add(this.btnthemhp);
+            this.groupBox2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.groupBox2.ForeColor = System.Drawing.Color.White;
+            this.groupBox2.Location = new System.Drawing.Point(481, 342);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox2.Size = new System.Drawing.Size(519, 87);
+            this.groupBox2.TabIndex = 27;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Chức năng";
+            // 
+            // btnthoathp
+            // 
+            this.btnthoathp.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnthoathp.Appearance.ForeColor = System.Drawing.Color.Transparent;
+            this.btnthoathp.Appearance.Options.UseFont = true;
+            this.btnthoathp.Appearance.Options.UseForeColor = true;
+            this.btnthoathp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnthoathp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnthoathp.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnthoathp.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthoathp.ImageOptions.Image")));
+            this.btnthoathp.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnthoathp.Location = new System.Drawing.Point(378, 28);
+            this.btnthoathp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnthoathp.Name = "btnthoathp";
+            this.btnthoathp.Size = new System.Drawing.Size(112, 41);
+            this.btnthoathp.TabIndex = 3;
+            this.btnthoathp.Text = "Đóng";
+            // 
+            // btnxoahp
+            // 
+            this.btnxoahp.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnxoahp.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnxoahp.Appearance.Options.UseFont = true;
+            this.btnxoahp.Appearance.Options.UseForeColor = true;
+            this.btnxoahp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnxoahp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnxoahp.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnxoahp.ImageOptions.Image")));
+            this.btnxoahp.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnxoahp.Location = new System.Drawing.Point(232, 28);
+            this.btnxoahp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnxoahp.Name = "btnxoahp";
+            this.btnxoahp.Size = new System.Drawing.Size(112, 41);
+            this.btnxoahp.TabIndex = 2;
+            this.btnxoahp.Text = "Xóa";
+            // 
+            // btnthemhp
+            // 
+            this.btnthemhp.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnthemhp.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnthemhp.Appearance.Options.UseFont = true;
+            this.btnthemhp.Appearance.Options.UseForeColor = true;
+            this.btnthemhp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnthemhp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnthemhp.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthemhp.ImageOptions.Image")));
+            this.btnthemhp.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnthemhp.Location = new System.Drawing.Point(89, 28);
+            this.btnthemhp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnthemhp.Name = "btnthemhp";
+            this.btnthemhp.Size = new System.Drawing.Size(112, 41);
+            this.btnthemhp.TabIndex = 0;
+            this.btnthemhp.Text = "Lưu";
+            // 
             // frmdangkymonhoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1018, 714);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.textEdit2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textEdit1);
             this.Controls.Add(this.label1);
             this.Name = "frmdangkymonhoc";
             this.Text = "frmdangkymonhoc";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmdangkymonhoc_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -257,13 +258,13 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private DevExpress.XtraEditors.SimpleButton btnthoathp;
-        private DevExpress.XtraEditors.SimpleButton btnxoahp;
-        private DevExpress.XtraEditors.SimpleButton btnthemhp;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label label2;
         private DevExpress.XtraEditors.TextEdit textEdit2;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private DevExpress.XtraEditors.SimpleButton btnthoathp;
+        private DevExpress.XtraEditors.SimpleButton btnxoahp;
+        private DevExpress.XtraEditors.SimpleButton btnthemhp;
     }
 }

@@ -335,7 +335,20 @@ namespace UI_Tier
                 PhanQuyen();
             }
         }
-
+        private void navBarItem17_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            Form frm = kiemtraform(typeof(frmdangkymonhoc));
+            if (frm == null)
+            {
+                frmdangkymonhoc forms = new frmdangkymonhoc();
+                forms.MdiParent = this;
+                forms.Show();
+            }
+            else
+            {
+                frm.Activate();
+            }
+        }
         #endregion
 
         #region Phân quyền
@@ -546,6 +559,10 @@ namespace UI_Tier
         }
 
         #endregion
-        
+
+        private void navBarControl1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

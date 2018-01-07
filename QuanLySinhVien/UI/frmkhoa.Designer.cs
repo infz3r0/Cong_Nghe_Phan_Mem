@@ -79,7 +79,7 @@
             this.btnthemkhoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthemkhoa.ImageOptions.Image")));
             this.btnthemkhoa.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnthemkhoa.Location = new System.Drawing.Point(31, 42);
-            this.btnthemkhoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnthemkhoa.Margin = new System.Windows.Forms.Padding(4);
             this.btnthemkhoa.Name = "btnthemkhoa";
             this.btnthemkhoa.Size = new System.Drawing.Size(128, 41);
             this.btnthemkhoa.TabIndex = 4;
@@ -97,7 +97,7 @@
             this.btnsuakhoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnsuakhoa.ImageOptions.Image")));
             this.btnsuakhoa.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnsuakhoa.Location = new System.Drawing.Point(31, 94);
-            this.btnsuakhoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnsuakhoa.Margin = new System.Windows.Forms.Padding(4);
             this.btnsuakhoa.Name = "btnsuakhoa";
             this.btnsuakhoa.Size = new System.Drawing.Size(128, 41);
             this.btnsuakhoa.TabIndex = 5;
@@ -115,7 +115,7 @@
             this.btnxoakhoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnxoakhoa.ImageOptions.Image")));
             this.btnxoakhoa.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnxoakhoa.Location = new System.Drawing.Point(31, 144);
-            this.btnxoakhoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnxoakhoa.Margin = new System.Windows.Forms.Padding(4);
             this.btnxoakhoa.Name = "btnxoakhoa";
             this.btnxoakhoa.Size = new System.Drawing.Size(128, 41);
             this.btnxoakhoa.TabIndex = 6;
@@ -132,9 +132,9 @@
             this.groupBox2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(681, 5);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(191, 256);
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
@@ -152,7 +152,7 @@
             this.btnthoatkhoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthoatkhoa.ImageOptions.Image")));
             this.btnthoatkhoa.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnthoatkhoa.Location = new System.Drawing.Point(31, 198);
-            this.btnthoatkhoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnthoatkhoa.Margin = new System.Windows.Forms.Padding(4);
             this.btnthoatkhoa.Name = "btnthoatkhoa";
             this.btnthoatkhoa.Size = new System.Drawing.Size(128, 41);
             this.btnthoatkhoa.TabIndex = 7;
@@ -166,7 +166,7 @@
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Appearance.Options.UseForeColor = true;
             this.labelControl2.Location = new System.Drawing.Point(27, 48);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(91, 29);
             this.labelControl2.TabIndex = 0;
@@ -179,7 +179,7 @@
             this.labelControl3.Appearance.Options.UseFont = true;
             this.labelControl3.Appearance.Options.UseForeColor = true;
             this.labelControl3.Location = new System.Drawing.Point(27, 94);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(99, 29);
             this.labelControl3.TabIndex = 1;
@@ -192,7 +192,7 @@
             this.labelControl4.Appearance.Options.UseFont = true;
             this.labelControl4.Appearance.Options.UseForeColor = true;
             this.labelControl4.Location = new System.Drawing.Point(27, 144);
-            this.labelControl4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(139, 29);
             this.labelControl4.TabIndex = 2;
@@ -205,7 +205,7 @@
             this.labelControl5.Appearance.Options.UseFont = true;
             this.labelControl5.Appearance.Options.UseForeColor = true;
             this.labelControl5.Location = new System.Drawing.Point(27, 198);
-            this.labelControl5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(56, 29);
             this.labelControl5.TabIndex = 3;
@@ -215,7 +215,7 @@
             // 
             this.txtmakhoa.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtmakhoa.Location = new System.Drawing.Point(227, 54);
-            this.txtmakhoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtmakhoa.Margin = new System.Windows.Forms.Padding(4);
             this.txtmakhoa.Name = "txtmakhoa";
             this.txtmakhoa.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtmakhoa.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
@@ -233,7 +233,7 @@
             // 
             this.txttenkhoa.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txttenkhoa.Location = new System.Drawing.Point(227, 100);
-            this.txttenkhoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txttenkhoa.Margin = new System.Windows.Forms.Padding(4);
             this.txttenkhoa.Name = "txttenkhoa";
             this.txttenkhoa.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txttenkhoa.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
@@ -250,7 +250,7 @@
             // 
             this.txtmailkhoa.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtmailkhoa.Location = new System.Drawing.Point(227, 204);
-            this.txtmailkhoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtmailkhoa.Margin = new System.Windows.Forms.Padding(4);
             this.txtmailkhoa.Name = "txtmailkhoa";
             this.txtmailkhoa.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtmailkhoa.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
@@ -277,9 +277,9 @@
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(16, 5);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(657, 256);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
@@ -289,7 +289,7 @@
             // 
             this.txtsdtkhoa.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtsdtkhoa.Location = new System.Drawing.Point(227, 150);
-            this.txtsdtkhoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtsdtkhoa.Margin = new System.Windows.Forms.Padding(4);
             this.txtsdtkhoa.Name = "txtsdtkhoa";
             this.txtsdtkhoa.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtsdtkhoa.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
@@ -317,7 +317,7 @@
             this.Email});
             this.gridviewkhoa.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.gridviewkhoa.Location = new System.Drawing.Point(9, 25);
-            this.gridviewkhoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gridviewkhoa.Margin = new System.Windows.Forms.Padding(4);
             this.gridviewkhoa.MultiSelect = false;
             this.gridviewkhoa.Name = "gridviewkhoa";
             this.gridviewkhoa.ReadOnly = true;
@@ -369,9 +369,9 @@
             this.groupBox3.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox3.ForeColor = System.Drawing.Color.White;
             this.groupBox3.Location = new System.Drawing.Point(16, 263);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(856, 327);
             this.groupBox3.TabIndex = 17;
             this.groupBox3.TabStop = false;
@@ -394,7 +394,7 @@
             this.Controls.Add(this.groupBox2);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmkhoa";
             this.Text = "QUẢN LÍ KHOA";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmkhoa_FormClosing);
