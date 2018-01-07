@@ -99,5 +99,22 @@ namespace DATA_Tier
             sqlParameters[0].Value = sv.MaSV;
             return executeDeleteQuery(query, sqlParameters);
         }
+
+        public void FillDataTable(ref DataTable dt, string malop)
+        {
+            string query = "SELECT MaSV, HoTen, CONVERT(CHAR(10), NgaySinh, 103) as [NgaySinh], GioiTinh, DiaChi, SoCMND, Sdt, Email, DiemTB, MaLop, XepLoai " +
+                            "FROM SinhVien WHERE MaLop = @MaLop";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@MaLop", SqlDbType.VarChar);
+            sqlParameters[0].Value = malop;
+            FillDataTable(query, sqlParameters, ref dt);
+        }
+
+        public DataTable Search()
+        {
+            string query = "SELECT MaSV, HoTen, CONVERT(CHAR(10), NgaySinh, 103) as [NgaySinh], GioiTinh, Sdt, MaLop FROM SinhVien";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            return executeSelectQuery(query, sqlParameters);
+        }
     }
 }

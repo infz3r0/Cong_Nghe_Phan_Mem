@@ -31,79 +31,82 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmthongke));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.rpThongKe1 = new UI_Tier.rpThongKe();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.cbbmaloptk = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.cbbtenkhoatk = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cbbLop = new System.Windows.Forms.ComboBox();
+            this.cbbKhoa = new System.Windows.Forms.ComboBox();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnthoattk = new DevExpress.XtraEditors.SimpleButton();
             this.btnthongke = new DevExpress.XtraEditors.SimpleButton();
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
-            this.gridviewsv = new System.Windows.Forms.DataGridView();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbmaloptk.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbtenkhoatk.Properties)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridviewsv)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox3.Controls.Add(this.gridviewsv);
+            this.groupBox3.Controls.Add(this.crystalReportViewer1);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox3.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox3.ForeColor = System.Drawing.Color.White;
-            this.groupBox3.Location = new System.Drawing.Point(12, 143);
+            this.groupBox3.Location = new System.Drawing.Point(0, 80);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(784, 327);
+            this.groupBox3.Size = new System.Drawing.Size(1191, 601);
             this.groupBox3.TabIndex = 25;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông tin chi tiết";
             // 
+            // crystalReportViewer1
+            // 
+            this.crystalReportViewer1.ActiveViewIndex = -1;
+            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.crystalReportViewer1.Location = new System.Drawing.Point(3, 22);
+            this.crystalReportViewer1.Name = "crystalReportViewer1";
+            this.crystalReportViewer1.Size = new System.Drawing.Size(1185, 576);
+            this.crystalReportViewer1.TabIndex = 0;
+            this.crystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
+            // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox2.Controls.Add(this.cbbmaloptk);
-            this.groupBox2.Controls.Add(this.cbbtenkhoatk);
+            this.groupBox2.Controls.Add(this.cbbLop);
+            this.groupBox2.Controls.Add(this.cbbKhoa);
             this.groupBox2.Controls.Add(this.labelControl2);
             this.groupBox2.Controls.Add(this.labelControl3);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(12, 12);
+            this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(518, 125);
+            this.groupBox2.Size = new System.Drawing.Size(949, 80);
             this.groupBox2.TabIndex = 27;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Điều kiện thống kê";
             // 
-            // cbbmaloptk
+            // cbbLop
             // 
-            this.cbbmaloptk.Location = new System.Drawing.Point(184, 78);
-            this.cbbmaloptk.Name = "cbbmaloptk";
-            this.cbbmaloptk.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.cbbmaloptk.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.cbbmaloptk.Properties.Appearance.Options.UseBackColor = true;
-            this.cbbmaloptk.Properties.Appearance.Options.UseForeColor = true;
-            this.cbbmaloptk.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbbmaloptk.Size = new System.Drawing.Size(248, 20);
-            this.cbbmaloptk.TabIndex = 1;
+            this.cbbLop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbLop.FormattingEnabled = true;
+            this.cbbLop.Location = new System.Drawing.Point(653, 30);
+            this.cbbLop.Name = "cbbLop";
+            this.cbbLop.Size = new System.Drawing.Size(250, 26);
+            this.cbbLop.TabIndex = 30;
             // 
-            // cbbtenkhoatk
+            // cbbKhoa
             // 
-            this.cbbtenkhoatk.EditValue = "";
-            this.cbbtenkhoatk.Location = new System.Drawing.Point(184, 37);
-            this.cbbtenkhoatk.Name = "cbbtenkhoatk";
-            this.cbbtenkhoatk.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.cbbtenkhoatk.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.cbbtenkhoatk.Properties.Appearance.Options.UseBackColor = true;
-            this.cbbtenkhoatk.Properties.Appearance.Options.UseForeColor = true;
-            this.cbbtenkhoatk.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbbtenkhoatk.Size = new System.Drawing.Size(248, 20);
-            this.cbbtenkhoatk.TabIndex = 0;
+            this.cbbKhoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbKhoa.FormattingEnabled = true;
+            this.cbbKhoa.Location = new System.Drawing.Point(239, 31);
+            this.cbbKhoa.Name = "cbbKhoa";
+            this.cbbKhoa.Size = new System.Drawing.Size(250, 26);
+            this.cbbKhoa.TabIndex = 30;
             // 
             // labelControl2
             // 
@@ -111,7 +114,7 @@
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Appearance.Options.UseForeColor = true;
-            this.labelControl2.Location = new System.Drawing.Point(19, 75);
+            this.labelControl2.Location = new System.Drawing.Point(571, 30);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(56, 23);
             this.labelControl2.TabIndex = 29;
@@ -123,7 +126,7 @@
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl3.Appearance.Options.UseFont = true;
             this.labelControl3.Appearance.Options.UseForeColor = true;
-            this.labelControl3.Location = new System.Drawing.Point(17, 34);
+            this.labelControl3.Location = new System.Drawing.Point(76, 30);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(78, 23);
             this.labelControl3.TabIndex = 27;
@@ -134,11 +137,12 @@
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.btnthoattk);
             this.groupBox1.Controls.Add(this.btnthongke);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(536, 12);
+            this.groupBox1.Location = new System.Drawing.Point(970, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(260, 125);
+            this.groupBox1.Size = new System.Drawing.Size(221, 80);
             this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chức năng";
@@ -154,7 +158,7 @@
             this.btnthoattk.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnthoattk.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthoattk.ImageOptions.Image")));
             this.btnthoattk.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnthoattk.Location = new System.Drawing.Point(80, 70);
+            this.btnthoattk.Location = new System.Drawing.Point(113, 30);
             this.btnthoattk.Name = "btnthoattk";
             this.btnthoattk.Size = new System.Drawing.Size(96, 33);
             this.btnthoattk.TabIndex = 2;
@@ -171,25 +175,16 @@
             this.btnthongke.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnthongke.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthongke.ImageOptions.Image")));
             this.btnthongke.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnthongke.Location = new System.Drawing.Point(80, 23);
+            this.btnthongke.Location = new System.Drawing.Point(11, 30);
             this.btnthongke.Name = "btnthongke";
             this.btnthongke.Size = new System.Drawing.Size(96, 33);
             this.btnthongke.TabIndex = 0;
             this.btnthongke.Text = "OK";
+            this.btnthongke.Click += new System.EventHandler(this.btnthongke_Click);
             // 
             // defaultLookAndFeel1
             // 
             this.defaultLookAndFeel1.LookAndFeel.SkinName = "Blueprint";
-            // 
-            // gridviewsv
-            // 
-            this.gridviewsv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gridviewsv.BackgroundColor = System.Drawing.Color.White;
-            this.gridviewsv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridviewsv.Location = new System.Drawing.Point(10, 27);
-            this.gridviewsv.Name = "gridviewsv";
-            this.gridviewsv.Size = new System.Drawing.Size(768, 284);
-            this.gridviewsv.TabIndex = 9;
             // 
             // frmthongke
             // 
@@ -197,21 +192,21 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnthoattk;
-            this.ClientSize = new System.Drawing.Size(808, 482);
+            this.ClientSize = new System.Drawing.Size(1191, 681);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(1207, 720);
+            this.MinimumSize = new System.Drawing.Size(1207, 720);
             this.Name = "frmthongke";
             this.Text = "THỐNG KÊ";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmthongke_FormClosing);
+            this.Load += new System.EventHandler(this.frmthongke_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbmaloptk.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbbtenkhoatk.Properties)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridviewsv)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -219,14 +214,15 @@
         #endregion
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox2;
-        private DevExpress.XtraEditors.ComboBoxEdit cbbmaloptk;
-        private DevExpress.XtraEditors.ComboBoxEdit cbbtenkhoatk;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private System.Windows.Forms.GroupBox groupBox1;
         private DevExpress.XtraEditors.SimpleButton btnthoattk;
         private DevExpress.XtraEditors.SimpleButton btnthongke;
         private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel1;
-        private System.Windows.Forms.DataGridView gridviewsv;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
+        private System.Windows.Forms.ComboBox cbbLop;
+        private System.Windows.Forms.ComboBox cbbKhoa;
+        private rpThongKe rpThongKe1;
     }
 }

@@ -79,11 +79,6 @@ namespace UI_Tier
             OpenFormDangNhap();
         }
 
-        private void btnthoat_Click_1(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private Form kiemtraform(Type ftype)
         {
             foreach (Form f in this.MdiChildren)
@@ -108,16 +103,6 @@ namespace UI_Tier
             {
                 e.Cancel = true;
             }
-        }
-
-        private void btnthoatmain_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            Close();
-        }
-
-        private void btnthoat_Click(object sender, EventArgs e)
-        {
-            Close();
         }
 
         #region Các chức năng

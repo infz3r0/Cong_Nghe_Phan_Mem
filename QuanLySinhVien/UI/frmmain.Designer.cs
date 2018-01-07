@@ -32,7 +32,6 @@
             DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::UI_Tier.frmload), false, false);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmmain));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.btnthoatmain = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.barEditItem1 = new DevExpress.XtraBars.BarEditItem();
@@ -99,7 +98,6 @@
             this.ribbon.ExpandCollapseItem.Id = 0;
             this.ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbon.ExpandCollapseItem,
-            this.btnthoatmain,
             this.barButtonItem2,
             this.barButtonItem3,
             this.barEditItem1,
@@ -128,14 +126,6 @@
             this.ribbon.Size = new System.Drawing.Size(876, 93);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             this.ribbon.UseWaitCursor = true;
-            // 
-            // btnthoatmain
-            // 
-            this.btnthoatmain.Caption = "Thoát";
-            this.btnthoatmain.Id = 1;
-            this.btnthoatmain.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthoatmain.ImageOptions.Image")));
-            this.btnthoatmain.Name = "btnthoatmain";
-            this.btnthoatmain.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnthoatmain_ItemClick);
             // 
             // barButtonItem2
             // 
@@ -651,7 +641,6 @@
 
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbon;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar;
-        private DevExpress.XtraBars.BarButtonItem btnthoatmain;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;

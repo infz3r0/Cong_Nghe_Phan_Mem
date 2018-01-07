@@ -46,5 +46,68 @@ namespace BUS_Tier
 
             return sinhVienDAO.Update(sinhVien);
         }
+
+        public DataTable TimKiemTheoTen(string input)
+        {
+            DataTable dt = sinhVienDAO.Search().Copy();
+            DataTable ketqua = new DataTable();
+            ketqua.Columns.Add("MaSV");
+            ketqua.Columns.Add("HoTen");
+            ketqua.Columns.Add("NgaySinh");
+            ketqua.Columns.Add("GioiTinh");
+            ketqua.Columns.Add("Sdt");
+            ketqua.Columns.Add("MaLop");
+
+            for (int r = 0; r < dt.Rows.Count; r++)
+            {
+                string hoten = dt.Rows[r]["HoTen"].ToString();
+                if (hoten.ToLower().Contains(input.ToLower()))
+                {
+                    DataRow row = dt.Rows[r];
+                    DataRow newrow = ketqua.NewRow();
+                    for (int i = 0; i < ketqua.Columns.Count; i++)
+                    {
+                        newrow[i] = row[i];
+                    }
+                    ketqua.Rows.Add(newrow);
+                }
+            }
+
+            return ketqua;
+        }
+
+        public DataTable TimKiemTheoMaSV(string input)
+        {
+            DataTable dt = sinhVienDAO.Search().Copy();
+            DataTable ketqua = new DataTable();
+            ketqua.Columns.Add("MaSV");
+            ketqua.Columns.Add("HoTen");
+            ketqua.Columns.Add("NgaySinh");
+            ketqua.Columns.Add("GioiTinh");
+            ketqua.Columns.Add("Sdt");
+            ketqua.Columns.Add("MaLop");
+
+            for (int r = 0; r < dt.Rows.Count; r++)
+            {
+                string masv = dt.Rows[r]["MaSV"].ToString();
+                if (masv.Contains(input))
+                {
+                    DataRow row = dt.Rows[r];
+                    DataRow newrow = ketqua.NewRow();
+                    for (int i = 0; i < ketqua.Columns.Count; i++)
+                    {
+                        newrow[i] = row[i];
+                    }
+                    ketqua.Rows.Add(newrow);
+                }
+            }
+
+            return ketqua;
+        }
+
+        public void FillDataTable(ref DataTable dt, string malop)
+        {
+            sinhVienDAO.FillDataTable(ref dt, malop);
+        }
     }
 }

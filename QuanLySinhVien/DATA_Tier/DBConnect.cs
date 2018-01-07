@@ -11,7 +11,7 @@ namespace DATA_Tier
 {
     public class DBConnect
     {
-        private string connect = DATA_Tier.Properties.Settings.Default.connectstringNhi;
+        private string connect = DATA_Tier.Properties.Settings.Default.connectstringLong;
 
         private SqlDataAdapter myAdapter;
         private SqlConnection conn;
@@ -159,6 +159,28 @@ namespace DATA_Tier
                 conn.Close();
             }
             return row;
+        }
+
+        public void FillDataTable(string _query, SqlParameter[] sqlParameter, ref DataTable dt)
+        {
+            SqlCommand myCommand = new SqlCommand();
+            myAdapter = new SqlDataAdapter();
+            try
+            {
+                myCommand.Connection = openConnection();
+                myCommand.CommandText = _query;
+                myCommand.Parameters.AddRange(sqlParameter);
+                myAdapter.SelectCommand = myCommand;
+                myAdapter.Fill(dt);
+            }
+            catch (SqlException e)
+            {
+                return;
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
 
     }
