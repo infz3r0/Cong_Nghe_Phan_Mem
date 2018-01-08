@@ -1,4 +1,6 @@
-﻿namespace UI_Tier
+﻿using System;
+
+namespace UI_Tier
 {
     partial class frmdangkymonhoc
     {
@@ -30,24 +32,23 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmdangkymonhoc));
             this.label1 = new System.Windows.Forms.Label();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txttimmon = new DevExpress.XtraEditors.TextEdit();
+            this.btnloc = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.checkedListBoxmonhoc = new System.Windows.Forms.CheckedListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.Griddanhsachdachon = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtmssv = new DevExpress.XtraEditors.TextEdit();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnthoathp = new DevExpress.XtraEditors.SimpleButton();
-            this.btnxoahp = new DevExpress.XtraEditors.SimpleButton();
-            this.btnthemhp = new DevExpress.XtraEditors.SimpleButton();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            this.btnthoatdk = new DevExpress.XtraEditors.SimpleButton();
+            this.btnxoadk = new DevExpress.XtraEditors.SimpleButton();
+            this.btnluudk = new DevExpress.XtraEditors.SimpleButton();
+            ((System.ComponentModel.ISupportInitialize)(this.txttimmon.Properties)).BeginInit();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Griddanhsachdachon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtmssv.Properties)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,32 +62,35 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Lọc theo môn học";
             // 
-            // textEdit1
+            // txttimmon
             // 
-            this.textEdit1.Location = new System.Drawing.Point(231, 22);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit1.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit1.Properties.Appearance.Options.UseFont = true;
-            this.textEdit1.Size = new System.Drawing.Size(235, 30);
-            this.textEdit1.TabIndex = 1;
+            this.txttimmon.Location = new System.Drawing.Point(231, 22);
+            this.txttimmon.Name = "txttimmon";
+            this.txttimmon.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txttimmon.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttimmon.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.txttimmon.Properties.Appearance.Options.UseBackColor = true;
+            this.txttimmon.Properties.Appearance.Options.UseFont = true;
+            this.txttimmon.Properties.Appearance.Options.UseForeColor = true;
+            this.txttimmon.Size = new System.Drawing.Size(235, 30);
+            this.txttimmon.TabIndex = 1;
             // 
-            // button1
+            // btnloc
             // 
-            this.button1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(485, 20);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 38);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Lọc >>";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnloc.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnloc.ForeColor = System.Drawing.Color.Black;
+            this.btnloc.Location = new System.Drawing.Point(485, 20);
+            this.btnloc.Name = "btnloc";
+            this.btnloc.Size = new System.Drawing.Size(94, 38);
+            this.btnloc.TabIndex = 2;
+            this.btnloc.Text = "Lọc >>";
+            this.btnloc.UseVisualStyleBackColor = true;
+            this.btnloc.Click += new System.EventHandler(this.btnloc_Click);
             // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox3.Controls.Add(this.dataGridView1);
+            this.groupBox3.Controls.Add(this.checkedListBoxmonhoc);
             this.groupBox3.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox3.ForeColor = System.Drawing.Color.White;
             this.groupBox3.Location = new System.Drawing.Point(17, 75);
@@ -98,20 +102,18 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông tin chi tiết";
             // 
-            // dataGridView1
+            // checkedListBoxmonhoc
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(23, 30);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(947, 201);
-            this.dataGridView1.TabIndex = 0;
+            this.checkedListBoxmonhoc.FormattingEnabled = true;
+            this.checkedListBoxmonhoc.Location = new System.Drawing.Point(23, 43);
+            this.checkedListBoxmonhoc.Name = "checkedListBoxmonhoc";
+            this.checkedListBoxmonhoc.Size = new System.Drawing.Size(947, 179);
+            this.checkedListBoxmonhoc.TabIndex = 2;
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.dataGridView2);
+            this.groupBox1.Controls.Add(this.Griddanhsachdachon);
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(17, 428);
@@ -123,15 +125,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách môn học đã chọn";
             // 
-            // dataGridView2
+            // Griddanhsachdachon
             // 
-            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(23, 47);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(947, 208);
-            this.dataGridView2.TabIndex = 0;
+            this.Griddanhsachdachon.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Griddanhsachdachon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Griddanhsachdachon.Location = new System.Drawing.Point(23, 47);
+            this.Griddanhsachdachon.Name = "Griddanhsachdachon";
+            this.Griddanhsachdachon.RowTemplate.Height = 24;
+            this.Griddanhsachdachon.Size = new System.Drawing.Size(947, 208);
+            this.Griddanhsachdachon.TabIndex = 0;
             // 
             // label2
             // 
@@ -143,23 +145,23 @@
             this.label2.TabIndex = 25;
             this.label2.Text = "Mã sinh viên";
             // 
-            // textEdit2
+            // txtmssv
             // 
-            this.textEdit2.Location = new System.Drawing.Point(184, 363);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.textEdit2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit2.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit2.Properties.Appearance.Options.UseFont = true;
-            this.textEdit2.Size = new System.Drawing.Size(235, 30);
-            this.textEdit2.TabIndex = 26;
+            this.txtmssv.Location = new System.Drawing.Point(184, 363);
+            this.txtmssv.Name = "txtmssv";
+            this.txtmssv.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtmssv.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtmssv.Properties.Appearance.Options.UseBackColor = true;
+            this.txtmssv.Properties.Appearance.Options.UseFont = true;
+            this.txtmssv.Size = new System.Drawing.Size(235, 30);
+            this.txtmssv.TabIndex = 26;
             // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox2.Controls.Add(this.btnthoathp);
-            this.groupBox2.Controls.Add(this.btnxoahp);
-            this.groupBox2.Controls.Add(this.btnthemhp);
+            this.groupBox2.Controls.Add(this.btnthoatdk);
+            this.groupBox2.Controls.Add(this.btnxoadk);
+            this.groupBox2.Controls.Add(this.btnluudk);
             this.groupBox2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(481, 342);
@@ -171,57 +173,58 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chức năng";
             // 
-            // btnthoathp
+            // btnthoatdk
             // 
-            this.btnthoathp.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnthoathp.Appearance.ForeColor = System.Drawing.Color.Transparent;
-            this.btnthoathp.Appearance.Options.UseFont = true;
-            this.btnthoathp.Appearance.Options.UseForeColor = true;
-            this.btnthoathp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnthoathp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnthoathp.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnthoathp.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthoathp.ImageOptions.Image")));
-            this.btnthoathp.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnthoathp.Location = new System.Drawing.Point(378, 28);
-            this.btnthoathp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnthoathp.Name = "btnthoathp";
-            this.btnthoathp.Size = new System.Drawing.Size(112, 41);
-            this.btnthoathp.TabIndex = 3;
-            this.btnthoathp.Text = "Đóng";
+            this.btnthoatdk.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnthoatdk.Appearance.ForeColor = System.Drawing.Color.Transparent;
+            this.btnthoatdk.Appearance.Options.UseFont = true;
+            this.btnthoatdk.Appearance.Options.UseForeColor = true;
+            this.btnthoatdk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnthoatdk.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnthoatdk.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnthoatdk.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthoatdk.ImageOptions.Image")));
+            this.btnthoatdk.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnthoatdk.Location = new System.Drawing.Point(378, 28);
+            this.btnthoatdk.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnthoatdk.Name = "btnthoatdk";
+            this.btnthoatdk.Size = new System.Drawing.Size(112, 41);
+            this.btnthoatdk.TabIndex = 3;
+            this.btnthoatdk.Text = "Đóng";
+            this.btnthoatdk.Click += new System.EventHandler(this.btnthoatdk_Click);
             // 
-            // btnxoahp
+            // btnxoadk
             // 
-            this.btnxoahp.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnxoahp.Appearance.ForeColor = System.Drawing.Color.White;
-            this.btnxoahp.Appearance.Options.UseFont = true;
-            this.btnxoahp.Appearance.Options.UseForeColor = true;
-            this.btnxoahp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnxoahp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnxoahp.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnxoahp.ImageOptions.Image")));
-            this.btnxoahp.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnxoahp.Location = new System.Drawing.Point(232, 28);
-            this.btnxoahp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnxoahp.Name = "btnxoahp";
-            this.btnxoahp.Size = new System.Drawing.Size(112, 41);
-            this.btnxoahp.TabIndex = 2;
-            this.btnxoahp.Text = "Xóa";
+            this.btnxoadk.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnxoadk.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnxoadk.Appearance.Options.UseFont = true;
+            this.btnxoadk.Appearance.Options.UseForeColor = true;
+            this.btnxoadk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnxoadk.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnxoadk.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnxoahp.ImageOptions.Image")));
+            this.btnxoadk.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnxoadk.Location = new System.Drawing.Point(232, 28);
+            this.btnxoadk.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnxoadk.Name = "btnxoadk";
+            this.btnxoadk.Size = new System.Drawing.Size(112, 41);
+            this.btnxoadk.TabIndex = 2;
+            this.btnxoadk.Text = "Xóa";
             // 
-            // btnthemhp
+            // btnluudk
             // 
-            this.btnthemhp.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnthemhp.Appearance.ForeColor = System.Drawing.Color.White;
-            this.btnthemhp.Appearance.Options.UseFont = true;
-            this.btnthemhp.Appearance.Options.UseForeColor = true;
-            this.btnthemhp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnthemhp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnthemhp.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthemhp.ImageOptions.Image")));
-            this.btnthemhp.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnthemhp.Location = new System.Drawing.Point(89, 28);
-            this.btnthemhp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnthemhp.Name = "btnthemhp";
-            this.btnthemhp.Size = new System.Drawing.Size(112, 41);
-            this.btnthemhp.TabIndex = 0;
-            this.btnthemhp.Text = "Lưu";
+            this.btnluudk.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnluudk.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnluudk.Appearance.Options.UseFont = true;
+            this.btnluudk.Appearance.Options.UseForeColor = true;
+            this.btnluudk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnluudk.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnluudk.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthemhp.ImageOptions.Image")));
+            this.btnluudk.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnluudk.Location = new System.Drawing.Point(89, 28);
+            this.btnluudk.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnluudk.Name = "btnluudk";
+            this.btnluudk.Size = new System.Drawing.Size(112, 41);
+            this.btnluudk.TabIndex = 0;
+            this.btnluudk.Text = "Lưu";
             // 
             // frmdangkymonhoc
             // 
@@ -229,42 +232,46 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1018, 714);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.textEdit2);
+            this.Controls.Add(this.txtmssv);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textEdit1);
+            this.Controls.Add(this.btnloc);
+            this.Controls.Add(this.txttimmon);
             this.Controls.Add(this.label1);
             this.Name = "frmdangkymonhoc";
             this.Text = "frmdangkymonhoc";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmdangkymonhoc_FormClosing);
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txttimmon.Properties)).EndInit();
             this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Griddanhsachdachon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtmssv.Properties)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
+        private void btnloc_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
-        private System.Windows.Forms.Button button1;
+        private DevExpress.XtraEditors.TextEdit txttimmon;
+        private System.Windows.Forms.Button btnloc;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView Griddanhsachdachon;
         private System.Windows.Forms.Label label2;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
+        private DevExpress.XtraEditors.TextEdit txtmssv;
         private System.Windows.Forms.GroupBox groupBox2;
-        private DevExpress.XtraEditors.SimpleButton btnthoathp;
-        private DevExpress.XtraEditors.SimpleButton btnxoahp;
-        private DevExpress.XtraEditors.SimpleButton btnthemhp;
+        private DevExpress.XtraEditors.SimpleButton btnthoatdk;
+        private DevExpress.XtraEditors.SimpleButton btnxoadk;
+        private DevExpress.XtraEditors.SimpleButton btnluudk;
+        private System.Windows.Forms.CheckedListBox checkedListBoxmonhoc;
     }
 }

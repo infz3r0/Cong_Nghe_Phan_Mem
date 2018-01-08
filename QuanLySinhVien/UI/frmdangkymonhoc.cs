@@ -8,6 +8,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using BUS_Tier;
+using MODEL_Tier;
 
 namespace UI_Tier
 {
@@ -25,5 +27,11 @@ namespace UI_Tier
                 e.Cancel = true;
             }
         }
+
+        private void btnthoatdk_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
     }
 }
