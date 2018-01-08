@@ -33,7 +33,7 @@ namespace UI_Tier
 
             txtmssv.DataBindings.Add("Text", bs, "MaSV", false, DataSourceUpdateMode.Never);
             txttensv.DataBindings.Add("Text", bs, "HoTen", false, DataSourceUpdateMode.Never);
-            ngaysinhsv.DataBindings.Add("Value", bs, "NgaySinh", false, DataSourceUpdateMode.Never);
+            ngaysinhsv.DataBindings.Add("Value", bs, "NgaySinh", true, DataSourceUpdateMode.Never);
 
             cbbGioiTinh.DataBindings.Add("SelectedValue", bs, "GioiTinh");
             txtdicchisv.DataBindings.Add("Text", bs, "DiaChi", false, DataSourceUpdateMode.Never);
@@ -157,8 +157,15 @@ namespace UI_Tier
             if (sinhvienBUS.Them(sv))
             {
                 MessageBox.Show("Thành công !");
-
-                bs.DataSource = sinhvienBUS.DanhSach();
+                
+                try
+                {
+                    bs.DataSource = sinhvienBUS.DanhSach();
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
             }
             else
             {
@@ -223,8 +230,15 @@ namespace UI_Tier
             if (sinhvienBUS.Xoa(sv))
             {
                 MessageBox.Show("Thành công !");
-
-                bs.DataSource = sinhvienBUS.DanhSach();
+                
+                try
+                {
+                    bs.DataSource = sinhvienBUS.DanhSach();
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
             }
             else
             {
