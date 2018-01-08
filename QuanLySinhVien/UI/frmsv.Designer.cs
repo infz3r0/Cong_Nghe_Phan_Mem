@@ -97,8 +97,7 @@
             // txtmailsv
             // 
             this.txtmailsv.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtmailsv.Location = new System.Drawing.Point(909, 193);
-            this.txtmailsv.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtmailsv.Location = new System.Drawing.Point(779, 157);
             this.txtmailsv.Name = "txtmailsv";
             this.txtmailsv.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtmailsv.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
@@ -107,7 +106,7 @@
             this.txtmailsv.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.txtmailsv.Properties.Mask.EditMask = "([a-z]|[0-9]|\\.|_)+@([a-z]|[0-9])+\\.([a-z]|[0-9])+";
             this.txtmailsv.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.txtmailsv.Size = new System.Drawing.Size(310, 22);
+            this.txtmailsv.Size = new System.Drawing.Size(266, 20);
             this.txtmailsv.TabIndex = 7;
             // 
             // groupBox1
@@ -133,11 +132,9 @@
             this.groupBox1.Controls.Add(this.labelControl2);
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(10, 6);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Location = new System.Drawing.Point(9, 5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(1389, 311);
+            this.groupBox1.Size = new System.Drawing.Size(1153, 253);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin";
@@ -147,10 +144,9 @@
             this.cbbMaLopSV.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cbbMaLopSV.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.cbbMaLopSV.FormattingEnabled = true;
-            this.cbbMaLopSV.Location = new System.Drawing.Point(909, 246);
-            this.cbbMaLopSV.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cbbMaLopSV.Location = new System.Drawing.Point(779, 200);
             this.cbbMaLopSV.Name = "cbbMaLopSV";
-            this.cbbMaLopSV.Size = new System.Drawing.Size(310, 31);
+            this.cbbMaLopSV.Size = new System.Drawing.Size(266, 26);
             this.cbbMaLopSV.TabIndex = 22;
             // 
             // labelControl1
@@ -159,18 +155,16 @@
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.Location = new System.Drawing.Point(792, 245);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl1.Location = new System.Drawing.Point(679, 199);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(72, 29);
+            this.labelControl1.Size = new System.Drawing.Size(56, 23);
             this.labelControl1.TabIndex = 23;
             this.labelControl1.Text = "Mã lớp";
             // 
             // txtdienthoaisv
             // 
             this.txtdienthoaisv.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtdienthoaisv.Location = new System.Drawing.Point(909, 143);
-            this.txtdienthoaisv.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtdienthoaisv.Location = new System.Drawing.Point(779, 116);
             this.txtdienthoaisv.Name = "txtdienthoaisv";
             this.txtdienthoaisv.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtdienthoaisv.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
@@ -179,14 +173,13 @@
             this.txtdienthoaisv.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.txtdienthoaisv.Properties.Mask.EditMask = "\\d{8,12}";
             this.txtdienthoaisv.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.txtdienthoaisv.Size = new System.Drawing.Size(310, 22);
+            this.txtdienthoaisv.Size = new System.Drawing.Size(266, 20);
             this.txtdienthoaisv.TabIndex = 6;
             // 
             // txtcmndsv
             // 
             this.txtcmndsv.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtcmndsv.Location = new System.Drawing.Point(909, 87);
-            this.txtcmndsv.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtcmndsv.Location = new System.Drawing.Point(779, 71);
             this.txtcmndsv.Name = "txtcmndsv";
             this.txtcmndsv.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtcmndsv.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
@@ -196,14 +189,13 @@
             this.txtcmndsv.Properties.Mask.EditMask = "\\d+";
             this.txtcmndsv.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtcmndsv.Properties.MaxLength = 15;
-            this.txtcmndsv.Size = new System.Drawing.Size(310, 22);
+            this.txtcmndsv.Size = new System.Drawing.Size(266, 20);
             this.txtcmndsv.TabIndex = 5;
             // 
             // txtmssv
             // 
             this.txtmssv.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtmssv.Location = new System.Drawing.Point(297, 39);
-            this.txtmssv.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtmssv.Location = new System.Drawing.Point(255, 32);
             this.txtmssv.Name = "txtmssv";
             this.txtmssv.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtmssv.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
@@ -212,24 +204,22 @@
             this.txtmssv.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.txtmssv.Properties.Mask.EditMask = "\\d{10}";
             this.txtmssv.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.txtmssv.Size = new System.Drawing.Size(310, 22);
+            this.txtmssv.Size = new System.Drawing.Size(266, 20);
             this.txtmssv.TabIndex = 0;
             // 
             // cbbGioiTinh
             // 
             this.cbbGioiTinh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbGioiTinh.FormattingEnabled = true;
-            this.cbbGioiTinh.Location = new System.Drawing.Point(297, 187);
-            this.cbbGioiTinh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cbbGioiTinh.Location = new System.Drawing.Point(255, 152);
             this.cbbGioiTinh.Name = "cbbGioiTinh";
-            this.cbbGioiTinh.Size = new System.Drawing.Size(310, 31);
+            this.cbbGioiTinh.Size = new System.Drawing.Size(266, 26);
             this.cbbGioiTinh.TabIndex = 3;
             // 
             // txtdicchisv
             // 
             this.txtdicchisv.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtdicchisv.Location = new System.Drawing.Point(909, 41);
-            this.txtdicchisv.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtdicchisv.Location = new System.Drawing.Point(779, 33);
             this.txtdicchisv.Name = "txtdicchisv";
             this.txtdicchisv.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtdicchisv.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
@@ -237,7 +227,7 @@
             this.txtdicchisv.Properties.Appearance.Options.UseForeColor = true;
             this.txtdicchisv.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.txtdicchisv.Properties.MaxLength = 500;
-            this.txtdicchisv.Size = new System.Drawing.Size(310, 22);
+            this.txtdicchisv.Size = new System.Drawing.Size(266, 20);
             this.txtdicchisv.TabIndex = 4;
             // 
             // labelControl9
@@ -246,10 +236,9 @@
             this.labelControl9.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl9.Appearance.Options.UseFont = true;
             this.labelControl9.Appearance.Options.UseForeColor = true;
-            this.labelControl9.Location = new System.Drawing.Point(794, 190);
-            this.labelControl9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl9.Location = new System.Drawing.Point(681, 154);
             this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(56, 29);
+            this.labelControl9.Size = new System.Drawing.Size(45, 23);
             this.labelControl9.TabIndex = 21;
             this.labelControl9.Text = "Email";
             // 
@@ -259,10 +248,9 @@
             this.labelControl8.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl8.Appearance.Options.UseFont = true;
             this.labelControl8.Appearance.Options.UseForeColor = true;
-            this.labelControl8.Location = new System.Drawing.Point(794, 139);
-            this.labelControl8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl8.Location = new System.Drawing.Point(681, 113);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(108, 29);
+            this.labelControl8.Size = new System.Drawing.Size(85, 23);
             this.labelControl8.TabIndex = 20;
             this.labelControl8.Text = "Điện thoại";
             // 
@@ -272,10 +260,9 @@
             this.labelControl7.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl7.Appearance.Options.UseFont = true;
             this.labelControl7.Appearance.Options.UseForeColor = true;
-            this.labelControl7.Location = new System.Drawing.Point(794, 86);
-            this.labelControl7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl7.Location = new System.Drawing.Point(681, 70);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(65, 29);
+            this.labelControl7.Size = new System.Drawing.Size(52, 23);
             this.labelControl7.TabIndex = 19;
             this.labelControl7.Text = "CMND";
             // 
@@ -285,10 +272,9 @@
             this.labelControl6.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl6.Appearance.Options.UseFont = true;
             this.labelControl6.Appearance.Options.UseForeColor = true;
-            this.labelControl6.Location = new System.Drawing.Point(794, 34);
-            this.labelControl6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl6.Location = new System.Drawing.Point(681, 28);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(72, 29);
+            this.labelControl6.Size = new System.Drawing.Size(57, 23);
             this.labelControl6.TabIndex = 18;
             this.labelControl6.Text = "Địa chỉ";
             // 
@@ -297,17 +283,15 @@
             this.ngaysinhsv.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.ngaysinhsv.CustomFormat = "dd/MM/yyyy";
             this.ngaysinhsv.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.ngaysinhsv.Location = new System.Drawing.Point(297, 134);
-            this.ngaysinhsv.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ngaysinhsv.Location = new System.Drawing.Point(255, 109);
             this.ngaysinhsv.Name = "ngaysinhsv";
-            this.ngaysinhsv.Size = new System.Drawing.Size(310, 30);
+            this.ngaysinhsv.Size = new System.Drawing.Size(266, 26);
             this.ngaysinhsv.TabIndex = 2;
             // 
             // txttensv
             // 
             this.txttensv.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txttensv.Location = new System.Drawing.Point(297, 87);
-            this.txttensv.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txttensv.Location = new System.Drawing.Point(255, 71);
             this.txttensv.Name = "txttensv";
             this.txttensv.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txttensv.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
@@ -315,7 +299,7 @@
             this.txttensv.Properties.Appearance.Options.UseForeColor = true;
             this.txttensv.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.txttensv.Properties.MaxLength = 50;
-            this.txttensv.Size = new System.Drawing.Size(310, 22);
+            this.txttensv.Size = new System.Drawing.Size(266, 20);
             this.txttensv.TabIndex = 1;
             // 
             // labelControl5
@@ -324,10 +308,9 @@
             this.labelControl5.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl5.Appearance.Options.UseFont = true;
             this.labelControl5.Appearance.Options.UseForeColor = true;
-            this.labelControl5.Location = new System.Drawing.Point(181, 186);
-            this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl5.Location = new System.Drawing.Point(155, 151);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(87, 29);
+            this.labelControl5.Size = new System.Drawing.Size(69, 23);
             this.labelControl5.TabIndex = 3;
             this.labelControl5.Text = "Giới tính";
             // 
@@ -337,10 +320,9 @@
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl4.Appearance.Options.UseFont = true;
             this.labelControl4.Appearance.Options.UseForeColor = true;
-            this.labelControl4.Location = new System.Drawing.Point(181, 132);
-            this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl4.Location = new System.Drawing.Point(155, 107);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(104, 29);
+            this.labelControl4.Size = new System.Drawing.Size(83, 23);
             this.labelControl4.TabIndex = 2;
             this.labelControl4.Text = "Ngày sinh";
             // 
@@ -350,10 +332,9 @@
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl3.Appearance.Options.UseFont = true;
             this.labelControl3.Appearance.Options.UseForeColor = true;
-            this.labelControl3.Location = new System.Drawing.Point(181, 81);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl3.Location = new System.Drawing.Point(155, 66);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(71, 29);
+            this.labelControl3.Size = new System.Drawing.Size(56, 23);
             this.labelControl3.TabIndex = 1;
             this.labelControl3.Text = "Họ tên";
             // 
@@ -363,10 +344,9 @@
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Appearance.Options.UseForeColor = true;
-            this.labelControl2.Location = new System.Drawing.Point(181, 33);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl2.Location = new System.Drawing.Point(155, 27);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(53, 29);
+            this.labelControl2.Size = new System.Drawing.Size(40, 23);
             this.labelControl2.TabIndex = 0;
             this.labelControl2.Text = "Mssv";
             // 
@@ -386,10 +366,9 @@
             this.btnthemsv.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnthemsv.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthemsv.ImageOptions.Image")));
             this.btnthemsv.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnthemsv.Location = new System.Drawing.Point(75, 31);
-            this.btnthemsv.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnthemsv.Location = new System.Drawing.Point(64, 25);
             this.btnthemsv.Name = "btnthemsv";
-            this.btnthemsv.Size = new System.Drawing.Size(112, 41);
+            this.btnthemsv.Size = new System.Drawing.Size(96, 33);
             this.btnthemsv.TabIndex = 8;
             this.btnthemsv.Text = "Thêm";
             this.btnthemsv.Click += new System.EventHandler(this.btnthemsv_Click);
@@ -404,10 +383,9 @@
             this.btnsuasv.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnsuasv.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnsuasv.ImageOptions.Image")));
             this.btnsuasv.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnsuasv.Location = new System.Drawing.Point(194, 31);
-            this.btnsuasv.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnsuasv.Location = new System.Drawing.Point(166, 25);
             this.btnsuasv.Name = "btnsuasv";
-            this.btnsuasv.Size = new System.Drawing.Size(112, 41);
+            this.btnsuasv.Size = new System.Drawing.Size(96, 33);
             this.btnsuasv.TabIndex = 9;
             this.btnsuasv.Text = "Sửa ";
             this.btnsuasv.Click += new System.EventHandler(this.btnsuasv_Click);
@@ -421,11 +399,9 @@
             this.groupBox2.Controls.Add(this.btnthemsv);
             this.groupBox2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(828, 325);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox2.Location = new System.Drawing.Point(672, 264);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox2.Size = new System.Drawing.Size(572, 94);
+            this.groupBox2.Size = new System.Drawing.Size(490, 76);
             this.groupBox2.TabIndex = 23;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chức năng";
@@ -441,10 +417,9 @@
             this.btnthoatsv.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnthoatsv.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthoatsv.ImageOptions.Image")));
             this.btnthoatsv.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnthoatsv.Location = new System.Drawing.Point(432, 31);
-            this.btnthoatsv.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnthoatsv.Location = new System.Drawing.Point(370, 25);
             this.btnthoatsv.Name = "btnthoatsv";
-            this.btnthoatsv.Size = new System.Drawing.Size(112, 41);
+            this.btnthoatsv.Size = new System.Drawing.Size(96, 33);
             this.btnthoatsv.TabIndex = 11;
             this.btnthoatsv.Text = "Đóng";
             this.btnthoatsv.Click += new System.EventHandler(this.btnthoatsv_Click);
@@ -459,10 +434,9 @@
             this.btnxoasv.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnxoasv.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnxoasv.ImageOptions.Image")));
             this.btnxoasv.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnxoasv.Location = new System.Drawing.Point(313, 31);
-            this.btnxoasv.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnxoasv.Location = new System.Drawing.Point(268, 25);
             this.btnxoasv.Name = "btnxoasv";
-            this.btnxoasv.Size = new System.Drawing.Size(112, 41);
+            this.btnxoasv.Size = new System.Drawing.Size(96, 33);
             this.btnxoasv.TabIndex = 10;
             this.btnxoasv.Text = "Xóa";
             this.btnxoasv.Click += new System.EventHandler(this.btnxoasv_Click);
@@ -473,11 +447,9 @@
             this.groupBox3.Controls.Add(this.gridviewsv);
             this.groupBox3.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox3.ForeColor = System.Drawing.Color.White;
-            this.groupBox3.Location = new System.Drawing.Point(10, 441);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox3.Location = new System.Drawing.Point(9, 346);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox3.Size = new System.Drawing.Size(1389, 287);
+            this.groupBox3.Size = new System.Drawing.Size(1153, 245);
             this.groupBox3.TabIndex = 25;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông tin chi tiết";
@@ -499,13 +471,12 @@
             this.DienThoai,
             this.Email,
             this.MaLop});
-            this.gridviewsv.Location = new System.Drawing.Point(7, 27);
-            this.gridviewsv.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gridviewsv.Location = new System.Drawing.Point(6, 22);
             this.gridviewsv.MultiSelect = false;
             this.gridviewsv.Name = "gridviewsv";
             this.gridviewsv.ReadOnly = true;
             this.gridviewsv.RowHeadersVisible = false;
-            this.gridviewsv.Size = new System.Drawing.Size(1375, 249);
+            this.gridviewsv.Size = new System.Drawing.Size(1141, 217);
             this.gridviewsv.TabIndex = 9;
             this.gridviewsv.TabStop = false;
             // 
@@ -594,15 +565,14 @@
             // frmsv
             // 
             this.AcceptButton = this.btnthemsv;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnthoatsv;
-            this.ClientSize = new System.Drawing.Size(1414, 742);
+            this.ClientSize = new System.Drawing.Size(1174, 603);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmsv";
             this.Text = "QUẢN LÍ SINH VIÊN";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmsv_FormClosing);
