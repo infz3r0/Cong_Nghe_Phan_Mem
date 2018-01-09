@@ -33,5 +33,26 @@ namespace BUS_Tier
         {
             return lopHocPhanDAO.Update(lopHocPhan);
         }
+        public bool dangki(string MaSV, string[] dshp)
+        {
+            foreach (string MaHP in dshp)
+            {
+                bool isOK = lopHocPhanDAO.DangKi(MaSV, MaHP);
+                if (!isOK)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        public bool huydangki(string MaSV, string MaHP)
+        {
+            bool isOK = lopHocPhanDAO.HuyDangKi(MaSV, MaHP);
+            return isOK;
+        }
+        public DataTable dshpdadangki()
+        {
+            return lopHocPhanDAO.DSHPDaDangKi();
+        }
     }
 }
