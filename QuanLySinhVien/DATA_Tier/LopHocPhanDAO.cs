@@ -63,7 +63,7 @@ namespace DATA_Tier
         }
         public bool DangKi(string MaSV, string MaHP)
         {
-            string query = "INSERT SinhVien (MaSV, MaHP)" +
+            string query = "INSERT SVHP (MaSV, MaHP)" +
                            " VALUES (@MaSV, @MaHP)";
             SqlParameter[] sqlParameters = new SqlParameter[2];
             sqlParameters[0] = new SqlParameter("@MaSV", SqlDbType.VarChar);
@@ -74,7 +74,7 @@ namespace DATA_Tier
         }
         public bool HuyDangKi(string MaSV, string MaHP)
         {
-            string query = "INSERT SinhVien (MaSV, MaHP)" +
+            string query = "INSERT SVHP (MaSV, MaHP)" +
                            " VALUES (@MaSV, @MaHP)";
             SqlParameter[] sqlParameters = new SqlParameter[2];
             sqlParameters[0] = new SqlParameter("@MaSV", SqlDbType.VarChar);
@@ -85,10 +85,11 @@ namespace DATA_Tier
         }
         public DataTable DSHPChuaDangKi(string MaSV)
         {
-            string query = "select MaHP, TenHP" +
-                             "from MonHoc" +
-                             "where MaHP not in " +
-                             "(select MaHP from SinhVien where MaSV = @MaSV)";
+            string query = "SELECT MonHoc.MaHP, MonHoc.TenHP, LopHocPhan.MaLopHP, LopHocPhan.SoLuongSV, MonHoc.SoTinChi" +
+                           "FROM LopHocPhan INNER JOIN" +
+                                 "MonHoc ON LopHocPhan.MaHP = MonHoc.MaHP" +
+                           "where MaHP not in " +
+                           "(select MaHP from SVHP where MaSV = @MaSV)";
             SqlParameter[] sqlParameters = new SqlParameter[1];
             sqlParameters[0] = new SqlParameter("@MaSV", SqlDbType.VarChar);
             sqlParameters[0].Value = MaSV;
@@ -96,10 +97,9 @@ namespace DATA_Tier
         }
         public DataTable DSHPDaDangKi()
         {
-            string query = "SELECT SinhVien.MaSV, LopHocPhan.MaHP, MonHoc.TenHP, MonHoc.SoTinChi, MonHoc.TrongSoDQT, MonHoc.TrongSoDThi, MonHoc.LoaiHP" +
-                "FROM LopHocPhan INNER JOIN" +
-                "MonHoc ON LopHocPhan.MaHP = MonHoc.MaHP INNER JOIN" +
-                "SinhVien ON LopHocPhan.LopTruong = SinhVien.MaSV";
+            string query = "SELECT MonHoc.MaHP, MonHoc.TenHP, LopHocPhan.MaLopHP, LopHocPhan.SoLuongSV, MonHoc.SoTinChi" +
+                           "FROM LopHocPhan INNER JOIN" +
+                                 "MonHoc ON LopHocPhan.MaHP = MonHoc.MaHP";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return executeSelectQuery(query, sqlParameters);
         }
