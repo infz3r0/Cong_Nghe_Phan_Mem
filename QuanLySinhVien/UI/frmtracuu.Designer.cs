@@ -163,7 +163,7 @@
             this.groupBox2.Location = new System.Drawing.Point(12, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(893, 86);
-            this.groupBox2.TabIndex = 22;
+            this.groupBox2.TabIndex = 23;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chức năng";
             // 
@@ -171,6 +171,9 @@
             // 
             this.txtInput.Location = new System.Drawing.Point(224, 39);
             this.txtInput.Name = "txtInput";
+            // 
+            // 
+            // 
             this.txtInput.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtInput.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.txtInput.Properties.Appearance.Options.UseBackColor = true;
