@@ -200,7 +200,7 @@ namespace UI_Tier
             this.btnxoadk.Appearance.Options.UseForeColor = true;
             this.btnxoadk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnxoadk.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnxoadk.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnxoahp.ImageOptions.Image")));
+            this.btnxoadk.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnxoadk.ImageOptions.Image")));
             this.btnxoadk.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnxoadk.Location = new System.Drawing.Point(232, 28);
             this.btnxoadk.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -217,7 +217,7 @@ namespace UI_Tier
             this.btnluudk.Appearance.Options.UseForeColor = true;
             this.btnluudk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnluudk.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnluudk.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthemhp.ImageOptions.Image")));
+            this.btnluudk.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnluudk.ImageOptions.Image")));
             this.btnluudk.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
             this.btnluudk.Location = new System.Drawing.Point(89, 28);
             this.btnluudk.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);

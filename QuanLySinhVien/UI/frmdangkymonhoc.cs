@@ -15,10 +15,13 @@ namespace UI_Tier
 {
     public partial class frmdangkymonhoc : DevExpress.XtraEditors.XtraForm
     {
+        private DanhSachLopHPBUS danhsachlophpBUS = new DanhSachLopHPBUS();
+        private BindingSource bs = new BindingSource();
         public frmdangkymonhoc()
         {
             InitializeComponent();
         }
+        
         private void frmdangkymonhoc_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult dlr = MessageBox.Show("Bạn muốn đóng Form?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -32,6 +35,6 @@ namespace UI_Tier
         {
             Close();
         }
-
+        
     }
 }
