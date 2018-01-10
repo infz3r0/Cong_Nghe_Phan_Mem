@@ -13,55 +13,29 @@ namespace BUS_Tier
     public class DanhSachLopHPBUS
     {
         private DanhSachLopHPDAO danhSachLopHPDAO = new DanhSachLopHPDAO();
-
-        public DataTable DanhSach()
-        {
-            DataTable dt = new DataTable();
-            dt = danhSachLopHPDAO.GetAll();
-            return dt;
-        }
-
-        public bool Them(DanhSachLopHP danhSachLopHP)
-        {
-            bool result = false;
-            result = danhSachLopHPDAO.Insert(danhSachLopHP);
-            return result;
-        }
-
-        public bool Xoa(DanhSachLopHP danhSachLopHP)
-        {
-            bool result = false;
-            result = danhSachLopHPDAO.Delete(danhSachLopHP);
-            return result;
-        }
-
-        public bool Sua(DanhSachLopHP danhSachLopHP)
-        {
-            bool result = false;
-            result = danhSachLopHPDAO.Update(danhSachLopHP);
-            return result;
-        }
+        
         public bool dangki(string MaSV, string[] dshp)
         {
             foreach (string MaLopHP in dshp)
             {
-                bool isOK = danhSachLopHPDAO.DangKi(MaSV, MaLopHP);
-                if (!isOK)
+                if (danhSachLopHPDAO.DangKi(MaSV, MaLopHP))
                 {
                     return false;
                 }
             }
             return true;
         }
+
         public bool huydangki(string MaSV, string MaLopHP)
         {
-            bool isOK = danhSachLopHPDAO.HuyDangKi(MaSV, MaLopHP);
-            return isOK;
+            return danhSachLopHPDAO.HuyDangKi(MaSV, MaLopHP);
         }
-        public DataTable dshpdadangki()
+
+        public DataTable dshpdadangki(string MaSV)
         {
-            return danhSachLopHPDAO.DSHPDaDangKi();
+            return danhSachLopHPDAO.DSHPDaDangKi(MaSV);
         }
+
         public Dictionary<string, string> dshpchuadangki(string MaSV)
         {
             Dictionary<string, string> dict = new Dictionary<string, string>();
