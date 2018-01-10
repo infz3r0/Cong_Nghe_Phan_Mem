@@ -13,33 +13,41 @@ namespace BUS_Tier
     public class DanhSachLopHPBUS
     {
         private DanhSachLopHPDAO danhSachLopHPDAO = new DanhSachLopHPDAO();
-
-        public DataTable DanhSach()
+        
+        public bool dangki(string MaSV, string[] dshp)
         {
-            DataTable dt = new DataTable();
-            dt = danhSachLopHPDAO.GetAll();
-            return dt;
+            foreach (string MaLopHP in dshp)
+            {
+                if (danhSachLopHPDAO.DangKi(MaSV, MaLopHP))
+                {
+                    return false;
+                }
+            }
+            return true;
         }
 
-        public bool Them(DanhSachLopHP danhSachLopHP)
+        public bool huydangki(string MaSV, string MaLopHP)
         {
-            bool result = false;
-            result = danhSachLopHPDAO.Insert(danhSachLopHP);
-            return result;
+            return danhSachLopHPDAO.HuyDangKi(MaSV, MaLopHP);
         }
 
-        public bool Xoa(DanhSachLopHP danhSachLopHP)
+        public DataTable dshpdadangki(string MaSV)
         {
-            bool result = false;
-            result = danhSachLopHPDAO.Delete(danhSachLopHP);
-            return result;
+            return danhSachLopHPDAO.DSHPDaDangKi(MaSV);
         }
 
-        public bool Sua(DanhSachLopHP danhSachLopHP)
+        public Dictionary<string, string> dshpchuadangki(string MaSV)
         {
-            bool result = false;
-            result = danhSachLopHPDAO.Update(danhSachLopHP);
-            return result;
+            Dictionary<string, string> dict = new Dictionary<string, string>();
+            DataTable dt = danhSachLopHPDAO.DSHPChuaDangKi(MaSV);
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                dict.Add(dt.Rows[i][1].ToString(), dt.Rows[i][0].ToString());
+            }
+
+            return dict;
         }
+
+
     }
 }

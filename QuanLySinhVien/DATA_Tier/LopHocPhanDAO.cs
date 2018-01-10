@@ -61,47 +61,5 @@ namespace DATA_Tier
             sqlParameters[0].Value = lophp.MaLopHP;
             return executeDeleteQuery(query, sqlParameters);
         }
-        public bool DangKi(string MaSV, string MaHP)
-        {
-            string query = "INSERT SVHP (MaSV, MaHP)" +
-                           " VALUES (@MaSV, @MaHP)";
-            SqlParameter[] sqlParameters = new SqlParameter[2];
-            sqlParameters[0] = new SqlParameter("@MaSV", SqlDbType.VarChar);
-            sqlParameters[0].Value = MaSV;
-            sqlParameters[1] = new SqlParameter("@MaHP", SqlDbType.VarChar);
-            sqlParameters[1].Value = MaHP;
-            return executeInsertQuery(query, sqlParameters);
-        }
-        public bool HuyDangKi(string MaSV, string MaHP)
-        {
-            string query = "INSERT SVHP (MaSV, MaHP)" +
-                           " VALUES (@MaSV, @MaHP)";
-            SqlParameter[] sqlParameters = new SqlParameter[2];
-            sqlParameters[0] = new SqlParameter("@MaSV", SqlDbType.VarChar);
-            sqlParameters[0].Value = MaSV;
-            sqlParameters[1] = new SqlParameter("@MaHP", SqlDbType.VarChar);
-            sqlParameters[1].Value = MaHP;
-            return executeInsertQuery(query, sqlParameters);
-        }
-        public DataTable DSHPChuaDangKi(string MaSV)
-        {
-            string query = "SELECT MonHoc.MaHP, MonHoc.TenHP, LopHocPhan.MaLopHP, LopHocPhan.SoLuongSV, MonHoc.SoTinChi" +
-                           "FROM LopHocPhan INNER JOIN" +
-                                 "MonHoc ON LopHocPhan.MaHP = MonHoc.MaHP" +
-                           "where MaHP not in " +
-                           "(select MaHP from SVHP where MaSV = @MaSV)";
-            SqlParameter[] sqlParameters = new SqlParameter[1];
-            sqlParameters[0] = new SqlParameter("@MaSV", SqlDbType.VarChar);
-            sqlParameters[0].Value = MaSV;
-            return executeSelectQuery(query, sqlParameters);
-        }
-        public DataTable DSHPDaDangKi()
-        {
-            string query = "SELECT MonHoc.MaHP, MonHoc.TenHP, LopHocPhan.MaLopHP, LopHocPhan.SoLuongSV, MonHoc.SoTinChi" +
-                           "FROM LopHocPhan INNER JOIN" +
-                                 "MonHoc ON LopHocPhan.MaHP = MonHoc.MaHP";
-            SqlParameter[] sqlParameters = new SqlParameter[0];
-            return executeSelectQuery(query, sqlParameters);
-        }
     }
 }
