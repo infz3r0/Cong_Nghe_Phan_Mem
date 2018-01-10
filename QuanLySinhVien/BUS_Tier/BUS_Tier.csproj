@@ -43,6 +43,7 @@
     <Compile Include="BanCanSuBUS.cs" />
     <Compile Include="DanhSachLopHPBUS.cs" />
     <Compile Include="DiemBUS.cs" />
+    <Compile Include="DiemHe4BUS.cs" />
     <Compile Include="DieuKienBUS.cs" />
     <Compile Include="KhoaBUS.cs" />
     <Compile Include="LopHocPhanBUS.cs" />

@@ -75,9 +75,11 @@
             this.groupBox3.Controls.Add(this.gridLopHP);
             this.groupBox3.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox3.ForeColor = System.Drawing.Color.White;
-            this.groupBox3.Location = new System.Drawing.Point(12, 229);
+            this.groupBox3.Location = new System.Drawing.Point(14, 282);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(765, 268);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox3.Size = new System.Drawing.Size(892, 330);
             this.groupBox3.TabIndex = 23;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông tin chi tiết";
@@ -97,12 +99,13 @@
             this.MAHP,
             this.TenHP,
             this.LopTruong});
-            this.gridLopHP.Location = new System.Drawing.Point(7, 25);
+            this.gridLopHP.Location = new System.Drawing.Point(8, 31);
+            this.gridLopHP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridLopHP.MultiSelect = false;
             this.gridLopHP.Name = "gridLopHP";
             this.gridLopHP.ReadOnly = true;
             this.gridLopHP.RowHeadersVisible = false;
-            this.gridLopHP.Size = new System.Drawing.Size(752, 235);
+            this.gridLopHP.Size = new System.Drawing.Size(877, 289);
             this.gridLopHP.TabIndex = 9;
             this.gridLopHP.TabStop = false;
             // 
@@ -160,9 +163,11 @@
             this.groupBox2.Controls.Add(this.btnthemlophp);
             this.groupBox2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(612, 12);
+            this.groupBox2.Location = new System.Drawing.Point(714, 15);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(165, 211);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox2.Size = new System.Drawing.Size(192, 260);
             this.groupBox2.TabIndex = 22;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chức năng";
@@ -178,9 +183,10 @@
             this.btnthoatlophp.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnthoatlophp.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthoatlophp.ImageOptions.Image")));
             this.btnthoatlophp.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnthoatlophp.Location = new System.Drawing.Point(43, 160);
+            this.btnthoatlophp.Location = new System.Drawing.Point(50, 197);
+            this.btnthoatlophp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnthoatlophp.Name = "btnthoatlophp";
-            this.btnthoatlophp.Size = new System.Drawing.Size(96, 33);
+            this.btnthoatlophp.Size = new System.Drawing.Size(112, 41);
             this.btnthoatlophp.TabIndex = 3;
             this.btnthoatlophp.Text = "Đóng";
             this.btnthoatlophp.Click += new System.EventHandler(this.btnthoatlophp_Click);
@@ -195,9 +201,10 @@
             this.btnxoalophp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnxoalophp.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnxoalophp.ImageOptions.Image")));
             this.btnxoalophp.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnxoalophp.Location = new System.Drawing.Point(43, 113);
+            this.btnxoalophp.Location = new System.Drawing.Point(50, 139);
+            this.btnxoalophp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnxoalophp.Name = "btnxoalophp";
-            this.btnxoalophp.Size = new System.Drawing.Size(96, 33);
+            this.btnxoalophp.Size = new System.Drawing.Size(112, 41);
             this.btnxoalophp.TabIndex = 2;
             this.btnxoalophp.Text = "Xóa";
             this.btnxoalophp.Click += new System.EventHandler(this.btnxoalophp_Click);
@@ -212,9 +219,10 @@
             this.btnsualophp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnsualophp.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnsualophp.ImageOptions.Image")));
             this.btnsualophp.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnsualophp.Location = new System.Drawing.Point(43, 69);
+            this.btnsualophp.Location = new System.Drawing.Point(50, 85);
+            this.btnsualophp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnsualophp.Name = "btnsualophp";
-            this.btnsualophp.Size = new System.Drawing.Size(96, 33);
+            this.btnsualophp.Size = new System.Drawing.Size(112, 41);
             this.btnsualophp.TabIndex = 1;
             this.btnsualophp.Text = "Sửa ";
             this.btnsualophp.Click += new System.EventHandler(this.btnsualophp_Click);
@@ -229,9 +237,10 @@
             this.btnthemlophp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnthemlophp.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnthemlophp.ImageOptions.Image")));
             this.btnthemlophp.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnthemlophp.Location = new System.Drawing.Point(43, 25);
+            this.btnthemlophp.Location = new System.Drawing.Point(50, 31);
+            this.btnthemlophp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnthemlophp.Name = "btnthemlophp";
-            this.btnthemlophp.Size = new System.Drawing.Size(96, 33);
+            this.btnthemlophp.Size = new System.Drawing.Size(112, 41);
             this.btnthemlophp.TabIndex = 0;
             this.btnthemlophp.Text = "Thêm";
             this.btnthemlophp.Click += new System.EventHandler(this.btnthemlophp_Click);
@@ -249,9 +258,11 @@
             this.groupBox1.Controls.Add(this.labelControl2);
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(14, 15);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(594, 211);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Size = new System.Drawing.Size(693, 260);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin";
@@ -259,9 +270,10 @@
             // cbbLopTruong
             // 
             this.cbbLopTruong.FormattingEnabled = true;
-            this.cbbLopTruong.Location = new System.Drawing.Point(192, 166);
+            this.cbbLopTruong.Location = new System.Drawing.Point(224, 204);
+            this.cbbLopTruong.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbbLopTruong.Name = "cbbLopTruong";
-            this.cbbLopTruong.Size = new System.Drawing.Size(313, 26);
+            this.cbbLopTruong.Size = new System.Drawing.Size(364, 31);
             this.cbbLopTruong.TabIndex = 6;
             // 
             // labelControl3
@@ -272,9 +284,10 @@
             this.labelControl3.Appearance.Options.UseBackColor = true;
             this.labelControl3.Appearance.Options.UseFont = true;
             this.labelControl3.Appearance.Options.UseForeColor = true;
-            this.labelControl3.Location = new System.Drawing.Point(20, 166);
+            this.labelControl3.Location = new System.Drawing.Point(23, 204);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(93, 23);
+            this.labelControl3.Size = new System.Drawing.Size(119, 29);
             this.labelControl3.TabIndex = 7;
             this.labelControl3.Text = "Lớp trưởng";
             // 
@@ -283,9 +296,10 @@
             this.cbbMaHPLopHP.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cbbMaHPLopHP.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.cbbMaHPLopHP.FormattingEnabled = true;
-            this.cbbMaHPLopHP.Location = new System.Drawing.Point(192, 124);
+            this.cbbMaHPLopHP.Location = new System.Drawing.Point(224, 153);
+            this.cbbMaHPLopHP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbbMaHPLopHP.Name = "cbbMaHPLopHP";
-            this.cbbMaHPLopHP.Size = new System.Drawing.Size(313, 26);
+            this.cbbMaHPLopHP.Size = new System.Drawing.Size(364, 31);
             this.cbbMaHPLopHP.TabIndex = 2;
             // 
             // labelControl1
@@ -296,16 +310,18 @@
             this.labelControl1.Appearance.Options.UseBackColor = true;
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.Location = new System.Drawing.Point(20, 124);
+            this.labelControl1.Location = new System.Drawing.Point(23, 153);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(117, 23);
+            this.labelControl1.Size = new System.Drawing.Size(145, 29);
             this.labelControl1.TabIndex = 5;
             this.labelControl1.Text = "Tên học phần";
             // 
             // txtSLSVLopHP
             // 
             this.txtSLSVLopHP.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSLSVLopHP.Location = new System.Drawing.Point(192, 82);
+            this.txtSLSVLopHP.Location = new System.Drawing.Point(224, 101);
+            this.txtSLSVLopHP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSLSVLopHP.Name = "txtSLSVLopHP";
             this.txtSLSVLopHP.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtSLSVLopHP.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
@@ -313,14 +329,15 @@
             this.txtSLSVLopHP.Properties.Appearance.Options.UseForeColor = true;
             this.txtSLSVLopHP.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.txtSLSVLopHP.Properties.ReadOnly = true;
-            this.txtSLSVLopHP.Size = new System.Drawing.Size(313, 20);
+            this.txtSLSVLopHP.Size = new System.Drawing.Size(365, 22);
             this.txtSLSVLopHP.TabIndex = 1;
             this.txtSLSVLopHP.TabStop = false;
             // 
             // txtmalophp
             // 
             this.txtmalophp.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtmalophp.Location = new System.Drawing.Point(192, 39);
+            this.txtmalophp.Location = new System.Drawing.Point(224, 48);
+            this.txtmalophp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtmalophp.Name = "txtmalophp";
             this.txtmalophp.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.txtmalophp.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
@@ -330,7 +347,7 @@
             this.txtmalophp.Properties.Mask.EditMask = "\\d{1,4}";
             this.txtmalophp.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtmalophp.Properties.MaxLength = 10;
-            this.txtmalophp.Size = new System.Drawing.Size(313, 20);
+            this.txtmalophp.Size = new System.Drawing.Size(365, 22);
             this.txtmalophp.TabIndex = 0;
             // 
             // labelControl5
@@ -339,9 +356,10 @@
             this.labelControl5.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl5.Appearance.Options.UseFont = true;
             this.labelControl5.Appearance.Options.UseForeColor = true;
-            this.labelControl5.Location = new System.Drawing.Point(20, 82);
+            this.labelControl5.Location = new System.Drawing.Point(23, 101);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(98, 23);
+            this.labelControl5.Size = new System.Drawing.Size(125, 29);
             this.labelControl5.TabIndex = 3;
             this.labelControl5.Text = "Số lượng sv";
             // 
@@ -351,9 +369,10 @@
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Appearance.Options.UseForeColor = true;
-            this.labelControl2.Location = new System.Drawing.Point(20, 39);
+            this.labelControl2.Location = new System.Drawing.Point(23, 48);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(56, 23);
+            this.labelControl2.Size = new System.Drawing.Size(72, 29);
             this.labelControl2.TabIndex = 0;
             this.labelControl2.Text = "Mã lớp";
             // 
@@ -364,14 +383,15 @@
             // frmlophp
             // 
             this.AcceptButton = this.btnthemlophp;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnthoatlophp;
-            this.ClientSize = new System.Drawing.Size(786, 507);
+            this.ClientSize = new System.Drawing.Size(917, 624);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmlophp";
             this.Text = "LỚP HỌC PHẦN";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmlophp_FormClosing);

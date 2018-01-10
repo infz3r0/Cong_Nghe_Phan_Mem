@@ -70,7 +70,7 @@ namespace DATA_Tier
             sqlParameters[0].Value = MaSV;
             sqlParameters[1] = new SqlParameter("@MaLopHP", SqlDbType.VarChar);
             sqlParameters[1].Value = MaLopHP;
-            return executeInsertQuery(query, sqlParameters);
+            return executeDeleteQuery(query, sqlParameters);
         }
         public DataTable DSHPChuaDangKi(string MaSV)
         {
@@ -78,8 +78,8 @@ namespace DATA_Tier
                              "FROM DanhSachLopHP INNER JOIN"+
                              "LopHocPhan ON DanhSachLopHP.MaLopHP = LopHocPhan.MaLopHP INNER JOIN"+
                              " MonHoc ON LopHocPhan.MaHP = MonHoc.MaHP "+
-                           "where MaLopHP not in " +
-                           "(select MaLopHP from DanhSachLopHP where MaSV = @MaSV)";
+                           "where LopHocPhan not in " +
+                           "(select MaLopHP, MaSV from DanhSachLopHP where MaSV = @MaSV and MaLopHP = @MaLopHP)";
             SqlParameter[] sqlParameters = new SqlParameter[1];
             sqlParameters[0] = new SqlParameter("@MaSV", SqlDbType.VarChar);
             sqlParameters[0].Value = MaSV;
@@ -90,7 +90,8 @@ namespace DATA_Tier
             string query = "SELECT  DanhSachLopHP.MaLopHP, LopHocPhan.SoLuongSV, LopHocPhan.MaHP, MonHoc.TenHP, MonHoc.SoTinChi" +
                              "FROM DanhSachLopHP INNER JOIN" +
                              "LopHocPhan ON DanhSachLopHP.MaLopHP = LopHocPhan.MaLopHP INNER JOIN" +
-                             " MonHoc ON LopHocPhan.MaHP = MonHoc.MaHP";
+                             " MonHoc ON LopHocPhan.MaHP = MonHoc.MaHP" +
+                             "where MaSV = @MaSV";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return executeSelectQuery(query, sqlParameters);
         }

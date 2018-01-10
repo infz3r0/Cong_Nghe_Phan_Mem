@@ -33,22 +33,22 @@ namespace UI_Tier
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmdangkymonhoc));
             this.label1 = new System.Windows.Forms.Label();
             this.txttimmon = new DevExpress.XtraEditors.TextEdit();
-            this.btnloc = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.checkedListBoxmonhoc = new System.Windows.Forms.CheckedListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Griddanhsachdachon = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtmssv = new DevExpress.XtraEditors.TextEdit();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnthoatdk = new DevExpress.XtraEditors.SimpleButton();
             this.btnxoadk = new DevExpress.XtraEditors.SimpleButton();
-            this.btnluudk = new DevExpress.XtraEditors.SimpleButton();
+            this.btnthem = new DevExpress.XtraEditors.SimpleButton();
+            this.btnloc = new System.Windows.Forms.Button();
+            this.btnok = new DevExpress.XtraEditors.SimpleButton();
+            this.checkedListBoxmonhoc = new System.Windows.Forms.CheckedListBox();
+            this.ccbmasv = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.txttimmon.Properties)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Griddanhsachdachon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtmssv.Properties)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,18 +75,6 @@ namespace UI_Tier
             this.txttimmon.Size = new System.Drawing.Size(235, 30);
             this.txttimmon.TabIndex = 1;
             // 
-            // btnloc
-            // 
-            this.btnloc.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnloc.ForeColor = System.Drawing.Color.Black;
-            this.btnloc.Location = new System.Drawing.Point(485, 20);
-            this.btnloc.Name = "btnloc";
-            this.btnloc.Size = new System.Drawing.Size(94, 38);
-            this.btnloc.TabIndex = 2;
-            this.btnloc.Text = "Lọc >>";
-            this.btnloc.UseVisualStyleBackColor = true;
-            this.btnloc.Click += new System.EventHandler(this.btnloc_Click);
-            // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
@@ -97,18 +85,10 @@ namespace UI_Tier
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox3.Size = new System.Drawing.Size(983, 250);
+            this.groupBox3.Size = new System.Drawing.Size(845, 250);
             this.groupBox3.TabIndex = 21;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông tin chi tiết";
-            // 
-            // checkedListBoxmonhoc
-            // 
-            this.checkedListBoxmonhoc.FormattingEnabled = true;
-            this.checkedListBoxmonhoc.Location = new System.Drawing.Point(23, 43);
-            this.checkedListBoxmonhoc.Name = "checkedListBoxmonhoc";
-            this.checkedListBoxmonhoc.Size = new System.Drawing.Size(947, 179);
-            this.checkedListBoxmonhoc.TabIndex = 2;
             // 
             // groupBox1
             // 
@@ -145,23 +125,12 @@ namespace UI_Tier
             this.label2.TabIndex = 25;
             this.label2.Text = "Mã sinh viên";
             // 
-            // txtmssv
-            // 
-            this.txtmssv.Location = new System.Drawing.Point(184, 363);
-            this.txtmssv.Name = "txtmssv";
-            this.txtmssv.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txtmssv.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtmssv.Properties.Appearance.Options.UseBackColor = true;
-            this.txtmssv.Properties.Appearance.Options.UseFont = true;
-            this.txtmssv.Size = new System.Drawing.Size(235, 30);
-            this.txtmssv.TabIndex = 26;
-            // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.btnthoatdk);
             this.groupBox2.Controls.Add(this.btnxoadk);
-            this.groupBox2.Controls.Add(this.btnluudk);
+            this.groupBox2.Controls.Add(this.btnthem);
             this.groupBox2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(481, 342);
@@ -209,69 +178,109 @@ namespace UI_Tier
             this.btnxoadk.TabIndex = 2;
             this.btnxoadk.Text = "Xóa";
             // 
-            // btnluudk
+            // btnthem
             // 
-            this.btnluudk.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnluudk.Appearance.ForeColor = System.Drawing.Color.White;
-            this.btnluudk.Appearance.Options.UseFont = true;
-            this.btnluudk.Appearance.Options.UseForeColor = true;
-            this.btnluudk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnluudk.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnluudk.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnluudk.ImageOptions.Image")));
-            this.btnluudk.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnluudk.Location = new System.Drawing.Point(89, 28);
-            this.btnluudk.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnluudk.Name = "btnluudk";
-            this.btnluudk.Size = new System.Drawing.Size(112, 41);
-            this.btnluudk.TabIndex = 0;
-            this.btnluudk.Text = "Lưu";
+            this.btnthem.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnthem.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnthem.Appearance.Options.UseFont = true;
+            this.btnthem.Appearance.Options.UseForeColor = true;
+            this.btnthem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnthem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnthem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnluudk.ImageOptions.Image")));
+            this.btnthem.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.btnthem.Location = new System.Drawing.Point(89, 28);
+            this.btnthem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnthem.Name = "btnthem";
+            this.btnthem.Size = new System.Drawing.Size(112, 41);
+            this.btnthem.TabIndex = 0;
+            this.btnthem.Text = "Lưu";
+            // 
+            // btnloc
+            // 
+            this.btnloc.Font = new System.Drawing.Font("Tahoma", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnloc.ForeColor = System.Drawing.Color.Black;
+            this.btnloc.Location = new System.Drawing.Point(509, 12);
+            this.btnloc.Name = "btnloc";
+            this.btnloc.Size = new System.Drawing.Size(104, 48);
+            this.btnloc.TabIndex = 28;
+            this.btnloc.Text = "Lọc";
+            this.btnloc.UseVisualStyleBackColor = true;
+            // 
+            // btnok
+            // 
+            this.btnok.Appearance.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnok.Appearance.Options.UseFont = true;
+            this.btnok.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnok.Location = new System.Drawing.Point(888, 116);
+            this.btnok.Name = "btnok";
+            this.btnok.Size = new System.Drawing.Size(112, 51);
+            this.btnok.TabIndex = 29;
+            this.btnok.Text = "OK";
+            this.btnok.Click += new System.EventHandler(this.btnok_Click);
+            // 
+            // checkedListBoxmonhoc
+            // 
+            this.checkedListBoxmonhoc.FormattingEnabled = true;
+            this.checkedListBoxmonhoc.Location = new System.Drawing.Point(23, 41);
+            this.checkedListBoxmonhoc.Name = "checkedListBoxmonhoc";
+            this.checkedListBoxmonhoc.Size = new System.Drawing.Size(802, 179);
+            this.checkedListBoxmonhoc.TabIndex = 0;
+            // 
+            // ccbmasv
+            // 
+            this.ccbmasv.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ccbmasv.FormattingEnabled = true;
+            this.ccbmasv.Location = new System.Drawing.Point(169, 365);
+            this.ccbmasv.Name = "ccbmasv";
+            this.ccbmasv.Size = new System.Drawing.Size(248, 30);
+            this.ccbmasv.TabIndex = 30;
             // 
             // frmdangkymonhoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1018, 714);
+            this.Controls.Add(this.ccbmasv);
+            this.Controls.Add(this.btnok);
+            this.Controls.Add(this.btnloc);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.txtmssv);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.btnloc);
             this.Controls.Add(this.txttimmon);
             this.Controls.Add(this.label1);
             this.Name = "frmdangkymonhoc";
             this.Text = "frmdangkymonhoc";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmdangkymonhoc_FormClosing);
+            this.Load += new System.EventHandler(this.frmdangkymonhoc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txttimmon.Properties)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Griddanhsachdachon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtmssv.Properties)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
-        private void btnloc_Click(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
+       
 
         #endregion
 
         private System.Windows.Forms.Label label1;
         private DevExpress.XtraEditors.TextEdit txttimmon;
-        private System.Windows.Forms.Button btnloc;
+        private EventHandler btnloc_Click;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView Griddanhsachdachon;
         private System.Windows.Forms.Label label2;
-        private DevExpress.XtraEditors.TextEdit txtmssv;
         private System.Windows.Forms.GroupBox groupBox2;
         private DevExpress.XtraEditors.SimpleButton btnthoatdk;
         private DevExpress.XtraEditors.SimpleButton btnxoadk;
-        private DevExpress.XtraEditors.SimpleButton btnluudk;
+        private DevExpress.XtraEditors.SimpleButton btnthem;
+        private System.Windows.Forms.Button btnloc;
+        private DevExpress.XtraEditors.SimpleButton btnok;
         private System.Windows.Forms.CheckedListBox checkedListBoxmonhoc;
+        private System.Windows.Forms.ComboBox ccbmasv;
     }
 }
