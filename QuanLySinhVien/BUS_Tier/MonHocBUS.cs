@@ -53,5 +53,61 @@ namespace BUS_Tier
 
             return monHocDAO.Update(monHoc);
         }
+        public DataTable loctheoten(string input)
+        {
+            DataTable dt = monHocDAO.Search().Copy();
+            DataTable ketqua = new DataTable();
+            ketqua.Columns.Add("MaHP");
+            ketqua.Columns.Add("TenHP");
+            ketqua.Columns.Add("MaLopHP");
+            ketqua.Columns.Add("SoTinChi");
+            ketqua.Columns.Add("SoLongSV");
+
+            for (int r = 0; r < dt.Rows.Count; r++)
+            {
+                string tenhp = dt.Rows[r]["TenHP"].ToString();
+                if (tenhp.ToLower().Contains(input.ToLower()))
+                {
+                    DataRow row = dt.Rows[r];
+                    DataRow newrow = ketqua.NewRow();
+                    for (int i = 0; i < ketqua.Columns.Count; i++)
+                    {
+                        newrow[i] = row[i];
+                    }
+                    ketqua.Rows.Add(newrow);
+                }
+            }
+            return ketqua;
+        }
+        public DataTable Loctheoma(string input)
+        {
+            DataTable dt = monHocDAO.Search().Copy();
+            DataTable ketqua = new DataTable();
+            ketqua.Columns.Add("MaHP");
+            ketqua.Columns.Add("TenHP");
+            ketqua.Columns.Add("MaLopHP");
+            ketqua.Columns.Add("SoTinChi");
+            ketqua.Columns.Add("SoLongSV");
+
+            for (int r = 0; r < dt.Rows.Count; r++)
+            {
+                string mahp = dt.Rows[r]["MaHP"].ToString();
+                if (mahp.Contains(input))
+                {
+                    DataRow row = dt.Rows[r];
+                    DataRow newrow = ketqua.NewRow();
+                    for (int i = 0; i < ketqua.Columns.Count; i++)
+                    {
+                        newrow[i] = row[i];
+                    }
+                    ketqua.Rows.Add(newrow);
+                }
+            }
+            return ketqua;
+        }
+        public DataTable danhsachmon()
+        {
+            return monHocDAO.Search();
+        }
     }
 }

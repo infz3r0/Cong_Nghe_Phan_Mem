@@ -64,9 +64,11 @@
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(14, 15);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(477, 134);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Size = new System.Drawing.Size(556, 165);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin";
@@ -75,9 +77,10 @@
             // 
             this.cbbGID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbGID.FormattingEnabled = true;
-            this.cbbGID.Location = new System.Drawing.Point(192, 47);
+            this.cbbGID.Location = new System.Drawing.Point(224, 58);
+            this.cbbGID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbbGID.Name = "cbbGID";
-            this.cbbGID.Size = new System.Drawing.Size(222, 26);
+            this.cbbGID.Size = new System.Drawing.Size(258, 31);
             this.cbbGID.TabIndex = 0;
             this.cbbGID.TabStop = false;
             this.cbbGID.SelectionChangeCommitted += new System.EventHandler(this.cbbGID_SelectionChangeCommitted);
@@ -88,9 +91,10 @@
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.Location = new System.Drawing.Point(27, 165);
+            this.labelControl1.Location = new System.Drawing.Point(31, 203);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(0, 23);
+            this.labelControl1.Size = new System.Drawing.Size(0, 29);
             this.labelControl1.TabIndex = 6;
             // 
             // labelControl5
@@ -99,9 +103,10 @@
             this.labelControl5.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl5.Appearance.Options.UseFont = true;
             this.labelControl5.Appearance.Options.UseForeColor = true;
-            this.labelControl5.Location = new System.Drawing.Point(88, 47);
+            this.labelControl5.Location = new System.Drawing.Point(103, 58);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(50, 23);
+            this.labelControl5.Size = new System.Drawing.Size(62, 29);
             this.labelControl5.TabIndex = 1;
             this.labelControl5.Text = "Nhóm";
             // 
@@ -116,9 +121,11 @@
             this.groupBox3.Controls.Add(this.clbPhanQuyen);
             this.groupBox3.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox3.ForeColor = System.Drawing.Color.White;
-            this.groupBox3.Location = new System.Drawing.Point(12, 152);
+            this.groupBox3.Location = new System.Drawing.Point(14, 187);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(614, 351);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox3.Size = new System.Drawing.Size(716, 432);
             this.groupBox3.TabIndex = 24;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông tin chi tiết";
@@ -132,9 +139,10 @@
             this.btnSystem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnSystem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSystem.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnSystem.Location = new System.Drawing.Point(429, 25);
+            this.btnSystem.Location = new System.Drawing.Point(500, 31);
+            this.btnSystem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSystem.Name = "btnSystem";
-            this.btnSystem.Size = new System.Drawing.Size(96, 33);
+            this.btnSystem.Size = new System.Drawing.Size(112, 41);
             this.btnSystem.TabIndex = 3;
             this.btnSystem.Text = "Hệ thống";
             this.btnSystem.Click += new System.EventHandler(this.btnSystem_Click);
@@ -148,9 +156,10 @@
             this.btnWrite.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnWrite.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnWrite.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnWrite.Location = new System.Drawing.Point(327, 25);
+            this.btnWrite.Location = new System.Drawing.Point(381, 31);
+            this.btnWrite.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnWrite.Name = "btnWrite";
-            this.btnWrite.Size = new System.Drawing.Size(96, 33);
+            this.btnWrite.Size = new System.Drawing.Size(112, 41);
             this.btnWrite.TabIndex = 3;
             this.btnWrite.Text = "Chỉnh sửa";
             this.btnWrite.Click += new System.EventHandler(this.btnWrite_Click);
@@ -164,9 +173,10 @@
             this.btnRead.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnRead.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRead.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnRead.Location = new System.Drawing.Point(225, 25);
+            this.btnRead.Location = new System.Drawing.Point(262, 31);
+            this.btnRead.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRead.Name = "btnRead";
-            this.btnRead.Size = new System.Drawing.Size(96, 33);
+            this.btnRead.Size = new System.Drawing.Size(112, 41);
             this.btnRead.TabIndex = 3;
             this.btnRead.Text = "Xem";
             this.btnRead.Click += new System.EventHandler(this.btnRead_Click);
@@ -180,9 +190,10 @@
             this.btnDefault.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnDefault.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDefault.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnDefault.Location = new System.Drawing.Point(123, 25);
+            this.btnDefault.Location = new System.Drawing.Point(143, 31);
+            this.btnDefault.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDefault.Name = "btnDefault";
-            this.btnDefault.Size = new System.Drawing.Size(96, 33);
+            this.btnDefault.Size = new System.Drawing.Size(112, 41);
             this.btnDefault.TabIndex = 3;
             this.btnDefault.Text = "Mặc định";
             this.btnDefault.Click += new System.EventHandler(this.btnDefault_Click);
@@ -196,9 +207,10 @@
             this.btnSelectAll.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnSelectAll.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSelectAll.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnSelectAll.Location = new System.Drawing.Point(21, 25);
+            this.btnSelectAll.Location = new System.Drawing.Point(24, 31);
+            this.btnSelectAll.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSelectAll.Name = "btnSelectAll";
-            this.btnSelectAll.Size = new System.Drawing.Size(96, 33);
+            this.btnSelectAll.Size = new System.Drawing.Size(112, 41);
             this.btnSelectAll.TabIndex = 3;
             this.btnSelectAll.Text = "Chọn tất cả";
             this.btnSelectAll.Click += new System.EventHandler(this.btnSelectAll_Click);
@@ -212,10 +224,11 @@
             this.clbPhanQuyen.CheckOnClick = true;
             this.clbPhanQuyen.Cursor = System.Windows.Forms.Cursors.Default;
             this.clbPhanQuyen.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.clbPhanQuyen.Location = new System.Drawing.Point(3, 64);
+            this.clbPhanQuyen.Location = new System.Drawing.Point(3, 78);
+            this.clbPhanQuyen.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.clbPhanQuyen.MultiColumn = true;
             this.clbPhanQuyen.Name = "clbPhanQuyen";
-            this.clbPhanQuyen.Size = new System.Drawing.Size(608, 284);
+            this.clbPhanQuyen.Size = new System.Drawing.Size(710, 350);
             this.clbPhanQuyen.TabIndex = 1;
             // 
             // groupBox2
@@ -225,9 +238,11 @@
             this.groupBox2.Controls.Add(this.btnThoatPhanQuyen);
             this.groupBox2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(495, 12);
+            this.groupBox2.Location = new System.Drawing.Point(577, 15);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(131, 134);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox2.Size = new System.Drawing.Size(153, 165);
             this.groupBox2.TabIndex = 23;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chức năng";
@@ -242,9 +257,10 @@
             this.btnOKPhanQuyen.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOKPhanQuyen.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnOKPhanQuyen.ImageOptions.Image")));
             this.btnOKPhanQuyen.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnOKPhanQuyen.Location = new System.Drawing.Point(15, 38);
+            this.btnOKPhanQuyen.Location = new System.Drawing.Point(17, 47);
+            this.btnOKPhanQuyen.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnOKPhanQuyen.Name = "btnOKPhanQuyen";
-            this.btnOKPhanQuyen.Size = new System.Drawing.Size(96, 33);
+            this.btnOKPhanQuyen.Size = new System.Drawing.Size(112, 41);
             this.btnOKPhanQuyen.TabIndex = 2;
             this.btnOKPhanQuyen.Text = "OK";
             this.btnOKPhanQuyen.Click += new System.EventHandler(this.btnOKPhanQuyen_Click);
@@ -259,21 +275,23 @@
             this.btnThoatPhanQuyen.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThoatPhanQuyen.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThoatPhanQuyen.ImageOptions.Image")));
             this.btnThoatPhanQuyen.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.btnThoatPhanQuyen.Location = new System.Drawing.Point(15, 79);
+            this.btnThoatPhanQuyen.Location = new System.Drawing.Point(17, 97);
+            this.btnThoatPhanQuyen.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnThoatPhanQuyen.Name = "btnThoatPhanQuyen";
-            this.btnThoatPhanQuyen.Size = new System.Drawing.Size(96, 33);
+            this.btnThoatPhanQuyen.Size = new System.Drawing.Size(112, 41);
             this.btnThoatPhanQuyen.TabIndex = 3;
             this.btnThoatPhanQuyen.Text = "Đóng";
             this.btnThoatPhanQuyen.Click += new System.EventHandler(this.btnThoatPhanQuyen_Click);
             // 
             // frmPhanQuyen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(637, 515);
+            this.ClientSize = new System.Drawing.Size(743, 634);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmPhanQuyen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PHÂN QUYỀN";
