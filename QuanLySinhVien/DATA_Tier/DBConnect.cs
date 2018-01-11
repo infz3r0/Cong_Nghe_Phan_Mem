@@ -11,7 +11,7 @@ namespace DATA_Tier
 {
     public class DBConnect
     {
-        private string connect = DATA_Tier.Properties.Settings.Default.connectstringNhi;
+        private string connect = DATA_Tier.Properties.Settings.Default.connectstringLong;
 
         private SqlDataAdapter myAdapter;
         private SqlConnection conn;
@@ -51,7 +51,6 @@ namespace DATA_Tier
                 myCommand.Connection = openConnection();
                 myCommand.CommandText = _query;
                 myCommand.Parameters.AddRange(sqlParameter);
-                myCommand.ExecuteNonQuery();
                 myAdapter.SelectCommand = myCommand;
                 myAdapter.Fill(ds);
                 dataTable = ds.Tables[0];
