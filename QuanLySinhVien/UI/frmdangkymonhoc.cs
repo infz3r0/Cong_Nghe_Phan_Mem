@@ -20,17 +20,17 @@ namespace UI_Tier
         private MonHocBUS monhocBUS = new MonHocBUS();
         private BindingSource bs = new BindingSource();
 
-        private string MaSV;
-        Dictionary<string, string> dict;
         public frmdangkymonhoc()
         {
             InitializeComponent();
         }
-
-        public frmdangkymonhoc(string MaSV)
+        private void LoadDB()
         {
-            InitializeComponent();
-            this.MaSV = MaSV;
+            bs.DataSource = monhocBUS.danhsachmon();
+
+            GridViewmonhoc.DataSource = bs;
+            
+            
         }
         private void frmdangkymonhoc_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -41,41 +41,50 @@ namespace UI_Tier
             }
         }
 
-        private void btnthoatdk_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private void frmdangkymonhoc_Load(object sender, EventArgs e)
         {
-            if (MaSV == null)
-            {
-                MaSV = "";
-            }
-            dict = danhsachlophpBUS.dshpchuadangki(MaSV);
-            foreach (string MaLopHP in dict.Keys)
-            {
-                checkedListBoxmonhoc.Items.Add(MaLopHP);
-            }
+            LoadDB();
         }
 
-        private void btnok_Click(object sender, EventArgs e)
+        private void btnloc_Click_1(object sender, EventArgs e)
         {
-            string[] dshp = new string[checkedListBoxmonhoc.CheckedItems.Count];
-            for (int i = 0; i < checkedListBoxmonhoc.CheckedItems.Count; i++)
-            {
-                dshp[i] = dict[checkedListBoxmonhoc.CheckedItems[i].ToString()];
-            }
-            bool isOK = danhsachlophpBUS.dangki(MaSV, dshp);
-            if (isOK)
-            {
-                MessageBox.Show("Đăng kí thành công");
-            }
-            else
-            {
-                MessageBox.Show("Lỗi");
-            }
-            Dispose();
+               string input = txttimmon.Text;
+               bool isNumber = true;
+               bool isString = true;
+
+               if (string.IsNullOrEmpty(input))
+               {
+                   return;
+               }
+
+               for (int i = 0; i < input.Length; i++)
+               {
+                   if (char.IsNumber(input[i]))
+                   {
+                       isString = false;
+                   }
+               }
+
+               for (int i = 0; i < input.Length; i++)
+               {
+                   if (char.IsLetter(input[i]))
+                   {
+                       isNumber = false;
+                   }
+               }
+
+               if (isNumber)
+               {
+                   GridViewmonhoc.DataSource = monhocBUS.Loctheoma(input);
+               }
+               if (isString)
+               {
+                   GridViewmonhoc.DataSource = monhocBUS.loctheoten(input);
+               }
+        }
+        private void btndong_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

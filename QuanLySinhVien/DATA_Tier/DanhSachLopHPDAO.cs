@@ -41,8 +41,8 @@ namespace DATA_Tier
             string query = "SELECT MaLopHP, LopHocPhan.SoLuongSV, LopHocPhan.MaHP, MonHoc.TenHP, MonHoc.SoTinChi" +
                              " FROM LopHocPhan INNER JOIN"+
                              " MonHoc ON LopHocPhan.MaHP = MonHoc.MaHP"+
-                           " where MaLopHP not in " +
-                           " (select MaLopHP from DanhSachLopHP where MaSV = @MaSV)";
+                           " where LopHocPhan not in " +
+                           " (select MaLopHP, MaSV from DanhSachLopHP where MaSV = @MaSV and MaLopHP = @MaLopHP)";
             SqlParameter[] sqlParameters = new SqlParameter[1];
             sqlParameters[0] = new SqlParameter("@MaSV", SqlDbType.VarChar);
             sqlParameters[0].Value = MaSV;
