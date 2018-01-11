@@ -48,6 +48,10 @@ namespace UI_Tier
 
         private void frmdangkymonhoc_Load(object sender, EventArgs e)
         {
+            if (MaSV == null)
+            {
+                MaSV = "";
+            }
             dict = danhsachlophpBUS.dshpchuadangki(MaSV);
             foreach (string MaLopHP in dict.Keys)
             {
