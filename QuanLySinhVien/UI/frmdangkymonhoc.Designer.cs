@@ -30,14 +30,20 @@ namespace UI_Tier
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmdangkymonhoc));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmdangkymonhoc));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.GridViewmonhoc = new System.Windows.Forms.DataGridView();
+            this.chon = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.mahp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenhp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.malophp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sotinchi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soluongsv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txttimmon = new System.Windows.Forms.TextBox();
             this.btnok = new DevExpress.XtraEditors.SimpleButton();
             this.label2 = new System.Windows.Forms.Label();
@@ -49,12 +55,6 @@ namespace UI_Tier
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.GridViewdanhsach = new System.Windows.Forms.DataGridView();
             this.btnloc = new DevExpress.XtraEditors.SimpleButton();
-            this.chon = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.mahp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenhp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.malophp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sotinchi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soluongsv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridViewmonhoc)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -89,6 +89,9 @@ namespace UI_Tier
             // 
             // GridViewmonhoc
             // 
+            this.GridViewmonhoc.AllowUserToAddRows = false;
+            this.GridViewmonhoc.AllowUserToDeleteRows = false;
+            this.GridViewmonhoc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.GridViewmonhoc.BackgroundColor = System.Drawing.Color.White;
             this.GridViewmonhoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GridViewmonhoc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -104,6 +107,54 @@ namespace UI_Tier
             this.GridViewmonhoc.RowTemplate.Height = 24;
             this.GridViewmonhoc.Size = new System.Drawing.Size(806, 201);
             this.GridViewmonhoc.TabIndex = 0;
+            // 
+            // chon
+            // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.NullValue = false;
+            this.chon.DefaultCellStyle = dataGridViewCellStyle1;
+            this.chon.HeaderText = "Chọn";
+            this.chon.Name = "chon";
+            // 
+            // mahp
+            // 
+            this.mahp.DataPropertyName = "MaHP";
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.mahp.DefaultCellStyle = dataGridViewCellStyle2;
+            this.mahp.HeaderText = "Mã Học Phần";
+            this.mahp.Name = "mahp";
+            // 
+            // tenhp
+            // 
+            this.tenhp.DataPropertyName = "TenHP";
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.tenhp.DefaultCellStyle = dataGridViewCellStyle3;
+            this.tenhp.HeaderText = "Tên Học Phần";
+            this.tenhp.Name = "tenhp";
+            // 
+            // malophp
+            // 
+            this.malophp.DataPropertyName = "MaLopHP";
+            this.malophp.HeaderText = "Mã Lớp HP";
+            this.malophp.Name = "malophp";
+            // 
+            // sotinchi
+            // 
+            this.sotinchi.DataPropertyName = "SoTinChi";
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.sotinchi.DefaultCellStyle = dataGridViewCellStyle4;
+            this.sotinchi.HeaderText = "Số Tín Chỉ";
+            this.sotinchi.Name = "sotinchi";
+            // 
+            // soluongsv
+            // 
+            this.soluongsv.DataPropertyName = "SoLuongSV";
+            this.soluongsv.HeaderText = "Số Lượng SV";
+            this.soluongsv.Name = "soluongsv";
             // 
             // txttimmon
             // 
@@ -248,54 +299,6 @@ namespace UI_Tier
             this.btnloc.TabIndex = 32;
             this.btnloc.Text = "Lọc";
             this.btnloc.Click += new System.EventHandler(this.btnloc_Click_1);
-            // 
-            // chon
-            // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.NullValue = false;
-            this.chon.DefaultCellStyle = dataGridViewCellStyle1;
-            this.chon.HeaderText = "Chọn";
-            this.chon.Name = "chon";
-            // 
-            // mahp
-            // 
-            this.mahp.DataPropertyName = "MaHP";
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            this.mahp.DefaultCellStyle = dataGridViewCellStyle2;
-            this.mahp.HeaderText = "Mã Học Phần";
-            this.mahp.Name = "mahp";
-            // 
-            // tenhp
-            // 
-            this.tenhp.DataPropertyName = "TenHP";
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            this.tenhp.DefaultCellStyle = dataGridViewCellStyle3;
-            this.tenhp.HeaderText = "Tên Học Phần";
-            this.tenhp.Name = "tenhp";
-            // 
-            // malophp
-            // 
-            this.malophp.DataPropertyName = "MaLopHP";
-            this.malophp.HeaderText = "Mã Lớp HP";
-            this.malophp.Name = "malophp";
-            // 
-            // sotinchi
-            // 
-            this.sotinchi.DataPropertyName = "SoTinChi";
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.sotinchi.DefaultCellStyle = dataGridViewCellStyle4;
-            this.sotinchi.HeaderText = "Số Tín Chỉ";
-            this.sotinchi.Name = "sotinchi";
-            // 
-            // soluongsv
-            // 
-            this.soluongsv.DataPropertyName = "SoLuongSV";
-            this.soluongsv.HeaderText = "Số Lượng SV";
-            this.soluongsv.Name = "soluongsv";
             // 
             // frmdangkymonhoc
             // 

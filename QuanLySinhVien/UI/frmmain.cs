@@ -545,7 +545,7 @@ namespace UI_Tier
 
             navBarItem14.Enabled = false;
             navBarItem14.Visible = false;
-            navBarItem15.Enabled = false;
+            
         }
 
         private void PhanQuyen()
@@ -559,10 +559,5 @@ namespace UI_Tier
         }
 
         #endregion
-
-        private void navBarControl1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

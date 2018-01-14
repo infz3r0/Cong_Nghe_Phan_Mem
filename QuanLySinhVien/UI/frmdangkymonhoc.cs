@@ -49,7 +49,7 @@ namespace UI_Tier
         private void btnloc_Click_1(object sender, EventArgs e)
         {
                string input = txttimmon.Text;
-               bool isNumber = true;
+              
                bool isString = true;
 
                if (string.IsNullOrEmpty(input))
@@ -64,27 +64,17 @@ namespace UI_Tier
                        isString = false;
                    }
                }
-
-               for (int i = 0; i < input.Length; i++)
-               {
-                   if (char.IsLetter(input[i]))
-                   {
-                       isNumber = false;
-                   }
-               }
-
-               if (isNumber)
-               {
-                   GridViewmonhoc.DataSource = monhocBUS.Loctheoma(input);
-               }
+              
                if (isString)
                {
                    GridViewmonhoc.DataSource = monhocBUS.loctheoten(input);
+                   GridViewmonhoc.DataSource = monhocBUS.Loctheoma(input);
                }
         }
         private void btndong_Click(object sender, EventArgs e)
         {
             Close();
         }
+        
     }
 }

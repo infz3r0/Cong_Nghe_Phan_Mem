@@ -18,7 +18,7 @@ namespace BUS_Tier
         {
             return monHocDAO.GetAll();
         }
-
+        
         private bool TrongSoHopLe(MonHoc monHoc)
         {
             if (monHoc.TrongSoDQT + monHoc.TrongSoDThi != (decimal)1.0)

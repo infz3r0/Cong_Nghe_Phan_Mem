@@ -68,9 +68,7 @@ namespace DATA_Tier
         }
         public DataTable Search()
         {
-            string query = "SELECT MonHoc.MaHP, TenHP, MaLopHP, SoTinChi, SoLuongSV" +
-                           "FROM MonHoc, LopHocPhan" +
-                           "WHERE MonHoc.MaHP = LopHocPhan.MaHP";
+            string query = "SELECT MonHoc.MaHP, TenHP, MaLopHP, SoTinChi, SoLuongSV FROM MonHoc, LopHocPhan WHERE MonHoc.MaHP = LopHocPhan.MaHP";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return executeSelectQuery(query, sqlParameters);
         }

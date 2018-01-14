@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DATA_Tier
 {
-    class DiemHe4DAO : DBConnect
+    public class DiemHe4DAO : DBConnect
     {
         public DataTable GetAll()
         {

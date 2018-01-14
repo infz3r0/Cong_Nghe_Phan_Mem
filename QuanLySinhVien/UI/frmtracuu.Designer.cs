@@ -31,6 +31,12 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmtracuu));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gridviewtracuu = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
@@ -40,6 +46,12 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.btntracuu = new DevExpress.XtraEditors.SimpleButton();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
+            this.masv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hoten = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngaysinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gioitinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.malop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridviewtracuu)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -57,6 +69,13 @@
             this.gridviewtracuu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridviewtracuu.BackgroundColor = System.Drawing.Color.White;
             this.gridviewtracuu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridviewtracuu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.masv,
+            this.hoten,
+            this.ngaysinh,
+            this.gioitinh,
+            this.sdt,
+            this.malop});
             this.gridviewtracuu.Location = new System.Drawing.Point(8, 28);
             this.gridviewtracuu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridviewtracuu.Name = "gridviewtracuu";
@@ -161,6 +180,60 @@
             this.btntracuu.Text = "Tìm";
             this.btntracuu.Click += new System.EventHandler(this.btntracuu_Click);
             // 
+            // masv
+            // 
+            this.masv.DataPropertyName = "MaSV";
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.masv.DefaultCellStyle = dataGridViewCellStyle2;
+            this.masv.HeaderText = "Mã SV";
+            this.masv.Name = "masv";
+            this.masv.ReadOnly = true;
+            // 
+            // hoten
+            // 
+            this.hoten.DataPropertyName = "HoTen";
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.hoten.DefaultCellStyle = dataGridViewCellStyle3;
+            this.hoten.HeaderText = "Họ & Tên";
+            this.hoten.Name = "hoten";
+            this.hoten.ReadOnly = true;
+            // 
+            // ngaysinh
+            // 
+            this.ngaysinh.DataPropertyName = "NgaySinh";
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.ngaysinh.DefaultCellStyle = dataGridViewCellStyle4;
+            this.ngaysinh.HeaderText = "Ngày Sinh";
+            this.ngaysinh.Name = "ngaysinh";
+            this.ngaysinh.ReadOnly = true;
+            // 
+            // gioitinh
+            // 
+            this.gioitinh.DataPropertyName = "GioiTinh";
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            this.gioitinh.DefaultCellStyle = dataGridViewCellStyle5;
+            this.gioitinh.HeaderText = "Giới Tính";
+            this.gioitinh.Name = "gioitinh";
+            this.gioitinh.ReadOnly = true;
+            // 
+            // sdt
+            // 
+            this.sdt.DataPropertyName = "Sdt";
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            this.sdt.DefaultCellStyle = dataGridViewCellStyle6;
+            this.sdt.HeaderText = "Sđt";
+            this.sdt.Name = "sdt";
+            this.sdt.ReadOnly = true;
+            // 
+            // malop
+            // 
+            this.malop.DataPropertyName = "MaLop";
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            this.malop.DefaultCellStyle = dataGridViewCellStyle7;
+            this.malop.HeaderText = "Mã Lớp";
+            this.malop.Name = "malop";
+            this.malop.ReadOnly = true;
+            // 
             // frmtracuu
             // 
             this.AcceptButton = this.btntracuu;
@@ -197,5 +270,11 @@
         private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
         private DevExpress.XtraEditors.SimpleButton btnthoatracuu;
         private DevExpress.XtraEditors.TextEdit txtInput;
+        private System.Windows.Forms.DataGridViewTextBoxColumn masv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hoten;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ngaysinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gioitinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sdt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn malop;
     }
 }
