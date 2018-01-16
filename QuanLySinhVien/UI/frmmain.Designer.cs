@@ -313,8 +313,8 @@
             this.dockPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dockPanel1.Name = "dockPanel1";
             this.dockPanel1.Options.ShowCloseButton = false;
-            this.dockPanel1.OriginalSize = new System.Drawing.Size(219, 200);
-            this.dockPanel1.Size = new System.Drawing.Size(219, 364);
+            this.dockPanel1.OriginalSize = new System.Drawing.Size(226, 200);
+            this.dockPanel1.Size = new System.Drawing.Size(226, 364);
             this.dockPanel1.Text = "CHỨC NĂNG";
             // 
             // dockPanel1_Container
@@ -323,7 +323,7 @@
             this.dockPanel1_Container.Location = new System.Drawing.Point(9, 36);
             this.dockPanel1_Container.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dockPanel1_Container.Name = "dockPanel1_Container";
-            this.dockPanel1_Container.Size = new System.Drawing.Size(199, 319);
+            this.dockPanel1_Container.Size = new System.Drawing.Size(206, 319);
             this.dockPanel1_Container.TabIndex = 0;
             // 
             // navBarControl1
@@ -357,8 +357,8 @@
             this.navBarControl1.Location = new System.Drawing.Point(0, 0);
             this.navBarControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.navBarControl1.Name = "navBarControl1";
-            this.navBarControl1.OptionsNavPane.ExpandedWidth = 199;
-            this.navBarControl1.Size = new System.Drawing.Size(199, 319);
+            this.navBarControl1.OptionsNavPane.ExpandedWidth = 206;
+            this.navBarControl1.Size = new System.Drawing.Size(206, 319);
             this.navBarControl1.TabIndex = 0;
             this.navBarControl1.Text = "navBarControl1";
             // 
@@ -561,6 +561,7 @@
             this.navBarItem16.AppearanceDisabled.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Strikeout);
             this.navBarItem16.AppearanceDisabled.Options.UseFont = true;
             this.navBarItem16.Caption = "Phân quyền";
+            this.navBarItem16.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem16.ImageOptions.SmallImage")));
             this.navBarItem16.Name = "navBarItem16";
             this.navBarItem16.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem16_LinkClicked);
             // 
@@ -573,7 +574,6 @@
             this.navBarGroup6.AppearanceHotTracked.FontSizeDelta = 3;
             this.navBarGroup6.AppearanceHotTracked.Options.UseFont = true;
             this.navBarGroup6.Caption = "Cài đặt";
-            this.navBarGroup6.Expanded = true;
             this.navBarGroup6.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarGroup6.ImageOptions.SmallImage")));
             this.navBarGroup6.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem14),

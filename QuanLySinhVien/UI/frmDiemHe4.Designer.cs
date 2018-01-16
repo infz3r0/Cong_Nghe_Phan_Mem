@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDiemHe4));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtDiemHe10Min = new DevExpress.XtraEditors.TextEdit();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnXoaHe4 = new DevExpress.XtraEditors.SimpleButton();
@@ -426,48 +426,48 @@
             // diemhe4so
             // 
             this.diemhe4so.DataPropertyName = "DiemHe4So";
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black;
-            this.diemhe4so.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.diemhe4so.DefaultCellStyle = dataGridViewCellStyle1;
             this.diemhe4so.HeaderText = "Điểm Hệ 4 Số";
             this.diemhe4so.Name = "diemhe4so";
             // 
             // diemhe4chu
             // 
             this.diemhe4chu.DataPropertyName = "DiemHe4Chu";
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.Black;
-            this.diemhe4chu.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.diemhe4chu.DefaultCellStyle = dataGridViewCellStyle2;
             this.diemhe4chu.HeaderText = "Điểm Hệ 4 Chữ";
             this.diemhe4chu.Name = "diemhe4chu";
             // 
             // diemhe10min
             // 
             this.diemhe10min.DataPropertyName = "DiemHe10Min";
-            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.Black;
-            this.diemhe10min.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.diemhe10min.DefaultCellStyle = dataGridViewCellStyle3;
             this.diemhe10min.HeaderText = "Điểm Hệ 10 Min";
             this.diemhe10min.Name = "diemhe10min";
             // 
             // diemhe10max
             // 
             this.diemhe10max.DataPropertyName = "DiemHe10Max";
-            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.Black;
-            this.diemhe10max.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.diemhe10max.DefaultCellStyle = dataGridViewCellStyle4;
             this.diemhe10max.HeaderText = "Điểm Hệ 10 Max";
             this.diemhe10max.Name = "diemhe10max";
             // 
             // xeploai
             // 
             this.xeploai.DataPropertyName = "XepLoai";
-            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.Black;
-            this.xeploai.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            this.xeploai.DefaultCellStyle = dataGridViewCellStyle5;
             this.xeploai.HeaderText = "Xếp Loại";
             this.xeploai.Name = "xeploai";
             // 
             // danhgia
             // 
             this.danhgia.DataPropertyName = "DanhGia";
-            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.Black;
-            this.danhgia.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            this.danhgia.DefaultCellStyle = dataGridViewCellStyle6;
             this.danhgia.HeaderText = "Đánh Giá";
             this.danhgia.Name = "danhgia";
             // 
